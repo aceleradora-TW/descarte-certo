@@ -1,0 +1,32 @@
+apply plugin: 'idea'
+
+idea {
+    module {
+        downloadSources = true
+    }
+}
+
+task clean(dependsOn: [':frontend:clean', ':backend:clean'], type: Delete) {
+    delete project.buildDir
+}
+
+task buildForProduction(
+    dependsOn: [
+        clean,
+        ':frontend:buildForProduction',
+        ':backend:build'
+    ]
+)
+
+task copyProductionArtifact(type: Copy) {
+    from "${project(':backend').buildDir}"
+
+    into project.buildDir
+}
+
+task stage(
+    dependsOn: [
+        buildForProduction,
+        copyProductionArtifact
+    ]
+)

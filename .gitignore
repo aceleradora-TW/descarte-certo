@@ -1,0 +1,26 @@
+# # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
+# gradle/wrapper/gradle-wrapper.properties
+.idea
+out/
+*.iml
+
+# Eclipse
+bin/
+.settings
+.project
+.classpath
+
+# MacOS
+.DS_Store
+
+# Vim
+*.swpgs
+*.swp
+
+# Gradle
+.gradle
+build/
+
+# Node
+node_modules
+

@@ -1,0 +1,6 @@
+rootProject.name = 'template-de-projeto'
+
+include(
+        "frontend",
+        "backend"
+)

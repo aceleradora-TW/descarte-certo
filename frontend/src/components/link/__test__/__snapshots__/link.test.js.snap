@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link Should renders component when there is all required props 1`] = `
+<div>
+  <a
+    class="fake-class"
+    href="http://fake-url.com"
+    rel="fake-rel"
+    target="_blank"
+  >
+    fake-link
+  </a>
+</div>
+`;

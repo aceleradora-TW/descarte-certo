@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Should renders component when there is title 1`] = `
+<div>
+  <header
+    class="App-header"
+  >
+    fake-title
+    <a
+      class="App-link"
+      href="https://reactjs.org"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      Learn React
+    </a>
+  </header>
+</div>
+`;
+
+exports[`Header Should renders component with warning when there is no title 1`] = `
+<div>
+  <header
+    class="App-header"
+  >
+    <a
+      class="App-link"
+      href="https://reactjs.org"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      Learn React
+    </a>
+  </header>
+</div>
+`;

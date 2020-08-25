@@ -1,0 +1,25 @@
+plugins {
+    id "com.moowork.node" version "1.3.1"
+}
+
+buildDir = "$projectDir/build"
+
+node {
+    download = false
+}
+
+task clean(type: Delete) {
+    delete buildDir
+}
+
+task yarnInstall(type: YarnTask) {
+    args = ['install']
+}
+
+task lint(type: YarnTask) {
+    args = ['lint']
+}
+
+task build(type: YarnTask, dependsOn: [yarnInstall, clean]) {
+    args = ['build']
+}

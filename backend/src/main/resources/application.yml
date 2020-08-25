@@ -1,0 +1,12 @@
+spring:
+  jpa:
+    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQL95Dialect
+    ddl-auto: none
+    hibernate:
+      dialect: org.hibernate.dialect.PostgreSQL95Dialect
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
