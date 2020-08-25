@@ -1,4 +1,4 @@
-# Template de projeto
+# Descarte Certo
 
 Este repositório serve como um template para criar um novo projeto utilizando as tecnologias aplicadas nos projetos da Aceleradora Ágil.
 Templates são uma funcionalidade do Github, para entendê-la em mais detalhes, visite [esta
