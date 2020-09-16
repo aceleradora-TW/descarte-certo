@@ -13,7 +13,7 @@ task clean(dependsOn: [':frontend:clean', ':backend:clean'], type: Delete) {
 task buildForProduction(
     dependsOn: [
         clean,
-        ':frontend:buildForProduction',
+        ':frontend:build',
         ':backend:build'
     ]
 )
