@@ -5,7 +5,7 @@ plugins {
 buildDir = "$projectDir/build"
 
 node {
-    download = false
+    download = true
 }
 
 task clean(type: Delete) {
