@@ -9,6 +9,23 @@ desenvolvimento. Para saber mais sobre as decisões tomadas na construção dess
 [Kanban](https://github.com/aceleradora-TW/template-de-projeto/projects/) e nas
 [issues](https://github.com/aceleradora-TW/template-de-projeto/issues).
 
+## Como contribuir?
+- **Escolha uma card** no Kanban ex. ```#4 Adicionar botão de envio de email```
+- **Crie um branch novo** com a nomeclarura ```numero_do_card/nome_do_card```
+-- Exemplo: ```4-adiciona-botao-envio-email```
+- **Faça os commits** necessários seguindo a nomeclatura: ```numero_do_card/@nome_aluna @nome aluna: o que o commit faz  para commit```
+-- Exemplo: ```#4 @Maria/@Joao: Adiciona o CSS para o botão de envio de email```
+-- Exemplo: ```#4 @Maria/@Joao: Adcionar o layout do botão de envio de email```
+- Realize o **push do branch**
+-- Não esqueça de fazer o **DesckCheck antes**
+- **Abra um Pull Request **no GitHub com o Branch
+- Informe o pull request no chat slack da Aceleratora para pedir revisões
+- Após revisado e testado pode **mergear com a master**
+-- O branch precisa estar revisado e aprovado
+-- O branch não pode ter conflitos
+-- O branch precisa rodar os testes de integração com sucesso (CircleCI)
+- Garantir que o build+deploy da master roda com sucesso e pedir para outra dupla **fazer o QA**
+
 ## Tecnologias
 
   - [Java 11](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
