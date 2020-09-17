@@ -35,6 +35,7 @@ public final class Encoding {
     public String toString() {
         return "Encoding{" +
                 "original='" + original + '\'' +
+
                 ", encoded='" + encoded + '\'' +
                 '}';
     }
