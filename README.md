@@ -11,21 +11,28 @@ desenvolvimento. Para saber mais sobre as decisões tomadas na construção dess
 
 ## Como contribuir?
 
-1. **Escolha uma card** no Kanban, exemplo: ```#4 Adicionar botão de envio de email```
-2. **Crie um branch novo** com a nomeclarura ```numero_do_card/nome_do_card```
-2.1. Exemplo: ```4/adiciona-botao-envio-email```
-3. **Faça os commits** necessários seguindo nomeclatura:```numero_do_card/@nome_aluna @nome aluna: o que o commit faz  para commit```&nbsp;
-3.1. Exemplo: ```#4/ @Maria @Joao: Adiciona o CSS para o botão de envio de email```
-3.2. Exemplo: ```#4/ @Maria @Joao: Adcionar o layout do botão de envio de email```
-4. Realize o **push do branch**
-4.1. Não esqueça de fazer o **DesckCheck antes**
-5. **Abra um Pull Request** no GitHub com o Branch
-5.1. Informe o pull request no chat slack da Aceleratora para pedir revisões
-6. Após revisado e testado pode **mergear com a master**
-6.1. O branch precisa estar revisado e aprovado
-6.2. O branch não pode ter conflitos
-6.3. O branch precisa rodar os testes de integração com sucesso (CircleCI)
-7. Garantir que o build+deploy da master roda com sucesso e pedir para outra dupla **fazer o QA**
+1) **Escolha uma card** no Kanban
+- Exemplo: ```#4 Adicionar botão de envio de email```
+
+2) **Crie um branch novo** com a nomeclarura ```numero_do_card/nome_do_card```
+- Exemplo: ```4/adiciona-botao-envio-email```
+
+3) **Faça os commits** necessários seguindo nomeclatura:```numero_do_card/@nome_aluna @nome aluna: o que o commit faz  para commit```&nbsp;
+- Exemplo: ```#4/ @Maria @Joao: Adiciona o CSS para o botão de envio de email```
+- Exemplo: ```#4/ @Maria @Joao: Adcionar o layout do botão de envio de email```
+
+4) Realize o **push do branch**
+- Não esqueça de fazer o **DesckCheck antes**
+
+5) **Abra um Pull Request** no GitHub com o Branch
+- Informe o pull request no chat slack da Aceleratora para pedir revisões
+
+6) Após revisado e testado pode **mergear com a master**
+- O branch precisa estar revisado e aprovado
+- O branch não pode ter conflitos
+- O branch precisa rodar os testes de integração com sucesso (CircleCI)
+
+7) Garantir que o build+deploy da master roda com sucesso e pedir para outra dupla **fazer o QA**
 
 
 ## Tecnologias
