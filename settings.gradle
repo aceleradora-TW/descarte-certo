@@ -1,4 +1,4 @@
-rootProject.name = 'template-de-projeto'
+rootProject.name = 'descarte-certo'
 
 include(
         "frontend",
