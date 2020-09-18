@@ -1,13 +1,8 @@
 # Descarte Certo
 
-Este repositório serve como um template para criar um novo projeto utilizando as tecnologias aplicadas nos projetos da Aceleradora Ágil.
-Templates são uma funcionalidade do Github, para entendê-la em mais detalhes, visite [esta
-página](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-template-repository).
-
-Este template foi baseado no projeto [Easy Beasy](https://github.com/aceleradora-TW/easy-beasy-v2) e em tudo que aprendemos durante seu
-desenvolvimento. Para saber mais sobre as decisões tomadas na construção desse repositório, dê uma olhada no
-[Kanban](https://github.com/aceleradora-TW/template-de-projeto/projects/) e nas
-[issues](https://github.com/aceleradora-TW/template-de-projeto/issues).
+<Colocar descrição do projeto>
+Porque?
+Como?
 
 ## Como contribuir?
 
@@ -34,20 +29,20 @@ git commit -m "#4/ @Maria @Joao: Adiciona o CSS para o botão de envio de email"
 
 - ```./gradlew buildForProduction```
 
-### 4) Realize o push do branch
+### 5) Realize o push do branch
 - ```git push --set-upstream origin <NOME DO BRANCH>```
 
-### 5) Abra um Pull Request no GitHub com o Branch
+### 6) Abra um Pull Request no GitHub com o Branch
 - PR: https://github.com/aceleradora-TW/descarte-certo/pulls
 - Informe o pull request no chat slack da Aceleratora para pedir revisões
 - CHAT: https://app.slack.com/client/TCHD1PE84/CRSV6QFTP/thread/C011T9DKQ9G-1600350556.008200?cdn_fallback=1
 
-### 6) Após revisado e testado pode mergear com a master
+### 7) Após revisado e testado pode mergear com a master
 - O branch precisa estar revisado e aprovado
 - O branch não pode ter conflitos
 - O branch precisa rodar os testes de integração com sucesso (CircleCI)
 
-### 7) Garantir que o build+deploy da master rodou com sucesso e pedir para outra dupla fazer o QA
+### 8) Garantir que o build+deploy da master rodou com sucesso e pedir para outra dupla fazer o QA
 - BUILD: https://app.circleci.com/pipelines/github/aceleradora-TW/descarte-certo
 
 
@@ -122,3 +117,14 @@ yarn start;
 
 Assim como o backend, este comando seguirá executando até ser parado manualmente. Ele também atualizará o front-end a 
 cada mudança feita no código, portanto, não é necessário executá-lo novamente para ver as mudanças aplicadas.
+
+## Template
+
+Este repositório serve como um template para criar um novo projeto utilizando as tecnologias aplicadas nos projetos da Aceleradora Ágil.
+Templates são uma funcionalidade do Github, para entendê-la em mais detalhes, visite [esta
+página](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-template-repository).
+
+Este template foi baseado no projeto [Easy Beasy](https://github.com/aceleradora-TW/easy-beasy-v2) e em tudo que aprendemos durante seu
+desenvolvimento. Para saber mais sobre as decisões tomadas na construção desse repositório, dê uma olhada no
+[Kanban](https://github.com/aceleradora-TW/template-de-projeto/projects/) e nas
+[issues](https://github.com/aceleradora-TW/template-de-projeto/issues).
