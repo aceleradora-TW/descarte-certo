@@ -12,6 +12,7 @@ desenvolvimento. Para saber mais sobre as decisões tomadas na construção dess
 ## Como contribuir?
 
 ### 1) **Escolha uma card** no Kanban
+- KABAN: https://github.com/aceleradora-TW/descarte-certo/projects/1
 - Exemplo: ```#4 Adicionar botão de envio de email```
 
 ### 2) **Crie um branch novo** com a nomeclarura ```numero_do_card/nome_do_card```
@@ -33,7 +34,7 @@ desenvolvimento. Para saber mais sobre as decisões tomadas na construção dess
 - O branch precisa rodar os testes de integração com sucesso (CircleCI)
 
 ### 7) Garantir que o build+deploy da master rodou com sucesso e pedir para outra dupla **fazer o QA**
-* BUILD: https://app.circleci.com/pipelines/github/aceleradora-TW/descarte-certo
+- BUILD: https://app.circleci.com/pipelines/github/aceleradora-TW/descarte-certo
 
 
 ## Tecnologias
