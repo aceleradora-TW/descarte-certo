@@ -30,20 +30,20 @@ git commit -m "#4/ @Maria @Joao: Adiciona o CSS para o botão de envio de email"
 
 - ```./gradlew buildForProduction```
 
-### 4) Realize o push do branch
+### 5) Realize o push do branch
 - ```git push --set-upstream origin <NOME DO BRANCH>```
 
-### 5) Abra um Pull Request no GitHub com o Branch
+### 6) Abra um Pull Request no GitHub com o Branch
 - PR: https://github.com/aceleradora-TW/descarte-certo/pulls
 - Informe o pull request no chat slack da Aceleratora para pedir revisões
 - CHAT: https://app.slack.com/client/TCHD1PE84/CRSV6QFTP/thread/C011T9DKQ9G-1600350556.008200?cdn_fallback=1
 
-### 6) Após revisado e testado pode mergear com a master
+### 7) Após revisado e testado pode mergear com a master
 - O branch precisa estar revisado e aprovado
 - O branch não pode ter conflitos
 - O branch precisa rodar os testes de integração com sucesso (CircleCI)
 
-### 7) Garantir que o build+deploy da master rodou com sucesso e pedir para outra dupla fazer o QA
+### 8) Garantir que o build+deploy da master rodou com sucesso e pedir para outra dupla fazer o QA
 - BUILD: https://app.circleci.com/pipelines/github/aceleradora-TW/descarte-certo
 
 
