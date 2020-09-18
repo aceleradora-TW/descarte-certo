@@ -1,13 +1,9 @@
 # Descarte Certo
 
-Este repositório serve como um template para criar um novo projeto utilizando as tecnologias aplicadas nos projetos da Aceleradora Ágil.
-Templates são uma funcionalidade do Github, para entendê-la em mais detalhes, visite [esta
-página](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-template-repository).
+<Colocar descrição do projeto>
 
-Este template foi baseado no projeto [Easy Beasy](https://github.com/aceleradora-TW/easy-beasy-v2) e em tudo que aprendemos durante seu
-desenvolvimento. Para saber mais sobre as decisões tomadas na construção desse repositório, dê uma olhada no
-[Kanban](https://github.com/aceleradora-TW/template-de-projeto/projects/) e nas
-[issues](https://github.com/aceleradora-TW/template-de-projeto/issues).
+Porque?
+Como?
 
 ## Como contribuir?
 
@@ -122,3 +118,14 @@ yarn start;
 
 Assim como o backend, este comando seguirá executando até ser parado manualmente. Ele também atualizará o front-end a 
 cada mudança feita no código, portanto, não é necessário executá-lo novamente para ver as mudanças aplicadas.
+
+## Template
+
+Este repositório serve como um template para criar um novo projeto utilizando as tecnologias aplicadas nos projetos da Aceleradora Ágil.
+Templates são uma funcionalidade do Github, para entendê-la em mais detalhes, visite [esta
+página](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-template-repository).
+
+Este template foi baseado no projeto [Easy Beasy](https://github.com/aceleradora-TW/easy-beasy-v2) e em tudo que aprendemos durante seu
+desenvolvimento. Para saber mais sobre as decisões tomadas na construção desse repositório, dê uma olhada no
+[Kanban](https://github.com/aceleradora-TW/template-de-projeto/projects/) e nas
+[issues](https://github.com/aceleradora-TW/template-de-projeto/issues).
