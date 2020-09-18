@@ -1,7 +1,6 @@
 # Descarte Certo
 
 <Colocar descrição do projeto>
-
 Porque?
 Como?
 
