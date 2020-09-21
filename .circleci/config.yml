@@ -15,7 +15,6 @@ jobs:
       - checkout
       - run: gradle dependencies
       - run: gradle test
-      - run: gradle stage
 
   deploy:
     docker:
