@@ -49,7 +49,7 @@ bootRun {
 }
 
 bootJar {
-    archiveFileName = 'template-de-projeto-aceleradora.jar'
+    archiveFileName = 'descarte-certo.jar'
 }
 
 processResources {

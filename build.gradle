@@ -10,13 +10,11 @@ task clean(dependsOn: [':frontend:clean', ':backend:clean'], type: Delete) {
     delete project.buildDir
 }
 
-task buildForProduction(
-    dependsOn: [
-        clean,
-        ':frontend:build',
-        ':backend:build'
-    ]
-)
+// We need to build the front end first in order to copy resources to the project dir. Depends on itself doesn't ensure order. See more: https://stackoverflow.com/a/19682130
+task buildFrontEnd(dependsOn: [clean, ':frontend:build'])
+task buildForProduction(dependsOn: [ buildFrontEnd, ':backend:build'])
+
+buildForProduction.mustRunAfter buildFrontEnd
 
 task copyProductionArtifact(type: Copy) {
     from "${project(':backend').buildDir}"

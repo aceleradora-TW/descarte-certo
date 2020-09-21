@@ -1,1 +1,1 @@
-web: java -jar -Dspring.profiles.active=heroku backend/build/libs/descarte-certo.jar
+web: java -jar -Dspring.profiles.active=heroku build/libs/descarte-certo.jar

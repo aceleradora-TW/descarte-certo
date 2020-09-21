@@ -21,6 +21,7 @@ jobs:
       - image: buildpack-deps:trusty
     steps:
       - checkout
+      - run: gradle stage
       - run:
           name: Deploy Master to Heroku
           command: |
