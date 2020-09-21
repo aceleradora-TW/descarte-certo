@@ -15,13 +15,13 @@ jobs:
       - checkout
       - run: gradle dependencies
       - run: gradle test
+      - run: gradle stage
 
   deploy:
     docker:
       - image: buildpack-deps:trusty
     steps:
       - checkout
-      - run: gradle stage
       - run:
           name: Deploy Master to Heroku
           command: |
