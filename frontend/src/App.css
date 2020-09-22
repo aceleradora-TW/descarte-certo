@@ -1,3 +1,28 @@
-.App {
+.flex-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container-box {
+  background-color: #ebebeb;
+  height: 100vh;
+}
+.content-box {
   text-align: center;
+  color: #303c5b;
+  font-family: Arial;
+}
+.flex-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container-box {
+  background-color: #ebebeb;
+  height: 100vh;
+}
+.content-box {
+  text-align: center;
+  color: #303c5b;
+  font-family: Arial;
 }
