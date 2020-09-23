@@ -5,7 +5,6 @@ spring:
   flyway:
     locations: classpath:/db/migrations
   datasource:
-    driverClassName: org.postgresql.Driver
     url: ${SPRING_DATASOURCE_URL}
     username: ${SPRING_DATASOURCE_USERNAME}
     password: ${SPRING_DATASOURCE_PASSWORD}
