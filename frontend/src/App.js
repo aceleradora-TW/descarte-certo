@@ -1,8 +1,8 @@
 import React from 'react'
-import 'bootswatch/dist/flatly/bootstrap.css'
 import './App.css'
 import NavBarComponent from './components/NavBar/NavBarComponent'
 import { Jumbotron } from "react-bootstrap";
+import FooterComponent from './components/Footer/FooterComponent'
 
 function App() {
   const headerProps = {
@@ -18,7 +18,9 @@ function App() {
             <h1>Seja bem vinda, somos o Descarte Certo!</h1>
             <p>Estamos em construção, em breve o site estará no ar.</p>
           </Jumbotron>
+          
          </div>
+          <FooterComponent></FooterComponent>
 
       </main>
     </div>
