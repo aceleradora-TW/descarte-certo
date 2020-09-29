@@ -2,13 +2,14 @@ import React from 'react'
 import {Navbar,Nav} from 'react-bootstrap'
 import NavigationStyles from "./NavBarStyle.css"
 import Image from 'react-bootstrap/Image'
+import {Logotipo} from '../images/IconsComponents.js'
 
 
 function NavBarComponent(){
         return (
             <Navbar className= "NavBar" bg="light"  expand="lg"  sticky="top"  >
-               <Image src="" rounded />
-                    <Navbar.Toggle aria-controls="basic-navbar-nav " />Logo
+               <Logotipo></Logotipo>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav " />
                     <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto mx-auto nb-cont">
                             <Nav.Link className="nb" href="#Contato" >Contato</Nav.Link >

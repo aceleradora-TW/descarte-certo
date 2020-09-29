@@ -6,10 +6,13 @@
     display: flex;
     position: absolute;
     text-align: center;
-    margin: auto;
-    top: 300px;
+    padding-top: 15%;
+    padding-bottom: 10%;
     right:30% ;
     left: 30%;
+    font-size: xxx-large;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#3F3D56;
   
 }
 
