@@ -1,8 +1,9 @@
 import React from 'react'
 import './App.css'
 import NavBarComponent from './components/NavBar/NavBarComponent'
-import { Jumbotron } from "react-bootstrap";
+import { Jumbotron, Nav } from "react-bootstrap";
 import FooterComponent from './components/Footer/FooterComponent'
+import BannerComponent from'./components/images/BannerComponent'
 
 function App() {
   const headerProps = {
@@ -12,15 +13,18 @@ function App() {
     <div className="App">
       <main className="App-content">
           <NavBarComponent></NavBarComponent>
+          <BannerComponent>
+          </BannerComponent>
           
           <div className="flex-box container-box">
+          
           <Jumbotron className="content-box">
-            <h1>Seja bem vinda, somos o Descarte Certo!</h1>
-            <p>Estamos em construção, em breve o site estará no ar.</p>
+          
           </Jumbotron>
           
          </div>
           <FooterComponent></FooterComponent>
+          
 
       </main>
     </div>

@@ -3,6 +3,8 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
 import footerStyle from './FooterStyle.css'
+import {Nav} from 'react-bootstrap'
+
 
 function FooterComponent(){
         return (
@@ -14,11 +16,11 @@ function FooterComponent(){
         </Row>
         <Row>
             <Col>Telefone: (51) 99851 - 7154</Col>
-            <Col>
-                <Image src=""/>Facebook
-                <Image src=""/>Intagram
-                <Image src=""/>Email
-                <Image src=""/>WhatsApp
+            <Col classNmae="icons">
+                <Nav.Link> <Image className="img" src=""/></Nav.Link>
+                <Nav.Link> <Image className="img" src=""/></Nav.Link>
+                <Nav.Link> <Image src=""/></Nav.Link>
+                <Nav.Link> <Image className="img" src=""/></Nav.Link>
             </Col>
         </Row>
                 

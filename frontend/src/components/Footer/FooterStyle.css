@@ -1,8 +1,25 @@
 .footerStyle{
     background-color: #3F3D56;
-    height: 200px;
+    height: 250px;
     color: whitesmoke;
     text-align: center;
-    padding-top: 50px;  
-   
+    padding-top: 60px;  
+}
+
+.nav-link{
+    color:white;
+}
+
+.nav-link:hover{
+    color: #0DC5A8;
+}
+
+.img{
+    height: 50px;
+}
+
+.icons{
+    margin: auto;
+    padding-top: 10px;
+
 }

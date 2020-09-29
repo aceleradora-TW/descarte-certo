@@ -1,0 +1,20 @@
+.banner-style{
+ display: flex;
+}
+    
+.titulo{
+    display: flex;
+    position: absolute;
+    text-align: center;
+    margin: auto;
+    top: 300px;
+    right:30% ;
+    left: 30%;
+  
+}
+
+.img-banner{
+    display: flex;
+    width: 100%;
+   
+}
