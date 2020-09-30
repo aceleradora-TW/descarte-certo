@@ -1,0 +1,15 @@
+
+.navbar-light .navbar-nav .nav-link:hover{
+    color:#0DC5A8;
+}
+.nb-cont{
+    width: 50%;
+}
+.navbar-light .navbar-nav .nav-link{
+    color: #3F3D56;
+    color:#2F2E41;
+    font-size: large;
+    margin: auto;
+    margin-bottom: 0;
+  
+}

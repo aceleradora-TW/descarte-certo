@@ -1,0 +1,27 @@
+.footerStyle{
+    background-color: #3F3D56;
+    height: 250px;
+    color: whitesmoke;
+    text-align: center;
+    padding-top: 60px;  
+}
+
+.footerStyle{
+    padding-top: 40px;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.footerStyle-texts{
+    padding-top: 40px;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.social-media-icons {
+    display: flex!important;
+    justify-content: space-around;
+    padding-top: 40px;
+    align-content: center;    
+
+}
+
