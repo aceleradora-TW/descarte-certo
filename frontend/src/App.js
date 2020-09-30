@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 import NavBarComponent from './components/NavBar/NavBarComponent'
-import { Jumbotron, Nav } from "react-bootstrap";
+import { Jumbotron } from "react-bootstrap";
 import FooterComponent from './components/Footer/FooterComponent'
 import BannerComponent from'./components/images/BannerComponent'
 

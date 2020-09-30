@@ -1,9 +1,7 @@
 import React from 'react'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Image from 'react-bootstrap/Image'
 import footerStyle from './FooterStyle.css'
-import {Nav} from 'react-bootstrap'
 import {FacebookIcon} from '../images/IconsComponents.js' 
 import {InstagramIcon} from '../images/IconsComponents.js'
 import {WhatsAppIcon} from '../images/IconsComponents.js' 
@@ -19,9 +17,9 @@ function FooterComponent(){
             <Col>Redes Sociais:</Col>
         </Row>
         <Row>
-            <Col className="footerStyle-n">Telefone: (51) 99851 - 7154</Col>
+            <Col className="footerStyle-texts">Telefone: (51) 99851 - 7154</Col>
             
-            <Col className="d-flex " >
+            <Col className="social-media-icons" >
                 <FacebookIcon></FacebookIcon>
                 <InstagramIcon></InstagramIcon>
                 <WhatsAppIcon></WhatsAppIcon>

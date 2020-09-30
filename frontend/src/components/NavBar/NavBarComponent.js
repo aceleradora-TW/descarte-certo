@@ -1,7 +1,6 @@
 import React from 'react'
 import {Navbar,Nav} from 'react-bootstrap'
 import NavigationStyles from "./NavBarStyle.css"
-import Image from 'react-bootstrap/Image'
 import {Logotipo} from '../images/IconsComponents.js'
 
 

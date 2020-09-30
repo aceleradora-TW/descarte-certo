@@ -14,7 +14,7 @@ function FacebookIcon(){
       </div>
       
     )
-}export {FacebookIcon}
+}
 
 function InstagramIcon(){
 
@@ -24,7 +24,7 @@ function InstagramIcon(){
       </div>
       
     )
-}export {InstagramIcon}
+}
 
 function WhatsAppIcon(){
     return(
@@ -33,7 +33,7 @@ function WhatsAppIcon(){
           </div>
     )
 
-}export {WhatsAppIcon}
+}
 
 function EMailIcon(){
     return(
@@ -42,7 +42,7 @@ function EMailIcon(){
           </div>
     )
 
-}export {EMailIcon}
+}
 
 function Logotipo(){
     return(
@@ -51,4 +51,4 @@ function Logotipo(){
           </div>
     )
 
-}export {Logotipo}
+}export {Logotipo,FacebookIcon,InstagramIcon, WhatsAppIcon, EMailIcon}
