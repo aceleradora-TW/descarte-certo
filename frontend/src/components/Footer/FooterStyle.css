@@ -19,6 +19,7 @@
 }
 .social-media-icons {
     display: flex!important;
+    margin-left: 50px;
     justify-content: space-around;
     padding-top: 40px;
     align-content: center;    
