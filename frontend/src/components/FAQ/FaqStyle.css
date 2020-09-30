@@ -1,0 +1,9 @@
+.btn.btn-primary {
+  background-color: #f4f4f4;  
+  color: #2d3d57
+}
+,
+.btn.btn-primary:active{
+  background-color: #f4f4f4;  
+  color: #2d3d57
+}
