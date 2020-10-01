@@ -5,9 +5,9 @@
 }
 
 .card.card {
-    position: relative;
+    /* position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; */
     min-width: 0;
     word-wrap: break-word;
     background-color: #f4f4f4;
@@ -16,7 +16,12 @@
     border-radius: .10rem;
     color: #2d3d57;
     font-family: 'Montserrat', sans-serif;
-    text-align: justify;
+    text-align: justify; 
+    /* padding: 16px 0 16px;
+    padding-top: 16px;
+    padding-right: 0px;
+    padding-bottom: 16px;
+    padding-left: 0px; */
 }
 
 .Accordion.Accordion{
@@ -27,7 +32,7 @@
   padding: .75rem 1.25rem;
   margin-bottom: 0;
   background-color: rgba(0,0,0,.03);
-  text-align: center;
+  text-align: center; 
 
 }
 

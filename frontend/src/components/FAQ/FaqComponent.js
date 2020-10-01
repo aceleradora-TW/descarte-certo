@@ -1,5 +1,5 @@
 import React from 'react'
-import { Dropdown, DropdownButton, Accordion, Card, Button } from "react-bootstrap";
+import { Accordion, Card, Button } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './FaqStyle.css'
 import { string } from 'prop-types';
