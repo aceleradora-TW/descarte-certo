@@ -13,17 +13,15 @@ function App() {
   return (
     <div className="App">
       <main className="App-content">
-        <div>
           <Menu></Menu>
           <Banner></Banner>
           <div className="flex-box container-box">
-          <Jumbotron className="content-box">
+          <div className="content-box">
             <Benefits></Benefits>
-          </Jumbotron>
+          </div>
          </div>
-        </div>
-        <Footer></Footer>
       </main>
+          <Footer></Footer>
     </div>
      
   );
