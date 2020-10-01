@@ -3,12 +3,16 @@
   justify-content: center;
 }
 .container-box {
-  height: 500px;
+  height: 100%;
   background-color: #E6E6E6;
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-bottom: 50px;
 }
 .content-box {
   color: #303c5b;
   font-family: Arial; 
   background-color: #E6E6E6;
-  height: 500px;
 }
+
+

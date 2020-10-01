@@ -4,6 +4,7 @@ import Menu from './components/NavBar/index'
 import { Jumbotron } from "react-bootstrap";
 import Footer from './components/Footer/index'
 import Banner from'./components/Banner/index'
+import Benefits from './components/Benefits/index'
 
 function App() {
   const headerProps = {
@@ -14,16 +15,13 @@ function App() {
       <main className="App-content">
           <Menu></Menu>
           <Banner></Banner>
-          
           <div className="flex-box container-box">
-          <Jumbotron className="content-box">
-          </Jumbotron>
+          <div className="content-box">
+            <Benefits></Benefits>
+          </div>
          </div>
-         
-          <Footer></Footer>
-          
-
       </main>
+          <Footer></Footer>
     </div>
      
   );
