@@ -1,9 +1,39 @@
 .btn.btn-primary {
   background-color: #f4f4f4;  
-  color: #2d3d57
+  color: #2d3d57;   
+  border-color: #f4f4f4;
 }
-,
-.btn.btn-primary:active{
-  background-color: #f4f4f4;  
-  color: #2d3d57
+
+.card.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #f4f4f4;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .10rem;
+    color: #2d3d57;
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+}
+
+.Accordion.Accordion{
+  background-color: #f4f4f4;
+}
+
+.card-header {
+  padding: .75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: rgba(0,0,0,.03);
+  text-align: center;
+
+}
+
+
+.h1{
+  text-align: center;
+  color: #2d3d57;
+  font-family: 'Montserrat';
 }
