@@ -4,15 +4,16 @@
 }
 .container-box {
   height: 100%;
-  background-color: #E6E6E6;
+  background-color: #ffffff;
   padding-right: 50px;
   padding-left: 50px;
   padding-bottom: 50px;
+  padding-top: 50px
 }
 .content-box {
   color: #303c5b;
   font-family: Arial; 
-  background-color: #E6E6E6;
+  background-color: #ffffff;
 }
 
 
