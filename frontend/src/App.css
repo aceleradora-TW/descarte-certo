@@ -5,6 +5,8 @@
 .container-box {
   height: 500px;
   background-color: #E6E6E6;
+  padding-right: 50px;
+  padding-left: 50px;
 }
 .content-box {
   color: #303c5b;
@@ -12,3 +14,4 @@
   background-color: #E6E6E6;
   height: 500px;
 }
+
