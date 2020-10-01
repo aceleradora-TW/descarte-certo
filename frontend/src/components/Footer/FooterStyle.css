@@ -4,13 +4,9 @@
     color: whitesmoke;
     text-align: center;
     padding-top: 60px;  
-
-}
-
-.footerStyle{
-    padding-top: 40px;
-    font-size: large;
     font-family: Arial, Helvetica, sans-serif;
+    bottom: 0;
+    
 
 }
 .footerStyle-texts{

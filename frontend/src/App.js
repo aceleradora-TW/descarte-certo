@@ -16,11 +16,10 @@ function App() {
           <Banner></Banner>
           
           <div className="flex-box container-box">
-          
           <Jumbotron className="content-box">
           </Jumbotron>
-          
          </div>
+         
           <Footer></Footer>
           
 
