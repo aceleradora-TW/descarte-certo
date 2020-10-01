@@ -1,0 +1,38 @@
+.div-banner{
+ position: relative;
+}
+  
+.titulo{
+    position: absolute; 
+    top:20%;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+    color: #3F3D56;
+    
+  }
+  .font{
+      font-size: 42px;
+  }
+  @media only screen and (min-width:0px) and (max-width:449px){
+    .font{
+       font-size: 12px;
+    }
+  }
+  @media only screen and (min-width:450px) and (max-width:779px){
+    .font{
+       font-size: 22px;
+    }
+  }
+  @media only screen and (min-width:780px) and (max-width:1080px){
+    .font{
+       font-size:32px;
+    }
+
+}
+
+.img-banner{
+    display: flex;
+    width: 100%;
+
+}

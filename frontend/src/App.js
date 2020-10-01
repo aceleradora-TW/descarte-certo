@@ -1,9 +1,9 @@
 import React from 'react'
 import './App.css'
-import NavBarComponent from './components/NavBar/NavBarComponent'
+import Menu from './components/NavBar/index'
 import { Jumbotron } from "react-bootstrap";
-import FooterComponent from './components/Footer/FooterComponent'
-import BannerComponent from'./components/images/BannerComponent'
+import Footer from './components/Footer/index'
+import Banner from'./components/Banner/index'
 
 function App() {
   const headerProps = {
@@ -12,18 +12,15 @@ function App() {
   return (
     <div className="App">
       <main className="App-content">
-          <NavBarComponent></NavBarComponent>
-          <BannerComponent>
-          </BannerComponent>
+          <Menu></Menu>
+          <Banner></Banner>
           
           <div className="flex-box container-box">
-          
           <Jumbotron className="content-box">
-          
           </Jumbotron>
-          
          </div>
-          <FooterComponent></FooterComponent>
+         
+          <Footer></Footer>
           
 
       </main>
