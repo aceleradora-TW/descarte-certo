@@ -5,7 +5,7 @@ function Benefits() {
     return(
         <div>
             <div >
-                <h1 className="title">Benefícios da Plataforma</h1>
+                <h1 id ="anchorBenefits" className="title">Benefícios da Plataforma</h1>
             </div>
             <div className="row">
                 <div className="col-6" >

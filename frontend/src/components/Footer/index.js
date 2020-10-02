@@ -12,20 +12,22 @@ import MailIcon from '../images/icon-mail.png'
 
 function FooterComponent(){
         return (
-            <div className="footerStyle" fixed="bottom">
+            <div id ="anchorContact"className="footerStyle" fixed="bottom">
                 <Row>
-                    <Col >Contato:</Col>
-                    <Col>Redes Sociais:</Col>
-                </Row>
-                <Row>
+                <Col>
+                    <Col>Contato:</Col>
                     <Col className="footerStyle-texts">Telefone: (51) 99851 - 7154</Col>
+                </Col>
+                <Col>
+                    <Col>Redes Sociais:</Col>
                     <Col className="social-media-icons" >
                         <a  target="_blank" href="https://www.facebook.com/5marias.sustentaveis"><img src={FaceIcon} width="50px"></img></a>
                         <a target="_blank" href="https://www.instagram.com/_5marias_/"><img src={InstaIcon} width="50px"></img></a>
                         <a  target="_blank" href="whatsapp://send?text=SUA_MENSAGEM_AQUI&phone=+5551998517154+"><img src={WhatsIcon} width="50px"></img></a>
                         <a target="_blank" href="mailto:sustentaveis@gmail.com "><img src={MailIcon} width="50px"></img></a>
                     </Col>
-                </Row>  
+                </Col>  
+                </Row>
             </div>
         )
 }
