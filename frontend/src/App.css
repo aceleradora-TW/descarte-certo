@@ -5,15 +5,11 @@
 .container-box {
   height: 100%;
   background-color: #ffffff;
-  padding-right: 50px;
-  padding-left: 50px;
-  padding-bottom: 50px;
-  padding-top: 50px
+ padding: 50px;
 }
 .content-box {
   color: #303c5b;
-  font-family: Arial; 
+  font-family: 'Montserrat', sans-serif;
+  line-height: 30px;
   background-color: #ffffff;
 }
-
-

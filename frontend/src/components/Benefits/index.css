@@ -4,3 +4,17 @@
     margin-bottom: 80px;
     font-size: 32px
 }
+
+.title-card {
+    font-size: 18px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+.text-card {
+    font-size: 16px;
+}
+
+.benefits-card {
+    margin-bottom: 50px;
+}
