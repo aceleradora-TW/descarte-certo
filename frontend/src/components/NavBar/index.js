@@ -15,8 +15,7 @@ function NavBarComponent(){
                             <Nav.Link className="nb" href="#Depoimentos" >Depoimento</Nav.Link>
                             <Nav.Link className="nb" href="#FAQ">FAQ</Nav.Link>
                             <Nav.Link className="nb" href="#Orcamento">Orçamento</Nav.Link>
-                     </Nav>
-                         
+                     </Nav>   
                     </Navbar.Collapse>
             </Navbar>
         )

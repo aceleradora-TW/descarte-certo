@@ -16,9 +16,9 @@ function App() {
           <Menu></Menu>
           <Banner></Banner>
           <div className="flex-box container-box">
-          <div className="content-box">
-            <Benefits></Benefits>
-          </div>
+            <div className="content-box">
+                <Benefits></Benefits> 
+            </div>
          </div>
       </main>
           <Footer></Footer>
