@@ -2,10 +2,6 @@ import React from 'react'
 import {Navbar,Nav} from 'react-bootstrap'
 import NavigationStyles from "./NavBarStyle.css"
 import Logotipo from '../images/logo-5marias.png'
-import { HashLink as Link } from 'react-router-hash-link';
-
-
-
 function NavBarComponent(){
         return (
             <Navbar className= "NavBar" bg="light"  expand="lg"  sticky="top"  >
