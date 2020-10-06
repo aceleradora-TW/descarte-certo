@@ -7,7 +7,7 @@ import { string } from 'prop-types';
 function FaqComponent() {
     return (
 
-        <div>
+        <div className="div">
             <h1 className="h1">
                 FAQ
             </h1>

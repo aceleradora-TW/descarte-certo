@@ -4,36 +4,32 @@
   border-color: #f4f4f4;
 }
 
-.card.card {
-    /* position: relative;
-    display: flex;
-    flex-direction: column; */
-    min-width: 0;
+.div{
+  width: 33%;
+  background-color: #ffffff
+  ;
+
+}
+
+.card.card {    
+    width: 100%;
     word-wrap: break-word;
-    background-color: #f4f4f4;
+    background-color: #ffffff;
     background-clip: border-box;
     border: 0px solid rgba(0,0,0,.125);
     border-radius: .10rem;
     color: #2d3d57;
     font-family: 'Montserrat', sans-serif;
     text-align: justify; 
-    /* padding: 16px 0 16px;
-    padding-top: 16px;
-    padding-right: 0px;
-    padding-bottom: 16px;
-    padding-left: 0px; */
+   
 }
 
-.Accordion.Accordion{
-  background-color: #f4f4f4;
-}
 
 .card-header {
   padding: .75rem 1.25rem;
   margin-bottom: 0;
-  background-color: rgba(0,0,0,.03);
-  text-align: center; 
-
+  background-color: #ffffff;
+  text-align: left; 
 }
 
 
@@ -41,4 +37,12 @@
   text-align: center;
   color: #2d3d57;
   font-family: 'Montserrat';
+}
+
+.flex-box{
+  background-color: #ffffff;
+}
+
+.content-box{
+  background-color: #ffffff;
 }
