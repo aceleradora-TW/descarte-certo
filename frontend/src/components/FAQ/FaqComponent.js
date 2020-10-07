@@ -8,7 +8,7 @@ function FaqComponent() {
     return (
 
         <div className="div">
-            <h1 className="h1">
+            <h1 id="anchorFAQ" className="h1">
                 FAQ
             </h1>
 
