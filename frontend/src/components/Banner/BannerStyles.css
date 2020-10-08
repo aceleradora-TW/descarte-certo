@@ -13,21 +13,26 @@
   }
   .font{
       font-size: 42px;
+      
   }
-  @media only screen and (min-width:0px) and (max-width:449px){
+  
+  @media only screen  and (max-width:739px){
     .font{
-       font-size: 12px;
+     
+      font-size: 26px;
+    }
+    .titulo{
+      top:5%;
     }
   }
-  @media only screen and (min-width:450px) and (max-width:779px){
+  @media only screen and (min-width:740px) and (max-width:1025px){
     .font{
-       font-size: 22px;
+       font-size:36px;
     }
-  }
-  @media only screen and (min-width:780px) and (max-width:1080px){
-    .font{
-       font-size:32px;
-    }
+       .titulo{
+        top:10%;
+      }
+    
 
 }
 

@@ -1,10 +1,11 @@
 import React from 'react'
 import './App.css'
 import Menu from './components/NavBar/index'
-import { Jumbotron } from "react-bootstrap";
-import Footer from './components/Footer/index'
+/*import Footer from './components/Footer/index'*/
 import Banner from'./components/Banner/index'
 import Benefits from './components/Benefits/index'
+
+import Footer from './components/Footer'
 
 function App() {
   const headerProps = {
@@ -13,16 +14,20 @@ function App() {
   return (
     <div className="App">
       <main className="App-content">
-          <Menu></Menu>
-          <Banner></Banner>
+          <Menu/>
+          <Banner/>
           <div className="flex-box container-box">
             <div className="content-box">
-                <Benefits></Benefits> 
+                <Benefits/>          
             </div>
          </div>
+         <Footer/>
       </main>
-          <Footer></Footer>
+
+          
     </div>
+  
+    
      
   );
 }
