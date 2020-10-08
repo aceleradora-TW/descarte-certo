@@ -36,5 +36,4 @@ function BenefitsComponent() {
         </div>
     )
 }
-
 export default BenefitsComponent;
