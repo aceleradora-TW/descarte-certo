@@ -25,11 +25,13 @@
        text-align: center;
     }
   }
+
   @media only screen and (min-width:768px) and (max-width:1024px){
     .text-card{
        font-size: 14px;
     }
   }
+
   @media only screen and (min-width:950px) and (max-width:1280px){
     .text-card{
        font-size:16px;
@@ -42,15 +44,16 @@
        text-align: center;
     }
   }
+
   @media only screen and (min-width:768px) and (max-width:1024px){
     .title-card{
        font-size: 16px;
        text-align: center;
     }
   }
+  
   @media only screen and (min-width:950px) and (max-width:1280px){
     .title-card{
        font-size:18px;
-
     }
 }
