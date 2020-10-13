@@ -11,7 +11,7 @@ function NavBarComponent() {
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto mx-auto nb-cont">
                     <Nav.Link className="nb" href="#anchorContact" >Contato</Nav.Link >
-                    <Nav.Link className="nb" href="#anchorBenefits" >Benefícios</Nav.Link>
+                    <Nav.Link className="nb" href="#Beneficios" >Benefícios</Nav.Link>
                     <Nav.Link className="nb" href="#anchorTestimonies">Depoimento</Nav.Link>
                     <Nav.Link className="nb" href="#anchorFAQ">FAQ</Nav.Link>
                     <Nav.Link className="nb" href="#anchorBudget">Orçamento</Nav.Link>
