@@ -1,6 +1,6 @@
 import React from 'react'
 import { Navbar, Nav } from 'react-bootstrap'
-import NavigationStyles from "./NavBarStyle.css"
+import "./NavBarStyle.css"
 import Logotipo from '../images/logo-5marias.png'
 
 function NavBarComponent() {
@@ -15,6 +15,11 @@ function NavBarComponent() {
                     <Nav.Link className="nb" href="#Depoimentos">Depoimento</Nav.Link>
                     <Nav.Link className="nb" href="#FAQ">FAQ</Nav.Link>
                     <Nav.Link className="nb" href="#Orcamento">Orçamento</Nav.Link>
+                    <Nav.Link  href="#Contato">Contato</Nav.Link >
+                    <Nav.Link  href="#Beneficios" >Beneficios</Nav.Link>
+                    <Nav.Link  href="#Depoimentos">Depoimento</Nav.Link>
+                    <Nav.Link  href="#FAQ">FAQ</Nav.Link>
+                    <Nav.Link  href="#Orcamento">Orçamento</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
