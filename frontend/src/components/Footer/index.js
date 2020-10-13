@@ -8,7 +8,7 @@ import WhatsIcon from '../images/icon-whats.png'
 import MailIcon from '../images/icon-mail.png'
 function FooterComponent(){
         return (
-            <div id ="anchorContact"className="footerStyle" fixed="bottom">
+            <div id ="Contato"className="footerStyle" fixed="bottom">
                 <Row>
                     <Col>
                         <Col>Contato:</Col>
