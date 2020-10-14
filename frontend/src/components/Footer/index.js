@@ -10,13 +10,8 @@ import MailIcon from '../images/icon-mail.png'
 
 
 function FooterComponent(){
-        return (
-            <div id ="Contato"className="footerStyle" fixed="bottom">
-                <Row>
-                    <Col>
     let telefone="(51)98311-1490" 
-
-    return (  
+        return (        
             <div id ="Contato" className="footerStyle" fixed="bottom" >
                 <Row className="row-style">
                     <Col className="footerStyle-texts">
