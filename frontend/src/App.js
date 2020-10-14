@@ -23,7 +23,7 @@ function App() {
             <div className="content-box">
                 <Depositions/>     
             </div>
-         </div>
+          </div>
          <Footer/>
       </main>
 

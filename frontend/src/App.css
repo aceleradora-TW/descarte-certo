@@ -1,5 +1,5 @@
 .flex-box {
-  display: flex;
+  display: flexbox;
   justify-content: center;
 }
 .container-box {

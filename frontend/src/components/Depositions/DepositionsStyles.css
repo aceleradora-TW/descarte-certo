@@ -1,5 +1,8 @@
 .div-depositions{
     position: relative;
-
-
+    text-align: center;
+    font-family: 'Montserrat', sans-serif ;
+    line-height: 30px;
+    color: #303c5b;
+    background-color: #F5F4F6;
 }
