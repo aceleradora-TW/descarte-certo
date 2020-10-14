@@ -1,6 +1,6 @@
 import React from 'react'
 import Banner from '../images/banner.png'
-import BannerStyle from './BannerStyles.css'
+import './BannerStyles.css'
 
 function BannerComponent() {
     return (
