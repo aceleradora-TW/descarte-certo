@@ -1,7 +1,7 @@
 spring:
   flyway:
-    locations: classpath:/db/migrations,classpath:/db/seeders
+    locations: classpath:/db/migration,classpath:/db/seeders
   datasource:
-    url: jdbc:postgresql://localhost:5432/template_aceleradora
+    url: jdbc:postgresql://localhost:5432/descarte_certo
     username: postgres
     password: 123456
