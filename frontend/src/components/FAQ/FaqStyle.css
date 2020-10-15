@@ -1,16 +1,24 @@
+/* Alteracao do estilo do btn primary do bootstrap */
 .btn.btn-primary {
   background-color: #f4f4f4;  
   color: #2d3d57;   
   border-color: #f4f4f4;
+  font-size: 1.5rem;
 }
 
+/* Alteracao do estilo do btn do bootstrap */
+.btn.btn {
+  font-size: 1.5rem;
+}
+
+/* Alteracao da cor de fundo do FAQ */
 .div{
-  width: 33%;
   background-color: #ffffff
   ;
 
 }
 
+/* Alteracao de estilo de todos os cards do bootstrap */
 .card.card {    
     width: 100%;
     word-wrap: break-word;
@@ -24,25 +32,32 @@
    
 }
 
-
+/* Alteracao de estilo de todos os cabecalhos dos cards do bootstrap */
 .card-header {
   padding: .75rem 1.25rem;
   margin-bottom: 0;
   background-color: #ffffff;
-  text-align: left; 
-}
+  content: "\f107"
+ }
 
-
+/* Alteracao do titulo do FAQ */
 .title{
   text-align: center;
   color: #2d3d57;
   font-family: 'Montserrat';
 }
 
+/* Alteracao de estilo do fundo do componente flex-box */
 .flex-box{
   background-color: #ffffff;
 }
 
+/* Alteracao de estilo do fundo do componente content-box  */
 .content-box{
   background-color: #ffffff;
+}
+
+.accordion-toggle.collapsed:after {
+  
+  content: "\imagens\icon-faq";
 }

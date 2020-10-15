@@ -7,12 +7,12 @@ import { string } from 'prop-types';
 function FaqComponent() {
     return (
 
-        <div className="div">
+        <div className="div col-6">
             <h1 id="anchorFAQ" className="title">FAQ</h1>
-            <Accordion defaultActiveKey="0">
+            <Accordion>
                 {/* Card 1 */}
                 <Card>
-                    <Card.Header>
+                    <Card.Header >
                         <Accordion.Toggle as={Button} variant="" eventKey="0">
                             Como sei que meu volume de resíduo é pequeno ou grande volume?
                         </Accordion.Toggle>
@@ -112,7 +112,7 @@ function FaqComponent() {
                 </Card>
 
             </Accordion>
-        </div>
+        </div >
 
 
     )
