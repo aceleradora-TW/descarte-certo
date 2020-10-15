@@ -3,7 +3,7 @@ server:
 
 spring:
   flyway:
-    locations: classpath:/db/migrations
+    locations: classpath:/db/migration
   datasource:
     url: ${SPRING_DATASOURCE_URL}
     username: ${SPRING_DATASOURCE_USERNAME}
