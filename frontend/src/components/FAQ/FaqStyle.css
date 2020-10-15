@@ -36,8 +36,7 @@
 .card-header {
   padding: .75rem 1.25rem;
   margin-bottom: 0;
-  background-color: #ffffff;
-  content: "\f107"
+  background-color: #ffffff;  
  }
 
 /* Alteracao do titulo do FAQ */
@@ -57,7 +56,3 @@
   background-color: #ffffff;
 }
 
-.accordion-toggle.collapsed:after {
-  
-  content: "\imagens\icon-faq";
-}
