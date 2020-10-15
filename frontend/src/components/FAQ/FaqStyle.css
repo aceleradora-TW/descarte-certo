@@ -9,6 +9,9 @@
 /* Alteracao do estilo do btn do bootstrap */
 .btn.btn {
   font-size: 1.5rem;
+  width: 100%;
+  text-align: left;
+  content: "\e114";
 }
 
 /* Alteracao da cor de fundo do FAQ */
