@@ -46,6 +46,15 @@ git commit -m "#4/ @Maria @Joao: Adiciona o CSS para o botão de envio de email"
 - BUILD: https://app.circleci.com/pipelines/github/aceleradora-TW/descarte-certo
 
 
+## Backend testes
+
+Usando https://httpie.org/
+
+```
+http GET http://localhost:8080/solicitcaoOrcamentoDescarte/1
+http POST http://localhost:8080/solicitcaoOrcamentoDescarte/create < backend/src/test/resources/createSolicitacaoRequest.json
+```
+
 ## Tecnologias
 
   - [Java 11](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)

@@ -1,6 +1,7 @@
 package com.thoughtworks.aceleradora.controller;
 
 import com.thoughtworks.aceleradora.controller.request.SolicitacaoOrcamentoDescarteRequest;
+import com.thoughtworks.aceleradora.controller.response.MessageResponse;
 import com.thoughtworks.aceleradora.controller.response.SolicitacaoOrcamentoDescarteResponse;
 import com.thoughtworks.aceleradora.domain.SolicitacaoOrcamentoDescarteService;
 import com.thoughtworks.aceleradora.entity.SolicitacaoOrcamentoDescarte;
@@ -12,7 +13,7 @@ import java.util.Optional;
 
 
 @RestController
-@RequestMapping("solicitcaoOrcamentoDescarte")
+@RequestMapping("/solicitcaoOrcamentoDescarte")
 public class SolicitacaoOrcamentoDescarteController {
 
     private SolicitacaoOrcamentoDescarteService solicitacaoOrcamentoDescarteService;
@@ -36,9 +37,13 @@ public class SolicitacaoOrcamentoDescarteController {
     public ResponseEntity get(@PathVariable int id) {
         Optional<SolicitacaoOrcamentoDescarte> optionalSolicitacao
                 = solicitacaoOrcamentoDescarteService.getSolicitacao(id);
-        //TODO ajustar optional
-        SolicitacaoOrcamentoDescarte solicitacao = optionalSolicitacao.get();
-        //TODO ajustar para resposta HttpStatus correta
-        return new ResponseEntity(solicitacao, HttpStatus.OK);
+        if (optionalSolicitacao.isPresent()) {
+            SolicitacaoOrcamentoDescarte solicitacao = optionalSolicitacao.get();
+            return new ResponseEntity(solicitacao, HttpStatus.OK);
+        } else {
+            return new ResponseEntity(MessageResponse
+                    .builder().msg("Solicitação de orçamento não encontrado").build(),
+                    HttpStatus.NOT_FOUND);
+        }
     }
 }
