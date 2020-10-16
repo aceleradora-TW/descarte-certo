@@ -1,0 +1,8 @@
+{
+  "solicitante": {
+    "name" : "leoTest"
+  },
+  "endereco" : {
+    "cep" : "cep"
+  }
+}

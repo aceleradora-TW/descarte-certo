@@ -3,6 +3,6 @@ package com.thoughtworks.aceleradora.controller;
 import lombok.Data;
 
 @Data
-public class GeneratorRequest {
+public class SolicitanteRequest {
     private String name;
 }
