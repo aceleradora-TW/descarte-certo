@@ -33,8 +33,8 @@ public class SolicitacaoOrcamentoDescarteController {
     public ResponseEntity get(@RequestParam int codigoSolicitacao) {
         Optional<SolicitacaoOrcamentoDescarte> optionalSolicitacao
                 = solicitacaoOrcamentoDescarteService.getSolicitacao(codigoSolicitacao);
-        SolicitacaoOrcamentoDescarte solicitacao = optionalSolicitacao.get();
         //TODO ajustar optional
+        SolicitacaoOrcamentoDescarte solicitacao = optionalSolicitacao.get();
         //TODO ajustar para resposta HttpStatus correta
         return new ResponseEntity(solicitacao, HttpStatus.OK);
     }
