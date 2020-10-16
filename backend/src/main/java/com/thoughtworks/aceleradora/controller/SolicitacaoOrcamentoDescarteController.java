@@ -1,5 +1,7 @@
 package com.thoughtworks.aceleradora.controller;
 
+import com.thoughtworks.aceleradora.controller.request.SolicitacaoOrcamentoDescarteRequest;
+import com.thoughtworks.aceleradora.controller.response.SolicitacaoOrcamentoDescarteResponse;
 import com.thoughtworks.aceleradora.domain.SolicitacaoOrcamentoDescarteService;
 import com.thoughtworks.aceleradora.entity.SolicitacaoOrcamentoDescarte;
 import org.springframework.http.HttpStatus;
@@ -10,6 +12,7 @@ import java.util.Optional;
 
 
 @RestController
+@RequestMapping("solicitcaoOrcamentoDescarte")
 public class SolicitacaoOrcamentoDescarteController {
 
     private SolicitacaoOrcamentoDescarteService solicitacaoOrcamentoDescarteService;
@@ -18,10 +21,10 @@ public class SolicitacaoOrcamentoDescarteController {
         this.solicitacaoOrcamentoDescarteService = solicitacaoOrcamentoDescarteService;
     }
 
-    @PostMapping(path = "/createSolicitacaoOrcamentoDescarte")
-    public ResponseEntity save(@RequestBody SolicitacaoOrcamentoDescarteRequest solicitacaoOrcamentoDescarteRequest) {
+    @PostMapping(path = "/create")
+    public ResponseEntity create(@RequestBody SolicitacaoOrcamentoDescarteRequest solicitacaoOrcamentoDescarteRequest) {
         SolicitacaoOrcamentoDescarte solicitacao = solicitacaoOrcamentoDescarteService
-                .saveGenerator(solicitacaoOrcamentoDescarteRequest);
+                .create(solicitacaoOrcamentoDescarteRequest);
         SolicitacaoOrcamentoDescarteResponse response = SolicitacaoOrcamentoDescarteResponse
                 .builder()
                 .codigoSolicitacao(solicitacao.getId())
@@ -29,10 +32,10 @@ public class SolicitacaoOrcamentoDescarteController {
         return new ResponseEntity(response, HttpStatus.CREATED);
     }
 
-    @GetMapping(path = "/getSolicitacaoOrcamentoDescarte")
-    public ResponseEntity get(@RequestParam int codigoSolicitacao) {
+    @GetMapping(path = "/{id}")
+    public ResponseEntity get(@PathVariable int id) {
         Optional<SolicitacaoOrcamentoDescarte> optionalSolicitacao
-                = solicitacaoOrcamentoDescarteService.getSolicitacao(codigoSolicitacao);
+                = solicitacaoOrcamentoDescarteService.getSolicitacao(id);
         //TODO ajustar optional
         SolicitacaoOrcamentoDescarte solicitacao = optionalSolicitacao.get();
         //TODO ajustar para resposta HttpStatus correta

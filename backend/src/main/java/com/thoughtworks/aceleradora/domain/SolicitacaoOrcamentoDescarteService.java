@@ -1,6 +1,6 @@
 package com.thoughtworks.aceleradora.domain;
 
-import com.thoughtworks.aceleradora.controller.SolicitacaoOrcamentoDescarteRequest;
+import com.thoughtworks.aceleradora.controller.request.SolicitacaoOrcamentoDescarteRequest;
 import com.thoughtworks.aceleradora.entity.SolicitacaoOrcamentoDescarte;
 import com.thoughtworks.aceleradora.repository.SolicitacaoOrcamentoDescarteRepository;
 import org.springframework.stereotype.Service;
@@ -17,7 +17,7 @@ public class SolicitacaoOrcamentoDescarteService {
         this.solicitacaoOrcamentoDescarteRepository = repository;
     }
 
-    public SolicitacaoOrcamentoDescarte saveGenerator(SolicitacaoOrcamentoDescarteRequest solicitacaoOrcamentoDescarteRequest) {
+    public SolicitacaoOrcamentoDescarte create(SolicitacaoOrcamentoDescarteRequest solicitacaoOrcamentoDescarteRequest) {
         SolicitacaoOrcamentoDescarte solicitacaoOrcamentoDescarte =
                 SolicitacaoOrcamentoDescarte.builder()
                         .name(solicitacaoOrcamentoDescarteRequest.getSolicitante().getName())
