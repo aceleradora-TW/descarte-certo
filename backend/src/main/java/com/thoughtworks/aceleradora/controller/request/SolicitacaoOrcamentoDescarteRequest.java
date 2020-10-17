@@ -11,5 +11,5 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class SolicitacaoOrcamentoDescarteRequest {
     private SolicitanteRequest solicitante;
-    private EnderecoResidoRequest endereco;
+    private EnderecoResiduoRequest endereco;
 }

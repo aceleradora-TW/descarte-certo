@@ -9,6 +9,6 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class EnderecoResidoRequest {
+public class EnderecoResiduoRequest {
     private String cep;
 }
