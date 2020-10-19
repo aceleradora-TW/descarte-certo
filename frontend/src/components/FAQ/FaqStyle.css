@@ -6,13 +6,16 @@
   font-size: 1.5rem;
 }
 
+.img {
+  border-color: red;
+}
+
 /* Alteracao do estilo do btn do bootstrap */
 .btn.btn {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   width: 100%;
-  text-align: left;
-  content: "\e114";
-}
+  text-align: left;    
+  }
 
 /* Alteracao da cor de fundo do FAQ */
 .div{
@@ -31,15 +34,14 @@
     border-radius: .10rem;
     color: #2d3d57;
     font-family: 'Montserrat', sans-serif;
-    text-align: justify; 
-   
+    text-align: justify;     
 }
 
 /* Alteracao de estilo de todos os cabecalhos dos cards do bootstrap */
 .card-header {
   padding: .75rem 1.25rem;
   margin-bottom: 0;
-  background-color: #ffffff;  
+  background-color: #ffffff;    
  }
 
 /* Alteracao do titulo do FAQ */
@@ -56,6 +58,5 @@
 
 /* Alteracao de estilo do fundo do componente content-box  */
 .content-box{
-  background-color: #ffffff;
+  background-color: #ffffff;  
 }
-

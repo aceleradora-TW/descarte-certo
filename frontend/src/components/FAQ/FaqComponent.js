@@ -1,5 +1,6 @@
 import React from 'react'
 import { Accordion, Card, Button } from "react-bootstrap";
+import Icone from '../images/icon-faq.png'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './FaqStyle.css'
 import { string } from 'prop-types';
@@ -12,9 +13,9 @@ function FaqComponent() {
             <Accordion>
                 {/* Card 1 */}
                 <Card>
-                    <Card.Header >
+                    <Card.Header>
                         <Accordion.Toggle as={Button} variant="" eventKey="0">
-                            Como sei que meu volume de resíduo é pequeno ou grande volume?
+                            Como sei que meu volume de resíduo é pequeno ou grande volume?    <img src={Icone} />
                         </Accordion.Toggle>
                     </Card.Header>
                     <Accordion.Collapse eventKey="0">
@@ -28,7 +29,7 @@ function FaqComponent() {
                 <Card>
                     <Card.Header>
                         <Accordion.Toggle as={Button} variant="" eventKey="1">
-                            Preciso separar os resíduos domésticos dos meus resíduos da obra?
+                            Preciso separar os resíduos domésticos dos meus resíduos da obra?    <img src={Icone} />
                         </Accordion.Toggle>
                     </Card.Header>
                     <Accordion.Collapse eventKey="1">
@@ -47,7 +48,7 @@ function FaqComponent() {
                 <Card>
                     <Card.Header>
                         <Accordion.Toggle as={Button} variant="" eventKey="2">
-                            É mais caro misturado?
+                            É mais caro misturado?   <img src={Icone} />
                         </Accordion.Toggle>
                     </Card.Header>
                     <Accordion.Collapse eventKey="2">
@@ -60,7 +61,7 @@ function FaqComponent() {
                 <Card>
                     <Card.Header>
                         <Accordion.Toggle as={Button} variant="" eventKey="3">
-                            Quais as formas de pagamento?
+                            Quais as formas de pagamento?   <img src={Icone} />
                         </Accordion.Toggle>
                     </Card.Header>
                     <Accordion.Collapse eventKey="3">
@@ -73,7 +74,7 @@ function FaqComponent() {
                 <Card>
                     <Card.Header>
                         <Accordion.Toggle as={Button} variant="" eventKey="4">
-                            Para onde vão os resíduos coletados?
+                            Para onde vão os resíduos coletados?   <img src={Icone} />
                         </Accordion.Toggle>
                     </Card.Header>
                     <Accordion.Collapse eventKey="4">
@@ -87,13 +88,13 @@ function FaqComponent() {
                 <Card>
                     <Card.Header>
                         <Accordion.Toggle as={Button} variant="" eventKey="5">
-                            Como sei se o meu resíduo foi para o descarte certo?
+                            Como sei se o meu resíduo foi para o descarte certo?   <img src={Icone} />
                         </Accordion.Toggle>
                     </Card.Header>
                     <Accordion.Collapse eventKey="5">
                         <Card.Body>Todas as coletas realizadas através do serviço da 5Marias, são monitoradas e garantem a destinação correta aos locais licenciados e/ou autorizados.
                         O cliente de pequenos volumes recebe ao final do descarte o CDF - Certificado de Destinação Final, a garantia de descarte correto do resíduo.
-                        Já os clientes que fazem uso de caçambas, recebem uma cópia do MTRCC - Manifesto de Transporte de Resíduos da Construção Civil, documento obrigatório e comprobatório po descarte correto para grandes volumes.
+                        Já os clientes que fazem uso de caçambas, recebem uma cópia do MTRCC - Manifesto de Transporte de Resíduos da Construção Civil, documento obrigatório e comprobatório pro descarte correto para grandes volumes.
                         </Card.Body>
                     </Accordion.Collapse>
                 </Card>
@@ -102,7 +103,7 @@ function FaqComponent() {
                 <Card>
                     <Card.Header>
                         <Accordion.Toggle as={Button} variant="" eventKey="6">
-                            Minha região é atendida?
+                            Minha região é atendida?  <img src={Icone} />
                         </Accordion.Toggle>
                     </Card.Header>
                     <Accordion.Collapse eventKey="6">
