@@ -1,6 +1,7 @@
 import React from 'react'
 import { Accordion, Card, Button } from "react-bootstrap";
-import Icone from '../images/icon-faq.png'
+import Icone from '../images/icon-faq-novo.png'
+import imgFaq from '../images/img-faq.png'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './FaqStyle.css'
 import { string } from 'prop-types';
@@ -10,12 +11,12 @@ function FaqComponent() {
 
         <div className="div col-6">
             <h1 id="anchorFAQ" className="title">FAQ</h1>
-            <Accordion>
+            <Accordion >
                 {/* Card 1 */}
                 <Card>
                     <Card.Header>
                         <Accordion.Toggle as={Button} variant="" eventKey="0">
-                            Como sei que meu volume de resíduo é pequeno ou grande volume?    <img src={Icone} />
+                            Como sei que meu volume de resíduo é pequeno ou grande volume? <img src={Icone} className="iconFaq" />
                         </Accordion.Toggle>
                     </Card.Header>
                     <Accordion.Collapse eventKey="0">
@@ -29,7 +30,7 @@ function FaqComponent() {
                 <Card>
                     <Card.Header>
                         <Accordion.Toggle as={Button} variant="" eventKey="1">
-                            Preciso separar os resíduos domésticos dos meus resíduos da obra?    <img src={Icone} />
+                            Preciso separar os resíduos domésticos dos meus resíduos da obra?  <img src={Icone} className="iconFaq" />
                         </Accordion.Toggle>
                     </Card.Header>
                     <Accordion.Collapse eventKey="1">
@@ -48,7 +49,7 @@ function FaqComponent() {
                 <Card>
                     <Card.Header>
                         <Accordion.Toggle as={Button} variant="" eventKey="2">
-                            É mais caro misturado?   <img src={Icone} />
+                            É mais caro misturado?  <img src={Icone} className="iconFaq" />
                         </Accordion.Toggle>
                     </Card.Header>
                     <Accordion.Collapse eventKey="2">
@@ -61,7 +62,7 @@ function FaqComponent() {
                 <Card>
                     <Card.Header>
                         <Accordion.Toggle as={Button} variant="" eventKey="3">
-                            Quais as formas de pagamento?   <img src={Icone} />
+                            Quais as formas de pagamento?  <img src={Icone} className="iconFaq" />
                         </Accordion.Toggle>
                     </Card.Header>
                     <Accordion.Collapse eventKey="3">
@@ -74,7 +75,7 @@ function FaqComponent() {
                 <Card>
                     <Card.Header>
                         <Accordion.Toggle as={Button} variant="" eventKey="4">
-                            Para onde vão os resíduos coletados?   <img src={Icone} />
+                            Para onde vão os resíduos coletados?  <img src={Icone} className="iconFaq" />
                         </Accordion.Toggle>
                     </Card.Header>
                     <Accordion.Collapse eventKey="4">
@@ -88,7 +89,7 @@ function FaqComponent() {
                 <Card>
                     <Card.Header>
                         <Accordion.Toggle as={Button} variant="" eventKey="5">
-                            Como sei se o meu resíduo foi para o descarte certo?   <img src={Icone} />
+                            Como sei se o meu resíduo foi para o descarte certo?  <img src={Icone} className="iconFaq" />
                         </Accordion.Toggle>
                     </Card.Header>
                     <Accordion.Collapse eventKey="5">
@@ -103,7 +104,7 @@ function FaqComponent() {
                 <Card>
                     <Card.Header>
                         <Accordion.Toggle as={Button} variant="" eventKey="6">
-                            Minha região é atendida?  <img src={Icone} />
+                            Minha região é atendida?  <img src={Icone} className="iconFaq" />
                         </Accordion.Toggle>
                     </Card.Header>
                     <Accordion.Collapse eventKey="6">
@@ -113,6 +114,8 @@ function FaqComponent() {
                 </Card>
 
             </Accordion>
+
+            <img src={imgFaq} className="imgFaq" />
         </div >
 
 
