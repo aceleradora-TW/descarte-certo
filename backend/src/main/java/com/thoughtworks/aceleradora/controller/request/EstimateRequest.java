@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class SolicitacaoOrcamentoDescarteRequest {
-    private SolicitanteRequest solicitante;
-    private EnderecoResiduoRequest endereco;
+public class EstimateRequest {
+    private RequesterRequest requester;
+    private ResidueAddressRequest residueAddress;
 }
