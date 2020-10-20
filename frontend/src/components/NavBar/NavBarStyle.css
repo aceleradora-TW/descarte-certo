@@ -7,9 +7,8 @@
 }
 .navbar-light .navbar-nav .nav-link{
     color: #3F3D56;
-    color:#2F2E41;
     font-size: large;
     margin: auto;
     margin-bottom: 0;
-  
+    font-family: 'Montserrat', sans-serif;
 }

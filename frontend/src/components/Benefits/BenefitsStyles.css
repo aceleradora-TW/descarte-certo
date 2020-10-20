@@ -1,0 +1,60 @@
+.title {
+    text-align: center;
+    margin-bottom: 80px;
+    padding-top: 80px;
+    font-size: 32px
+}
+
+.title-card {
+    font-size: 18px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+.text-card {
+    font-size: 16px;
+}
+
+.benefits-card {
+    margin-bottom: 50px;
+}
+
+@media only screen and (min-width:411px) and (max-width:731px){
+    .text-card{
+       font-size: 14px;
+       text-align: center;
+    }
+  }
+
+  @media only screen and (min-width:768px) and (max-width:1024px){
+    .text-card{
+       font-size: 14px;
+    }
+  }
+
+  @media only screen and (min-width:950px) and (max-width:1280px){
+    .text-card{
+       font-size:16px;
+    }
+}
+
+@media only screen and (min-width:411px) and (max-width:731px){
+    .title-card{
+       font-size: 16px;
+       text-align: center;
+    }
+  }
+
+  @media only screen and (min-width:768px) and (max-width:1024px){
+    .title-card{
+       font-size: 16px;
+       text-align: center;
+    }
+  }
+
+  @media only screen and (min-width:950px) and (max-width:1280px){
+    .title-card{
+       font-size:18px;
+    }
+}
+

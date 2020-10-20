@@ -1,10 +1,12 @@
 import React from 'react'
 import './App.css'
-import NavBarComponent from './components/NavBar/NavBarComponent'
+import NavBar from './components/NavBar/'
 import { Jumbotron } from "react-bootstrap";
-import FooterComponent from './components/Footer/FooterComponent'
-import BannerComponent from './components/images/BannerComponent'
 import FaqComponent from './components/FAQ/FaqComponent'
+import Menu from './components/NavBar/index'
+import Banner from './components/Banner/index'
+import Benefits from './components/Benefits/index'
+import Footer from './components/Footer'
 
 function App() {
   const headerProps = {
@@ -13,25 +15,22 @@ function App() {
   return (
     <div className="App">
       <main className="App-content">
-        <NavBarComponent></NavBarComponent>
-        <BannerComponent>
-        </BannerComponent>
-
+        <Menu />
+        <Banner />
+        <NavBar />
         <div className="flex-box container-box">
-
+          <div className="content-box">
+            <Benefits />
+          </div>
+        </div>
+        <div className="flex-box container-box">
           <Jumbotron className="content-box">
-
           </Jumbotron>
           <FaqComponent></FaqComponent>
-
         </div>
-        <FooterComponent></FooterComponent>
-
-
-
+        <Footer />
       </main>
     </div>
-
   );
 }
 export default App
