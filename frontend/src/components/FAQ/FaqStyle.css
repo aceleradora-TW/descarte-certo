@@ -6,16 +6,29 @@
   font-size: 1.5rem;
 }
 
+/* Alinhamento do icone do Faq */
+.iconFaq {
+ /* padding-left: 20px; */
+ position: absolute;
+  right: 20px;
+  top: 15px;
+}
+
+.imgFaq {
+  padding-left: 450px;
+}
+
 /* Alteracao do estilo do btn do bootstrap */
 .btn.btn {
-  font-size: 1.5rem;
-}
+  font-size: 1.4rem;
+  width: 95%;
+  text-align: left;    
+  }
 
 /* Alteracao da cor de fundo do FAQ */
 .div{
-  background-color: #ffffff
-  ;
-
+  background-color: #ffffff;
+  padding-bottom: 150px;
 }
 
 /* Alteracao de estilo de todos os cards do bootstrap */
@@ -28,15 +41,16 @@
     border-radius: .10rem;
     color: #2d3d57;
     font-family: 'Montserrat', sans-serif;
-    text-align: justify; 
-   
+    text-align: justify;   
+    margin-bottom: -1px;  
 }
 
 /* Alteracao de estilo de todos os cabecalhos dos cards do bootstrap */
 .card-header {
   padding: .75rem 1.25rem;
-  margin-bottom: 0;
-  background-color: #ffffff;  
+  margin-bottom: -1px;
+  background-color: #ffffff;    
+ 
  }
 
 /* Alteracao do titulo do FAQ */
@@ -44,15 +58,17 @@
   text-align: center;
   color: #2d3d57;
   font-family: 'Montserrat';
+  padding-top: 150px;
+  padding-bottom: 30px;
 }
 
 /* Alteracao de estilo do fundo do componente flex-box */
-.flex-box{
+
+ .flex-box{
   background-color: #ffffff;
 }
 
 /* Alteracao de estilo do fundo do componente content-box  */
-.content-box{
-  background-color: #ffffff;
-}
-
+ .content-box{
+  background-color: #ffffff;   
+  } 

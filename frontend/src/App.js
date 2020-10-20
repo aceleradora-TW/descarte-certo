@@ -30,7 +30,7 @@ function App() {
         </div>
         <Footer />
       </main>
-    </div >
+    </div>
   );
 }
 export default App
