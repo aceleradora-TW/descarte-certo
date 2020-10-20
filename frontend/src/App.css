@@ -3,12 +3,13 @@
   justify-content: center;
 }
 .container-box {
-  background-color: #ebebeb;
- 
+  height: 100%;
+  background-color: #ffffff;
+ padding: 50px;
 }
 .content-box {
   color: #303c5b;
-  font-family: Arial;
-  
-  
+  font-family: 'Montserrat', sans-serif;
+  line-height: 30px;
+  background-color: #ffffff;
 }

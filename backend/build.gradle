@@ -6,9 +6,15 @@ buildscript {
         mavenCentral()
     }
     dependencies {
+        classpath 'com.h2database:h2:1.4.197'
         classpath "org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion"
     }
 }
+
+plugins {
+    id "org.flywaydb.flyway" version "7.0.2"
+}
+
 
 apply plugin: 'java'
 apply plugin: 'org.springframework.boot'
@@ -29,10 +35,14 @@ dependencies {
     compile "org.springframework.boot:spring-boot-starter-data-jpa:$springBootVersion"
     compile "org.flywaydb:flyway-core"
     compile "org.postgresql:postgresql:42.2.5"
+    compile  'org.projectlombok:lombok:1.18.14'
+    annotationProcessor 'org.projectlombok:lombok:1.18.14'
 
-    testCompile 'junit:junit:4.12'
+    testCompile 'org.projectlombok:lombok:1.18.14'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.14'
     testCompile "org.mockito:mockito-core:2.21.0"
 
+    testImplementation('org.springframework.boot:spring-boot-starter-test')
     developmentOnly "org.springframework.boot:spring-boot-devtools:$springBootVersion"
 }
 
@@ -56,4 +66,10 @@ processResources {
     from(frontendProject.buildDir) {
         into 'static'
     }
+}
+
+flyway {
+    url = 'jdbc:postgresql://localhost:5432/descarte_certo'
+    user = 'postgres'
+    password = '123456'
 }
