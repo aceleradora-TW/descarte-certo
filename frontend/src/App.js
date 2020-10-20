@@ -1,7 +1,6 @@
 import React from 'react'
 import './App.css'
 import Menu from './components/NavBar/index'
-/*import Footer from './components/Footer/index'*/
 import Banner from'./components/Banner/index'
 import Benefits from './components/Benefits/index'
 import Depositions from './components/Depositions/index'
