@@ -1,0 +1,10 @@
+{
+    "card1" : {
+        "title" : "Garantia do descarte certo",
+        "content" : "Todo resíduo que é coletado através de nossos serviços tem a garantia da destinação final correta e adequada, realizada apenas em locais licenciados e regularizados pelos órgãos ambientais responsáveis."
+    },
+    "card2" : {
+        "title" : "Limpeza Urbana",
+        "content" : "Garantindo que o descarte seja feito apenas em locais corretos, nós estamos evitando que estes resíduos sejam descartados em vias públicas ou em áreas impróprias da cidade,  contribuindo assim, com a limpeza urbana e sua manutenção."
+    }
+}

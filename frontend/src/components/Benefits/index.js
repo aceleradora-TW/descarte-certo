@@ -1,5 +1,6 @@
 import React from 'react'
 import './BenefitsStyles.css'
+import Texts from './texts.json'
 
 function BenefitsComponent() {
     return(
@@ -10,12 +11,12 @@ function BenefitsComponent() {
             <div className="row">
                 <div className="col-sm">
                     <div className="benefits-card">
-                        <h3 className="title-card">Garantia do descarte certo</h3>
-                        <p className="text-card">Todo resíduo que é coletado através de nossos serviços tem a garantia da destinação final correta e adequada, realizada apenas em locais licenciados e regularizados pelos órgãos ambientais responsáveis.</p>
+                        <h3 className="title-card">{Texts.card1.title}</h3>
+                        <p className="text-card">{Texts.card1.content}</p>
                     </div>
                     <div className="benefits-card">
-                        <h3 className="title-card">Limpeza Urbana</h3>
-                        <p className="text-card">Garantindo que o descarte seja feito apenas em locais corretos, nós estamos evitando que estes resíduos sejam descartados em vias públicas ou em áreas impróprias da cidade,  contribuindo assim, com a limpeza urbana e sua manutenção.</p>
+                        <h3 className="title-card">{Texts.card2.title}</h3>
+                        <p className="text-card">{Texts.card2.content}</p>
                     </div>
                     <div className="benefits-card">
                         <h3 className="title-card">Economia Circular </h3>
