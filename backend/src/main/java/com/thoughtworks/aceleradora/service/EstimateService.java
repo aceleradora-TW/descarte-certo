@@ -19,7 +19,8 @@ public class EstimateService {
     }
 
     public Estimate create(EstimateRequest estimateRequest) {
-        return estimateRepository.save(estimateConverterService.converter(estimateRequest));
+        Estimate estimateEntity = estimateConverterService.converter(estimateRequest);
+        return estimateRepository.save(estimateEntity);
     }
 
     public Optional<Estimate> getEstimate(int codigo) {
