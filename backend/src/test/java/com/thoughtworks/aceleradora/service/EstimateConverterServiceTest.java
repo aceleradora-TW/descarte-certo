@@ -52,4 +52,19 @@ public class EstimateConverterServiceTest {
         assertThat(estimateEntity.getResidueAddress().getCep()).isEqualTo(expectedAddressCep);
     }
 
+    @Test
+    public void shouldCreateEstimateConvertingTheRightLocationInfo() {
+        String expectedLocationInfo = "Tem Elevador";
+        ResidueAddressRequest residueAddressRequest = ResidueAddressRequest.builder()
+                .locationInfo(expectedLocationInfo)
+                .build();
+
+        EstimateRequest validEstimateRequest = createValidRequest();
+        validEstimateRequest.setResidueAddress(residueAddressRequest);
+
+        Estimate estimateEntity = estimateConverterService.converter(validEstimateRequest);
+
+        assertThat(estimateEntity.getResidueAddress().getLocationInfo()).isEqualTo(expectedLocationInfo);
+    }
+
 }

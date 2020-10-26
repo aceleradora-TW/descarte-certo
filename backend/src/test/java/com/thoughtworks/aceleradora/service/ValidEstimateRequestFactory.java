@@ -15,6 +15,7 @@ public class ValidEstimateRequestFactory {
                         .build())
                 .residueAddress(ResidueAddressRequest.builder()
                         .cep("900000000")
+                        .locationInfo("Tem Elevador")
                         .build())
                 .build();
         return estimateRequest;
