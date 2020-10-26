@@ -11,11 +11,12 @@ function DepositionsComponent() {
     <div>
       <div className="div-depositions" id="Depoimentos">
         <h1>Depoimentos</h1>
-      </div>
       <CardDeck>
         <Card>
+          <div  class="avatar">
+            <Card.Img variant="top" src={Avatar}/>
+          </div>
           <Card.Body>
-              <Card.Img class="avatar" variant="top" src={Avatar}/>
               <Card.Title> Sebastian Pereira </Card.Title>
                 <Card.Text>
                 Essa é a importância dos centros de reciclagem, o que antes ia para o aterro vira outro 
@@ -50,6 +51,7 @@ function DepositionsComponent() {
           </Card.Body>
         </Card>
       </CardDeck>
+    </div>
     </div>
   )
 } export default DepositionsComponent

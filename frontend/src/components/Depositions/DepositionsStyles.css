@@ -5,10 +5,14 @@
     line-height: 30px;
     color: #303c5b;
     background-color: #F5F4F6;
+    padding-bottom: 33px;
+    padding-top: 22px;
 }
 .avatar{
-    width: 10%;
-    text-align: center;
+    width: 25%;
+    height: auto;
+    margin: auto;
+    margin-top: 10px; 
 }
 .card-depositions{
     border-color: aqua;
@@ -16,7 +20,7 @@
 }
 
 .card {
-    width: 200px;
+    width: 120px;
     height: 300px;
     position: relative;
     display: flex;
@@ -31,12 +35,28 @@
     -moz-box-shadow: 3px 3px 10px 5px #26E2C5;
     -webkit-box-shadow: 1px 1px 40px 1px #0c3f37;
     -o-box-shadow: 3px 3px 10px 5px #26E2C5;
+    margin: 5px 5px 5px 5px;
 }
 .img {
     vertical-align: super;
     border-style: none;
 
 }
-.card.title{
+.card-title{
     text-align: center;
+    margin-top: 7px;
+    margin-bottom: 15px;
+}
+.card-text{
+    font-size: 13px;
+    margin: auto;
+    line-height: 22px;
+    text-align: left;
+}
+.card-body{
+    padding: 0px 15px 15px 15px
+}
+.card-deck{
+    width: 850px;
+    margin: auto;
 }
