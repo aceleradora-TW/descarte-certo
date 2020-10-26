@@ -18,6 +18,7 @@ public class EstimateConverterService {
                 )
                 .residueAddress(ResidueAddress.builder()
                         .cep(request.getResidueAddress().getCep())
+                        .locationInfo(request.getResidueAddress().getLocationInfo())
                         .build())
                 .build();
     }
