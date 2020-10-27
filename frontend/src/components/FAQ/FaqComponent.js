@@ -11,7 +11,7 @@ function FaqComponent() {
     return (
 
         <div className="div col-6">
-            <h1 id="FAQ" className="title">FAQ</h1>
+            <h1 id="FAQ" className="title">{Texts.faq.title}</h1>
             <Accordion >
                 <Card>
                     <Card.Header>
