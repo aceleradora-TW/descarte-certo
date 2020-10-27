@@ -1,0 +1,29 @@
+{
+    "depositions": {
+        "title" : "Depoimentos"
+    },
+    "card1" : {	   
+        "title" : "Stephanie Conte",	   
+        "content" : "Serviço exatamente qualificado com profissionais atenciosos."      
+    },	   
+    "card2" : {	    
+        "title" : "Juliane Fernandes",	      
+        "content" : "Além de recolherem pequenos volumes vcs dão o destino certo e o valor é justo."	        
+    },
+    "card3" : {
+        "title" : "Everton Correa de Borba",
+        "content" : "Ótimo trabalho! Fiquei muito feliz em saber que os resíduos terão o destino correto. Por mais empresas assim! Parabéns."
+    },
+    "card4" : {
+        "title" : "Amanda Kaster",
+        "content" : "Foi muito fácil e rápido o atendimento da 5 Marias. Marcamos tudo pelo WhatsApp, agendei o dia e a hora que quis e fui atendida pontualmente. E o melhor: preço justo e pagamento comcartão. 5 estrelas para esse projeto."
+    },
+    "card5" : {
+        "title" : "Paula Lopes",
+        "content" : "O atendimento foi eficiente e claro desde o primeiro contato. O pessoal que veio buscar os materiais também foram super rápidos e cuidadosos. Fico mais tranquila em encontrar uma empresa que se preocupa com o encaminhamento correto dos materiais evitando transtornos ao meio ambiente. Super recomendo a empresa."
+    },	
+    "card6" : {
+        "title" : "Arlei Romeiro",
+        "content" : "Gostaria de agradecer as 5 Marias – Projetos Sustentáveis pelo ótimo serviço prestado no descarte adequado dos resíduos de construção civil. Aproveito também para parabenizar as idealizadoras pelo projeto que além de inovador é altamente sustentável, dando destino adequado para os RCC e preservando o nosso meio ambiente! Para quem está em obra, super recomendo as 5 Marias."
+    }	     
+}
