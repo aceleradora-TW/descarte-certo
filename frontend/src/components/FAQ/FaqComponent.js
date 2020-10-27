@@ -12,7 +12,6 @@ function FaqComponent() {
         <div className="div col-6">
             <h1 id="FAQ" className="title">FAQ</h1>
             <Accordion >
-                {/* Card 1 */}
                 <Card>
                     <Card.Header>
                         <Accordion.Toggle as={Button} variant="" eventKey="0">
@@ -26,7 +25,6 @@ function FaqComponent() {
                     </Accordion.Collapse>
                 </Card>
 
-                {/* Card 2 */}
                 <Card>
                     <Card.Header>
                         <Accordion.Toggle as={Button} variant="" eventKey="1">
@@ -45,7 +43,6 @@ function FaqComponent() {
                     </Accordion.Collapse>
                 </Card>
 
-                {/* Card 3 */}
                 <Card>
                     <Card.Header>
                         <Accordion.Toggle as={Button} variant="" eventKey="2">
@@ -58,7 +55,6 @@ function FaqComponent() {
                     </Accordion.Collapse>
                 </Card>
 
-                {/* Card 4 */}
                 <Card>
                     <Card.Header>
                         <Accordion.Toggle as={Button} variant="" eventKey="3">
@@ -71,7 +67,6 @@ function FaqComponent() {
                     </Accordion.Collapse>
                 </Card>
 
-                {/* Card 5 */}
                 <Card>
                     <Card.Header>
                         <Accordion.Toggle as={Button} variant="" eventKey="4">
@@ -85,7 +80,7 @@ function FaqComponent() {
                     </Accordion.Collapse>
                 </Card>
 
-                {/* Card 6 */}
+               
                 <Card>
                     <Card.Header>
                         <Accordion.Toggle as={Button} variant="" eventKey="5">
@@ -100,7 +95,6 @@ function FaqComponent() {
                     </Accordion.Collapse>
                 </Card>
 
-                {/* Card 7 */}
                 <Card>
                     <Card.Header>
                         <Accordion.Toggle as={Button} variant="" eventKey="6">
