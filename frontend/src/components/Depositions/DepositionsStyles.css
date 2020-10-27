@@ -1,5 +1,7 @@
-.div-depositions{
+.container-fluid{
+    width: 100%;
     position: relative;
+    padding: 2%;
     text-align: center;
     font-family: 'Montserrat', sans-serif ;
     line-height: 30px;
@@ -7,21 +9,6 @@
     background-color: #F5F4F6;
 }
 
-.content-box{
-    text-align: center;
-}
-.card-deck{
-    border: #ffffff 
-}
-
-.div-depositions{
-    width: 120%;
-    text-align: center;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    margin-left: -500px;
-    padding: 50px;
-}
 
 .imgCard{
     width: 8rem;
@@ -32,18 +19,17 @@
     overflow: hidden;
    
 }
-.card-depositions{
-    border-color: aqua;
-    border-style: dashed; 
+.col-sx{
+    margin-bottom: 5%; 
+    
 }
 
 .card {
     width: 450px;
     height: 500px;
     top: 30px;
-    bottom: 200px;
-    left: 50px;
-    padding: 10px;
+    bottom: 30px;
+    padding: 20px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -59,11 +45,6 @@
     -o-box-shadow: 3px 3px 50px 5px #26E2C5;
 }
 
-.card-deck{
-    width: 1350px;
-    height: 600px;
-}
-
 .img {
     vertical-align: super;
     border-style: none;
@@ -77,53 +58,42 @@
     font-size: 18px;
 }
 
-div {
-    display: block;
-}
-
-@media only screen and (min-width:411px) and (max-width:731px){
-    .carousel>.card-deck>.card>{
-        width: 100%;
-        height: 240px; 
-    }
+@media only screen and (min-width:280px) and (max-width:768px){
     .card.title{
         font-size: 12px;
+        text-align: center;
+        margin: 1px;
+        margin-top: 1px;
     }
-  }
-
-  @media only screen and (min-width:768px) and (max-width:1024px){
-    .carousel>.card-deck>.card>{
+    .text-card{
+        font-size: 10px;
+        text-align: center;
+        padding-bottom: 5%;
+    }
+    .imgCard{
+        width: 25%;
+        height: 20%;
+    }
+    .card {
+        width: 80%;
+        height: 100%;
+        margin-bottom: 20%;
+        padding-bottom: 5%;
+        display: flex!important;
+        justify-content: space-around;
+    }
+    .container-fluid{
         width: 100%;
-        height: 300px; 
-    }
-    .card.title{
-        font-size: 12px;
-    }
-    
-  }
-
-  @media only screen and (min-width:950px) and (max-width:1280px){
-    .card{
-       font-size:16px;
-    }
-}
-
-@media only screen and (min-width:411px) and (max-width:731px){
-    .card.title{
-       font-size: 16px;
-       text-align: center;
     }
   }
 
   @media only screen and (min-width:768px) and (max-width:1024px){
     .card.title{
-       font-size: 16px;
+       font-size: 14px;
        text-align: center;
     }
-  }
-
-  @media only screen and (min-width:950px) and (max-width:1280px){
-    .card.title{
-       font-size:18px;
+    .text-card{
+        font-size: 12px;
+        text-align: center;
     }
-}
+  }
