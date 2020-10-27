@@ -1,0 +1,40 @@
+.form{
+display: block;
+width: 50%;
+padding: 12px 20px;
+
+}
+
+.form[type=text]{
+    width: 40%;
+
+}
+
+.form[type=email]{
+    width: 40%;
+
+}
+
+.form[type=number]{
+    width: 40%;
+
+}
+
+.button{
+    background-color:#333333;
+    color:white;
+    border:1%;
+}
+
+.field-input{
+    border-radius: 10px;
+}
+
+
+.modal-content {
+    border-radius: 1rem;
+  }
+
+
+/* #32bf89*/
+
