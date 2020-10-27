@@ -1,4 +1,4 @@
-package com.thoughtworks.aceleradora.domain;
+package com.thoughtworks.aceleradora.service;
 
 import com.thoughtworks.aceleradora.controller.request.EstimateRequest;
 import com.thoughtworks.aceleradora.entity.Estimate;
@@ -7,19 +7,20 @@ import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
-import static com.thoughtworks.aceleradora.entity.Estimate.from;
-
 @Service
 public class EstimateService {
 
     private EstimateRepository estimateRepository;
+    private EstimateConverterService estimateConverterService;
 
-    EstimateService(EstimateRepository repository) {
+    EstimateService(EstimateRepository repository, EstimateConverterService estimateConverter) {
         this.estimateRepository = repository;
+        this.estimateConverterService = estimateConverter;
     }
 
     public Estimate create(EstimateRequest estimateRequest) {
-        return estimateRepository.save(from(estimateRequest));
+        Estimate estimateEntity = estimateConverterService.converter(estimateRequest);
+        return estimateRepository.save(estimateEntity);
     }
 
     public Optional<Estimate> getEstimate(int codigo) {

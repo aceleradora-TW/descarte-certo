@@ -18,4 +18,5 @@ public class ResidueAddress {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String cep;
+    private String locationInfo;
 }

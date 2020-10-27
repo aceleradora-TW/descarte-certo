@@ -24,19 +24,5 @@ public class Estimate {
 
     @OneToOne(cascade=CascadeType.ALL)
     private ResidueAddress residueAddress;
-
-    public static Estimate from(EstimateRequest request) {
-        return Estimate
-                .builder()
-                   .requester(
-                           Requester.builder()
-                                  .name(request.getRequester().getName())
-                                   .build()
-                   )
-                .residueAddress(ResidueAddress.builder()
-                        .cep(request.getResidueAddress().getCep())
-                        .build())
-                .build();
-    }
 }
 

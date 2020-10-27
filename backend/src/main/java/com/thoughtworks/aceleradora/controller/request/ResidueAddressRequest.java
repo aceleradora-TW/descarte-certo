@@ -11,4 +11,5 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class ResidueAddressRequest {
     private String cep;
+    private String locationInfo;
 }
