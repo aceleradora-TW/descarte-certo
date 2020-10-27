@@ -36,8 +36,8 @@ function DepositionsComponent() {
               <Card.Img variant="top" src={PhotoCard2}/>
             </div>
             <Card.Body>
-              <Card.Title>{TextsDepositions.card2.title}</Card.Title>
-              <Card.Text>{TextsDepositions.card2.content}</Card.Text>
+              <Card.Title className='card.title'>{TextsDepositions.card2.title}</Card.Title>
+              <Card.Text className='text-card'>{TextsDepositions.card2.content}</Card.Text>
             </Card.Body>
           </Card>
 
@@ -46,8 +46,8 @@ function DepositionsComponent() {
               <Card.Img variant="top" src={PhotoCard3}/>
             </div>
             <Card.Body>
-              <Card.Title>{TextsDepositions.card3.title}</Card.Title>
-              <Card.Text>{TextsDepositions.card3.content}</Card.Text>
+              <Card.Title className='card.title'>{TextsDepositions.card3.title}</Card.Title>
+              <Card.Text className='text-card'>{TextsDepositions.card3.content}</Card.Text>
             </Card.Body>
           </Card>
       </CardDeck>
@@ -58,8 +58,8 @@ function DepositionsComponent() {
             <Card.Img variant="top" src={PhotoCard4}/>
           </div>
           <Card.Body>
-            <Card.Title>{TextsDepositions.card4.title}</Card.Title>
-            <Card.Text>{TextsDepositions.card4.content}</Card.Text>
+            <Card.Title className='card.title'>{TextsDepositions.card4.title}</Card.Title>
+            <Card.Text className='text-card'>>{TextsDepositions.card4.content}</Card.Text>
           </Card.Body>
         </Card>
 
@@ -68,8 +68,8 @@ function DepositionsComponent() {
             <Card.Img variant="top" src={PhotoCard5}/>
           </div>
           <Card.Body>
-            <Card.Title>{TextsDepositions.card5.title}</Card.Title>
-            <Card.Text>{TextsDepositions.card5.content}</Card.Text>
+            <Card.Title className='card.title'>{TextsDepositions.card5.title}</Card.Title>
+            <Card.Text className='text-card'>{TextsDepositions.card5.content}</Card.Text>
           </Card.Body>
         </Card>
 
@@ -78,8 +78,8 @@ function DepositionsComponent() {
             <Card.Img variant="top" src={PhotoCard6}/>
           </div>
           <Card.Body>
-            <Card.Title>{TextsDepositions.card6.title}</Card.Title>
-            <Card.Text>{TextsDepositions.card6.content}</Card.Text>
+            <Card.Title className='card.title'>{TextsDepositions.card6.title}</Card.Title>
+            <Card.Text className='text-card'>{TextsDepositions.card6.content}</Card.Text>
           </Card.Body>
         </Card>
       </CardDeck>
