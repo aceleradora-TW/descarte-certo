@@ -11,11 +11,7 @@ function FaqComponent() {
     return (
 
         <div className="div col-6">
-<<<<<<< HEAD
             <h1 id="FAQ" className="title">FAQ</h1>
-=======
-            <h1 id="anchorFAQ" className="title">{Texts.faq.title}</h1>
->>>>>>> 32d20cc6241e1d93dff31f52172b63089358a0eb
             <Accordion >
                 <Card>
                     <Card.Header>
