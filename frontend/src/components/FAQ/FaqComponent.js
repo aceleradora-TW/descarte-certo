@@ -10,7 +10,7 @@ function FaqComponent() {
     return (
 
         <div className="div col-6">
-            <h1 id="anchorFAQ" className="title">FAQ</h1>
+            <h1 id="FAQ" className="title">FAQ</h1>
             <Accordion >
                 {/* Card 1 */}
                 <Card>
