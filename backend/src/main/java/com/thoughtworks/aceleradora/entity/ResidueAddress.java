@@ -1,6 +1,5 @@
 package com.thoughtworks.aceleradora.entity;
 
-import com.thoughtworks.aceleradora.controller.request.EstimateRequest;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -9,20 +8,15 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "estimate")
+@Table(name = "residue_address")
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class Estimate {
+public class ResidueAddress {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
-    @OneToOne(cascade=CascadeType.ALL)
-    private Requester requester;
-
-    @OneToOne(cascade=CascadeType.ALL)
-    private ResidueAddress residueAddress;
+    private String cep;
+    private String locationInfo;
 }
-

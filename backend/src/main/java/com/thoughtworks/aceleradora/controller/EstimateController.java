@@ -2,7 +2,7 @@ package com.thoughtworks.aceleradora.controller;
 
 import com.thoughtworks.aceleradora.controller.request.EstimateRequest;
 import com.thoughtworks.aceleradora.controller.response.EstimateResponse;
-import com.thoughtworks.aceleradora.domain.EstimateService;
+import com.thoughtworks.aceleradora.service.EstimateService;
 import com.thoughtworks.aceleradora.entity.Estimate;
 import com.thoughtworks.aceleradora.exception.EstimateNotFoundException;
 import org.springframework.http.HttpStatus;
