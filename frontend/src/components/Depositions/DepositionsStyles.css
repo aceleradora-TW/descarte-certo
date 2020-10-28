@@ -1,6 +1,9 @@
 .container-fluid{
     width: 100%;
+    height: auto;
     position: relative;
+    align-content: center;
+    display: block;
     padding: 2%;
     text-align: center;
     font-family: 'Montserrat', sans-serif ;
@@ -8,8 +11,6 @@
     color: #303c5b;
     background-color: #F5F4F6;
 }
-
-
 .imgCard{
     width: 8rem;
     height: 8rem;
@@ -17,22 +18,15 @@
     margin-top: 10px;
     border-radius: 50%;
     overflow: hidden;
-   
 }
-.col-sx{
-    margin-bottom: 5%; 
-    
-}
-
 .card {
-    width: 450px;
+    width: 350px;
     height: 500px;
-    top: 30px;
-    bottom: 30px;
-    padding: 20px;
+    margin: 20px;
+    bottom: auto;
     position: relative;
-    display: flex;
-    flex-direction: column;
+    display: block;
+    flex-direction:column;
     min-width: 0;
     word-wrap: break-word;
     background-color: #ffffff;
@@ -44,18 +38,29 @@
     -webkit-box-shadow: 1px 1px 10px 1px #98d4cb;
     -o-box-shadow: 3px 3px 50px 5px #26E2C5;
 }
-
+.col-sx {
+    width: 100%;
+    height: auto;
+    margin: 10px;
+    bottom: auto;
+    position: relative;
+    display: flex;
+}
 .img {
     vertical-align: super;
     border-style: none;
 }
-
-.card.title{
-    text-align: center;
-    margin-top: 500px;
+.text-card{
     font-size: 16px;
-    margin-bottom: .75rem;
+    text-align: center;
+    padding-bottom: 5%;
+    font-style: italic;
+}
+.card.title{
     font-size: 18px;
+    text-align: center;
+    margin: 1px;
+    margin-top: 1px;
 }
 
 @media only screen and (min-width:280px) and (max-width:768px){
@@ -71,29 +76,104 @@
         padding-bottom: 5%;
     }
     .imgCard{
-        width: 25%;
-        height: 20%;
+        display: block;
     }
     .card {
-        width: 80%;
-        height: 100%;
-        margin-bottom: 20%;
-        padding-bottom: 5%;
-        display: flex!important;
-        justify-content: space-around;
-    }
-    .container-fluid{
-        width: 100%;
+            margin: 10px;
+            bottom: auto;
+            position: relative;
+            display: inline;
+            flex-direction:column;
+            grid-row: span 2;
     }
   }
 
-  @media only screen and (min-width:768px) and (max-width:1024px){
+  @media only screen and (min-width:411px) and (max-width:736px){
     .card.title{
-       font-size: 14px;
-       text-align: center;
-    }
-    .text-card{
         font-size: 12px;
         text-align: center;
+        margin: 1px;
+        margin-top: 1px;
     }
+    .text-card{
+        font-size: 10px;
+        text-align: center;
+        padding-bottom: 5%;
+    }
+    .imgCard{
+        display: block;
+    }
+    .card {
+            margin: 10px;
+            bottom: auto;
+            position: relative;
+            display: inline;
+            flex-direction:column;
+            grid-row: span 2;
+    }
+}
+
+  @media only screen and (min-width:768px) and (max-width:1024px){
+    .card.title{
+        font-size: 16px;
+        text-align: center;
+        margin: 1px;
+        margin-top: 1px;
+    }
+    .text-card{
+        font-size: 14px;
+        text-align: center;
+        padding-bottom: 5%;
+    }
+    .imgCard{
+        display: block;
+    }
+    .card {
+            width: 450px;
+            align-items: center;
+            left: 50px;
+            margin: 10px;
+            bottom: auto;
+            position: relative;
+            display: flex;
+            flex-direction:column;
+    }   
   }
+
+  @media only screen and (min-width:1024px) and (max-width:1366px){
+    .card.title{
+        font-size: 16px;
+        text-align: center;
+        margin: 1px;
+        margin-top: 1px;
+    }
+    .text-card{
+        font-size: 14px;
+        text-align: center;
+        padding-bottom: 5%;
+    }
+    .imgCard{
+        display: block;
+    }
+    .card {
+            align-items: center;
+            width: 450px;
+            left: 200px;
+            margin: 10px;
+            bottom: auto;
+            position: relative;
+            display: flex;
+            flex-direction:column;
+    }  
+  }
+
+
+
+
+
+
+
+
+
+
+
