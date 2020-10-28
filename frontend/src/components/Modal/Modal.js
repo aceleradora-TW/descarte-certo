@@ -59,66 +59,65 @@ function Modal(props) {
             isSubmitting,
             isValid,
           }) => (
-            <Form className="form-inputs-style">
-              <Field
-                className="form-control field-input"
-                name="nomeCompleto"
-                placeholder="Nome Completo"
-                onChange={handleChange}
-                value={values.nomeCompleto}
-                onBlur={handleBlur}
-                required/>
-              <ErrorMessage component="div" name="nomeCompleto" />
-              <br />
-              <Field
-                className="form-control field-input"
-                name="email"
-                value={values.email}
-                onChange={handleChange}
-                onBlur={handleBlur}
-                placeholder="E-mail"
-                required/>
-              <ErrorMessage component="div" name="email" />
-              <br />
-              <Row>
-                <Col lg="6">
-                  <FormGroup>
-                    <Field
-                      className="form-control field-input"
-                      name="telefoneCelular"
-                      value={values.telefoneCelular}
-                      onChange={handleChange}
-                      onBlur={handleBlur}
-                      placeholder="Telefone Celular"
-                      required/>
-                    <ErrorMessage component="div" name="telefoneCelular" />
-                  </FormGroup>
-                </Col>
+              <Form className="form-inputs-style">
+                <Field
+                  className="form-control field-input"
+                  name="nomeCompleto"
+                  placeholder="Nome Completo"
+                  onChange={handleChange}
+                  value={values.nomeCompleto}
+                  onBlur={handleBlur}
+                  required />
+                <ErrorMessage component="div" name="nomeCompleto" />
+                <br />
+                <Field
+                  className="form-control field-input"
+                  name="email"
+                  value={values.email}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  placeholder="E-mail"
+                  required />
+                <ErrorMessage component="div" name="email" />
+                <br />
+                <Row>
+                  <Col lg="6">
+                    <FormGroup>
+                      <Field
+                        className="form-control field-input"
+                        name="telefoneCelular"
+                        value={values.telefoneCelular}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        placeholder="Telefone Celular"
+                        required />
+                      <ErrorMessage component="div" name="telefoneCelular" />
+                    </FormGroup>
+                  </Col>
 
-                <Col lg="6">
-                  <FormGroup>
-                    <Field
-                      className="form-control field-input"
-                      name="cep"
-                      value={values.cep}
-                      onChange={handleChange}
-                      placeholder="CEP"
-                      required/>
-                    <ErrorMessage component="div" name="cep" />
-                  </FormGroup>
-                </Col>
-              </Row>
+                  <Col lg="6">
+                    <FormGroup>
+                      <Field
+                        className="form-control field-input"
+                        name="cep"
+                        value={values.cep}
+                        onChange={handleChange}
+                        placeholder="CEP"
+                        required />
+                      <ErrorMessage component="div" name="cep" />
+                    </FormGroup>
+                  </Col>
+                </Row>
 
-              <Button
-                className="button"
-                disabled={!isValid || isSubmitting}
-                block
-                color="secondary"
-                onClick={props.handleBudgetClick}>
-                Solicitar
+                <Button 
+                  disabled={!isValid || isSubmitting}
+                  block
+                  color="secondary"
+                  onClick={props.handleBudgetClick}>
+                  Solicitar
               </Button>
-            </Form>
-          )}
+              </Form>
+            )}
         </Formik>
       </ModalBody>
     </BootstrapModal>

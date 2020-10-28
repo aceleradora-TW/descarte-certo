@@ -1,40 +1,40 @@
 import React from 'react'
-import './index.css'
+import './BenefitsStyles.css'
+import Texts from './texts.json'
 
-function Benefits() {
+function BenefitsComponent() {
     return(
         <div>
             <div >
-                <h1 id ="anchorBenefits" className="title">Benefícios da Plataforma</h1>
+                <h1 id ="Beneficios" className="title">{Texts.benefits.title}</h1>
             </div>
             <div className="row">
-                <div className="col-6" >
+                <div className="col-sm">
                     <div className="benefits-card">
-                        <h3 className="title-card">Garantia do descarte certo</h3>
-                        <p className="text-card">Todo resíduo que é coletado através de nossos serviços tem a garantia da destinação final correta e adequada, realizada apenas em locais licenciados e regularizados pelos órgãos ambientais responsáveis.</p>
+                        <h3 className="title-card">{Texts.card1.title}</h3>
+                        <p className="text-card">{Texts.card1.content}</p>
                     </div>
                     <div className="benefits-card">
-                        <h3 className="title-card">Limpeza Urbana</h3>
-                        <p className="text-card">Garantindo que o descarte seja feito apenas em locais corretos, nós estamos evitando que estes resíduos sejam descartados em vias públicas ou em áreas impróprias da cidade,  contribuindo assim, com a limpeza urbana e sua manutenção</p>
+                        <h3 className="title-card">{Texts.card2.title}</h3>
+                        <p className="text-card">{Texts.card2.content}</p>
                     </div>
                     <div className="benefits-card">
-                        <h3 className="title-card">Economia Circular </h3>
-                        <p className="text-card">Com a utilização e retorno dos resíduos em novas construções, estamos colocando em prática o conceito de economia circular, que baseia-se na redução, reutilização, recuperação e reciclagem de materiais e energia, prolongando a vida útil destes recursos.</p>
+                        <h3 className="title-card">{Texts.card3.title}</h3>
+                        <p className="text-card">{Texts.card3.content}</p>
                     </div> 
                 </div>
-                <div className="col-6" >
+                <div className="col-sm">
                     <div className="benefits-card">
-                        <h3 className="title-card">Preservação Ambiental</h3>
-                        <p className="text-card">Através da reciclagem dos resíduos coletados e a reinserção na cadeia de produção, estamos contribuindo com a diminuição de extração de novos recursos naturais.</p>
+                        <h3 className="title-card">{Texts.card4.title}</h3>
+                        <p className="text-card">{Texts.card4.content}</p>
                     </div>
                     <div className="benefits-card">
-                        <h3 className="title-card">Reciclagem</h3>
-                        <p className="text-card">Nosso serviço conta com parceiros que trabalham com o beneficiamento e a reciclagem dos resíduos da construção civil coletados por nós. O processo da reciclagem garante o retorno destes resíduos a cadeia produtiva no setor da construção, como material chamado agregado reciclado. </p>
+                        <h3 className="title-card">{Texts.card5.title}</h3>
+                        <p className="text-card">{Texts.card5.content}</p>
                     </div>
                 </div>
             </div>
         </div>
     )
 }
-
-export default Benefits;
+export default BenefitsComponent;

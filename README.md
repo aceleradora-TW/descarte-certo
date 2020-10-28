@@ -45,6 +45,25 @@ git commit -m "#4/ @Maria @Joao: Adiciona o CSS para o botão de envio de email"
 ### 8) Garantir que o build+deploy da master rodou com sucesso e pedir para outra dupla fazer o QA
 - BUILD: https://app.circleci.com/pipelines/github/aceleradora-TW/descarte-certo
 
+## Como ver os logs da aplicação
+### Stage
+```
+heroku logs --app descartecerto --tail
+```
+
+### Prod
+```
+heroku logs --app descartecerto-prod --tail
+```
+
+## Backend testes
+
+Usando https://httpie.org/
+
+```
+http GET http://localhost:8080/solicitcaoOrcamentoDescarte/1
+http POST http://localhost:8080/solicitcaoOrcamentoDescarte/create < backend/src/test/resources/createSolicitacaoRequest.json
+```
 
 ## Tecnologias
 

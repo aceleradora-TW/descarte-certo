@@ -4,7 +4,7 @@ readonly CONTAINER_NAME=template-aceleradora-db
 readonly POSTGRES_USER=postgres
 readonly POSTGRES_PASSWORD=123456
 readonly POSTGRES_IMAGE="postgres:12"
-readonly DATABASE_NAME=template_aceleradora
+readonly DATABASE_NAME=descarte_certo
 
 case $1 in
   run-volatile)
