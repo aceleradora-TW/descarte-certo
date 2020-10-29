@@ -1,1 +1,0 @@
-ALTER TABLE users RENAME CONSTRAINT enterpreneur_pkey to users_pk;

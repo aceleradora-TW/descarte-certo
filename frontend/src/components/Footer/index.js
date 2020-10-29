@@ -6,17 +6,16 @@ import FaceIcon from '../images/icon-face.png'
 import InstaIcon from '../images/icon-insta.png'
 import WhatsIcon from '../images/icon-whats.png'
 import MailIcon from '../images/icon-mail.png'
-
+import Contact from './texts.json'
 
 
 function FooterComponent(){
-    let telefone="(51)98311-1490" 
     return (  
             <div id ="Contato" className="footerStyle" fixed="bottom" >
                 <Row className="row-style">
                     <Col className="footerStyle-texts">
-                        <Col>Contato:</Col>
-                        <Col>{telefone}</Col>
+                        <Col>{Contact.data.contact}</Col>
+                        <Col>{Contact.data.telephone}</Col>
                     </Col>
                     <Col>
                         <Col className="social-media-icons" >

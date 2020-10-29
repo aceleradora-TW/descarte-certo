@@ -46,6 +46,32 @@ git commit -m "#4/ @Maria @Joao: Adiciona o CSS para o botão de envio de email"
 - BUILD: https://app.circleci.com/pipelines/github/aceleradora-TW/descarte-certo
 
 
+## Pipeline
+
+* [CircleCI - Descarte Certo](https://app.circleci.com/pipelines/github/aceleradora-TW/descarte-certo)
+* [Heroku - Descarte Certo](https://dashboard.heroku.com/apps/descartecerto)
+
+
+## Como ver os logs da aplicação
+### Stage
+```
+heroku logs --app descartecerto --tail
+```
+
+### Prod
+```
+heroku logs --app descartecerto-prod --tail
+```
+
+## Backend testes
+
+Usando https://httpie.org/
+
+```
+http GET http://localhost:8080/solicitcaoOrcamentoDescarte/1
+http POST http://localhost:8080/solicitcaoOrcamentoDescarte/create < backend/src/test/resources/createSolicitacaoRequest.json
+```
+
 ## Tecnologias
 
   - [Java 11](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
@@ -53,6 +79,8 @@ git commit -m "#4/ @Maria @Joao: Adiciona o CSS para o botão de envio de email"
   - React
   - [Postgres 12](https://www.postgresql.org/download/)
   - [IntelliJ Community Edition](https://www.jetbrains.com/idea/download/)
+  - [Heroku reference](https://devcenter.heroku.com/categories/reference)
+  - [CircleCI reference](https://circleci.com/docs/2.0/getting-started/#section=getting-started)
 
 
 ###  Ferramentas recomendadas (não obrigatórias)

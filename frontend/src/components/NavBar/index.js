@@ -2,6 +2,7 @@ import React from 'react'
 import { Navbar, Nav } from 'react-bootstrap'
 import "./NavBarStyle.css"
 import Logotipo from '../images/logo-5marias.png'
+import NavId from './texts.json'
 
 function NavBarComponent() {
     return (
@@ -10,11 +11,11 @@ function NavBarComponent() {
             <Navbar.Toggle aria-controls="basic-navbar-nav " />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto mx-auto nb-cont">
-                    <Nav.Link  href="#Contato">Contato</Nav.Link >
-                    <Nav.Link  href="#Beneficios" >Beneficios</Nav.Link>
-                    <Nav.Link  href="#Depoimentos">Depoimento</Nav.Link>
-                    <Nav.Link  href="#FAQ">FAQ</Nav.Link>
-                    <Nav.Link  href="#Orcamento">Orçamento</Nav.Link>
+                    <Nav.Link  href="#Contato">{NavId.id.contact}</Nav.Link >
+                    <Nav.Link  href="#Beneficios" >{NavId.id.benefits}</Nav.Link>
+                    <Nav.Link  href="#Depoimentos">{NavId.id.depositions}</Nav.Link>
+                    <Nav.Link  href="#FAQ">{NavId.id.faq}</Nav.Link>
+                    <Nav.Link  href="#Orcamento">{NavId.id.budget}</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

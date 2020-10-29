@@ -1,5 +1,7 @@
 import React from 'react'
 import './App.css'
+import { Jumbotron } from "react-bootstrap";
+import FaqComponent from './components/FAQ/FaqComponent'
 import Menu from './components/NavBar/index'
 import Banner from'./components/Banner/index'
 import Benefits from './components/Benefits/index'
@@ -13,24 +15,24 @@ function App() {
   return (
     <div className="App">
       <main className="App-content">
-          <Menu/>
-          <Banner/>
-          <div className="flex-box container-box">
-            <div className="content-box">
-                <Benefits/>       
-            </div>
-            <div className="content-box">
-                <Depositions/>     
-            </div>
+        <Menu />
+        <Banner />
+        <div className="flex-box container-box">
+          <div className="content-box">
+            <Benefits />
           </div>
-         <Footer/>
+          <div className="content-box">
+                <Depositions/>     
+          </div>
+        </div>
+        <div className="flex-box container-box">
+          <Jumbotron className="content-box">
+          </Jumbotron>
+          <FaqComponent></FaqComponent>
+        </div>
+        <Footer />
       </main>
-
-          
     </div>
-  
-    
-     
   );
 }
 export default App
