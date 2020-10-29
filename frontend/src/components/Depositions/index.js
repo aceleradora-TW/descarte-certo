@@ -164,9 +164,7 @@ function renderCard() {
               </Card>
             </div>
         </div>
-        <div><h1>hdsjhssdkhskdshdkhsdhdshsskddshskhkdshkdskdhhkdshdkhdskds</h1></div>
     </Carousel>
-   
     </div>
     )
    }
