@@ -16,7 +16,7 @@ function DepositionsComponent() {
   }
 function renderCard() {
          
-         if(window.innerWidth < 700){
+         if(window.innerWidth < 600){
          
           return(
             <div id ="Depoimentos" className='container-fluid'>
@@ -164,9 +164,7 @@ function renderCard() {
               </Card>
             </div>
         </div>
-        <div><h1>hdsjhssdkhskdshdkhsdhdshsskddshskhkdshkdskdhhkdshdkhdskds</h1></div>
     </Carousel>
-   
     </div>
     )
    }
