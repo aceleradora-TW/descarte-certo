@@ -18,5 +18,7 @@ public class Requester {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String name;
+    private String nameCompleted;
+    private String cellphone;
+    private String email;
 }

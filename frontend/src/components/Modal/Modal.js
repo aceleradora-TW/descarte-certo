@@ -17,16 +17,16 @@ import * as yup from "yup";
 
 function Modal(props) {
   const validationSchema = yup.object().shape({
-    email: yup.string().email('e-mail inválido').required(ERRORS.REQUIRED_FIELD),
-    nomeCompleto: yup.string().required(ERRORS.REQUIRED_FIELD),
+    email: yup.string().email().required(ERRORS.REQUIRED_FIELD),
+    nameCompleted: yup.string().required(ERRORS.REQUIRED_FIELD),
     cep: yup.string().required(ERRORS.REQUIRED_FIELD),
-    telefoneCelular: yup.string().required(ERRORS.REQUIRED_FIELD),
+    cellphone: yup.string().required(ERRORS.REQUIRED_FIELD),
   });
 
   const initialValues = {
-    nomeCompleto: "",
+    nameCompleted: "",
     email: "",
-    telefoneCelular: "",
+    cellphone: "",
     cep: "",
   };
 
@@ -64,13 +64,13 @@ function Modal(props) {
               <Form className="form-inputs-style">
                 <Field
                   className="form-control field-input"
-                  name="nomeCompleto"
+                  name="nameCompleted"
                   placeholder="Nome Completo"
                   onChange={handleChange}
-                  value={values.nomeCompleto}
+                  value={values.nameCompleted}
                   onBlur={handleBlur}
                   required />
-                <ErrorMessage component="div" name="nomeCompleto" />
+                <ErrorMessage component="div" name="nameCompleted" />
                 <br />
                 <Field
                   className="form-control field-input"
@@ -85,17 +85,17 @@ function Modal(props) {
                 <Row>
                   <Col lg="6">
                     <FormGroup>
-                      <Field name="telefoneCelular" required>
+                      <Field name="cellphone" required>
                         {({ field }) => {
                           return <InputMask mask="99999-9999"
                             className="form-control field-input"
                             placeholder="Telefone Celular"
-                            value={values.telefoneCelular}
+                            value={values.cellphone}
                             onChange={handleChange}
                             onBlur={handleBlur}{...field} />
                         }}
                       </Field>
-                      <ErrorMessage component="div" name="telefoneCelular" />
+                      <ErrorMessage component="div" name="cellphone" />
                     </FormGroup>
                   </Col>
 

@@ -13,7 +13,9 @@ public class EstimateConverterService {
                 .builder()
                 .requester(
                         Requester.builder()
-                                .name(request.getRequester().getName())
+                                .nameCompleted(request.getRequester().getNameCompleted())
+                                .cellphone(request.getRequester().getCellphone())
+                                .email(request.getRequester().getEmail())
                                 .build()
                 )
                 .residueAddress(ResidueAddress.builder()

@@ -10,5 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class RequesterRequest {
-    private String name;
+    private String nameCompleted;
+    private String cellphone;
+    private String email;
 }
