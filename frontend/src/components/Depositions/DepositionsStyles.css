@@ -1,10 +1,21 @@
+ .card-carousel {
+    display: flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  
+}
+
 .container-fluid{
     width: 100%;
     height: auto;
     position: relative;
     align-content: center;
     display: block;
-    padding: 2%;
+    padding-bottom:10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 0px;
     text-align: center;
     font-family: 'Montserrat', sans-serif ;
     line-height: 30px;
@@ -18,6 +29,9 @@
     margin-top: 10px;
     border-radius: 50%;
     overflow: hidden;
+    height: 70px;
+    width: 70px;
+    
 }
 .card {
     width: 350px;
@@ -62,110 +76,63 @@
     margin: 1px;
     margin-top: 1px;
 }
-
-@media only screen and (min-width:280px) and (max-width:768px){
-    .card.title{
-        font-size: 12px;
-        text-align: center;
-        margin: 1px;
-        margin-top: 1px;
+@media only screen  and (max-width:739px){
+    .chowzb {
+    display: none;
     }
-    .text-card{
-        font-size: 10px;
-        text-align: center;
-        padding-bottom: 5%;
+    .hCVuYx {
+    display: none;
     }
-    .imgCard{
+    .card{
+        width: 350px;
+        height: 500px;
+        margin: 20px;
+        bottom: auto;
+        position: relative;
         display: block;
+        flex-direction:column;
+        word-wrap: break-word;
+        background-color: #ffffff;
+        background-clip: border-box;
+        border: 1px solid #ffffff;
+        border-radius: 20px;
+        box-shadow: 1px 1px 1px 5px #F5F4F6;
+        -moz-box-shadow: 3px 3px 10px 5px #ffffff;
+        -webkit-box-shadow: 1px 1px 10px 1px #98d4cb;
+        -o-box-shadow: 3px 3px 50px 5px #26E2C5;
+        
     }
-    .card {
-            margin: 10px;
-            bottom: auto;
-            position: relative;
-            display: inline;
-            flex-direction:column;
-            grid-row: span 2;
+    .container-fluid{
+        width: 100%;
+        height: auto;
+        position: relative;
+        align-content: center;
+        display: block;
+        padding-bottom:10px;
+        padding-left: 0px;
+        padding-right: 0px;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif ;
+        line-height: 15px;
+        color: #303c5b;
+        background-color: #F5F4F6;
+        
     }
+    .row{
+        display: flexbox;
+    }
+   
   }
 
-  @media only screen and (min-width:411px) and (max-width:736px){
-    .card.title{
-        font-size: 12px;
-        text-align: center;
-        margin: 1px;
-        margin-top: 1px;
-    }
-    .text-card{
-        font-size: 10px;
-        text-align: center;
-        padding-bottom: 5%;
-    }
-    .imgCard{
-        display: block;
-    }
-    .card {
-            margin: 10px;
-            bottom: auto;
-            position: relative;
-            display: inline;
-            flex-direction:column;
-            grid-row: span 2;
-    }
+
+
+
+ 
+
+  
+.element.style {
+    height: 450px;
 }
-
-  @media only screen and (min-width:768px) and (max-width:1024px){
-    .card.title{
-        font-size: 16px;
-        text-align: center;
-        margin: 1px;
-        margin-top: 1px;
-    }
-    .text-card{
-        font-size: 14px;
-        text-align: center;
-        padding-bottom: 5%;
-    }
-    .imgCard{
-        display: block;
-    }
-    .card {
-            width: 450px;
-            align-items: center;
-            left: 50px;
-            margin: 10px;
-            bottom: auto;
-            position: relative;
-            display: flex;
-            flex-direction:column;
-    }   
-  }
-
-  @media only screen and (min-width:1024px) and (max-width:1366px){
-    .card.title{
-        font-size: 16px;
-        text-align: center;
-        margin: 1px;
-        margin-top: 1px;
-    }
-    .text-card{
-        font-size: 14px;
-        text-align: center;
-        padding-bottom: 5%;
-    }
-    .imgCard{
-        display: block;
-    }
-    .card {
-            align-items: center;
-            width: 450px;
-            left: 200px;
-            margin: 10px;
-            bottom: auto;
-            position: relative;
-            display: flex;
-            flex-direction:column;
-    }  
-  }
 
 
 
