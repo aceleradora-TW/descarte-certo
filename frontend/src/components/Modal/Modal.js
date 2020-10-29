@@ -47,15 +47,23 @@ const showingField = () =>{
       type="text"
       name="descreva"
       placeholder="Descreva..."
-      className="form-control"
+      className="form-control field-input"
+      required
   /> ) }else{
     return null;
   }
 }
 
  function fieldTextTrue() {
-    fieldText = true
-    console.log(fieldText)
+    if(fieldText === false){
+      fieldText = true
+    } else if (fieldText === true){
+      fieldText = false
+    }
+   
+  };
+  function fieldTextFalse(){
+    fieldText = false
   };
  
 
@@ -133,22 +141,33 @@ const showingField = () =>{
               </Row>
               <div><p>O local de coleta de residuo possui:</p></div>
               <Row>
-                <Col lg="4">
+                <Col lg="3">
                   <FormGroup>
-                   <Label>
+                  
+                   <Label >
+                                         
                     <Field type="checkbox"
                       className=""
                       name="checked"
                       value="Escada"
                       />
-                      Escada
-                      </Label>
+                      <a> Escada</a>
                     
+                      </Label>
                      
+                      <Field 
+                      type="Number"
+                      placeholder="Informe o andar:"
+                      min="0"
+                      max="4"
+                      name="Andar"
+                      className="form-control field-input"
+                      />
+
                   </FormGroup>
                 </Col>
 
-                <Col lg="4">
+                <Col lg="3">
                   <FormGroup>
                    <Label>
                     <Field type="checkbox"
@@ -156,12 +175,12 @@ const showingField = () =>{
                       name="checked"
                       value="Elevador"
                       />
-                      Elevador
+                      <a> Elevador</a>
                       </Label>
                   </FormGroup>
                 </Col>
 
-                <Col lg="4">
+                <Col lg="6">
                   <FormGroup>
                    <Label>
                     <Field type="checkbox"
@@ -169,27 +188,21 @@ const showingField = () =>{
                       name="checked"
                       value="Outro"
                       onClick={fieldTextTrue}
+                      //onChange ={fieldTextFalse}
                       />
-                      Outro de difícil acesso:
+                      <a> Outro de difícil acesso:</a>
                       </Label>
+                      <div>
+                      {showingField()}
+                      </div>
                   </FormGroup>
                 </Col>
 
               </Row>
               <Row>
-                <Col lg="4" width="100%">
-                 <Field 
-                      type="number"
-                      placeholder="Informe o andar:"
-                      value= ''
-                      className="form-control"
-                      />
-                      
-                  </Col>
+                
 
-                   <Col lg="6">
-                      {showingField()}
-                  </Col>
+                  
               </Row>
 
               <Button
