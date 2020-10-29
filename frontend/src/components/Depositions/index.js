@@ -19,10 +19,10 @@ function renderCard() {
          if(window.innerWidth < 700){
          
           return(
-            <div className='container-fluid'>
-              <h1 id ="Beneficios" className="title">Depoimentos</h1>
+            <div id ="Depoimentos" className='container-fluid'>
+              <h1 className="title-depositions">Depoimentos</h1>
         <Carousel className="card-carousel">
-          <Card>
+          <Card className= "card-depositions">
             <div class="imgCard">
               <Card.Img variant="top" src={PhotoCard1} width="100px"/>
             </div>
@@ -32,7 +32,7 @@ function renderCard() {
             </Card.Body>
           </Card>
        
-          <Card>
+          <Card className= "card-depositions">
             <div class="imgCard">
               <Card.Img variant="top" src={PhotoCard2}/>
             </div>
@@ -42,7 +42,7 @@ function renderCard() {
             </Card.Body>
           </Card>
      
-          <Card>
+          <Card className= "card-depositions">
             <div class="imgCard">
               <Card.Img variant="top" src={PhotoCard3}/>
             </div>
@@ -52,7 +52,7 @@ function renderCard() {
             </Card.Body>
           </Card>
 
-          <Card>
+          <Card className= "card-depositions">
             <div class="imgCard">
               <Card.Img variant="top" src={PhotoCard4}/>
             </div>
@@ -62,7 +62,7 @@ function renderCard() {
             </Card.Body>
           </Card>
 
-          <Card>
+          <Card className= "card-depositions">
             <div class="imgCard">
               <Card.Img variant="top" src={PhotoCard5}/>
             </div>
@@ -72,7 +72,7 @@ function renderCard() {
             </Card.Body>
           </Card>
 
-          <Card>
+          <Card className= "card-depositions">
             <Card.Body>
             <div class="imgCard">
               <Card.Img variant="top" src={PhotoCard6}/>
@@ -86,12 +86,12 @@ function renderCard() {
          }else {
          
     return(
-      <div className='container-fluid'>
-        <h1 id ="Beneficios" className="title">Depoimentos</h1>
-   <Carousel className="card-carousel">
+      <div  id ="Depoimentos" className='container-fluid'>
+        <h1 className="title-depositions">Depoimentos</h1>
+   <Carousel className="depositions-carousel">
         <div className="row">
             <div className="col-sm-*">
-              <Card>
+              <Card className= "card-depositions">
                 <div class="imgCard">
                   <Card.Img variant="top" src={PhotoCard1}/>
                 </div>
@@ -103,7 +103,7 @@ function renderCard() {
             </div>
 
             <div className="col-sm-*">
-              <Card>
+              <Card className= "card-depositions">
                 <div class="imgCard">
                   <Card.Img variant="top" src={PhotoCard2}/>
                 </div>
@@ -115,7 +115,7 @@ function renderCard() {
             </div>
 
             <div className="col-sm-*">
-              <Card>
+              <Card className= "card-depositions">
                 <div class="imgCard">
                   <Card.Img variant="top" src={PhotoCard3}/>
                 </div>
@@ -129,7 +129,7 @@ function renderCard() {
 
         <div className="row">
             <div className="col-sm-*">
-              <Card>
+              <Card className= "card-depositions">
                 <div class="imgCard">
                   <Card.Img variant="top" src={PhotoCard4}/>
                 </div>
@@ -141,7 +141,7 @@ function renderCard() {
             </div>
 
             <div className="col-sm-*">
-              <Card>
+              <Card className= "card-depositions">
                 <div class="imgCard">
                   <Card.Img variant="top" src={PhotoCard5}/>
                 </div>
@@ -153,7 +153,7 @@ function renderCard() {
             </div>
 
             <div className="col-sm-*">
-              <Card>
+              <Card className= "card-depositions">
                 <Card.Body>
                 <div class="imgCard">
                   <Card.Img variant="top" src={PhotoCard6}/>
@@ -164,8 +164,11 @@ function renderCard() {
               </Card>
             </div>
         </div>
+        <div><h1>hdsjhssdkhskdshdkhsdhdshsskddshskhkdshkdskdhhkdshdkhdskds</h1></div>
     </Carousel>
-    </div>)
+   
+    </div>
+    )
    }
    
   };

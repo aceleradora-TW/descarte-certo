@@ -1,64 +1,54 @@
- .card-carousel {
-    display: flex;
-  align-items:center;
-  justify-content:center;
-  position:relative;
-  
-}
-
 .container-fluid{
     width: 100%;
     height: auto;
     position: relative;
     align-content: center;
     display: block;
+    padding: 10px;
     padding-bottom:10px;
     padding-left: 5px;
     padding-right: 5px;
     margin-left: 0px;
     text-align: center;
     font-family: 'Montserrat', sans-serif ;
-    line-height: 30px;
+    line-height: 25px;
     color: #303c5b;
     background-color: #F5F4F6;
 }
+
+.depositions-carousel{
+    
+    height: auto;
+    padding-bottom: 100px;
+}
 .imgCard{
-    width: 8rem;
-    height: 8rem;
     margin: auto;
-    margin-top: 10px;
     border-radius: 50%;
     overflow: hidden;
     height: 70px;
-    width: 70px;
-    
+    width: 70px;  
 }
-.card {
-    width: 350px;
-    height: 500px;
+.card.card-depositions{
+    max-width: 350px;
+    height: 540px;
     margin: 20px;
-    bottom: auto;
+    padding: 30px;
     position: relative;
     display: block;
     flex-direction:column;
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
     min-width: 0;
     word-wrap: break-word;
     background-color: #ffffff;
+    border: 0px solid #ffffff;
     background-clip: border-box;
     border: 1px solid #ffffff;
-    border-radius: 20px;
+    border-radius: 25px;
     box-shadow: 1px 1px 1px 5px #F5F4F6;
     -moz-box-shadow: 3px 3px 10px 5px #ffffff;
     -webkit-box-shadow: 1px 1px 10px 1px #98d4cb;
     -o-box-shadow: 3px 3px 50px 5px #26E2C5;
-}
-.col-sx {
-    width: 100%;
-    height: auto;
-    margin: 10px;
-    bottom: auto;
-    position: relative;
-    display: flex;
 }
 .img {
     vertical-align: super;
@@ -66,15 +56,20 @@
 }
 .text-card{
     font-size: 16px;
+    padding-top: 15px;
     text-align: center;
     padding-bottom: 5%;
     font-style: italic;
 }
-.card.title{
+.card-title{
     font-size: 18px;
     text-align: center;
     margin: 1px;
     margin-top: 1px;
+}
+.title-depositions{
+    padding-top: 65px;
+    padding-bottom: 65px ;
 }
 @media only screen  and (max-width:739px){
     .chowzb {
@@ -83,8 +78,8 @@
     .hCVuYx {
     display: none;
     }
-    .card{
-        width: 350px;
+    .card-depositions{
+        max-width: 350px;
         height: 500px;
         margin: 20px;
         bottom: auto;
@@ -113,7 +108,7 @@
         padding-right: 0px;
         text-align: center;
         font-family: 'Montserrat', sans-serif ;
-        line-height: 15px;
+        line-height: 20px;
         color: #303c5b;
         background-color: #F5F4F6;
         
@@ -121,13 +116,7 @@
     .row{
         display: flexbox;
     }
-   
   }
-
-
-
-
- 
 
   
 .element.style {
