@@ -45,6 +45,13 @@ git commit -m "#4/ @Maria @Joao: Adiciona o CSS para o botão de envio de email"
 ### 8) Garantir que o build+deploy da master rodou com sucesso e pedir para outra dupla fazer o QA
 - BUILD: https://app.circleci.com/pipelines/github/aceleradora-TW/descarte-certo
 
+
+## Pipeline
+
+* [CircleCI - Descarte Certo](https://app.circleci.com/pipelines/github/aceleradora-TW/descarte-certo)
+* [Heroku - Descarte Certo](https://dashboard.heroku.com/apps/descartecerto)
+
+
 ## Como ver os logs da aplicação
 ### Stage
 ```
@@ -72,6 +79,8 @@ http POST http://localhost:8080/solicitcaoOrcamentoDescarte/create < backend/src
   - React
   - [Postgres 12](https://www.postgresql.org/download/)
   - [IntelliJ Community Edition](https://www.jetbrains.com/idea/download/)
+  - [Heroku reference](https://devcenter.heroku.com/categories/reference)
+  - [CircleCI reference](https://circleci.com/docs/2.0/getting-started/#section=getting-started)
 
 
 ###  Ferramentas recomendadas (não obrigatórias)
