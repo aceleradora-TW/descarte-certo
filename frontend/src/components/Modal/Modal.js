@@ -86,35 +86,37 @@ function Modal(props) {
                   <Col lg="6">
                     <FormGroup>
                       <Field name="telefoneCelular" required>
-                      {({field})=>{
-                          return <InputMask mask="99999-9999" 
-                          className="form-control field-input" 
-                          placeholder="Telefone Celular" 
-                          value={values.telefoneCelular}
-                          onChange={handleChange}
-                          onBlur={handleBlur}{...field}/>
+                        {({ field }) => {
+                          return <InputMask mask="99999-9999"
+                            className="form-control field-input"
+                            placeholder="Telefone Celular"
+                            value={values.telefoneCelular}
+                            onChange={handleChange}
+                            onBlur={handleBlur}{...field} />
                         }}
-                       </Field>    
-                <ErrorMessage component="div" name="telefoneCelular" />
+                      </Field>
+                      <ErrorMessage component="div" name="telefoneCelular" />
                     </FormGroup>
                   </Col>
 
                   <Col lg="6">
                     <FormGroup>
-                      <Field
-                        className="form-control field-input"
-                        name="cep"
-                        value={values.cep}
-                        onChange={handleChange}
-                        placeholder="CEP"
-                        required />
-                      <ErrorMessage component="div" name="cep" />                       
-                      
+                      <Field name="cep" required>
+                        {({ field }) => {
+                          return <InputMask mask="99999-999"
+                            className="form-control field-input"
+                            onChange={handleChange}
+                            placeholder="CEP"
+                          onBlur = { handleBlur }{...field} />
+                      }}
+                      </Field>
+                      <ErrorMessage component="div" name="cep" />
+
                     </FormGroup>
                   </Col>
                 </Row>
 
-                <Button 
+                <Button
                   disabled={!isValid || isSubmitting}
                   block
                   color="secondary"
