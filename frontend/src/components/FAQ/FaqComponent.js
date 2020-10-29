@@ -11,7 +11,7 @@ function FaqComponent() {
     return (
 
         <div className="div col-6">
-            <h1 id="FAQ" className="title">{Texts.faq.title}</h1>
+            <h1 id="Duvidas" className="title">{Texts.duvidas.title}</h1>
             <Accordion >
                 <Card>
                     <Card.Header>
@@ -23,7 +23,6 @@ function FaqComponent() {
                         <Card.Body>{Texts.card1.content}</Card.Body>
                     </Accordion.Collapse>
                 </Card>
-
                 <Card>
                     <Card.Header>
                         <Accordion.Toggle as={Button} variant="" eventKey="1">
@@ -34,7 +33,6 @@ function FaqComponent() {
                         <Card.Body>{Texts.card2.content}</Card.Body>
                     </Accordion.Collapse>
                 </Card>
-
                 <Card>
                     <Card.Header>
                         <Accordion.Toggle as={Button} variant="" eventKey="2">
@@ -45,7 +43,6 @@ function FaqComponent() {
                         <Card.Body>{Texts.card3.content}</Card.Body>
                     </Accordion.Collapse>
                 </Card>
-
                 <Card>
                     <Card.Header>
                         <Accordion.Toggle as={Button} variant="" eventKey="3">
@@ -56,7 +53,6 @@ function FaqComponent() {
                         <Card.Body>{Texts.card4.content}</Card.Body>
                     </Accordion.Collapse>
                 </Card>
-
                 <Card>
                     <Card.Header>
                         <Accordion.Toggle as={Button} variant="" eventKey="4">
@@ -67,8 +63,6 @@ function FaqComponent() {
                         <Card.Body>{Texts.card5.content}</Card.Body>
                     </Accordion.Collapse>
                 </Card>
-
-               
                 <Card>
                     <Card.Header>
                         <Accordion.Toggle as={Button} variant="" eventKey="5">
@@ -79,7 +73,6 @@ function FaqComponent() {
                         <Card.Body>{Texts.card6.content}</Card.Body>
                     </Accordion.Collapse>
                 </Card>
-
                 <Card>
                     <Card.Header>
                         <Accordion.Toggle as={Button} variant="" eventKey="6">
@@ -90,13 +83,9 @@ function FaqComponent() {
                         <Card.Body>{Texts.card7.content}</Card.Body>
                     </Accordion.Collapse>
                 </Card>
-
             </Accordion>
-
             <img src={imgFaq} className="imgFaq" />
         </div >
-
-
     )
 }
 export default FaqComponent

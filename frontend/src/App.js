@@ -17,7 +17,6 @@ function App() {
       <main className="App-content">
         <Menu />
         <Banner />
-        <NavBar />
         <div className="flex-box container-box">
           <div className="content-box">
             <Benefits />

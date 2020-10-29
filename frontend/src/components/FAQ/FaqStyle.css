@@ -8,15 +8,11 @@
 
 /* Alinhamento do icone do Faq */
 .iconFaq {
- /* padding-left: 20px; */
  position: absolute;
   right: 20px;
   top: 15px;
 }
 
-/* .imgFaq {
-  padding-left: 450px;
-} */
 
 /* Alteracao do estilo do btn do bootstrap */
 .btn.btn {
@@ -50,8 +46,7 @@
 .card-header {
   padding: .75rem 1.25rem;
   margin-bottom: -1px;
-  background-color: #ffffff;    
- 
+  background-color: #ffffff;   
  }
 
  .card-body {
@@ -59,19 +54,16 @@
    font-weight: 200;
  }
 
-
-
 /* Alteracao do titulo do FAQ */
 .title{
   text-align: center;
   color: #2d3d57;
   font-family: 'Montserrat';
-  padding-top: 150px;
+  padding-top: 80px;
   padding-bottom: 20px;
 }
 
 /* Alteracao de estilo do fundo do componente flex-box */
-
  .flex-box{
   background-color: #ffffff;
 }
@@ -81,6 +73,20 @@
   background-color: #ffffff;   
   } 
 
+  /* Retirando o jumbotron */
+  .jumbotron {
+    padding: 0px;
+    margin-bottom: 0rem;
+    background-color: #e9ecef;
+    border-radius: .0rem;
+  }
+
+  .btn.btn:focus{     
+    outline: none;
+    box-shadow: none;
+    }
+
+
   @media only screen and (min-width:414px) and (max-width:736px){
     .btn.btn{
       font-size: 0.9rem;
@@ -88,12 +94,7 @@
       text-align: left; 
       padding: 0px;  
     }
-
-    .btn.btn:focus{     
-       outline: 0px auto -webkit-focus-ring-color;
-       outline-offset: 0px;
-      }
-
+   
     .div{
       column-width: 100%;
       background-color: #ffffff;
@@ -146,8 +147,242 @@
     text-align: center;
     color: #2d3d57;
     font-family: 'Montserrat';
-    padding-top: 150px;
+    padding-top: 80px;
     padding-bottom: 0px;
   }
+
+  .iconFaq {
+     position: absolute;
+     right: 0px;
+     top: 15px;
+  }
+ .imgFaq {
+ display: none;
+ }
+    
+  }
+
+  @media only screen and (min-width:768px) and (max-width:1024px){
+    .btn.btn{
+      font-size: 0.9rem;
+      width: 100%;
+      text-align: left; 
+      padding: 0px;  
+    }
+   
+    .div{
+      column-width: 100%;
+      background-color: #ffffff;
+      padding-bottom: 150px;      
+    }
+
+    .col-6 {
+      flex: 0 0 90%;
+      max-width: 90%;
+  }
+    
+
+    .card.card {    
+      width: 100%;
+      word-wrap: break-word;
+      background-color: #ffffff;
+      background-clip: border-box;
+      border: 0px solid rgba(0,0,0,.125);
+      border-radius: .10rem;
+      color: #2d3d57;
+      font-family: 'Montserrat';
+      text-align: left;   
+      margin-bottom: -1px;
+      padding-left: 0px;  
+  }
+   
+  .card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: -1px;
+    background-color: #ffffff; 
+    padding-left: 0px;  
+
+  }
+
+  .jumbotron {
+    padding: 0px;
+    margin-bottom: 0rem;
+    background-color: #e9ecef;
+    border-radius: .0rem;
+  }
+    .card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 0px;
+    font-size: 0.8rem;
+    
+  }
+
+  .title {
+    text-align: center;
+    color: #2d3d57;
+    font-family: 'Montserrat';
+    padding-top: 80px;
+    padding-bottom: 0px;
+  }
+
+  .iconFaq {
+     position: absolute;
+     right: 30px;
+     top: 15px;
+  }
+ .imgFaq {
+ display: none;
+ }
+    
+  }
+
+  @media only screen and (min-width:360px) and (max-width:640px){
+    .btn.btn{
+      font-size: 0.9rem;
+      width: 100%;
+      text-align: left; 
+      padding: 0px;  
+    }
+   
+    .div{
+      column-width: 100%;
+      background-color: #ffffff;
+      padding-bottom: 150px;      
+    }
+
+    .col-6 {
+      flex: 0 0 120%;
+      max-width: 120%;
+  }
+    
+
+    .card.card {    
+      width: 100%;
+      word-wrap: break-word;
+      background-color: #ffffff;
+      background-clip: border-box;
+      border: 0px solid rgba(0,0,0,.125);
+      border-radius: .10rem;
+      color: #2d3d57;
+      font-family: 'Montserrat';
+      text-align: left;   
+      margin-bottom: -1px;
+      padding-left: 0px;  
+  }
+   
+  .card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: -1px;
+    background-color: #ffffff; 
+    padding-left: 0px;  
+
+  }
+
+  .jumbotron {
+    padding: 0px;
+    margin-bottom: 0rem;
+    background-color: #e9ecef;
+    border-radius: .0rem;
+  }
+    .card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 0px;
+    font-size: 0.8rem;
+    
+  }
+
+  .title {
+    text-align: center;
+    color: #2d3d57;
+    font-family: 'Montserrat';
+    padding-top: 80px;
+    padding-bottom: 0px;
+  }
+
+  .iconFaq {
+     position: absolute;
+     right: 0px;
+     top: 15px;
+  }
+ .imgFaq {
+ display: none;
+ }
+    
+  }
+
+  @media only screen and (min-width:320px) and (max-width:568px){
+    .btn.btn{
+      font-size: 0.9rem;
+      width: 100%;
+      text-align: left; 
+      padding: 0px;  
+    }
+   
+    .div{
+      column-width: 100%;
+      background-color: #ffffff;
+      padding-bottom: 150px;      
+    }
+
+    .col-6 {
+      flex: 0 0 120%;
+      max-width: 120%;
+  }
+    
+
+    .card.card {    
+      width: 100%;
+      word-wrap: break-word;
+      background-color: #ffffff;
+      background-clip: border-box;
+      border: 0px solid rgba(0,0,0,.125);
+      border-radius: .10rem;
+      color: #2d3d57;
+      font-family: 'Montserrat';
+      text-align: left;   
+      margin-bottom: -1px;
+      padding-left: 0px;  
+  }
+   
+  .card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: -1px;
+    background-color: #ffffff; 
+    padding-left: 0px;  
+
+  }
+
+  .jumbotron {
+    padding: 0px;
+    margin-bottom: 0rem;
+    background-color: #e9ecef;
+    border-radius: .0rem;
+  }
+    .card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 0px;
+    font-size: 0.8rem;
+    
+  }
+
+  .title {
+    text-align: center;
+    color: #2d3d57;
+    font-family: 'Montserrat';
+    padding-top: 80px;
+    padding-bottom: 0px;
+  }
+
+  .iconFaq {
+     position: absolute;
+     right: 0px;
+     top: 15px;
+  }
+ .imgFaq {
+ display: none;
+ }
     
   }
