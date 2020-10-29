@@ -16,7 +16,7 @@ function DepositionsComponent() {
   }
 function renderCard() {
          
-         if(window.innerWidth < 700){
+         if(window.innerWidth < 600){
          
           return(
             <div id ="Depoimentos" className='container-fluid'>
