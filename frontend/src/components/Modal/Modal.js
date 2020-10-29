@@ -11,7 +11,9 @@ import {
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import "./ModalStyle.css";
 import { ERRORS } from "../../constant";
+import InputMask from "react-input-mask";
 import * as yup from "yup";
+
 
 function Modal(props) {
   const validationSchema = yup.object().shape({
@@ -83,15 +85,17 @@ function Modal(props) {
                 <Row>
                   <Col lg="6">
                     <FormGroup>
-                      <Field
-                        className="form-control field-input"
-                        name="telefoneCelular"
-                        value={values.telefoneCelular}
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                        placeholder="Telefone Celular"
-                        required />
-                      <ErrorMessage component="div" name="telefoneCelular" />
+                      <Field name="telefoneCelular" required>
+                      {({field})=>{
+                          return <InputMask mask="99999-9999" 
+                          className="form-control field-input" 
+                          placeholder="Telefone Celular" 
+                          value={values.telefoneCelular}
+                          onChange={handleChange}
+                          onBlur={handleBlur}{...field}/>
+                        }}
+                       </Field>    
+                <ErrorMessage component="div" name="telefoneCelular" />
                     </FormGroup>
                   </Col>
 
@@ -104,7 +108,8 @@ function Modal(props) {
                         onChange={handleChange}
                         placeholder="CEP"
                         required />
-                      <ErrorMessage component="div" name="cep" />
+                      <ErrorMessage component="div" name="cep" />                       
+                      
                     </FormGroup>
                   </Col>
                 </Row>
@@ -113,7 +118,7 @@ function Modal(props) {
                   disabled={!isValid || isSubmitting}
                   block
                   color="secondary"
-                  onClick={props.handleBudgetClick}>
+                  type="submit">
                   Solicitar
               </Button>
               </Form>
