@@ -15,10 +15,9 @@
     color: #303c5b;
     background-color: #F5F4F6;
 }
-.depositions-carousel{
-    
+.depositions-carousel{ 
     height: auto;
-    padding-bottom: 100px;
+    padding-bottom: 35px;
 }
 .imgCard{
     margin: auto;
@@ -67,8 +66,8 @@
     margin-top: 1px;
 }
 .title-depositions{
-    padding-top: 65px;
-    padding-bottom: 65px ;
+    padding-top: 55px;
+    padding-bottom: 40px ;
 }
 @media only screen  and (max-width:700px){
     .lmYcIR {
@@ -258,6 +257,24 @@
   } 
 .element.style {
     height: 450px;
+}
+button.sc-gKAblj.brcpxa.rec.rec-dot.rec.rec-dot_active{
+    background-color: #60D6C5;
+    box-shadow: 0 0 1px 2px #424242;
+    width: 12px;
+    height: 11px;
+}
+button.sc-gKAblj.ikyGAt.rec.rec-dot{
+    background-color: transparent;
+    box-shadow: 0 0 1px 2px #424242;
+    width: 12px;
+    height: 11px;
+}
+.sc-bdnylx.chowzb.rec.rec-arrow.rec.rec-arrow-right{
+    background-color: #60D6C5; 
+}
+.sc-bdnylx.chowzb.rec.rec-arrow.rec.rec-arrow-left{
+    background-color: #60D6C5;
 }
 
 
