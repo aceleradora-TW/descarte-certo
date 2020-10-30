@@ -167,20 +167,11 @@ function renderCard() {
     </Carousel>
     </div>
     )
-   }
-   
+   } 
   };
-
-
   return (
-    <div>
-    
-        
-    
-    
-        {renderCard()}
-        
+    <div> 
+        {renderCard()}    
     </div>
-
   )
 } export default DepositionsComponent
