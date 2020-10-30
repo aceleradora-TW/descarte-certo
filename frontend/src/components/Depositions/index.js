@@ -73,10 +73,10 @@ function renderCard() {
           </Card>
 
           <Card className= "card-depositions">
-            <Card.Body>
-            <div class="imgCard">
+            <div class="img06">
               <Card.Img variant="top" src={PhotoCard6}/>
             </div>
+            <Card.Body>
               <Card.Title className='card.title'>{TextsDepositions.card6.title}</Card.Title>
               <Card.Text className='text-card'>{TextsDepositions.card6.content}</Card.Text>
             </Card.Body>
@@ -154,10 +154,10 @@ function renderCard() {
 
             <div className="col-sm-*">
               <Card className= "card-depositions">
-                <Card.Body>
-                <div class="imgCard">
+                <div class="img06">
                   <Card.Img variant="top" src={PhotoCard6}/>
                 </div>
+                <Card.Body>
                   <Card.Title className='card.title'>{TextsDepositions.card6.title}</Card.Title>
                   <Card.Text className='text-card'>{TextsDepositions.card6.content}</Card.Text>
                 </Card.Body>
