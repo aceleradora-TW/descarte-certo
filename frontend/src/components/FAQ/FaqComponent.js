@@ -84,6 +84,7 @@ function FaqComponent() {
                     </Accordion.Collapse>
                 </Card>
             </Accordion>
+            
             <img src={imgFaq} className="imgFaq" />
         </div >
     )
