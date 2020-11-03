@@ -10,7 +10,7 @@
 .iconFaq {
  position: absolute;
   right: 20px;
-  top: 15px;
+  top: 32px;
 }
 
 
@@ -85,8 +85,18 @@
     outline: none;
     box-shadow: none;
     }
-
-
+  .div.col-6{
+    margin: auto;
+    padding-bottom: 50px;
+  }
+  
+  .imgFaq{
+    height: 330px;
+    width: auto;
+    margin-top: 25px;
+    margin-left: 400px;
+  }
+  
   @media only screen and (min-width:414px) and (max-width:736px){
     .btn.btn{
       font-size: 0.9rem;
@@ -94,7 +104,7 @@
       text-align: left; 
       padding: 0px;  
     }
-   
+  
     .div{
       column-width: 100%;
       background-color: #ffffff;
@@ -217,7 +227,6 @@
     font-size: 0.8rem;
     
   }
-
   .title {
     text-align: center;
     color: #2d3d57;
