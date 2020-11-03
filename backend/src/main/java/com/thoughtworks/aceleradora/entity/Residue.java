@@ -19,4 +19,7 @@ public class Residue {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long residueId;
+    private String residueType;
+    private int residueAmount;
+    private String residueMensure;
 }
