@@ -1,6 +1,7 @@
 package com.thoughtworks.aceleradora.entity;
 
 import com.thoughtworks.aceleradora.controller.request.EstimateRequest;
+import com.thoughtworks.aceleradora.controller.request.ResidueRequest;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -24,5 +25,8 @@ public class Estimate {
 
     @OneToOne(cascade=CascadeType.ALL)
     private ResidueAddress residueAddress;
+
+    @OneToOne(cascade=CascadeType.ALL)
+    private ResidueRequest residueRequest;
 }
 

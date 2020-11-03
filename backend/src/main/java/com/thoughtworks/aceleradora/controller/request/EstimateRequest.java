@@ -12,4 +12,5 @@ import lombok.NoArgsConstructor;
 public class EstimateRequest {
     private RequesterRequest requester;
     private ResidueAddressRequest residueAddress;
+    private ResidueRequest residueRequest;
 }
