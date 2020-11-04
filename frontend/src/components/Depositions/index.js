@@ -23,7 +23,7 @@ function renderCard() {
               <h1 className="title-depositions">Depoimentos</h1>
         <Carousel className="card-carousel">
           <Card className= "card-depositions">
-            <div class="imgCard">
+            <div className="imgCard">
               <Card.Img variant="top" src={PhotoCard1} width="100px"/>
             </div>
             <Card.Body>
@@ -33,7 +33,7 @@ function renderCard() {
           </Card>
        
           <Card className= "card-depositions">
-            <div class="imgCard">
+            <div className="imgCard">
               <Card.Img variant="top" src={PhotoCard2}/>
             </div>
             <Card.Body>
@@ -43,7 +43,7 @@ function renderCard() {
           </Card>
      
           <Card className= "card-depositions">
-            <div class="imgCard">
+            <div className="imgCard">
               <Card.Img variant="top" src={PhotoCard3}/>
             </div>
             <Card.Body>
@@ -53,7 +53,7 @@ function renderCard() {
           </Card>
 
           <Card className= "card-depositions">
-            <div class="imgCard">
+            <div className="imgCard">
               <Card.Img variant="top" src={PhotoCard4}/>
             </div>
             <Card.Body>
@@ -63,7 +63,7 @@ function renderCard() {
           </Card>
 
           <Card className= "card-depositions">
-            <div class="imgCard">
+            <div className="imgCard">
               <Card.Img variant="top" src={PhotoCard5}/>
             </div>
             <Card.Body>
@@ -73,10 +73,10 @@ function renderCard() {
           </Card>
 
           <Card className= "card-depositions">
-            <Card.Body>
-            <div class="imgCard">
+            <div className="imgCard">
               <Card.Img variant="top" src={PhotoCard6}/>
             </div>
+            <Card.Body>
               <Card.Title className='card.title'>{TextsDepositions.card6.title}</Card.Title>
               <Card.Text className='text-card'>{TextsDepositions.card6.content}</Card.Text>
             </Card.Body>
@@ -92,7 +92,7 @@ function renderCard() {
         <div className="row">
             <div className="col-sm-*">
               <Card className= "card-depositions">
-                <div class="imgCard">
+                <div className="imgCard">
                   <Card.Img variant="top" src={PhotoCard1}/>
                 </div>
                 <Card.Body>
@@ -104,7 +104,7 @@ function renderCard() {
 
             <div className="col-sm-*">
               <Card className= "card-depositions">
-                <div class="imgCard">
+                <div className="imgCard">
                   <Card.Img variant="top" src={PhotoCard2}/>
                 </div>
                 <Card.Body>
@@ -116,7 +116,7 @@ function renderCard() {
 
             <div className="col-sm-*">
               <Card className= "card-depositions">
-                <div class="imgCard">
+                <div className="imgCard">
                   <Card.Img variant="top" src={PhotoCard3}/>
                 </div>
                 <Card.Body>
@@ -130,7 +130,7 @@ function renderCard() {
         <div className="row">
             <div className="col-sm-*">
               <Card className= "card-depositions">
-                <div class="imgCard">
+                <div className="imgCard">
                   <Card.Img variant="top" src={PhotoCard4}/>
                 </div>
                 <Card.Body>
@@ -142,7 +142,7 @@ function renderCard() {
 
             <div className="col-sm-*">
               <Card className= "card-depositions">
-                <div class="imgCard">
+                <div className="imgCard">
                   <Card.Img variant="top" src={PhotoCard5}/>
                 </div>
                 <Card.Body>
@@ -154,10 +154,10 @@ function renderCard() {
 
             <div className="col-sm-*">
               <Card className= "card-depositions">
-                <Card.Body>
-                <div class="imgCard">
+                <div className="imgCard">
                   <Card.Img variant="top" src={PhotoCard6}/>
                 </div>
+                <Card.Body>
                   <Card.Title className='card.title'>{TextsDepositions.card6.title}</Card.Title>
                   <Card.Text className='text-card'>{TextsDepositions.card6.content}</Card.Text>
                 </Card.Body>
