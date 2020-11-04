@@ -13,7 +13,7 @@
   top: 32px;
 }
 
-.iconFaq:hover {
+.iconFaq:active {
   transform: rotate(180deg);
   transition: 0.5s;
 }
@@ -21,10 +21,10 @@
 
 /* Alteracao do estilo do btn do bootstrap */
 .btn.btn {
-  font-size: 1.4rem;
   width: 95%;
   text-align: left;
-  color: #2d3d57;    
+  color: #2d3d57;  
+  font-size: 18px;  
   }
 
 /* Alteracao da cor de fundo do FAQ */
@@ -34,19 +34,35 @@
 }
 
 /* Alteracao de estilo de todos os cards do bootstrap */
-.card.card {    
-    width: 100%;
-    word-wrap: break-word;
-    background-color: #ffffff;
-    background-clip: border-box;
-    border: 0px solid rgba(0,0,0,.125);
-    border-radius: .10rem;
-    color: #2d3d57;
-    font-family: 'Montserrat';
-    text-align: justify;   
-    margin-bottom: -1px;  
+.card {    
+  width: 100%;
+  word-wrap: break-word;
+  background-color: #ffffff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  color: #2d3d57;
+  font-family: 'Montserrat', sans-serif;
+  text-align: justify;   
+  opacity: 90%;
+  margin-bottom: 30px;
+  box-shadow: 1px 1px 1px 5px #F5F4F6;
+  -moz-box-shadow: 3px 3px 10px 5px #ffffff;
+  -webkit-box-shadow: 1px 1px 10px 1px #98d4cb;
+  -o-box-shadow: 3px 3px 50px 5px #26E2C5;
+  border-radius: 25px
+}
+.accordion>.card:not(:last-of-type) {
+  border-bottom: 0;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 }
 
+.btn.focus, .btn:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
 /* Alteracao de estilo de todos os cabecalhos dos cards do bootstrap */
 .card-header {
   padding: .75rem 1.25rem;
@@ -55,8 +71,9 @@
  }
 
  .card-body {
-   color: black;
+   color: #636363;
    font-weight: 200;
+   font-size: 16px;
  }
 
 /* Alteracao do titulo do FAQ */
