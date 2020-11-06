@@ -13,7 +13,7 @@
   top: 32px;
 }
 
-.iconFaq:active {
+.iconFaq:active{
   transform: rotate(180deg);
   transition: 0.5s;
 }
@@ -52,9 +52,11 @@
   border-radius: 25px
 }
 .accordion>.card:not(:last-of-type) {
-  border-bottom: 0;
   border-bottom-right-radius: 30px;
   border-bottom-left-radius: 30px;
+}
+
+.accordion>.card:not(:first-of-type) {
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
 }
