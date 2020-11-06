@@ -2,7 +2,6 @@
 .btn.btn-primary {
   background-color: #f4f4f4;  
   color: #2d3d57;   
-  border-color: #f4f4f4;
   font-size: 1.5rem;
 }
 
@@ -17,6 +16,13 @@
   transform: rotate(180deg);
   transition: 0.5s;
 }
+.imgFaq {
+  top:82%;
+  left: 90%;
+  position: absolute;
+  width: 50%;
+
+}
 
 
 /* Alteracao do estilo do btn do bootstrap */
@@ -30,7 +36,7 @@
 /* Alteracao da cor de fundo do FAQ */
 .div{
   background-color: #ffffff;
-  padding-bottom: 150px;
+  padding-bottom: 2000px;
 }
 
 /* Alteracao de estilo de todos os cards do bootstrap */
@@ -39,7 +45,7 @@
   word-wrap: break-word;
   background-color: #ffffff;
   background-clip: border-box;
-  border: 1px solid rgba(0,0,0,.125);
+  border: 2px 1px 2px 1px solid;
   color: #2d3d57;
   font-family: 'Montserrat', sans-serif;
   text-align: justify;   
@@ -47,9 +53,9 @@
   margin-bottom: 30px;
   box-shadow: 1px 1px 1px 5px #F5F4F6;
   -moz-box-shadow: 3px 3px 10px 5px #ffffff;
-  -webkit-box-shadow: 1px 1px 10px 1px #98d4cb;
-  -o-box-shadow: 3px 3px 50px 5px #26E2C5;
-  border-radius: 25px
+  -webkit-box-shadow: 0px 0px 5px 0px black;
+  border-radius: 25px;
+  z-index: 6;
 }
 .accordion>.card:not(:last-of-type) {
   border-bottom-right-radius: 30px;
@@ -79,10 +85,9 @@
  }
 
 /* Alteracao do titulo do FAQ */
-.title{
+.duvidas{
   text-align: center;
   color: #2d3d57;
-  font-family: 'Montserrat';
   padding-top: 80px;
   padding-bottom: 20px;
 }
@@ -101,7 +106,7 @@
   .jumbotron {
     padding: 0px;
     margin-bottom: 0rem;
-    background-color: #e9ecef;
+    /* background-color: #e9ecef; */
     border-radius: .0rem;
   }
 
@@ -114,12 +119,14 @@
     padding-bottom: 50px;
   }
   
-  .imgFaq{
-    height: 330px;
-    width: auto;
-    margin-top: 25px;
-    margin-left: 400px;
-  }
+  .imgFaq {
+    top:60%;
+    left: 85%;
+    position: absolute;
+    width: 50%;
+  
+}
+
   
   @media only screen and (min-width:414px) and (max-width:736px){
     .btn.btn{
@@ -334,11 +341,14 @@
     padding-bottom: 0px;
   }
 
-  .iconFaq {
-     position: absolute;
-     right: 0px;
-     top: 15px;
-  }
+  .imgFaq {
+    top:60%;
+    left: 85%;
+    position: absolute;
+    width: 50%;
+  
+}
+
  .imgFaq {
  display: none;
  }
