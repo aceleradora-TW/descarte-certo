@@ -1,31 +1,28 @@
-/* Alteracao do estilo do btn primary do bootstrap */
+
 .btn.btn-primary {
   background-color: #f4f4f4;  
   color: #2d3d57;   
   font-size: 1.5rem;
 }
 
-/* Alinhamento do icone do Faq */
 .iconFaq {
  position: absolute;
   right: 20px;
   top: 32px;
 }
 
-.iconFaq:active{
+.iconFaq:active {
   transform: rotate(180deg);
   transition: 0.5s;
 }
+
 .imgFaq {
   top:82%;
   left: 90%;
   position: absolute;
   width: 50%;
-
 }
 
-
-/* Alteracao do estilo do btn do bootstrap */
 .btn.btn {
   width: 95%;
   text-align: left;
@@ -33,13 +30,11 @@
   font-size: 18px;  
   }
 
-/* Alteracao da cor de fundo do FAQ */
-.div{
+.div {
   background-color: #ffffff;
   padding-bottom: 2000px;
 }
 
-/* Alteracao de estilo de todos os cards do bootstrap */
 .card {    
   width: 100%;
   word-wrap: break-word;
@@ -54,24 +49,24 @@
   box-shadow: 1px 1px 1px 5px #F5F4F6;
   -moz-box-shadow: 3px 3px 10px 5px #ffffff;
   -webkit-box-shadow: 0px 0px 5px 0px black;
-  border-radius: 25px;
+  border-radius: 50px;
   z-index: 6;
 }
+
 .accordion>.card:not(:last-of-type) {
-  border-bottom-right-radius: 30px;
-  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
 }
 
 .accordion>.card:not(:first-of-type) {
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
 }
 
 .btn.focus, .btn:focus {
-  outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
 }
-/* Alteracao de estilo de todos os cabecalhos dos cards do bootstrap */
+
 .card-header {
   padding: .75rem 1.25rem;
   margin-bottom: -1px;
@@ -84,37 +79,34 @@
    font-size: 16px;
  }
 
-/* Alteracao do titulo do FAQ */
-.duvidas{
+.duvidas {
   text-align: center;
   color: #2d3d57;
   padding-top: 80px;
   padding-bottom: 20px;
 }
 
-/* Alteracao de estilo do fundo do componente flex-box */
- .flex-box{
+ .flex-box {
   background-color: #ffffff;
 }
 
-/* Alteracao de estilo do fundo do componente content-box  */
- .content-box{
+ .content-box {
   background-color: #ffffff;   
   } 
 
-  /* Retirando o jumbotron */
   .jumbotron {
     padding: 0px;
     margin-bottom: 0rem;
-    /* background-color: #e9ecef; */
+    background-color: #e9ecef;
     border-radius: .0rem;
   }
 
-  .btn.btn:focus{     
+  .btn.btn:focus {     
     outline: none;
     box-shadow: none;
     }
-  .div.col-6{
+
+  .div.col-6 {
     margin: auto;
     padding-bottom: 50px;
   }
@@ -124,308 +116,4 @@
     left: 85%;
     position: absolute;
     width: 50%;
-  
 }
-
-  
-  @media only screen and (min-width:414px) and (max-width:736px){
-    .btn.btn{
-      font-size: 0.9rem;
-      width: 100%;
-      text-align: left; 
-      padding: 0px;  
-    }
-  
-    .div{
-      column-width: 100%;
-      background-color: #ffffff;
-      padding-bottom: 150px;      
-    }
-
-    .col-6 {
-      flex: 0 0 120%;
-      max-width: 120%;
-  }
-    
-
-    .card.card {    
-      width: 100%;
-      word-wrap: break-word;
-      background-color: #ffffff;
-      background-clip: border-box;
-      border: 0px solid rgba(0,0,0,.125);
-      border-radius: .10rem;
-      color: #2d3d57;
-      font-family: 'Montserrat';
-      text-align: left;   
-      margin-bottom: -1px;
-      padding-left: 0px;  
-  }
-   
-  .card-header {
-    padding: .75rem 1.25rem;
-    margin-bottom: -1px;
-    background-color: #ffffff; 
-    padding-left: 0px;  
-
-  }
-
-  .jumbotron {
-    padding: 0px;
-    margin-bottom: 0rem;
-    background-color: #e9ecef;
-    border-radius: .0rem;
-  }
-    .card-body {
-    flex: 1 1 auto;
-    min-height: 1px;
-    padding: 0px;
-    font-size: 0.8rem;
-    
-  }
-
-  .title {
-    text-align: center;
-    color: #2d3d57;
-    font-family: 'Montserrat';
-    padding-top: 80px;
-    padding-bottom: 0px;
-  }
-
-  .iconFaq {
-     position: absolute;
-     right: 0px;
-     top: 15px;
-  }
- .imgFaq {
- display: none;
- }
-    
-  }
-
-  @media only screen and (min-width:768px) and (max-width:1024px){
-    .btn.btn{
-      font-size: 0.9rem;
-      width: 100%;
-      text-align: left; 
-      padding: 0px;  
-    }
-   
-    .div{
-      column-width: 100%;
-      background-color: #ffffff;
-      padding-bottom: 150px;      
-    }
-
-    .col-6 {
-      flex: 0 0 90%;
-      max-width: 90%;
-  }
-    
-
-    .card.card {    
-      width: 100%;
-      word-wrap: break-word;
-      background-color: #ffffff;
-      background-clip: border-box;
-      border: 0px solid rgba(0,0,0,.125);
-      border-radius: .10rem;
-      color: #2d3d57;
-      font-family: 'Montserrat';
-      text-align: left;   
-      margin-bottom: -1px;
-      padding-left: 0px;  
-  }
-   
-  .card-header {
-    padding: .75rem 1.25rem;
-    margin-bottom: -1px;
-    background-color: #ffffff; 
-    padding-left: 0px;  
-
-  }
-
-  .jumbotron {
-    padding: 0px;
-    margin-bottom: 0rem;
-    background-color: #e9ecef;
-    border-radius: .0rem;
-  }
-    .card-body {
-    flex: 1 1 auto;
-    min-height: 1px;
-    padding: 0px;
-    font-size: 0.8rem;
-    
-  }
-  .title {
-    text-align: center;
-    color: #2d3d57;
-    font-family: 'Montserrat';
-    padding-top: 80px;
-    padding-bottom: 0px;
-  }
-
-  .iconFaq {
-     position: absolute;
-     right: 30px;
-     top: 15px;
-  }
- .imgFaq {
- display: none;
- }
-    
-  }
-
-  @media only screen and (min-width:360px) and (max-width:640px){
-    .btn.btn{
-      font-size: 0.9rem;
-      width: 100%;
-      text-align: left; 
-      padding: 0px;  
-    }
-   
-    .div{
-      column-width: 100%;
-      background-color: #ffffff;
-      padding-bottom: 150px;      
-    }
-
-    .col-6 {
-      flex: 0 0 120%;
-      max-width: 120%;
-  }
-    
-
-    .card.card {    
-      width: 100%;
-      word-wrap: break-word;
-      background-color: #ffffff;
-      background-clip: border-box;
-      border: 0px solid rgba(0,0,0,.125);
-      border-radius: .10rem;
-      color: #2d3d57;
-      font-family: 'Montserrat';
-      text-align: left;   
-      margin-bottom: -1px;
-      padding-left: 0px;  
-  }
-   
-  .card-header {
-    padding: .75rem 1.25rem;
-    margin-bottom: -1px;
-    background-color: #ffffff; 
-    padding-left: 0px;  
-
-  }
-
-  .jumbotron {
-    padding: 0px;
-    margin-bottom: 0rem;
-    background-color: #e9ecef;
-    border-radius: .0rem;
-  }
-    .card-body {
-    flex: 1 1 auto;
-    min-height: 1px;
-    padding: 0px;
-    font-size: 0.8rem;
-    
-  }
-
-  .title {
-    text-align: center;
-    color: #2d3d57;
-    font-family: 'Montserrat';
-    padding-top: 80px;
-    padding-bottom: 0px;
-  }
-
-  .imgFaq {
-    top:60%;
-    left: 85%;
-    position: absolute;
-    width: 50%;
-  
-}
-
- .imgFaq {
- display: none;
- }
-    
-  }
-
-  @media only screen and (min-width:320px) and (max-width:568px){
-    .btn.btn{
-      font-size: 0.9rem;
-      width: 100%;
-      text-align: left; 
-      padding: 0px;  
-    }
-   
-    .div{
-      column-width: 100%;
-      background-color: #ffffff;
-      padding-bottom: 150px;      
-    }
-
-    .col-6 {
-      flex: 0 0 120%;
-      max-width: 120%;
-  }
-    
-
-    .card.card {    
-      width: 100%;
-      word-wrap: break-word;
-      background-color: #ffffff;
-      background-clip: border-box;
-      border: 0px solid rgba(0,0,0,.125);
-      border-radius: .10rem;
-      color: #2d3d57;
-      font-family: 'Montserrat';
-      text-align: left;   
-      margin-bottom: -1px;
-      padding-left: 0px;  
-  }
-   
-  .card-header {
-    padding: .75rem 1.25rem;
-    margin-bottom: -1px;
-    background-color: #ffffff; 
-    padding-left: 0px;  
-
-  }
-
-  .jumbotron {
-    padding: 0px;
-    margin-bottom: 0rem;
-    background-color: #e9ecef;
-    border-radius: .0rem;
-  }
-    .card-body {
-    flex: 1 1 auto;
-    min-height: 1px;
-    padding: 0px;
-    font-size: 0.8rem;
-    
-  }
-
-  .title {
-    text-align: center;
-    color: #2d3d57;
-    font-family: 'Montserrat';
-    padding-top: 80px;
-    padding-bottom: 0px;
-  }
-
-  .iconFaq {
-     position: absolute;
-     right: 0px;
-     top: 15px;
-  }
- .imgFaq {
- display: none;
- }
-    
-  }

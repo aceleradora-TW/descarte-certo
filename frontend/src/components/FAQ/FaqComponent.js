@@ -6,10 +6,11 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './FaqStyle.css'
 import Texts from './texts.json'
 import { string } from 'prop-types';
+import './FaqResponsive.css'
 
 function FaqComponent() {
     return (
-
+        
         <div className="div col-6">
             <h1 id="Duvidas" className="duvidas">{Texts.duvidas.title}</h1>
             <Accordion >
@@ -22,7 +23,6 @@ function FaqComponent() {
                             </Accordion.Collapse>
                         </Accordion.Toggle>
                     </Card.Header>
-
                 </Card>
                 <Card>
                     <Card.Header>
@@ -33,7 +33,6 @@ function FaqComponent() {
                             </Accordion.Collapse>
                         </Accordion.Toggle>
                     </Card.Header>
-
                 </Card>
                 <Card>
                     <Card.Header>
@@ -44,7 +43,6 @@ function FaqComponent() {
                             </Accordion.Collapse>
                         </Accordion.Toggle>
                     </Card.Header>
-
                 </Card>
                 <Card>
                     <Card.Header>
@@ -55,7 +53,6 @@ function FaqComponent() {
                                 <Card.Body>{Texts.card4.content}</Card.Body>
                             </Accordion.Collapse>   </Accordion.Toggle>
                     </Card.Header>
-
                 </Card>
                 <Card>
                     <Card.Header>
@@ -66,7 +63,6 @@ function FaqComponent() {
                             </Accordion.Collapse>
                         </Accordion.Toggle>
                     </Card.Header>
-
                 </Card>
                 <Card>
                     <Card.Header>
@@ -77,7 +73,6 @@ function FaqComponent() {
                             </Accordion.Collapse>
                         </Accordion.Toggle>
                     </Card.Header>
-
                 </Card>
                 <Card>
                     <Card.Header>
@@ -88,10 +83,9 @@ function FaqComponent() {
                             </Accordion.Collapse>
                         </Accordion.Toggle>
                     </Card.Header>
-
                 </Card>
             </Accordion>
-
+            
             <img src={imgFaq} className="imgFaq" />
         </div >
     )
