@@ -1,5 +1,4 @@
 import React from 'react'
-import './DepositionsStyles.css'
 import Card from 'react-bootstrap/Card'
 import PhotoCard1 from '../images/img1.png'
 import PhotoCard2 from '../images/img2.png'
@@ -9,6 +8,7 @@ import PhotoCard5 from '../images/img5.png'
 import PhotoCard6 from '../images/img6.png'
 import Carousel from 'react-elastic-carousel'
 import TextsDepositions from './texts.json'
+import './DepositionsStyles.css'
   
 function DepositionsComponent() {
   const initialValues = {
