@@ -47,6 +47,10 @@
     -moz-box-shadow: 3px 3px 10px 5px #ffffff;
     -webkit-box-shadow: 1px 1px 10px 1px #98d4cb;
     -o-box-shadow: 3px 3px 50px 5px #26E2C5;
+    opacity:100%;
+}
+.body-depositions{
+    opacity:100%;   
 }
 .img {
     vertical-align: super;

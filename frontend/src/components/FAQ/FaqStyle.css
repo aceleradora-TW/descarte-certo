@@ -73,10 +73,11 @@
   background-color: #ffffff;   
  }
 
- .card-body {
+ .body-faq {
    color: #636363;
    font-weight: 200;
    font-size: 16px;
+   opacity:100%;
  }
 
 .duvidas {
