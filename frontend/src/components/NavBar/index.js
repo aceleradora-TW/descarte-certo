@@ -11,11 +11,11 @@ function NavBarComponent() {
             <Navbar.Toggle aria-controls="basic-navbar-nav " />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto mx-auto nb-cont">
-                    <Nav.Link  href="#Contato">{NavId.id.contact}</Nav.Link >
-                    <Nav.Link  href="#Beneficios" >{NavId.id.benefits}</Nav.Link>
-                    <Nav.Link  href="#Depoimentos">{NavId.id.depositions}</Nav.Link>
-                    <Nav.Link  href="#FAQ">{NavId.id.faq}</Nav.Link>
-                    <Nav.Link  href="#Orcamento">{NavId.id.budget}</Nav.Link>
+                    <Nav.Link href="#Contato">{NavId.id.contact}</Nav.Link >
+                    <Nav.Link href="#Beneficios" >{NavId.id.benefits}</Nav.Link>
+                    <Nav.Link href="#Depoimentos">{NavId.id.depositions}</Nav.Link>
+                    <Nav.Link href="#Duvidas">{NavId.id.duvidas}</Nav.Link>
+                    <Nav.Link href="#Orcamento">{NavId.id.budget}</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

@@ -1,9 +1,9 @@
 {
     "id": {
-        "contact" : "Contato",
-        "benefits" : "Beneficios",
-        "depositions" : "Depoimento",
-        "faq" : "FAQ",
-        "budget" : "Orçamento"
+        "contact": "Contato",
+        "benefits": "Beneficios",
+        "depositions": "Depoimento",
+        "duvidas": "Dúvidas",
+        "budget": "Orçamento"
     }
 }
