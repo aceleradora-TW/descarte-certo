@@ -13,15 +13,16 @@ import "./ModalStyle.css";
 import { ERRORS } from "../../constant";
 import InputMask from "react-input-mask";
 import * as yup from "yup";
+import Axios from "axios";
 
-
-function Modal(props) {
-  const validationSchema = yup.object().shape({
-    email: yup.string().email().required(ERRORS.REQUIRED_FIELD),
-    nameCompleted: yup.string().required(ERRORS.REQUIRED_FIELD),
-    cep: yup.string().required(ERRORS.REQUIRED_FIELD),
-    cellphone: yup.string().required(ERRORS.REQUIRED_FIELD),
-  });
+ function Modal(props) {
+    const validationSchema = yup.object().shape({
+      email: yup.string().email('e-mail inválido').required(ERRORS.REQUIRED_FIELD),
+      nameCompleted: yup.string().matches(/^(?=.[A-Z])(?=.[a-z]).{5,50}\S$/, 'Insira um nome válido').required(ERRORS.REQUIRED_FIELD),
+      cep: yup.string().matches(/^(?=.*[0-9]).{8,8}\S$/, 'Insira um cep válido').required(ERRORS.REQUIRED_FIELD),
+      cellphone: yup.string().matches(/^(?=.*[0-9]).{11,12}\S$/, 'Insira um telefone válido').required(ERRORS.REQUIRED_FIELD),
+      descreva: yup.string().matches(/^(?=.[A-Z])(?=.[a-z]).{5,200}\S$/, 'Insira apenas letras')
+    });
 
   const initialValues = {
     nameCompleted: "",
@@ -32,12 +33,16 @@ function Modal(props) {
 
   const onSubmit = (values, { setSubmitting, resetForm }) => {
     setTimeout(() => {
+      Axios.post(`http://localhost:8080/estimate`, {
+        nameCompleted: validationSchema.nameCompleted,
+        email: validationSchema.email,
+        cellphone: validationSchema.cellphone,
+        cep: validationSchema.cep
+      })
       alert(JSON.stringify(values, null, 2));
       setSubmitting(false);
     }, 400);
   };
-
-  console.log(initialValues);
 
   return (
     <BootstrapModal
