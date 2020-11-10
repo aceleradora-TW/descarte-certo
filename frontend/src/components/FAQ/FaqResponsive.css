@@ -3,7 +3,22 @@
       font-size: 0.9rem;
       width: 100%;
       text-align: left; 
-      padding: 0px;  
+    }
+
+    .accordion>.card:not(:last-of-type) {
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+      border-top-left-radius: 20px;
+      border-top-left-radius: 20px;
+    }
+    
+    .accordion>.card:not(:first-of-type) {
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      padding-left: 15px;
+      margin-top: 22px;
     }
   
     .div{
@@ -75,10 +90,27 @@
 
   @media only screen and (min-width:768px) and (max-width:1024px){
     .btn.btn{
-      font-size: 0.9rem;
       width: 100%;
       text-align: left; 
-      padding: 0px;  
+      padding: 0px; 
+      font-size: 18px;   
+    }
+
+    .accordion>.card:not(:last-of-type) {
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      padding-left: 15px;
+    }
+    
+    .accordion>.card:not(:first-of-type) {
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      padding-left: 15px;
+      margin-top: 22px;
     }
    
     .div{
@@ -149,10 +181,22 @@
 
   @media only screen and (min-width:360px) and (max-width:640px){
     .btn.btn{
-      font-size: 0.9rem;
+      font-size: 16px;
       width: 100%;
       text-align: left; 
-      padding: 0px;  
+      padding-right: 10px;  
+    }
+
+    .accordion>.card:not(:last-of-type) {
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+    
+    .accordion>.card:not(:first-of-type) {
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      padding-left: 15px;
+      margin-top: 22px;
     }
    
     .div{
@@ -199,7 +243,7 @@
     flex: 1 1 auto;
     min-height: 1px;
     padding: 0px;
-    font-size: 0.8rem;
+    font-size: 14px;
     
   }
 
@@ -227,10 +271,27 @@
 
   @media only screen and (min-width:320px) and (max-width:568px){
     .btn.btn{
-      font-size: 0.9rem;
+      font-size: 16px;
       width: 100%;
       text-align: left; 
-      padding: 0px;  
+      padding-right: 10px;
+    }
+
+    .accordion>.card:not(:last-of-type) {
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      padding-left: 5px;
+    }
+    
+    .accordion>.card:not(:first-of-type) {
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      padding-left: 5px;
+      margin-top: 22px;
     }
    
     .div{
@@ -244,7 +305,6 @@
       max-width: 120%;
   }
     
-
     .card.card {    
       width: 100%;
       word-wrap: break-word;
@@ -277,8 +337,7 @@
     flex: 1 1 auto;
     min-height: 1px;
     padding: 0px;
-    font-size: 0.8rem;
-    
+    font-size: 14px;  
   }
 
   .title {
@@ -291,8 +350,8 @@
 
   .iconFaq {
      position: absolute;
-     right: 0px;
-     top: 15px;
+     right: 10px;
+     top: 23px;
   }
  .imgFaq {
  display: none;
