@@ -71,16 +71,16 @@
 }
 
 button.sc-gKAblj.brcpxa.rec.rec-dot.rec.rec-dot_active{
-    background-color: #60D6C5 !important;
-    box-shadow: 0 0 1px 2px #13927f !important;
-    width: 12px;
-    height: 11px;
+    background-color:#26E2C5  !important;
+    box-shadow: 0 0 1px 2px #a8b2c7 !important;
+    width: 15px;
+    height: 15px;
 }
 button.sc-gKAblj.ikyGAt.rec.rec-dot{
     background-color: transparent;
-    box-shadow: 0 0 1px 2px  #60D6C5 !important;
-    width: 12px;
-    height: 11px;
+    box-shadow: 0px 0px 1px 2px rgba(48, 60, 91, 0.1)!important;
+    width: 15px;
+    height: 15px;
 }
 .sc-bdnylx.chowzb.rec.rec-arrow.rec.rec-arrow-right{
     background-color: #60D6C5 !important; 
@@ -125,12 +125,12 @@ button.sc-gKAblj.ikyGAt.rec.rec-dot{
     transition: all 250ms ease;
     border: none;
     margin: 5px;
-    background-color: #f1f5ff !important;
+    background-color:#26E2C5  !important;
     font-size: 1.3em;
     content: "";
-    height: 10px;
-    width: 10px;
-    box-shadow: 0 0 1px 3px #34c2aa !important;
+    height: 15px;
+    width: 15px;
+    box-shadow: 0 0 1px 3px #a8b2c7 !important;
     border-radius: 50%;
     outline: none;
 }
@@ -139,12 +139,12 @@ button.sc-gKAblj.ikyGAt.rec.rec-dot{
     transition: all 250ms ease;
     border: none;
     margin: 5px;
-    background-color:  #f1f5ff !important;
+    background-color:#26E2C5  !important;
     font-size: 1.3em;
     content: "";
-    height: 10px;
-    width: 10px;
-    box-shadow: 0 0 1px 3px #34c2aa !important;
+    height: 15px;
+    width: 15px;
+    box-shadow: 0 0 1px 2px #a8b2c7 !important;
     border-radius: 50%;
     outline: none;
 }
@@ -155,8 +155,8 @@ button.sc-gKAblj.ikyGAt.rec.rec-dot{
     background-color: transparent;
     font-size: 1.3em;
     content: "";
-    height: 10px;
-    width: 10px;
+    height: 15px;
+    width: 15px;
     box-shadow: 0px 0px 1px 2px rgba(48, 60, 91, 0.1)!important;
     border-radius: 50%;
     outline: none;
@@ -165,12 +165,12 @@ button.sc-gKAblj.ikyGAt.rec.rec-dot{
     transition: all 250ms ease 0s;
     border: none;
     margin: 5px;
-    background-color: #aec0ee !important;
+    background-color: #26E2C5  !important;
     font-size: 1.3em;
     content: "";
-    height: 10px;
-    width: 10px;
-    box-shadow:0 0 1px 3px #13927f !important;
+    height: 15px;
+    width: 15px;
+    box-shadow:0 0 1px 2px #a8b2c7 !important;
     border-radius: 50%;
     outline: none;
 }
