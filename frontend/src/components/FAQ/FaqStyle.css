@@ -1,74 +1,119 @@
-/* Alteracao do estilo do btn primary do bootstrap */
+
 .btn.btn-primary {
   background-color: #f4f4f4;  
   color: #2d3d57;   
-  border-color: #f4f4f4;
   font-size: 1.5rem;
 }
 
-/* Alinhamento do icone do Faq */
 .iconFaq {
- /* padding-left: 20px; */
  position: absolute;
   right: 20px;
-  top: 15px;
+  top: 32px;
+}
+
+.iconFaq:active {
+  transform: rotate(180deg);
+  transition: 0.5s;
 }
 
 .imgFaq {
-  padding-left: 450px;
+  top:82%;
+  left: 90%;
+  position: absolute;
+  width: 50%;
 }
 
-/* Alteracao do estilo do btn do bootstrap */
 .btn.btn {
-  font-size: 1.4rem;
   width: 95%;
-  text-align: left;    
+  text-align: left;
+  color: #2d3d57;  
+  font-size: 18px;  
   }
 
-/* Alteracao da cor de fundo do FAQ */
-.div{
+.div {
   background-color: #ffffff;
-  padding-bottom: 150px;
+  padding-bottom: 2000px;
 }
 
-/* Alteracao de estilo de todos os cards do bootstrap */
-.card.card {    
-    width: 100%;
-    word-wrap: break-word;
-    background-color: #ffffff;
-    background-clip: border-box;
-    border: 0px solid rgba(0,0,0,.125);
-    border-radius: .10rem;
-    color: #2d3d57;
-    font-family: 'Montserrat', sans-serif;
-    text-align: justify;   
-    margin-bottom: -1px;  
+.card {    
+  width: 100%;
+  word-wrap: break-word;
+  background-color: #ffffff;
+  background-clip: border-box;
+  border: 2px 1px 2px 1px solid;
+  color: #2d3d57;
+  font-family: 'Montserrat', sans-serif;
+  text-align: justify;   
+  opacity: 90%;
+  margin-bottom: 30px;
+  box-shadow: 1px 1px 1px 5px #F5F4F6;
+  -moz-box-shadow: 3px 3px 10px 5px #ffffff;
+  -webkit-box-shadow: 0px 0px 5px 0px black;
+  border-radius: 50px;
+  z-index: 6;
 }
 
-/* Alteracao de estilo de todos os cabecalhos dos cards do bootstrap */
+.accordion>.card:not(:last-of-type) {
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.accordion>.card:not(:first-of-type) {
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+.btn.focus, .btn:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
 .card-header {
   padding: .75rem 1.25rem;
   margin-bottom: -1px;
-  background-color: #ffffff;    
- 
+  background-color: #ffffff;   
  }
 
-/* Alteracao do titulo do FAQ */
-.title{
+ .card-body {
+   color: #636363;
+   font-weight: 200;
+   font-size: 16px;
+ }
+
+.duvidas {
   text-align: center;
   color: #2d3d57;
-  font-family: 'Montserrat';
-  padding-top: 150px;
-  padding-bottom: 30px;
+  padding-top: 80px;
+  padding-bottom: 20px;
 }
 
-/* Alteracao de estilo do fundo do componente flex-box */
-
- .flex-box{
+ .flex-box {
   background-color: #ffffff;
 }
 
-/* Alteracao de estilo do fundo do componente content-box  */
- .content-box{
+ .content-box {
   background-color: #ffffff;   
   } 
+
+  .jumbotron {
+    padding: 0px;
+    margin-bottom: 0rem;
+    background-color: #e9ecef;
+    border-radius: .0rem;
+  }
+
+  .btn.btn:focus {     
+    outline: none;
+    box-shadow: none;
+    }
+
+  .div.col-6 {
+    margin: auto;
+    padding-bottom: 50px;
+  }
+  
+  .imgFaq {
+    top:60%;
+    left: 85%;
+    position: absolute;
+    width: 50%;
+}
