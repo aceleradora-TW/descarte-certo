@@ -44,13 +44,13 @@
   color: #2d3d57 !important;
   font-family: 'Montserrat', sans-serif;
   text-align: justify;   
-  opacity: none !important;
+  opacity: 90% !important;
   margin-bottom: 30px;
   box-shadow: 1px 1px 1px 5px #F5F4F6 !important;
   -moz-box-shadow: 3px 3px 10px 5px #ffffff !important;
   -webkit-box-shadow: 0px 0px 5px 0px black !important;
   border-radius: 50px;
-  z-index: 6;
+  z-index: 1;
 }
 
 .accordion>.card:not(:last-of-type) {
