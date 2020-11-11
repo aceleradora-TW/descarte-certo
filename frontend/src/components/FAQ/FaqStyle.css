@@ -1,7 +1,7 @@
 
 .btn.btn-primary {
-  background-color: #f4f4f4;  
-  color: #2d3d57;   
+  background-color: #f4f4f4 !important;  
+  color: #2d3d57 !important;   
   font-size: 1.5rem;
 }
 
@@ -26,29 +26,29 @@
 .btn.btn {
   width: 95%;
   text-align: left;
-  color: #2d3d57;  
+  color: #2d3d57 !important;  
   font-size: 18px;  
   }
 
 .div {
-  background-color: #ffffff;
+  background-color: #ffffff !important;
   padding-bottom: 2000px;
 }
 
 .card {    
   width: 100%;
   word-wrap: break-word;
-  background-color: #ffffff;
+  background-color: #ffffff !important;
   background-clip: border-box;
-  border: 2px 1px 2px 1px solid;
-  color: #2d3d57;
+  border: 2px 1px 2px 1px solid !important;
+  color: #2d3d57 !important;
   font-family: 'Montserrat', sans-serif;
   text-align: justify;   
-  opacity: 90%;
+  opacity: 90% !important;
   margin-bottom: 30px;
-  box-shadow: 1px 1px 1px 5px #F5F4F6;
-  -moz-box-shadow: 3px 3px 10px 5px #ffffff;
-  -webkit-box-shadow: 0px 0px 5px 0px black;
+  box-shadow: 1px 1px 1px 5px #F5F4F6 !important;
+  -moz-box-shadow: 3px 3px 10px 5px #ffffff !important;
+  -webkit-box-shadow: 0px 0px 5px 0px black !important;
   border-radius: 50px;
   z-index: 6;
 }
@@ -70,11 +70,11 @@
 .card-header {
   padding: .75rem 1.25rem;
   margin-bottom: -1px;
-  background-color: #ffffff;   
+  background-color: #ffffff !important;   
  }
 
  .body-faq {
-   color: #636363;
+   color: #636363 !important;
    font-weight: 200;
    font-size: 16px;
    opacity:100%;
@@ -82,23 +82,23 @@
 
 .duvidas {
   text-align: center;
-  color: #2d3d57;
+  color: #2d3d57 !important;
   padding-top: 80px;
   padding-bottom: 20px;
 }
 
  .flex-box {
-  background-color: #ffffff;
+  background-color: #ffffff !important;
 }
 
  .content-box {
-  background-color: #ffffff;   
+  background-color: #ffffff !important;   
   } 
 
   .jumbotron {
     padding: 0px;
     margin-bottom: 0rem;
-    background-color: #e9ecef;
+    background-color: #e9ecef !important;
     border-radius: .0rem;
   }
 
