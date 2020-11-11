@@ -3,10 +3,10 @@ import { Accordion, Card, Button } from "react-bootstrap";
 import Icone from '../images/icon-faq-novo.png'
 import imgFaq from '../images/img-faq.png'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import './FaqStyle.css'
 import Texts from './texts.json'
 import { string } from 'prop-types';
 import './FaqResponsive.css'
+import './FaqStyle.css'
 
 function FaqComponent() {
     return (
