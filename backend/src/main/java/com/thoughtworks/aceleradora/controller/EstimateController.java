@@ -26,7 +26,7 @@ public class EstimateController {
         this.estimateService = estimateService;
     }
 
-    @PostMapping(value = "/create")
+    @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public EstimateResponse create(@RequestBody EstimateRequest estimateRequest) {
         return from(estimateService.create(estimateRequest));
