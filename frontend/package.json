@@ -9,6 +9,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "axios": "^0.21.0",
     "bootstrap": "^4.5.3",
     "carousel": "^0.0.3",
     "formik": "^2.2.0",
