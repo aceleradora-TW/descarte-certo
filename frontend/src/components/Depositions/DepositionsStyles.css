@@ -73,7 +73,7 @@
     padding-top: 55px;
     padding-bottom: 40px ;
 }
-
+/* 
 button.sc-gKAblj.brcpxa.rec.rec-dot.rec.rec-dot_active{
     background-color: #60D6C5 !important;
     box-shadow: 0 0 1px 2px #13927f !important;
@@ -184,7 +184,7 @@ button.sc-gKAblj.ikyGAt.rec.rec-dot {
     box-shadow: 0 0 1px 2px rgb(248, 245, 245);
     border-radius: 50%;
     outline: none;
-}
+} */
 button {
     appearance: button;
     text-rendering: auto;
