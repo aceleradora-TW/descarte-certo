@@ -12,7 +12,7 @@ import org.springframework.web.client.RestTemplate;
 
 public class CreateEstimateFunctionalTestTool {
 
-    private static final String URL_BACKEND = "http://localhost:8080/estimate/create";
+    private static final String URL_BACKEND = "http://localhost:8080/estimate";
 
     public static void main(String[] args) {
         try {
