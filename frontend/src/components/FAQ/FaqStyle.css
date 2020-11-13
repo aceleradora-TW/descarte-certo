@@ -56,13 +56,13 @@
 .accordion>.card:not(:last-of-type) {
   border-bottom-right-radius: 50px;
   border-bottom-left-radius: 50px;
-  opacity: 90%;
+  opacity: 90% !important;
 }
 
 .accordion>.card:not(:first-of-type) {
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
-  opacity: 90%;
+  opacity: 90% !important;
 }
 
 .btn.focus, .btn:focus {
