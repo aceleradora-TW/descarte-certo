@@ -14,7 +14,7 @@ function FaqComponent() {
         <div className="div col-6">
             <h1 id="Duvidas" className="duvidas">{Texts.duvidas.title}</h1>
             <Accordion >
-                <Card>
+                <Card className="card-faq">
                     <Card.Header>
                         <Accordion.Toggle as={Button} variant="" eventKey="0">
                             {Texts.card1.title} <img src={Icone} className="iconFaq" />
@@ -24,7 +24,7 @@ function FaqComponent() {
                         </Accordion.Toggle>
                     </Card.Header>
                 </Card>
-                <Card>
+                <Card className="card-faq">
                     <Card.Header>
                         <Accordion.Toggle as={Button} variant="" eventKey="1">
                             {Texts.card2.title} <img src={Icone} className="iconFaq" />
@@ -34,7 +34,7 @@ function FaqComponent() {
                         </Accordion.Toggle>
                     </Card.Header>
                 </Card>
-                <Card>
+                <Card className="card-faq">
                     <Card.Header>
                         <Accordion.Toggle as={Button} variant="" eventKey="2">
                             {Texts.card3.title}  <img src={Icone} className="iconFaq" />
@@ -44,7 +44,7 @@ function FaqComponent() {
                         </Accordion.Toggle>
                     </Card.Header>
                 </Card>
-                <Card>
+                <Card className="card-faq">
                     <Card.Header>
                         <Accordion.Toggle as={Button} variant="" eventKey="3">
                             {Texts.card4.title}  <img src={Icone} className="iconFaq" />
@@ -53,7 +53,7 @@ function FaqComponent() {
                             </Accordion.Collapse>   </Accordion.Toggle>
                     </Card.Header>
                 </Card>
-                <Card>
+                <Card className="card-faq">
                     <Card.Header>
                         <Accordion.Toggle as={Button} variant="" eventKey="4">
                             {Texts.card5.title}  <img src={Icone} className="iconFaq" />
@@ -63,7 +63,7 @@ function FaqComponent() {
                         </Accordion.Toggle>
                     </Card.Header>
                 </Card>
-                <Card>
+                <Card className="card-faq">
                     <Card.Header>
                         <Accordion.Toggle as={Button} variant="" eventKey="5">
                             {Texts.card6.title}  <img src={Icone} className="iconFaq" />
@@ -73,7 +73,7 @@ function FaqComponent() {
                         </Accordion.Toggle>
                     </Card.Header>
                 </Card>
-                <Card>
+                <Card className="card-faq">
                     <Card.Header>
                         <Accordion.Toggle as={Button} variant="" eventKey="6">
                             {Texts.card7.title}  <img src={Icone} className="iconFaq" />
