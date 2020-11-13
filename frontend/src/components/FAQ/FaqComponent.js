@@ -10,7 +10,6 @@ import './FaqResponsive.css'
 
 function FaqComponent() {
     return (
-        
         <div className="div col-6">
             <h1 id="Duvidas" className="duvidas">{Texts.duvidas.title}</h1>
             <Accordion >
@@ -84,7 +83,7 @@ function FaqComponent() {
                     </Card.Header>
                 </Card>
             </Accordion>
-            
+
             <img src={imgFaq} className="imgFaq" />
         </div >
     )
