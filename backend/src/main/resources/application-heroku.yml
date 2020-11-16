@@ -10,4 +10,4 @@ spring:
     password: ${SPRING_DATASOURCE_PASSWORD}
   mailgun:
     username: ${MAILGUN_USERNAME}
-      password: ${MAILGUN_PASSWORD}
+    password: ${MAILGUN_PASSWORD}

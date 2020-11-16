@@ -7,11 +7,15 @@ import org.springframework.beans.factory.annotation.Value;
 
 
 public class MailFactory {
-    @Value("#{${ mailgun: {'MAILGUN_USERNAME','MAILGUN_PASSWORD'}}}")
+    @Value("{$MAILGUN_USERNAME}")
+    private String username;
+    @Value("{$MAILGUN_PASSWORD}")
+    private String password;
+
     private String email="5marias.sustentaveis@gmail.com";
     public  JsonNode sendSimpleMessage(String textBody) throws UnirestException {
-        HttpResponse<JsonNode> request = Unirest.post("https://api.mailgun.net/v3/" + "${MAILGUN_USERNAME}" + "/messages")
-                .basicAuth("api","MAILGUN_PASSWORD")
+        HttpResponse<JsonNode> request = Unirest.post("https://api.mailgun.net/v3/" + username + "/messages")
+                .basicAuth("api",password)
                 .field("from",email)
                 .field("to", email)
                 .field("subject", "E mail recebido com novo orçamento")
