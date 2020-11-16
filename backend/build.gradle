@@ -36,6 +36,7 @@ dependencies {
     compile "org.flywaydb:flyway-core"
     compile "org.postgresql:postgresql:42.2.5"
     compile  'org.projectlombok:lombok:1.18.14'
+
     annotationProcessor 'org.projectlombok:lombok:1.18.14'
 
     testCompile 'org.projectlombok:lombok:1.18.14'
