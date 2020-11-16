@@ -21,5 +21,6 @@ public class EstimateConverterService {
                         .locationInfo(request.getResidueAddress().getLocationInfo())
                         .build())
                 .build();
+
     }
 }
