@@ -22,7 +22,7 @@
     "react-card-slide": "^1.0.13",
     "react-dom": "^16.13.0",
     "react-elastic-carousel": "^0.9.4",
-    "react-input-mask": "^3.0.0-alpha.2",
+    "react-input-mask": "^2.0.4",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
     "react-slick": "^0.27.12",

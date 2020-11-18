@@ -21,4 +21,5 @@ public class Requester {
     private String nameCompleted;
     private String cellphone;
     private String email;
+    
 }

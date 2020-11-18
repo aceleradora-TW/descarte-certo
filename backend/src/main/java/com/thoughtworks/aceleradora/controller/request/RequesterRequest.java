@@ -13,4 +13,5 @@ public class RequesterRequest {
     private String nameCompleted;
     private String cellphone;
     private String email;
+    
 }

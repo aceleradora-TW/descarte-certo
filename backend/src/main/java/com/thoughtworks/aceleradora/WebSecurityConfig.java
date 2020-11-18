@@ -2,21 +2,16 @@ package com.thoughtworks.aceleradora;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.CorsRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+
 
 @Configuration
-public class WebSecurityConfig {
-
-    @Bean
-    public WebMvcConfigurer corsConfigurer() {
-        return new WebMvcConfigurerAdapter() {
-            //FIXME ajustar melhor a configuracao do CORS com origens corretas
-            @Override
-            public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**");
-            }
-        };
+public class  WebSecurityConfig extends WebSecurityConfigurerAdapter
+ {
+    @Override 
+    protected void configure (HttpSecurity httpSecurity) throws Exception {
+        httpSecurity.cors().and().csrf().disable();     
     }
+
 }

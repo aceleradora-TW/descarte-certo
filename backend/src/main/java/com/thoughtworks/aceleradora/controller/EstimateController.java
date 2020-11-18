@@ -31,9 +31,9 @@ public class EstimateController {
     public EstimateResponse create(@RequestBody EstimateRequest estimateRequest) {
         //FIXME remover apos backend estar pronto
         return EstimateResponse.builder()
-                .estimateCode(0)
+                .estimateCode(10)
                 .build();
-        //return from(estimateService.create(estimateRequest));
+      //  return from(estimateService.create(estimateRequest));
     }
 
     @GetMapping(path = "/{id}")

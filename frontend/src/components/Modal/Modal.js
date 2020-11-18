@@ -15,9 +15,10 @@ import InputMask from "react-input-mask";
 import * as yup from "yup";
 import Axios from "axios";
 
+
+
 function Modal(props) {
     const validationSchema = yup.object().shape({
-        //FIXME 1 ajustar validacoes removidas
         email: yup.string().email('e-mail inválido').required(ERRORS.REQUIRED_FIELD),
         nameCompleted: yup.string().required(ERRORS.REQUIRED_FIELD),
         cep: yup.string().required(ERRORS.REQUIRED_FIELD),
@@ -32,11 +33,13 @@ function Modal(props) {
         cep: "",
     };
 
-
     const onSubmit = (values, { setSubmitting, resetForm }) => {
         const requestCreateEstimate = {
             requester: {
-                nameCompleted: values.nameCompleted
+                nameCompleted: values.nameCompleted,
+                email: values.email,
+                cellphone: values.cellphone,
+
             },
             residueAddress: {
                 cep: values.cep,
@@ -69,76 +72,75 @@ function Modal(props) {
                     onSubmit={onSubmit}
                 >
                     {({
-                          values,
-                          handleChange,
-                          handleBlur,
-                          isSubmitting,
-                          isValid,
-                      }) => (
-                        <Form className="form-inputs-style">
-                            <Field
-                                className="form-control field-input"
-                                name="nameCompleted"
-                                placeholder="Nome Completo"
-                                onChange={handleChange}
-                                value={values.nameCompleted}
-                                onBlur={handleBlur}
-                                required />
-                            <ErrorMessage component="div" name="nameCompleted" />
-                            <br />
-                            <Field
-                                className="form-control field-input"
-                                name="email"
-                                value={values.email}
-                                onChange={handleChange}
-                                onBlur={handleBlur}
-                                placeholder="E-mail"
-                                required />
-                            <ErrorMessage component="div" name="email" />
-                            <br />
-                            <Row>
-                                <Col lg="6">
-                                    <FormGroup>
-                                        <Field name="cellphone" required>
-                                            {({ field }) => {
-                                                return <InputMask mask="99999-9999"
-                                                                  className="form-control field-input"
-                                                                  placeholder="Telefone Celular"
-                                                                  value={values.cellphone}
-                                                                  onChange={handleChange}
-                                                                  onBlur={handleBlur}{...field} />
-                                            }}
-                                        </Field>
-                                        <ErrorMessage component="div" name="cellphone" />
-                                    </FormGroup>
-                                </Col>
+                        values,
+                        handleChange,
+                        handleBlur,
+                        isSubmitting,
+                        isValid,
+                    }) => (
+                            <Form className="form-inputs-style">
+                                    <Field 
+                                    name="nameCompleted" required
+                                    className="form-control field-input"
+                                    placeholder="Nome Completo"
+                                    onChange={handleChange}
+                                    value={values.nameCompleted}
+                                    onBlur={handleBlur}/>
+                                    <ErrorMessage component="div" name="nameCompleted" />
+                                <br />
+                                <Field
+                                    className="form-control field-input"
+                                    name="email"
+                                    value={values.email}
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    placeholder="E-mail"
+                                    required />
+                                <ErrorMessage component="div" name="email" />
+                                <br />
+                                <Row>
+                                    <Col lg="6">
+                                        <FormGroup>
+                                            <Field name="cellphone" required>
+                                                {({ field }) => {
+                                                    return <InputMask mask="99999-9999"
+                                                        className="form-control field-input"
+                                                        placeholder="Telefone Celular"
+                                                        value={values.cellphone}
+                                                        onChange={handleChange}
+                                                        onBlur={handleBlur}{...field} />
+                                                }}
+                                            </Field>
+                                            <ErrorMessage component="div" name="cellphone" />
+                                        </FormGroup>
+                                    </Col>
 
-                                <Col lg="6">
-                                    <FormGroup>
-                                        <Field name="cep" required>
-                                            {({ field }) => {
-                                                return <InputMask mask="99999-999"
-                                                                  className="form-control field-input"
-                                                                  onChange={handleChange}
-                                                                  placeholder="CEP"
-                                                                  onBlur = { handleBlur }{...field} />
-                                            }}
-                                        </Field>
-                                        <ErrorMessage component="div" name="cep" />
+                                    <Col lg="6">
+                                        <FormGroup>
+                                            <Field name="cep" required>
+                                                {({ field }) => {
+                                                    return <InputMask mask="99999-999"
+                                                        className="form-control field-input"
+                                                        onChange={handleChange}
+                                                        placeholder="CEP"
+                                                        onBlur={handleBlur}{...field} />
+                                                }}
+                                            </Field>
+                                            <ErrorMessage component="div" name="cep" />
 
-                                    </FormGroup>
-                                </Col>
-                            </Row>
+                                        </FormGroup>
+                                    </Col>
+                                </Row>
 
-                            <Button
-                                disabled={!isValid || isSubmitting}
-                                block
-                                color="secondary"
-                                type="submit">
-                                Solicitar
+                                <Button
+                                    disabled={!isValid || isSubmitting}
+                                    block
+                                    color="secondary"
+                                    type="submit">
+                                    Solicitar
                             </Button>
-                        </Form>
-                    )}
+                            </Form>
+                        )}
                 </Formik>
             </ModalBody>
         </BootstrapModal>

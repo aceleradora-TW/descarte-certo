@@ -1,8 +1,12 @@
 {
-  "solicitante": {
-    "name": "TestEndToEnd"
+  "requester": {
+    "nameCompleted": "",
+    "cellphone": "",
+    "email":""
+
   },
-  "endereco": {
-    "cep": "00000000000"
+  "residueAddress": {
+    "cep": "",
+    "locationInfo":""
   }
 }
