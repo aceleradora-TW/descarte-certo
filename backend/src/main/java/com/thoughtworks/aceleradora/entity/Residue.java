@@ -1,8 +1,6 @@
 package com.thoughtworks.aceleradora.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,12 +9,16 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table
+@Table(name = "residue")
 @Data
 @Builder
 @AllArgsConstructor
+@NoArgsConstructor
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Residue {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long residueId;
+    @EqualsAndHashCode.Include
+    private Integer id;
+
 }
