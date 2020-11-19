@@ -26,7 +26,7 @@ function renderCard() {
             <div className="imgCard">
               <Card.Img variant="top" src={PhotoCard1} width="100px"/>
             </div>
-            <Card.Body>
+            <Card.Body classname="body-depositions">
               <Card.Title className='card-title'>{TextsDepositions.card1.title}</Card.Title>
               <Card.Text className='text-card'>{TextsDepositions.card1.content}</Card.Text>
             </Card.Body>
@@ -36,7 +36,7 @@ function renderCard() {
             <div className="imgCard">
               <Card.Img variant="top" src={PhotoCard2}/>
             </div>
-            <Card.Body>
+            <Card.Body classname="body-depositions">
               <Card.Title className='card.title'>{TextsDepositions.card2.title}</Card.Title>
               <Card.Text className='text-card'>{TextsDepositions.card2.content}</Card.Text>
             </Card.Body>
@@ -46,7 +46,7 @@ function renderCard() {
             <div className="imgCard">
               <Card.Img variant="top" src={PhotoCard3}/>
             </div>
-            <Card.Body>
+            <Card.Body classname="body-depositions">
               <Card.Title className='card.title'>{TextsDepositions.card3.title}</Card.Title>
               <Card.Text className='text-card'>{TextsDepositions.card3.content}</Card.Text>
             </Card.Body>
@@ -56,7 +56,7 @@ function renderCard() {
             <div className="imgCard">
               <Card.Img variant="top" src={PhotoCard4}/>
             </div>
-            <Card.Body>
+            <Card.Body classname="body-depositions">
               <Card.Title className='card.title'>{TextsDepositions.card4.title}</Card.Title>
               <Card.Text className='text-card'>{TextsDepositions.card4.content}</Card.Text>
             </Card.Body>
@@ -66,7 +66,7 @@ function renderCard() {
             <div className="imgCard">
               <Card.Img variant="top" src={PhotoCard5}/>
             </div>
-            <Card.Body>
+            <Card.Body classname="body-depositions">
               <Card.Title className='card.title'>{TextsDepositions.card5.title}</Card.Title>
               <Card.Text className='text-card'>{TextsDepositions.card5.content}</Card.Text>
             </Card.Body>
@@ -76,7 +76,7 @@ function renderCard() {
             <div className="imgCard">
               <Card.Img variant="top" src={PhotoCard6}/>
             </div>
-            <Card.Body>
+            <Card.Body classname="body-depositions">
               <Card.Title className='card.title'>{TextsDepositions.card6.title}</Card.Title>
               <Card.Text className='text-card'>{TextsDepositions.card6.content}</Card.Text>
             </Card.Body>
@@ -95,7 +95,7 @@ function renderCard() {
                 <div className="imgCard">
                   <Card.Img variant="top" src={PhotoCard1}/>
                 </div>
-                <Card.Body>
+                <Card.Body classname="body-depositions">
                   <Card.Title className='card-title'>{TextsDepositions.card1.title}</Card.Title>
                   <Card.Text className='text-card'>{TextsDepositions.card1.content}</Card.Text>
                 </Card.Body>
@@ -107,7 +107,7 @@ function renderCard() {
                 <div className="imgCard">
                   <Card.Img variant="top" src={PhotoCard2}/>
                 </div>
-                <Card.Body>
+                <Card.Body classname="body-depositions">
                   <Card.Title className='card.title'>{TextsDepositions.card2.title}</Card.Title>
                   <Card.Text className='text-card'>{TextsDepositions.card2.content}</Card.Text>
                 </Card.Body>
@@ -119,7 +119,7 @@ function renderCard() {
                 <div className="imgCard">
                   <Card.Img variant="top" src={PhotoCard3}/>
                 </div>
-                <Card.Body>
+                <Card.Body classname="body-depositions">
                   <Card.Title className='card.title'>{TextsDepositions.card3.title}</Card.Title>
                   <Card.Text className='text-card'>{TextsDepositions.card3.content}</Card.Text>
                 </Card.Body>
@@ -133,7 +133,7 @@ function renderCard() {
                 <div className="imgCard">
                   <Card.Img variant="top" src={PhotoCard4}/>
                 </div>
-                <Card.Body>
+                <Card.Body classname="body-depositions">
                   <Card.Title className='card.title'>{TextsDepositions.card4.title}</Card.Title>
                   <Card.Text className='text-card'>{TextsDepositions.card4.content}</Card.Text>
                 </Card.Body>
@@ -145,7 +145,7 @@ function renderCard() {
                 <div className="imgCard">
                   <Card.Img variant="top" src={PhotoCard5}/>
                 </div>
-                <Card.Body>
+                <Card.Body classname="body-depositions">
                   <Card.Title className='card.title'>{TextsDepositions.card5.title}</Card.Title>
                   <Card.Text className='text-card'>{TextsDepositions.card5.content}</Card.Text>
                 </Card.Body>
@@ -157,7 +157,7 @@ function renderCard() {
                 <div className="imgCard">
                   <Card.Img variant="top" src={PhotoCard6}/>
                 </div>
-                <Card.Body>
+                <Card.Body classname="body-depositions">
                   <Card.Title className='card.title'>{TextsDepositions.card6.title}</Card.Title>
                   <Card.Text className='text-card'>{TextsDepositions.card6.content}</Card.Text>
                 </Card.Body>

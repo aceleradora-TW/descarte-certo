@@ -1,8 +1,9 @@
 {
-  "solicitante": {
-    "name": "TestEndToEnd"
+  "requester": {
+    "name": "Leo"
   },
-  "endereco": {
-    "cep": "00000000000"
+  "residueAddress": {
+    "cep": "00000000",
+    "locationInfo": "alguma coisa"
   }
 }

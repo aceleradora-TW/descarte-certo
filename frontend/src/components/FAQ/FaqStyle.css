@@ -1,7 +1,7 @@
 
 .btn.btn-primary {
-  background-color: #f4f4f4;  
-  color: #2d3d57;   
+  background-color: #f4f4f4;
+  color: #2d3d57;
   font-size: 1.5rem;
 }
 
@@ -26,8 +26,8 @@
 .btn.btn {
   width: 95%;
   text-align: left;
-  color: #2d3d57;  
-  font-size: 18px;  
+  color: #2d3d57;
+  font-size: 18px;
   }
 
 .div {
@@ -35,7 +35,7 @@
   padding-bottom: 2000px;
 }
 
-.card {    
+.card {
   width: 100%;
   word-wrap: break-word;
   background-color: #ffffff;
@@ -43,8 +43,8 @@
   border: 2px 1px 2px 1px solid;
   color: #2d3d57;
   font-family: 'Montserrat', sans-serif;
-  text-align: justify;   
-  opacity: 90%;
+  text-align: justify;
+  opacity: 0.9 !important;
   margin-bottom: 30px;
   box-shadow: 1px 1px 1px 5px #F5F4F6;
   -moz-box-shadow: 3px 3px 10px 5px #ffffff;
@@ -70,13 +70,14 @@
 .card-header {
   padding: .75rem 1.25rem;
   margin-bottom: -1px;
-  background-color: #ffffff;   
+  background-color: #ffffff;
  }
 
- .card-body {
+ .body-faq {
    color: #636363;
    font-weight: 200;
    font-size: 16px;
+   opacity:100%;
  }
 
 .duvidas {
@@ -91,8 +92,8 @@
 }
 
  .content-box {
-  background-color: #ffffff;   
-  } 
+  background-color: #ffffff;
+  }
 
   .jumbotron {
     padding: 0px;
@@ -101,7 +102,7 @@
     border-radius: .0rem;
   }
 
-  .btn.btn:focus {     
+  .btn.btn:focus {
     outline: none;
     box-shadow: none;
     }
@@ -110,7 +111,7 @@
     margin: auto;
     padding-bottom: 50px;
   }
-  
+
   .imgFaq {
     top:60%;
     left: 85%;
