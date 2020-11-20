@@ -8,7 +8,7 @@
 .iconFaq {
  position: absolute;
   right: 20px;
-  top: 32px;
+  top: 22px;
 }
 
 .iconFaq:active {
@@ -70,7 +70,10 @@
 }
 
 .card-header {
-  padding: .75rem 1.25rem;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 20px;
   margin-bottom: -1px;
   background-color: #ffffff !important;   
  }
@@ -111,12 +114,12 @@
 
   .div.col-6 {
     margin: auto;
-    padding-bottom: 50px;
+    padding-bottom: 360px;
   }
   
   .imgFaq {
-    top:60%;
-    left: 85%;
+    top: 62%;
+    left: 54%;
     position: absolute;
-    width: 50%;
+    width: 70%;
 }
