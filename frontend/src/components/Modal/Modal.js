@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
     Button,
     Modal as BootstrapModal,
@@ -7,6 +7,7 @@ import {
     Row,
     Col,
     FormGroup,
+    Alert
 } from "reactstrap";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import "./ModalStyle.css";
@@ -26,11 +27,18 @@ function Modal(props) {
         descreva: yup.string()
     });
 
+    const [isAlertVisible, setIsAlertVisible] = useState(false);    
+    const handleAlertClick = () => setIsAlertVisible(!isAlertVisible);
+    
+    const [submitSuccess, setSubmitSuccess] = useState(false);    
+    const handleSubmitSuccess = (success) => setSubmitSuccess(success);
+
     const initialValues = {
+        
         nameCompleted: "",
         email: "",
         cellphone: "",
-        cep: "",
+        cep: ""
     };
 
     const onSubmit = (values, { setSubmitting, resetForm }) => {
@@ -44,16 +52,25 @@ function Modal(props) {
             residueAddress: {
                 cep: values.cep,
                 locationInfo: "location INFO mock"
-            }
+            }            
         }
 
         setTimeout(() => {
             Axios.post(`http://localhost:8080/estimate`,
                 requestCreateEstimate
-            )
-            console.log(JSON.stringify(values))
-            setSubmitting(false);
-        }, 400);
+            ).then(function (response) {                
+                console.log(JSON.stringify(values));
+                handleSubmitSuccess(true);
+                setSubmitting(false);
+            }).catch(function (error) {
+                handleSubmitSuccess(false);
+            }).then(function () {
+                handleAlertClick();
+            });    
+           // console.log(JSON.stringify(values));
+            
+           // setSubmitting(false);
+        }, 400);        
     };
 
     return (
@@ -103,7 +120,7 @@ function Modal(props) {
                                         <FormGroup>
                                             <Field name="cellphone" required>
                                                 {({ field }) => {
-                                                    return <InputMask mask="99999-9999"
+                                                    return <InputMask mask="(99) 99999-9999"
                                                         className="form-control field-input"
                                                         placeholder="Telefone Celular"
                                                         value={values.cellphone}
@@ -139,6 +156,13 @@ function Modal(props) {
                                     type="submit">
                                     Solicitar
                             </Button>
+                            <Alert color={submitSuccess ? "success" : "danger"} isOpen={isAlertVisible} toggle={handleAlertClick}>
+                                    { 
+                                        // operador ternário 
+                                        submitSuccess ? "Sua solicitação foi enviada! Obrigado!" :
+                                                        "Ops! Tivemos um problema. Tente novamente mais tarde."
+                                    }
+                            </Alert>
                             </Form>
                         )}
                 </Formik>

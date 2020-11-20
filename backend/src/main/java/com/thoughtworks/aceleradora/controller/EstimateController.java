@@ -30,10 +30,12 @@ public class EstimateController {
     @ResponseStatus(HttpStatus.CREATED)
     public EstimateResponse create(@RequestBody EstimateRequest estimateRequest) {
         //FIXME remover apos backend estar pronto
-        return EstimateResponse.builder()
-                .estimateCode(10)
-                .build();
-      //  return from(estimateService.create(estimateRequest));
+        //return EstimateResponse.builder()
+               // .estimateCode(10)
+               // .build();
+       //return from(estimateService.create(estimateRequest));
+        estimateService.create(estimateRequest);
+       return EstimateResponse.builder().build();
     }
 
     @GetMapping(path = "/{id}")
