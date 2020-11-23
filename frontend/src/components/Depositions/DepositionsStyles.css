@@ -88,23 +88,19 @@
     box-shadow: #878787 0px 0px 1px 2px;
 } 
 .jAmbxV{
-    background-color: rgba(103, 58, 183, 0.1);
+    background-color: rgba(38, 226, 197, 0.1);
     color: rgb(153, 153, 153);
     box-shadow: rgb(51, 51, 51) 0px 0px 2px 0px;
 }
 .jAmbxV:hover{
-    background-color: #26E2C5;
-    color: #ffffff;
+    background-color: #26E2C5 !important;
 }
 .jAkCdf{
     background-color: rgba(103, 58, 183, 0.1);
     color: rgb(153, 153, 153);
     box-shadow: rgb(51, 51, 51) 0px 0px 2px 0px;
 }
-.jAmbxV:hover{
-    background-color: #26E2C5;
-    color: #ffffff;
-}
+
 button:disabled {
     color: (#fcf7f7,#13927f);
     background-color: #efefef,#12afa7!important;
