@@ -5,7 +5,6 @@ import com.thoughtworks.aceleradora.controller.response.EstimateResponse;
 import com.thoughtworks.aceleradora.service.EstimateService;
 import com.thoughtworks.aceleradora.entity.Estimate;
 import com.thoughtworks.aceleradora.exception.EstimateNotFoundException;
-import com.thoughtworks.aceleradora.service.MailService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,16 +21,15 @@ import static com.thoughtworks.aceleradora.controller.response.EstimateResponse.
 public class EstimateController {
 
     private EstimateService estimateService;
-    private MailService mailService;
-    public EstimateController(EstimateService estimateService, MailService mailService) {
+
+    public EstimateController(EstimateService estimateService) {
         this.estimateService = estimateService;
-        this.mailService = mailService;
     }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public EstimateResponse create(@RequestBody EstimateRequest estimateRequest) {
-       mailService.MailSender(estimateRequest);
+
         return from(estimateService.create(estimateRequest));
     }
 
