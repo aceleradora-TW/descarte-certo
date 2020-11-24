@@ -150,6 +150,7 @@ function Modal(props) {
                                 </Row>
 
                                 <Button
+                                    className="form-button"
                                     disabled={!isValid || isSubmitting}
                                     block
                                     color="secondary"
