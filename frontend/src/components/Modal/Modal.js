@@ -21,7 +21,7 @@ import Axios from "axios";
 function Modal(props) {
     const validationSchema = yup.object().shape({
         email: yup.string().email('e-mail inválido').required(ERRORS.REQUIRED_FIELD),
-        nameCompleted: yup.string().required(ERRORS.REQUIRED_FIELD),
+        fullName: yup.string().required(ERRORS.REQUIRED_FIELD),
         cep: yup.string().required(ERRORS.REQUIRED_FIELD),
         cellphone: yup.string().required(ERRORS.REQUIRED_FIELD),
         descreva: yup.string()
@@ -35,7 +35,7 @@ function Modal(props) {
 
     const initialValues = {
         
-        nameCompleted: "",
+        fullName: "",
         email: "",
         cellphone: "",
         cep: ""
@@ -44,7 +44,7 @@ function Modal(props) {
     const onSubmit = (values, { setSubmitting, resetForm }) => {
         const requestCreateEstimate = {
             requester: {
-                nameCompleted: values.nameCompleted,
+                fullName: values.fullName,
                 email: values.email,
                 cellphone: values.cellphone,
 
@@ -55,21 +55,19 @@ function Modal(props) {
             }            
         }
 
-        setTimeout(() => {
-            Axios.post(`http://localhost:8080/estimate`,
-                requestCreateEstimate
-            ).then(function (response) {                
-                console.log(JSON.stringify(values));
-                handleSubmitSuccess(true);
-                setSubmitting(false);
-            }).catch(function (error) {
-                handleSubmitSuccess(false);
-            }).then(function () {
-                handleAlertClick();
-            });    
-           // console.log(JSON.stringify(values));
-            
-           // setSubmitting(false);
+       setTimeout(() => {
+                   Axios.post(`http://localhost:8080/estimate`,
+                       requestCreateEstimate
+                   ).then(function (response) {
+                       console.log(JSON.stringify(values));
+                       handleSubmitSuccess(true);
+                       setSubmitting(false);
+                   }).catch(function (error) {
+                       handleSubmitSuccess(false);
+                   }).then(function () {
+                       handleAlertClick();
+                   });
+
         }, 400);        
     };
 
@@ -97,13 +95,13 @@ function Modal(props) {
                     }) => (
                             <Form className="form-inputs-style">
                                     <Field 
-                                    name="nameCompleted" required
+                                    name="fullName" required
                                     className="form-control field-input"
                                     placeholder="Nome Completo"
                                     onChange={handleChange}
-                                    value={values.nameCompleted}
+                                    value={values.fullName}
                                     onBlur={handleBlur}/>
-                                    <ErrorMessage component="div" name="nameCompleted" />
+                                    <ErrorMessage component="div" name="fullName" />
                                 <br />
                                 <Field
                                     className="form-control field-input"
@@ -159,8 +157,8 @@ function Modal(props) {
                             </Button>
                             <Alert color={submitSuccess ? "success" : "danger"} isOpen={isAlertVisible} toggle={handleAlertClick}>
                                     { 
-                                        // operador ternário 
-                                        submitSuccess ? "Sua solicitação foi enviada! Obrigado!" :
+
+                                        submitSuccess ? "Sua solicitação foi enviada! Obrigada!" :
                                                         "Ops! Tivemos um problema. Tente novamente mais tarde."
                                     }
                             </Alert>

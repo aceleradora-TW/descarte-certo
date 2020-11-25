@@ -28,22 +28,19 @@ public class EstimateServiceTest {
 
     @Test
     public void shouldConvertAndSaveEstimateOnCreateWithRequest() {
-        //DADO uma requisicao VALIDA
+
         EstimateRequest validRequest = createValidRequest();
 
-        //DADO que o estimateConverterServiceMock esta respondendo corretamente uma Estimate Entity
+
         Estimate expectedEstimateCreated = Estimate.builder().build();
         when(estimateConverterServiceMock.converter(validRequest))
                 .thenReturn(expectedEstimateCreated);
 
-        //DADO que o respository retorna uma entidade apos salvar
         when(estimateRepositoryMock.save(any())).thenAnswer(
                 (InvocationOnMock invocation) -> invocation.getArguments()[0]);
 
-        //QUANDO pedido para criar uma Estimate
         Estimate estimateEntity = estimateService.create(validRequest);
 
-        //ENTAO deve converter e chamar o metodo save do Respository
         verify(estimateRepositoryMock, times(1)).save(estimateEntity);
         verify(estimateConverterServiceMock, times(1)).converter(validRequest);
         assertThat(estimateEntity).isEqualTo(expectedEstimateCreated);

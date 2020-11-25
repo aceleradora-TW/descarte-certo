@@ -17,7 +17,7 @@ public class Requester {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
     private Integer id;
-    private String nameCompleted;
+    private String fullName;
     private String cellphone;
     private String email;
     
