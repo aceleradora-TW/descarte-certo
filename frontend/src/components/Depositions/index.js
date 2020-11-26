@@ -9,169 +9,29 @@ import PhotoCard6 from '../images/img6.png'
 import Carousel from 'react-elastic-carousel'
 import TextsDepositions from './texts.json'
 import './DepositionsStyles.css'
-  
+
 function DepositionsComponent() {
-  const initialValues = {
-     
-  }
-function renderCard() {
-         
-         if(window.innerWidth < 700){
-         
-          return(
-            <div id ="Depoimentos" className='container-fluid'>
-              <h1 className="title-depositions">Depoimentos</h1>
-        <Carousel className="card-carousel">
-          <Card className= "card-depositions">
-            <div className="imgCard">
-              <Card.Img variant="top" src={PhotoCard1} width="100px"/>
-            </div>
-            <Card.Body classname="body-depositions">
-              <Card.Title className='card-title'>{TextsDepositions.card1.title}</Card.Title>
-              <Card.Text className='text-card'>{TextsDepositions.card1.content}</Card.Text>
-            </Card.Body>
-          </Card>
-       
-          <Card className= "card-depositions">
-            <div className="imgCard">
-              <Card.Img variant="top" src={PhotoCard2}/>
-            </div>
-            <Card.Body classname="body-depositions">
-              <Card.Title className='card.title'>{TextsDepositions.card2.title}</Card.Title>
-              <Card.Text className='text-card'>{TextsDepositions.card2.content}</Card.Text>
-            </Card.Body>
-          </Card>
-     
-          <Card className= "card-depositions">
-            <div className="imgCard">
-              <Card.Img variant="top" src={PhotoCard3}/>
-            </div>
-            <Card.Body classname="body-depositions">
-              <Card.Title className='card.title'>{TextsDepositions.card3.title}</Card.Title>
-              <Card.Text className='text-card'>{TextsDepositions.card3.content}</Card.Text>
-            </Card.Body>
-          </Card>
+  const photos = [PhotoCard1, PhotoCard2, PhotoCard3, PhotoCard4, PhotoCard5, PhotoCard6];
 
-          <Card className= "card-depositions">
-            <div className="imgCard">
-              <Card.Img variant="top" src={PhotoCard4}/>
-            </div>
-            <Card.Body classname="body-depositions">
-              <Card.Title className='card.title'>{TextsDepositions.card4.title}</Card.Title>
-              <Card.Text className='text-card'>{TextsDepositions.card4.content}</Card.Text>
-            </Card.Body>
-          </Card>
-
-          <Card className= "card-depositions">
-            <div className="imgCard">
-              <Card.Img variant="top" src={PhotoCard5}/>
-            </div>
-            <Card.Body classname="body-depositions">
-              <Card.Title className='card.title'>{TextsDepositions.card5.title}</Card.Title>
-              <Card.Text className='text-card'>{TextsDepositions.card5.content}</Card.Text>
-            </Card.Body>
-          </Card>
-
-          <Card className= "card-depositions">
-            <div className="imgCard">
-              <Card.Img variant="top" src={PhotoCard6}/>
-            </div>
-            <Card.Body classname="body-depositions">
-              <Card.Title className='card.title'>{TextsDepositions.card6.title}</Card.Title>
-              <Card.Text className='text-card'>{TextsDepositions.card6.content}</Card.Text>
-            </Card.Body>
-          </Card> 
-          </Carousel>
-          </div>)
-         }else {
-         
-    return(
-      <div  id ="Depoimentos" className='container-fluid'>
-        <h1 className="title-depositions">Depoimentos</h1>
-   <Carousel className="depositions-carousel">
-        <div className="row">
-            <div className="col-sm-*">
-              <Card className= "card-depositions">
-                <div className="imgCard">
-                  <Card.Img variant="top" src={PhotoCard1}/>
-                </div>
-                <Card.Body classname="body-depositions">
-                  <Card.Title className='card-title'>{TextsDepositions.card1.title}</Card.Title>
-                  <Card.Text className='text-card'>{TextsDepositions.card1.content}</Card.Text>
-                </Card.Body>
-              </Card>
-            </div>
-
-            <div className="col-sm-*">
-              <Card className= "card-depositions">
-                <div className="imgCard">
-                  <Card.Img variant="top" src={PhotoCard2}/>
-                </div>
-                <Card.Body classname="body-depositions">
-                  <Card.Title className='card.title'>{TextsDepositions.card2.title}</Card.Title>
-                  <Card.Text className='text-card'>{TextsDepositions.card2.content}</Card.Text>
-                </Card.Body>
-              </Card>
-            </div>
-
-            <div className="col-sm-*">
-              <Card className= "card-depositions">
-                <div className="imgCard">
-                  <Card.Img variant="top" src={PhotoCard3}/>
-                </div>
-                <Card.Body classname="body-depositions">
-                  <Card.Title className='card.title'>{TextsDepositions.card3.title}</Card.Title>
-                  <Card.Text className='text-card'>{TextsDepositions.card3.content}</Card.Text>
-                </Card.Body>
-              </Card>
-            </div>
-        </div>
-
-        <div className="row">
-            <div className="col-sm-*">
-              <Card className= "card-depositions">
-                <div className="imgCard">
-                  <Card.Img variant="top" src={PhotoCard4}/>
-                </div>
-                <Card.Body classname="body-depositions">
-                  <Card.Title className='card.title'>{TextsDepositions.card4.title}</Card.Title>
-                  <Card.Text className='text-card'>{TextsDepositions.card4.content}</Card.Text>
-                </Card.Body>
-              </Card>
-            </div>
-
-            <div className="col-sm-*">
-              <Card className= "card-depositions">
-                <div className="imgCard">
-                  <Card.Img variant="top" src={PhotoCard5}/>
-                </div>
-                <Card.Body classname="body-depositions">
-                  <Card.Title className='card.title'>{TextsDepositions.card5.title}</Card.Title>
-                  <Card.Text className='text-card'>{TextsDepositions.card5.content}</Card.Text>
-                </Card.Body>
-              </Card>
-            </div>
-
-            <div className="col-sm-*">
-              <Card className= "card-depositions">
-                <div className="imgCard">
-                  <Card.Img variant="top" src={PhotoCard6}/>
-                </div>
-                <Card.Body classname="body-depositions">
-                  <Card.Title className='card.title'>{TextsDepositions.card6.title}</Card.Title>
-                  <Card.Text className='text-card'>{TextsDepositions.card6.content}</Card.Text>
-                </Card.Body>
-              </Card>
-            </div>
-        </div>
-    </Carousel>
-    </div>
-    )
-   } 
-  };
   return (
-    <div> 
-        {renderCard()}    
+    <div>
+      <div id="Depoimentos" className='container-fluid'>
+        <h1 className="title-depositions">Depoimentos</h1>
+
+        <Carousel itemsToShow={window.innerWidth < 700 ? 1 : 3} className="card-carousel">
+          {TextsDepositions.cards.map((card, index) =>
+            <Card key={index} className="card-depositions">
+              <div className="imgCard">
+                <Card.Img variant="top" src={photos[index]} width="100px" />
+              </div>
+              <Card.Body className="body-depositions">
+                <Card.Title className='card-title'>{card.title}</Card.Title>
+                <Card.Text className='text-card'>{card.content}</Card.Text>
+              </Card.Body>
+            </Card>
+          )}
+        </Carousel>
+      </div>
     </div>
   )
 } export default DepositionsComponent
