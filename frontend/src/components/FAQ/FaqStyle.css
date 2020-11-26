@@ -90,6 +90,7 @@
   color: #2d3d57 !important;
   padding-top: 80px;
   padding-bottom: 20px;
+  font-size: 32px;
 }
 
  .flex-box {
@@ -118,7 +119,7 @@
   }
   
   .imgFaq {
-    top: 62%;
+    top: 56%;
     left: 54%;
     position: absolute;
     width: 70%;
