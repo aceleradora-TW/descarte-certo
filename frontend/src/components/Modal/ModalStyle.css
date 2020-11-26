@@ -1,0 +1,46 @@
+.form{
+display: block;
+width: 50%;
+padding: 12px 20px;
+
+}
+
+.form[type=text]{
+    width: 40%;
+
+}
+
+.form[type=email]{
+    width: 40%;
+
+}
+
+.form[type=number]{
+    width: 40%;
+
+}
+
+.btn.form-button{
+    background-color:#333333;
+    color:white;
+    width: 25%;
+    text-align: center;
+    font-size: small;
+    float: right;
+}
+
+.field-input{
+    border-radius: 10px;
+}
+
+
+.modal-content {
+    border-radius: 1rem;
+}
+
+.modal-dialog{
+    max-width: 750px;
+}
+
+
+

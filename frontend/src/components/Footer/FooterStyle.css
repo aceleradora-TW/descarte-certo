@@ -35,3 +35,20 @@
     padding-right: 10px;
 }
 
+.buttonBanner {
+    font-size: 1.4rem;
+    width: 250px;
+    text-align: center;
+    color:#2E3C5B;
+    background-color: #71DECE;
+    border-radius: 15px;
+    border-color: #71DECE;
+    
+}
+
+.positionButton{
+    position:absolute; 
+    top:234%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
