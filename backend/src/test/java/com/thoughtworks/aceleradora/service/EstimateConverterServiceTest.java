@@ -22,33 +22,30 @@ public class EstimateConverterServiceTest {
 
     @Test
     public void shouldCreateEstimateWithRequestName() {
-        //DADO uma requisição de solicitacao de orcamento valida (Estimate)
         String expectedRequesterName = "expectedRequesterNameValue";
         EstimateRequest validEstimateRequest = createValidRequest();
-        validEstimateRequest.getRequester().setName(expectedRequesterName);
+        validEstimateRequest.getRequester().setFullName(expectedRequesterName);
 
-        //QUANDO solicitado para converter essa requisicao para uma entidade
         Estimate estimateEntity = estimateConverterService.converter(validEstimateRequest);
 
-        //ENTAO quero receber uma nova entidade de dominio com todos os campos convertidos
-        assertThat(estimateEntity.getRequester().getName()).isEqualTo(expectedRequesterName);
+        assertThat(estimateEntity.getRequester().getFullName()).isEqualTo(expectedRequesterName);
     }
 
     @Test
     public void shouldCreateEstimateConvertingTheRightCepAddress() {
-        //DADO um endereco com um cep de residuo
+
         String expectedAddressCep = "9109020304";
         ResidueAddressRequest residueAddressRequest = ResidueAddressRequest.builder()
                .cep(expectedAddressCep)
                .build();
-        //DADO que este endenreco esta numa requisicao valida
+
         EstimateRequest validEstimateRequest = createValidRequest();
         validEstimateRequest.setResidueAddress(residueAddressRequest);
 
-        //QUANDO solicitado para converter essa requisicao para uma entidade
+
         Estimate estimateEntity = estimateConverterService.converter(validEstimateRequest);
 
-        //ENTAO quero receber uma nova entidade de dominio com todos os campos convertidos
+
         assertThat(estimateEntity.getResidueAddress().getCep()).isEqualTo(expectedAddressCep);
     }
 

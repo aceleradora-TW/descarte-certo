@@ -29,7 +29,11 @@ public class EstimateController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public EstimateResponse create(@RequestBody EstimateRequest estimateRequest) {
-        return from(estimateService.create(estimateRequest));
+
+        Estimate estimateEntity = estimateService.create(estimateRequest);
+        return EstimateResponse.builder()
+                .estimateCode(estimateEntity.getId())
+                .build();
     }
 
     @GetMapping(path = "/{id}")

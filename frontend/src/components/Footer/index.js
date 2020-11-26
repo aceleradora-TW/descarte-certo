@@ -1,7 +1,7 @@
 import React from 'react'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import footerStyle from './FooterStyle.css'
+import  './FooterStyle.css'
 import FaceIcon from '../images/icon-face.png'
 import InstaIcon from '../images/icon-insta.png'
 import WhatsIcon from '../images/icon-whats.png'

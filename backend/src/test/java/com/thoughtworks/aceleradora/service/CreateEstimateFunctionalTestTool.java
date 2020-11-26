@@ -20,7 +20,9 @@ public class CreateEstimateFunctionalTestTool {
             EstimateRequest estimateRequest =
                     EstimateRequest.builder()
                             .requester(RequesterRequest.builder()
-                                    .name("Leo")
+                                    .fullName("Leo")
+                                    .cellphone("")
+                                    .email("")
                                     .build())
                             .residueAddress(ResidueAddressRequest.builder()
                                     .cep("00000000")

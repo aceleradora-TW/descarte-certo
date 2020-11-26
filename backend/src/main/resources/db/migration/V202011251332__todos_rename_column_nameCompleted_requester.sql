@@ -1,0 +1,1 @@
+ALTER TABLE requester RENAME  name_completed TO full_name;
