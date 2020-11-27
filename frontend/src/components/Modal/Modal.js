@@ -16,7 +16,7 @@ import { ERRORS } from "../../constant";
 import InputMask from "react-input-mask";
 import * as yup from "yup";
 import Axios from "axios";
-
+import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
 
 function Modal(props) {
@@ -26,7 +26,9 @@ function Modal(props) {
         cep: yup.string().required(ERRORS.REQUIRED_FIELD),
         cellphone: yup.string().required(ERRORS.REQUIRED_FIELD),
         descreva: yup.string(),
-
+        quantity:yup.string().required(ERRORS.REQUIRED_FIELD),
+        residueDescription:yup.string().required(ERRORS.REQUIRED_FIELD),
+        
     });
 
     const [isAlertVisible, setIsAlertVisible] = useState(false);
@@ -34,6 +36,8 @@ function Modal(props) {
 
     const [submitSuccess, setSubmitSuccess] = useState(false);
     const handleSubmitSuccess = (success) => setSubmitSuccess(success);
+   
+   
 
     const initialValues = {
         fullName: "",
@@ -46,9 +50,13 @@ function Modal(props) {
         andar:"",
         locationInfo: "",
         descreva:"",
+        residueType: "",
+        quantity:"",
+        residueDescription:""
 
     };
      let fieldText = false;
+     let fieldTextResidue= false;
 
 
     const onSubmit = (values, { setSubmitting, resetForm }) => {
@@ -57,8 +65,6 @@ function Modal(props) {
                 fullName: values.fullName,
                 email: values.email,
                 cellphone: values.cellphone,
-
-
             },
             residueAddress: {
                 cep: values.cep,
@@ -95,10 +101,35 @@ function Modal(props) {
               <ErrorMessage component="div" name="descreva" />
              </div> ) }else { return null;}
         };
-     function fieldTextTrue() {
+    function fieldTextTrue() {
        fieldText === true ? fieldText = false : fieldText = true
 
       };
+
+      const showingFieldResidue = (values) =>{
+        if (fieldTextResidue === true){
+           return (
+           <Row className="quant"><Field
+             maxlength="200"
+             type="text"
+             name="descreva"
+             value={values.descreva}
+             placeholder="Descreva..."
+             className="form-control field-input"
+             />
+             <ErrorMessage component="div" name="descreva" />
+            </Row> ) }else { return null;}
+       };
+       function fieldTextTrueResidue(value) {
+        console.log(value)
+        if (value === "Outro:"){
+            fieldTextResidue = true
+        }else {
+            fieldTextResidue = false
+        }
+ 
+    };
+
     return (
         <BootstrapModal
 
@@ -144,7 +175,7 @@ function Modal(props) {
                                 <ErrorMessage component="div" name="email" />
                                 <br />
                                 <Row>
-                                    <Col lg="6">
+                                    <Col>
                                         <FormGroup>
                                             <Field name="cellphone" required>
                                                 {({ field }) => {
@@ -159,8 +190,46 @@ function Modal(props) {
                                             <ErrorMessage component="div" name="cellphone" />
                                         </FormGroup>
                                     </Col>
-
-                                    <Col lg="6">
+                                    </Row>
+                                    <Row>
+                                        <Col>
+                                    <select
+                                        className="select-residuo"
+                                        name="residueType"
+                                        value={values.residueType}
+                                        onChange={handleChange}
+                                        onBlur={handleBlur}
+                                        style={{ display: 'block' }}
+                                        onClick={fieldTextTrueResidue(values.residueType)}
+                                        required
+                                    >   
+                                        <option label="Tipo de resíduo:" />
+                                        <option value="Caliça ( cimentícios, cerâmicos, solo, areia)" label="Caliça ( cimentícios, cerâmicos, solo, areia)" />
+                                        <option value="Gesso (acartonado, placas, drywall,...)" label="Gesso (acartonado, placas, drywall,...)" />
+                                        <option value="Madeira com tinta" label="Madeira com tinta" />
+                                        <option value="Madeira sem tinta" label="Madeira sem tinta" />
+                                        <option value="Mix" label="Mix (resíduos de obra contendo outros em menor volume: recicláveis, madeiras, metais...)" />
+                                        <option value="Outro:" label="Outro:" />
+                                       
+                                    </select> <ErrorMessage component="div" name="residueType" />
+                                    </Col>
+                                    <Col>
+                                    <Field
+                                        type="Text"
+                                        placeholder="Quantidade:"
+                                        name="quantity"
+                                        value={values.quantity}
+                                        className="form-control field-input"
+                                        required
+                                        />
+                                        <ErrorMessage component="div" name="quantity" />
+                                        </Col>
+                                    </Row>
+                                    <Col>
+                                    {showingFieldResidue(values)}
+                                    </Col>
+                                    <Row>
+                                    <Col >
                                         <FormGroup>
                                             <Field name="cep" required>
                                                 {({ field }) => {
@@ -175,8 +244,9 @@ function Modal(props) {
 
                                         </FormGroup>
                                     </Col>
+                                    </Row>
 
-                                </Row>
+                                
                                 <div><p>O local de coleta de residuo possui:</p></div>
                                               <Row>
                                                 <Col lg="3">
