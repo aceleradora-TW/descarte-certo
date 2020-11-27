@@ -16,7 +16,7 @@ public class CreateEstimateFunctionalTestTool {
 
     public static void main(String[] args) {
         try {
-            //Requisicao em formato de classe
+
             EstimateRequest estimateRequest =
                     EstimateRequest.builder()
                             .requester(RequesterRequest.builder()
@@ -29,21 +29,21 @@ public class CreateEstimateFunctionalTestTool {
                                     .locationInfo("alguma coisa")
                                     .build())
                             .build();
-            //Convertendo requisicao para JSON
+
             String jsonContent = new ObjectMapper().writeValueAsString(estimateRequest);
             System.out.println("-- Request JSON: \n" + jsonContent);
 
-            //Configurando os headers do HTTO com conteudo enviado
+
             HttpHeaders headers = new HttpHeaders();
             headers.setContentType(MediaType.APPLICATION_JSON_UTF8);
             HttpEntity<String> request =
                     new HttpEntity<>(jsonContent, headers);
 
-            //Enviando a requisicao e capturando a resposta
+
             ResponseEntity<String> response = new RestTemplate()
                     .postForEntity(URL_BACKEND, request, String.class);
 
-            //mostrando a resposta
+
             System.out.println("-- Status response:" + response.getStatusCode());
             System.out.println("-- Response JSON:\n" + response.getBody());
         } catch (Exception e) {
