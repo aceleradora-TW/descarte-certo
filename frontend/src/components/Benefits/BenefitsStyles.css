@@ -1,17 +1,23 @@
-.title {
-    text-align: center;
-    margin-bottom: 80px;
-    padding-top: 80px;
-    font-size: 32px
+.container-benefits {
+   margin-left: 70px;
+   margin-right: 70px;
+   padding-bottom: 50px;
 }
 
-.title-card {
+.title-benefits {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 100px;
+    padding-top: 115px;
+}
+
+.title-card-benefits {
     font-size: 18px;
     font-weight: bolder;
     margin-bottom: 10px;
 }
 
-.text-card {
+.text-card-benefits {
     font-size: 16px;
 }
 
@@ -19,42 +25,47 @@
     margin-bottom: 50px;
 }
 
-@media only screen and (min-width:411px) and (max-width:731px){
-    .text-card{
-       font-size: 14px;
-       text-align: center;
+@media only screen and (min-width:360px) and (max-width:640px){
+    .text-card-benefits{
+       font-size: 15px;
+       padding: 3%;
     }
+    .title-card-benefits{
+      font-size: 17px;
+      padding: 3%;
+   }
+   .title-benefits {
+      font-size: 25px;
+      padding: 3%;
   }
+   .container-benefits {
+      margin-left: 30px;
+      margin-right: 30px;
+      padding-bottom: 50px;
+}
+}
 
-  @media only screen and (min-width:768px) and (max-width:1024px){
-    .text-card{
-       font-size: 14px;
+  @media only screen and (min-width:641px) and (max-width:1024px){
+    .text-card-benefits{
+       font-size: 16px;
+       padding: 3%;
     }
+    .title-card-benefits{
+      font-size: 18px;
+      padding: 3%;
+   }
   }
 
   @media only screen and (min-width:950px) and (max-width:1280px){
-    .text-card{
+    .text-card-benefits{
        font-size:16px;
+       padding: 3%;
     }
+    .title-card-benefits{
+      font-size:18px;
+      padding: 3%;
+   } 
 }
 
-@media only screen and (min-width:411px) and (max-width:731px){
-    .title-card{
-       font-size: 16px;
-       text-align: center;
-    }
-  }
 
-  @media only screen and (min-width:768px) and (max-width:1024px){
-    .title-card{
-       font-size: 16px;
-       text-align: center;
-    }
-  }
-
-  @media only screen and (min-width:950px) and (max-width:1280px){
-    .title-card{
-       font-size:18px;
-    }
-}
 

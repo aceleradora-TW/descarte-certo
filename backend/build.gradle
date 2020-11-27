@@ -44,6 +44,8 @@ dependencies {
 
     testImplementation('org.springframework.boot:spring-boot-starter-test')
     developmentOnly "org.springframework.boot:spring-boot-devtools:$springBootVersion"
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+
 }
 
 repositories {

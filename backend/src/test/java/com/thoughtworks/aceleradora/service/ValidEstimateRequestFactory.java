@@ -11,7 +11,9 @@ public class ValidEstimateRequestFactory {
     public static EstimateRequest createValidRequest() {
         EstimateRequest estimateRequest = EstimateRequest.builder()
                 .requester(RequesterRequest.builder()
-                        .name("Pedro")
+                        .fullName("Pedro")
+                        .cellphone("999999999")
+                        .email("HodineyGatinho69@gmail.com")
                         .build())
                 .residueAddress(ResidueAddressRequest.builder()
                         .cep("900000000")
