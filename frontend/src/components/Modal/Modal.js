@@ -50,7 +50,7 @@ function Modal(props) {
         locationInfo: "",
         descreva:"",
         residueType: "",
-        residueQuantity:"",
+        residueAmount:"",
         residueDescription:"",
         residueMeasure:"",
         residueInfo:""
@@ -70,9 +70,16 @@ function Modal(props) {
             
             residueAddress: {
                 cep: values.cep,
-                locationInfo: values.checked1 +"  " + values.andar +"  " + values.checked2+"  "+ values.descreva,            }
-        }
-
+                locationInfo: values.checked1 +"  " + values.andar +"  " + values.checked2+"  "+ values.descreva,  
+            },         
+         
+            residue : {
+                residueType: values.residueType,
+                residueAmount: values.residueAmount,
+                residueMensure: values.residueMeasure,
+            },
+ }
+          
        setTimeout(() => {
                    Axios.post(`http://localhost:8080/estimate`,
                        requestCreateEstimate
@@ -228,23 +235,22 @@ function Modal(props) {
                                                       type="Number"
                                                       placeholder="1"
                                                       min="0"
-                                                      max="4"
-                                                      name="residueQuantity"
-                                                      value={values.residueQuantity}
+                                                      max="500"
+                                                      name="residueAmount"
+                                                      value={values.residueAmount}
                                                       className="form-control field-input"
                                                       />
-                                        <ErrorMessage component="div" name="quantity" />
+                                        <ErrorMessage component="div" name="residueAmount" />
                                         </Col>
                             
                                         <Col className="col-sm-3 residue-measure">
                                     <select
                                         className="select-residuo"
                                         name="residueMeasure"
-                                        value=""
+                                        value={values.residueMeasure}
                                         onChange={handleChange}
                                         onBlur={handleBlur}
                                         style={{ display: 'block' }}
-                                        onClick={fieldTextTrueResidue(values.residueType)}
                                         required
                                     >   
                                         <option label="Medida:" />
@@ -255,7 +261,7 @@ function Modal(props) {
                                         <option value="caçambas" label="caçambas" />
                                     
                                        
-                                    </select> <ErrorMessage component="div" name="residueType" />
+                                    </select> <ErrorMessage component="div" name="residueMeasure" />
                                     </Col>
                                     </Row>
                                     <Col>

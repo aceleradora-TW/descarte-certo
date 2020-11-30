@@ -4,6 +4,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.thoughtworks.aceleradora.controller.request.EstimateRequest;
 import com.thoughtworks.aceleradora.controller.request.RequesterRequest;
 import com.thoughtworks.aceleradora.controller.request.ResidueAddressRequest;
+import com.thoughtworks.aceleradora.controller.request.ResidueRequest;
+import com.thoughtworks.aceleradora.entity.Residue;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -28,6 +30,12 @@ public class CreateEstimateFunctionalTestTool {
                                     .cep("00000000")
                                     .locationInfo("alguma coisa")
                                     .build())
+                            .residueRequest(
+                                    ResidueRequest.builder()
+                                            .residueAmount(1)
+                                            .residueMensure("")
+                                            .residueType("")
+                                            .build())
                             .build();
 
             String jsonContent = new ObjectMapper().writeValueAsString(estimateRequest);
