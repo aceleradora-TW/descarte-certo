@@ -7,6 +7,7 @@ import {
     Row,
     Col,
     FormGroup,
+    Label,
     Alert
 } from "reactstrap";
 import { Formik, Form, Field, ErrorMessage } from "formik";
@@ -24,22 +25,31 @@ function Modal(props) {
         fullName: yup.string().required(ERRORS.REQUIRED_FIELD),
         cep: yup.string().required(ERRORS.REQUIRED_FIELD),
         cellphone: yup.string().required(ERRORS.REQUIRED_FIELD),
-        descreva: yup.string()
+        descreva: yup.string(),
+
     });
 
-    const [isAlertVisible, setIsAlertVisible] = useState(false);    
+    const [isAlertVisible, setIsAlertVisible] = useState(false);
     const handleAlertClick = () => setIsAlertVisible(!isAlertVisible);
-    
-    const [submitSuccess, setSubmitSuccess] = useState(false);    
+
+    const [submitSuccess, setSubmitSuccess] = useState(false);
     const handleSubmitSuccess = (success) => setSubmitSuccess(success);
 
     const initialValues = {
-        
         fullName: "",
         email: "",
         cellphone: "",
-        cep: ""
+        cep: "",
+        checked1: "",
+        checked2:"",
+        checked3:"",
+        andar:"",
+        locationInfo: "",
+        descreva:"",
+
     };
+     let fieldText = false;
+
 
     const onSubmit = (values, { setSubmitting, resetForm }) => {
         const requestCreateEstimate = {
@@ -48,11 +58,11 @@ function Modal(props) {
                 email: values.email,
                 cellphone: values.cellphone,
 
+
             },
             residueAddress: {
                 cep: values.cep,
-                locationInfo: "location INFO mock"
-            }            
+                locationInfo: values.checked1 +"  " + values.andar +"  " + values.checked2+"  "+ values.descreva,            }
         }
 
        setTimeout(() => {
@@ -68,11 +78,30 @@ function Modal(props) {
                        handleAlertClick();
                    });
 
-        }, 400);        
+        }, 400);
     };
 
+     const showingField = (values) =>{
+         if (fieldText === true){
+            return (
+            <div><Field
+              maxlength="200"
+              type="text"
+              name="descreva"
+              value={values.descreva}
+              placeholder="Descreva..."
+              className="form-control field-input"
+              />
+              <ErrorMessage component="div" name="descreva" />
+             </div> ) }else { return null;}
+        };
+     function fieldTextTrue() {
+       fieldText === true ? fieldText = false : fieldText = true
+
+      };
     return (
         <BootstrapModal
+
             border="light"
             isOpen={props.isModalVisible}
             toggle={props.handleBudgetClick}
@@ -93,8 +122,9 @@ function Modal(props) {
                         isSubmitting,
                         isValid,
                     }) => (
+
                             <Form className="form-inputs-style">
-                                    <Field 
+                                    <Field
                                     name="fullName" required
                                     className="form-control field-input"
                                     placeholder="Nome Completo"
@@ -145,7 +175,70 @@ function Modal(props) {
 
                                         </FormGroup>
                                     </Col>
+
                                 </Row>
+                                <div><p>O local de coleta de residuo possui:</p></div>
+                                              <Row>
+                                                <Col lg="3">
+                                                  <FormGroup>
+
+                                                   <Label >
+
+                                                    <Field type="checkbox"
+                                                      className=""
+                                                      name="checked1"
+                                                      value="Escada"
+                                                      />
+                                                      <a> Escada</a>
+
+                                                      </Label>
+                                                      <Field
+                                                      type="Number"
+                                                      placeholder="Informe o andar:"
+                                                      min="0"
+                                                      max="4"
+                                                      name="andar"
+                                                      value={values.andar}
+                                                      className="form-control field-input"
+                                                      />
+
+                                                  </FormGroup>
+                                                </Col>
+
+                                                <Col lg="3">
+                                                  <FormGroup>
+                                                   <Label>
+                                                    <Field type="checkbox"
+                                                      className=""
+                                                      name="checked2"
+                                                      value="Elevador"
+                                                      />
+                                                      <a> Elevador</a>
+                                                      </Label>
+                                                  </FormGroup>
+                                                </Col>
+
+                                                <Col lg="6">
+                                                  <FormGroup>
+                                                   <Label>
+                                                    <Field type="checkbox"
+                                                      className=""
+                                                      name="checked3"
+                                                       value="Outro"
+                                                      onClick={fieldTextTrue}
+
+
+                                                      />
+                                                      <a> Outro de difícil acesso:</a>
+                                                      </Label>
+
+                                                      <div>
+                                                      {showingField(values)}
+                                                      </div>
+                                                  </FormGroup>
+                                                </Col>
+
+                                              </Row>
 
                                 <Button
                                     className="form-button"
@@ -153,15 +246,17 @@ function Modal(props) {
                                     block
                                     color="secondary"
                                     type="submit">
+
                                     Solicitar
                             </Button>
                             <Alert color={submitSuccess ? "success" : "danger"} isOpen={isAlertVisible} toggle={handleAlertClick}>
-                                    { 
+                                    {
 
-                                        submitSuccess ? "Sua solicitação foi enviada! Obrigada!" :
-                                                        "Ops! Tivemos um problema. Tente novamente mais tarde."
+                                        submitSuccess ? "Sua solicitação foi enviada! Obrigada!" + values.locationInfo:
+                                                        "Ops! Tivemos um problema. Tente novamente mais tarde. " + values.locationInfo
                                     }
                             </Alert>
+
                             </Form>
                         )}
                 </Formik>
