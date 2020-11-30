@@ -26,7 +26,6 @@ function Modal(props) {
         cep: yup.string().required(ERRORS.REQUIRED_FIELD),
         cellphone: yup.string().required(ERRORS.REQUIRED_FIELD),
         descreva: yup.string(),
-        quantity:yup.string().required(ERRORS.REQUIRED_FIELD),
         residueDescription:yup.string().required(ERRORS.REQUIRED_FIELD),
         
     });
@@ -51,8 +50,10 @@ function Modal(props) {
         locationInfo: "",
         descreva:"",
         residueType: "",
-        quantity:"",
-        residueDescription:""
+        residueQuantity:"",
+        residueDescription:"",
+        residueMeasure:"",
+        residueInfo:""
 
     };
      let fieldText = false;
@@ -66,6 +67,7 @@ function Modal(props) {
                 email: values.email,
                 cellphone: values.cellphone,
             },
+            
             residueAddress: {
                 cep: values.cep,
                 locationInfo: values.checked1 +"  " + values.andar +"  " + values.checked2+"  "+ values.descreva,            }
@@ -112,16 +114,17 @@ function Modal(props) {
            <Row className="quant"><Field
              maxlength="200"
              type="text"
-             name="descreva"
-             value={values.descreva}
+             name="residueDescription"
+             value={values.residueDescription}
              placeholder="Descreva..."
              className="form-control field-input"
              />
-             <ErrorMessage component="div" name="descreva" />
+             <ErrorMessage component="div" name="residueDescription" />
             </Row> ) }else { return null;}
        };
        function fieldTextTrueResidue(value) {
         console.log(value)
+    
         if (value === "Outro:"){
             fieldTextResidue = true
         }else {
@@ -175,7 +178,7 @@ function Modal(props) {
                                 <ErrorMessage component="div" name="email" />
                                 <br />
                                 <Row>
-                                    <Col>
+                                    <Col >
                                         <FormGroup>
                                             <Field name="cellphone" required>
                                                 {({ field }) => {
@@ -193,6 +196,12 @@ function Modal(props) {
                                     </Row>
                                     <Row>
                                         <Col>
+                                        Informe o tipo e a quantidade do resíduo.<br></br>
+                                        Saiba que: 1m³ = 1 piscina de mil litros, 1 caçamba = 4m³, 1 bag = 1m³.
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col className="col-sm-8">
                                     <select
                                         className="select-residuo"
                                         name="residueType"
@@ -213,17 +222,41 @@ function Modal(props) {
                                        
                                     </select> <ErrorMessage component="div" name="residueType" />
                                     </Col>
-                                    <Col>
+                                  
+                                    <Col className="col-sm-1 residue-quantity">
                                     <Field
-                                        type="Text"
-                                        placeholder="Quantidade:"
-                                        name="quantity"
-                                        value={values.quantity}
-                                        className="form-control field-input"
-                                        required
-                                        />
+                                                      type="Number"
+                                                      placeholder="1"
+                                                      min="0"
+                                                      max="4"
+                                                      name="residueQuantity"
+                                                      value={values.residueQuantity}
+                                                      className="form-control field-input"
+                                                      />
                                         <ErrorMessage component="div" name="quantity" />
                                         </Col>
+                            
+                                        <Col className="col-sm-3 residue-measure">
+                                    <select
+                                        className="select-residuo"
+                                        name="residueMeasure"
+                                        value=""
+                                        onChange={handleChange}
+                                        onBlur={handleBlur}
+                                        style={{ display: 'block' }}
+                                        onClick={fieldTextTrueResidue(values.residueType)}
+                                        required
+                                    >   
+                                        <option label="Medida:" />
+                                        <option value="Sacos de 50L" label="Sacos de 50L" />
+                                        <option value="Kg" label="Kg" />
+                                        <option value="m³" label="m³" />
+                                        <option value="bags" label="bags" />
+                                        <option value="caçambas" label="caçambas" />
+                                    
+                                       
+                                    </select> <ErrorMessage component="div" name="residueType" />
+                                    </Col>
                                     </Row>
                                     <Col>
                                     {showingFieldResidue(values)}

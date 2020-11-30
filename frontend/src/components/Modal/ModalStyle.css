@@ -63,5 +63,11 @@ padding: 12px 20px;
 .quant{
     margin-bottom: 15px;
 }
-
-
+.residue-quantity{
+    padding-left: 0px;
+    padding-right: 1px;
+  
+}
+.residue-measure{
+    padding-left: 0px;
+}
