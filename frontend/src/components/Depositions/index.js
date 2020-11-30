@@ -28,7 +28,7 @@ function DepositionsComponent() {
                 <Card.Title className='card-title'>{card.title}</Card.Title>
                 <Card.Text className='text-card'>{card.content}</Card.Text>
               </Card.Body>
-            </Card>
+            </Card> 
           )}
         </Carousel>
       </div>
