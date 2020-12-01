@@ -18,12 +18,13 @@ public class EstimateServiceTest {
     private EstimateService estimateService;
     private EstimateConverterService estimateConverterServiceMock;
     private EstimateRepository estimateRepositoryMock;
+    private MailFactory mailFactoryMock;
 
     @Before
     public void setUp() {
         estimateConverterServiceMock = mock(EstimateConverterService.class);
         estimateRepositoryMock = mock(EstimateRepository.class);
-        estimateService = new EstimateService(estimateRepositoryMock, estimateConverterServiceMock);
+        estimateService = new EstimateService(estimateRepositoryMock, estimateConverterServiceMock,mailFactoryMock);
     }
 
     @Test

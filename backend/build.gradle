@@ -37,7 +37,8 @@ dependencies {
     compile "org.postgresql:postgresql:42.2.5"
     compile  'org.projectlombok:lombok:1.18.14'
     annotationProcessor 'org.projectlombok:lombok:1.18.14'
-
+    compile group: 'net.sargue', name: 'mailgun', version: '1.3.0'
+    compile group: 'com.mashape.unirest', name: 'unirest-java', version: '1.3.1'
     testCompile 'org.projectlombok:lombok:1.18.14'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.14'
     testCompile "org.mockito:mockito-core:2.21.0"
