@@ -70,11 +70,11 @@ function Modal(props) {
             
             residueAddress: {
                 cep: values.cep,
-                locationInfo: values.checked1 +"  " + values.andar +"  " + values.checked2+"  "+ values.descreva,  
+                locationInfo: values.checked1 +" Andar: " + values.andar +"  " + values.checked2+"  "+ values.descreva,
             },         
          
             residueRequest : {
-                residueType: values.residueType,
+                residueType: values.residueType + values.residueDescription,
                 residueMensure: values.residueAmount + values.residueMeasure ,
             },
 
@@ -234,7 +234,7 @@ function Modal(props) {
                                     <Field
                                                       type="Number"
                                                       placeholder="1"
-                                                      min="0"
+                                                      min="1"
                                                       max="500"
                                                       name="residueAmount"
                                                       value={values.residueAmount}

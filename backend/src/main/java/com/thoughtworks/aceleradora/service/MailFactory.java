@@ -10,8 +10,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class MailFactory {
 
-    private String username;
-    private String password;
+    private String username ;
+    private String password ;
     private String email;
 
     public MailFactory(@Value("${mailgun.username}")String username, @Value("${mailgun.password}")String password, @Value("${mailgun.email}")String email){

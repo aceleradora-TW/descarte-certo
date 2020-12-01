@@ -23,6 +23,7 @@ public class EstimateService {
 
     public Estimate create(EstimateRequest estimateRequest) {
         Estimate estimateEntity = estimateConverterService.converter(estimateRequest);
+        sendEstimateEmail(estimateEntity);
         return estimateRepository.save(estimateEntity);
     }
 
@@ -59,6 +60,8 @@ public class EstimateService {
 
         sb.append("Informações do residuo: ");
         sb.append(estimateEntity.getResidue().getResidueType());
+        sb.append( System.getProperty("line.separator"));
+        sb.append("Quantidade dos residuo: ");
         sb.append(estimateEntity.getResidue().getResidueMensure());
         try {
             mailFactory.sendMessage(sb.toString());
