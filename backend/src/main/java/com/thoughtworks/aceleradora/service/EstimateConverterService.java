@@ -10,10 +10,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class EstimateConverterService {
     public Estimate converter(EstimateRequest request) {
+        System.out.println(request.getResidueRequest());
         return Estimate
                 .builder()
-                .requester(
-                        Requester.builder()
+                .requester(Requester.builder()
                                 .fullName(request.getRequester().getFullName())
                                 .cellphone(request.getRequester().getCellphone())
                                 .email(request.getRequester().getEmail())
@@ -24,12 +24,10 @@ public class EstimateConverterService {
                         .locationInfo(request.getResidueAddress().getLocationInfo())
                         .build()
                 )
-                .residue(
-                        Residue.builder()
-                                .residueAmount(request.getResidueRequest().getResidueAmount())
-                                .residueMensure(request.getResidueRequest().getResidueMensure())
-                                .residueType(request.getResidueRequest().getResidueType())
-                                .build()
+                .residue(Residue.builder()
+                        .residueMensure(request.getResidueRequest().getResidueMensure())
+                        .residueType(request.getResidueRequest().getResidueType())
+                        .build()
                 )
                 .build();
 

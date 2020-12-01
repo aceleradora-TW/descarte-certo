@@ -19,9 +19,8 @@ public class Residue {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
-    private long residueId;
+    private int id;
     private String residueType;
-    private int residueAmount;
     private String residueMensure;
 
 

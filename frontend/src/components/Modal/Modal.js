@@ -26,7 +26,7 @@ function Modal(props) {
         cep: yup.string().required(ERRORS.REQUIRED_FIELD),
         cellphone: yup.string().required(ERRORS.REQUIRED_FIELD),
         descreva: yup.string(),
-        residueDescription:yup.string().required(ERRORS.REQUIRED_FIELD),
+        residueDescription:yup.string(),
         
     });
 
@@ -73,11 +73,11 @@ function Modal(props) {
                 locationInfo: values.checked1 +"  " + values.andar +"  " + values.checked2+"  "+ values.descreva,  
             },         
          
-            residue : {
+            residueRequest : {
                 residueType: values.residueType,
-                residueAmount: values.residueAmount,
-                residueMensure: values.residueMeasure,
+                residueMensure: values.residueAmount + values.residueMeasure ,
             },
+
  }
           
        setTimeout(() => {
