@@ -15,11 +15,13 @@ public class EstimateService {
     private EstimateConverterService estimateConverterService;
     private MailFactory mailFactory;
 
-    EstimateService(EstimateRepository repository, EstimateConverterService estimateConverter, MailFactory mailFactory) {
+    EstimateService(EstimateRepository repository, EstimateConverterService estimateConverter,MailFactory mailFactory) {
         this.estimateRepository = repository;
         this.estimateConverterService = estimateConverter;
         this.mailFactory=mailFactory;
     }
+
+
 
     public Estimate create(EstimateRequest estimateRequest) {
         Estimate estimateEntity = estimateConverterService.converter(estimateRequest);
