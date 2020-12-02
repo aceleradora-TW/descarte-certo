@@ -17,7 +17,7 @@ import InputMask from "react-input-mask";
 import * as yup from "yup";
 import Axios from "axios";
 
-
+const BACKEND_URL = process.env.PORT ? `http://localhost:${process.env.PORT}` : 'http://localhost:8080';
 
 function Modal(props) {
     const validationSchema = yup.object().shape({
@@ -66,7 +66,7 @@ function Modal(props) {
         }
 
        setTimeout(() => {
-                   Axios.post(`http://localhost:8080/estimate`,
+                   Axios.post(`${BACKEND_URL}\estimate`,
                        requestCreateEstimate
                    ).then(function (response) {
                        console.log(JSON.stringify(values));
