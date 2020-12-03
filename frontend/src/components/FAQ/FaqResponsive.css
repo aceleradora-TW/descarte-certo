@@ -76,6 +76,11 @@
     padding-top: 80px;
     padding-bottom: 0px;
   }
+ 
+   .iconFaq .active {
+     transform: rotate(180deg);
+     transition: 0.5s;
+   }
 
   .iconFaq {
      position: absolute;

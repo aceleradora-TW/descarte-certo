@@ -8,10 +8,10 @@
 .iconFaq {
  position: absolute;
   right: 20px;
-  top: 32px;
+  top: 27px;
 }
 
-.iconFaq:active {
+.iconFaqActive {
   transform: rotate(180deg);
   transition: 0.5s;
 }
