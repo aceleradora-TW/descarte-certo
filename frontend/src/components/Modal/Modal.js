@@ -19,6 +19,8 @@ import Axios from "axios";
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
 
+const BACKEND_URL = process.env.PORT ? `http://localhost:${process.env.PORT}` : 'http://localhost:8080';
+
 function Modal(props) {
     const validationSchema = yup.object().shape({
         email: yup.string().email('e-mail inválido').required(ERRORS.REQUIRED_FIELD),
@@ -27,7 +29,7 @@ function Modal(props) {
         cellphone: yup.string().required(ERRORS.REQUIRED_FIELD),
         localDescription: yup.string(),
         residueDescription:yup.string(),
-        
+
     });
 
     const [isAlertVisible, setIsAlertVisible] = useState(false);
@@ -35,8 +37,8 @@ function Modal(props) {
 
     const [submitSuccess, setSubmitSuccess] = useState(false);
     const handleSubmitSuccess = (success) => setSubmitSuccess(success);
-   
-   
+
+
 
     const initialValues = {
         fullName: "",
@@ -67,21 +69,21 @@ function Modal(props) {
                 email: values.email,
                 cellphone: values.cellphone,
             },
-            
+
             residueAddress: {
                 cep: values.cep,
                 locationInfo: values.checked1 +" Andar: " + values.andar +"  " + values.checked2+"  "+ values.localDescription,
-            },         
-         
+            },
+
             residueRequest : {
                 residueType: values.residueType + values.residueDescription,
                 residueMeasure: values.residueAmount + values.residueMeasure ,
             },
 
  }
-          
+
        setTimeout(() => {
-                   Axios.post(`http://localhost:8080/estimate`,
+                   Axios.post(`${BACKEND_URL}\estimate`,
                        requestCreateEstimate
                    ).then(function (response) {
                        console.log(JSON.stringify(values));
@@ -234,7 +236,7 @@ function Modal(props) {
                                         style={{ display: 'block' }}
                                         onClick={fieldTextTrueResidue(values.residueType)}
                                         required
-                                    >   
+                                    >
                                         <option label="Tipo de resíduo:" />
                                         <option value="Caliça ( cimentícios, cerâmicos, solo, areia)" label="Caliça ( cimentícios, cerâmicos, solo, areia)" />
                                         <option value="Gesso (acartonado, placas, drywall,...)" label="Gesso (acartonado, placas, drywall,...)" />
@@ -242,10 +244,10 @@ function Modal(props) {
                                         <option value="Madeira sem tinta" label="Madeira sem tinta" />
                                         <option value="Mix" label="Mix (resíduos de obra contendo outros em menor volume: recicláveis, madeiras, metais...)" />
                                         <option value="Outro:" label="Outro:" />
-                                       
+
                                     </select> <ErrorMessage component="div" name="residueType" />
                                     </Col>
-                                  
+
                                     <Col className="col-sm-1 residue-quantity">
                                     <Field
                                                       type="Number"
@@ -258,7 +260,7 @@ function Modal(props) {
                                                       />
                                         <ErrorMessage component="div" name="residueAmount" />
                                         </Col>
-                            
+
                                         <Col className="col-sm-3 residue-measure">
                                     <select
                                         className="select-residuo"
@@ -268,15 +270,15 @@ function Modal(props) {
                                         onBlur={handleBlur}
                                         style={{ display: 'block' }}
                                         required
-                                    >   
+                                    >
                                         <option label="Medida:" />
                                         <option value="Sacos de 50L" label="Sacos de 50L" />
                                         <option value="Kg" label="Kg" />
                                         <option value="m³" label="m³" />
                                         <option value="bags" label="bags" />
                                         <option value="caçambas" label="caçambas" />
-                                    
-                                       
+
+
                                     </select> <ErrorMessage component="div" name="residueMeasure" />
                                     </Col>
                                     </Row>
@@ -301,7 +303,7 @@ function Modal(props) {
                                     </Col>
                                     </Row>
 
-                                
+
                                 <div><p>Informe se o local de coleta possui (múltiplas opções possíveis):</p></div>
                                               <Row>
                                                 <Col lg="3">
