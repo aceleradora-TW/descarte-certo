@@ -24,7 +24,7 @@ public class EstimateConverterService {
                         .build()
                 )
                 .residue(Residue.builder()
-                        .residueMensure(request.getResidueRequest().getResidueMensure())
+                        .residueMeasure(request.getResidueRequest().getResidueMeasure())
                         .residueType(request.getResidueRequest().getResidueType())
                         .build()
                 )

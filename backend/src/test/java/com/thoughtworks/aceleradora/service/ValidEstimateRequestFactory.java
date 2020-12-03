@@ -22,7 +22,7 @@ public class ValidEstimateRequestFactory {
                         .build())
                 .residueRequest(ResidueRequest.builder()
                         .residueType("caliça")
-                        .residueMensure("43m³")
+                        .residueMeasure("43m³")
                         .build())
                 .build();
         return estimateRequest;

@@ -64,7 +64,7 @@ public class EstimateService {
         sb.append(estimateEntity.getResidue().getResidueType());
         sb.append( System.getProperty("line.separator"));
         sb.append("Quantidade dos residuo: ");
-        sb.append(estimateEntity.getResidue().getResidueMensure());
+        sb.append(estimateEntity.getResidue().getResidueMeasure());
         try {
             mailFactory.sendMessage(sb.toString());
         } catch (UnirestException e) {

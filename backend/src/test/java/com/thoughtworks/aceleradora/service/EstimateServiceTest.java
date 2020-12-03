@@ -33,7 +33,7 @@ public class EstimateServiceTest {
             EstimateRequest validRequest = createValidRequest();
 
             Requester requester= Requester.builder().fullName("Rosa").cellphone("999999999").email("va@van").build();
-            Residue residue = Residue.builder().id(1).residueMensure("").residueType("").build();
+            Residue residue = Residue.builder().id(1).residueMeasure("").residueType("").build();
             ResidueAddress residueAddress= ResidueAddress.builder().cep("").locationInfo("").id(1).build();
             Estimate expectedEstimateCreated = Estimate.builder().id(1).requester(requester).residue(residue).residueAddress(residueAddress).build();
             when(estimateConverterServiceMock.converter(validRequest))

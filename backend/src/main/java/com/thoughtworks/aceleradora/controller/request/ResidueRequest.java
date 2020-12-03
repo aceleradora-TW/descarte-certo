@@ -12,5 +12,5 @@ import lombok.NoArgsConstructor;
 
 public class ResidueRequest {
     private String residueType;
-    private String residueMensure;
+    private String residueMeasure;
 }

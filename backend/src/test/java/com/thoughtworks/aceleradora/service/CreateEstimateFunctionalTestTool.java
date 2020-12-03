@@ -32,7 +32,7 @@ public class CreateEstimateFunctionalTestTool {
                                     .build())
                             .residueRequest(
                                     ResidueRequest.builder()
-                                            .residueMensure("")
+                                            .residueMeasure("")
                                             .residueType("")
                                             .build())
                             .build();

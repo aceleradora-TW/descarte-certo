@@ -21,7 +21,7 @@ public class Residue {
     @EqualsAndHashCode.Include
     private int id;
     private String residueType;
-    private String residueMensure;
+    private String residueMeasure;
 
 
 }
