@@ -17,11 +17,9 @@ import InputMask from "react-input-mask";
 import * as yup from "yup";
 import Axios from "axios";
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-//import app from "../App";
 
-//const BACKEND_URL = process.env.PORT ? `http://localhost:${process.env.PORT}` : 'http://localhost:8080';
-const BACKEND_URL =process.env.PORT || 8080;
-//app.listen(BACKEND_URL);
+
+
 function Modal(props) {
     const validationSchema = yup.object().shape({
         email: yup.string().email('e-mail inválido').required(ERRORS.REQUIRED_FIELD),
@@ -83,11 +81,13 @@ function Modal(props) {
             },
 
  }
+        let BACKEND_URL = process.env.REACT_APP_BACKEND_URL ?
+            process.env.REACT_APP_BACKEND_URL :
+            "http://localhost:8080";
 
-       setTimeout(() => {
-                   let URL = `${BACKEND_URL}/estimate`;
-                    console.log("URL backend: "+ URL)
-                   Axios.post(URL,
+        setTimeout(() => {
+                   console.log("URL backend: "+ BACKEND_URL)
+                   Axios.post(`${BACKEND_URL}/estimate`,
                        requestCreateEstimate
                    ).then(function (response) {
                        console.log(JSON.stringify(values));
