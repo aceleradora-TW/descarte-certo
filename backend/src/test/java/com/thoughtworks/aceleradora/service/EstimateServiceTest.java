@@ -30,10 +30,8 @@ public class EstimateServiceTest {
     }
         @Test
         public void shouldConvertAndSaveEstimateOnCreateWithRequest() throws UnirestException {
-            //DADO uma requisicao VALIDA
             EstimateRequest validRequest = createValidRequest();
 
-            //DADO que o estimateConverterServiceMock esta respondendo corretamente uma Estimate Entity
             Requester requester= Requester.builder().fullName("Rosa").cellphone("999999999").email("va@van").build();
             Residue residue = Residue.builder().id(1).residueMensure("").residueType("").build();
             ResidueAddress residueAddress= ResidueAddress.builder().cep("").locationInfo("").id(1).build();
@@ -41,17 +39,14 @@ public class EstimateServiceTest {
             when(estimateConverterServiceMock.converter(validRequest))
                     .thenReturn(expectedEstimateCreated);
 
-            //DADO que o respositoryretorna uma entidade apos salvar
             when(estimateRepositoryMock.save(any())).thenAnswer(
                     (InvocationOnMock invocation) -> invocation.getArguments()[0]);
 
             JsonNode jsonNode=new JsonNode("[]");
             when(mailFactoryMock.sendMessage(anyString())).thenReturn(jsonNode);
 
-            //QUANDO pedido para criar uma Estimate
             Estimate estimateEntity = estimateService.create(validRequest);
 
-            //ENTAO deve converter e chamar o metodo save do Respository
             verify(estimateRepositoryMock, times(1)).save(estimateEntity);
             verify(estimateConverterServiceMock, times(1)).converter(validRequest);
             verify(mailFactoryMock,times(1)).sendMessage(anyString());
