@@ -63,6 +63,7 @@ function Modal(props) {
      let fieldTextFloor= false;
 
     const onSubmit = (values, { setSubmitting, resetForm }) => {
+
         const requestCreateEstimate = {
             requester: {
                 fullName: values.fullName,
@@ -83,13 +84,16 @@ function Modal(props) {
  }
 
        setTimeout(() => {
-                   Axios.post(`${BACKEND_URL}\estimate`,
+                   let URL = `${BACKEND_URL}/estimate`;
+                    console.log("URL backend: "+ URL)
+                   Axios.post(URL,
                        requestCreateEstimate
                    ).then(function (response) {
                        console.log(JSON.stringify(values));
                        handleSubmitSuccess(true);
                        setSubmitting(false);
                    }).catch(function (error) {
+                       console.error(error)
                        handleSubmitSuccess(false);
                    }).then(function () {
                        handleAlertClick();
