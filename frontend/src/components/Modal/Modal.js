@@ -82,7 +82,7 @@ function Modal(props) {
 
  }
         let BACKEND_URL = process.env.REACT_APP_IS_LOCAL_BACKEND ?
-            "http://localhost:8080" : "http://localhost";
+            "http://localhost:8080" : "https://localhost";
 
         setTimeout(() => {
                    console.log("URL backend: "+ BACKEND_URL)
