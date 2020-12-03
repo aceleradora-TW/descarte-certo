@@ -1,5 +1,5 @@
-import React from 'react'
-import { Accordion, Card, Button } from "react-bootstrap";
+import React,{useContext} from 'react'
+import { Accordion, Card, Button, AccordionContext, } from "react-bootstrap";
 import Icone from '../images/icon-faq-novo.png'
 import imgFaq from '../images/img-faq.png'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -7,6 +7,28 @@ import './FaqStyle.css'
 import Texts from './texts.json'
 import { string } from 'prop-types';
 import './FaqResponsive.css'
+import { useAccordionToggle } from 'react-bootstrap/AccordionToggle';
+import { Link } from 'react-router-dom';
+
+function AccordionToggleButton ({children,eventKey,callback}){
+    const currentEventKey = useContext(AccordionContext);
+
+
+  const decoratedOnClick = useAccordionToggle(
+    eventKey,
+    () => callback && callback(eventKey),
+  );
+
+  const isCurrentEventKey = currentEventKey === eventKey;
+  
+  console.log({currentEventKey,eventKey});
+  return (
+      <Button variant= "link" onClick={decoratedOnClick}>
+      {children} <img src={Icone} className={'iconFaq' + (isCurrentEventKey ? ' iconFaqActive' : '' )}  /> 
+      </Button>
+  );
+
+}
 
 function FaqComponent() {
     return (
@@ -15,13 +37,14 @@ function FaqComponent() {
             <Accordion >
                 <Card>
                     <Card.Header>
-                        <Accordion.Toggle as={Button} variant="" eventKey="0">
-                            {Texts.card1.title} <img src={Icone} className="iconFaq" />
+                            <AccordionToggleButton eventKey="0">
+                            {Texts.card1.title} 
+                            </AccordionToggleButton>
+                            </Card.Header>
                             <Accordion.Collapse eventKey="0">
                                 <Card.Body classname="body-faq">{Texts.card1.content}</Card.Body>
                             </Accordion.Collapse>
-                        </Accordion.Toggle>
-                    </Card.Header>
+                   
                 </Card>
                 <Card>
                     <Card.Header>

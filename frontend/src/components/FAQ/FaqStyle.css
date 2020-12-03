@@ -11,7 +11,7 @@
   top: 32px;
 }
 
-.iconFaq:active {
+.iconFaqActive {
   transform: rotate(180deg);
   transition: 0.5s;
 }
