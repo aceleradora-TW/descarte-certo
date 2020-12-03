@@ -29,7 +29,6 @@ public class EstimateController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public EstimateResponse create(@RequestBody EstimateRequest estimateRequest) {
-
         Estimate estimateEntity = estimateService.create(estimateRequest);
         return EstimateResponse.builder()
                 .estimateCode(estimateEntity.getId())
