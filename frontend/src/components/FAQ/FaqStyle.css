@@ -11,23 +11,17 @@
   top: 22px;
 }
 
-.iconFaq:active {
+.iconFaqActive {
   transform: rotate(180deg);
   transition: 0.5s;
-}
-
-.imgFaq {
-  top:82%;
-  left: 90%;
-  position: absolute;
-  width: 50%;
 }
 
 .btn.btn {
   width: 95%;
   text-align: left;
   color: #2d3d57 !important;  
-  font-size: 18px;  
+  font-size: 18px;
+  text-decoration: none;  
   }
 
 .div {
@@ -35,7 +29,7 @@
   padding-bottom: 2000px;
 }
 
-.card.card-faq {    
+.card {
   width: 100%;
   word-wrap: break-word;
   background-color: #ffffff !important;
@@ -43,8 +37,8 @@
   border: 2px 1px 2px 1px solid !important;
   color: #2d3d57 !important;
   font-family: 'Montserrat', sans-serif;
-  text-align: justify;   
-  opacity: 90%!important;
+  text-align: justify;
+  opacity: 0.9 !important;
   margin-bottom: 30px;
   box-shadow: 1px 1px 1px 5px #F5F4F6 !important;
   -moz-box-shadow: 3px 3px 10px 5px #ffffff !important;
@@ -108,7 +102,7 @@
     border-radius: .0rem;
   }
 
-  .btn.btn:focus {     
+  .btn.btn:focus {
     outline: none;
     box-shadow: none;
     }
@@ -117,9 +111,9 @@
     margin: auto;
     padding-bottom: 360px;
   }
-  
+
   .imgFaq {
-    top: 56%;
+    top: 52%;
     left: 54%;
     position: absolute;
     width: 70%;
