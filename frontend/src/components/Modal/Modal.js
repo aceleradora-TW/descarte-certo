@@ -82,8 +82,7 @@ function Modal(props) {
 
  }
         let BACKEND_URL = process.env.REACT_APP_IS_LOCAL_BACKEND ?
-            "http://localhost:8080" : "https://descartecerto.herokuapp.com";
-
+           "http://localhost:8080" : "https://www.5marias.eco.br";
         setTimeout(() => {
                    console.log("URL backend: "+ BACKEND_URL)
                    Axios.post(`${BACKEND_URL}/estimate`,
