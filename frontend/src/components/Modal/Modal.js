@@ -60,6 +60,7 @@ function Modal(props) {
      let fieldText = false;
      let fieldTextResidue= false;
      let fieldTextFloor= false;
+     let fieldTextQuantity=false;
 
     const onSubmit = (values, { setSubmitting, resetForm }) => {
 
@@ -161,6 +162,17 @@ function Modal(props) {
                 fieldTextResidue = false
             }
         };
+
+        const showingFieldQuantity = (values) =>{
+            if (fieldTextQuantity === true){
+               return (
+               <div>
+                </div> ) }else { return null;}
+   };
+   function fieldTextTrueQuantity() {
+    fieldTextQuantity === true ? fieldTextQuantity = false : fieldTextQuantity = true
+
+   };
 
     return (
         <BootstrapModal
