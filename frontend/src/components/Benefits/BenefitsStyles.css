@@ -43,6 +43,9 @@
       margin-right: 30px;
       padding-bottom: 50px;
 }
+.title-benefits {
+   margin-bottom: 20px;
+}
 }
 
   @media only screen and (min-width:641px) and (max-width:1024px){
@@ -53,6 +56,9 @@
     .title-card-benefits{
       font-size: 18px;
       padding: 3%;
+   }
+   .title-benefits {
+      margin-bottom: 20px;
    }
   }
 
