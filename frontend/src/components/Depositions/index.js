@@ -17,8 +17,11 @@ function DepositionsComponent() {
     <div>
       <div id="Depoimentos" className='container-fluid'>
         <h1 className="title-depositions">Depoimentos</h1>
+        
+        <Carousel
+          showArrows={window.innerWidth < 700 ? false : true}
+          itemsToShow={window.innerWidth < 700 ? 1 : 3} className="card-carousel">
 
-        <Carousel itemsToShow={window.innerWidth < 700 ? 1 : 3} className="card-carousel">
           {TextsDepositions.cards.map((card, index) =>
             <Card key={index} className="card-depositions">
               <div className="imgCard">
