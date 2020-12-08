@@ -22,7 +22,7 @@ public class EstimateConverterServiceTest {
 
     @Test
     public void shouldCreateEstimateWithRequestName() {
-        String expectedRequesterName = "expectedRequesterNameValue";
+        String expectedRequesterName = "Pedro";
         EstimateRequest validEstimateRequest = createValidRequest();
         validEstimateRequest.getRequester().setFullName(expectedRequesterName);
 

@@ -31,9 +31,7 @@
       flex: 0 0 120%;
       max-width: 120%;
   }
-    
-
-    .card.card {    
+    .card-faq{    
       width: 100%;
       word-wrap: break-word;
       background-color: #ffffff;
@@ -76,6 +74,11 @@
     padding-top: 80px;
     padding-bottom: 0px;
   }
+ 
+   .iconFaq .active {
+     transform: rotate(180deg);
+     transition: 0.5s;
+   }
 
   .iconFaq {
      position: absolute;

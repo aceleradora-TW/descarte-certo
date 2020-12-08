@@ -1,0 +1,1 @@
+ALTER TABLE residue DROP COLUMN residue_quantity;

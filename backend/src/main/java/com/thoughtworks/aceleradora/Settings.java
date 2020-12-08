@@ -16,7 +16,8 @@ public class Settings{
                 registry
                         .addMapping("/**")
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
-                        .allowedOrigins("http://localhost:3000","https://descartecerto.herokuapp.com");
+                        .allowedOrigins("http://localhost:3000","https://descartecerto.herokuapp.com",
+                                "https://www.5marias.eco.br","https://5marias.eco.br");
             }
         };
     }

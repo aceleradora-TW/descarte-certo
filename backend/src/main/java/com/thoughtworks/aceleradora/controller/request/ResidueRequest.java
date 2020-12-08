@@ -9,8 +9,8 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class EstimateRequest {
-    private RequesterRequest requester;
-    private ResidueAddressRequest residueAddress;
-    private ResidueRequest residueRequest;
+
+public class ResidueRequest {
+    private String residueType;
+    private String residueMeasure;
 }
