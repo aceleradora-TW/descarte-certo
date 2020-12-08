@@ -35,13 +35,16 @@
       padding: 3%;
    }
    .title-benefits {
-      text-align: center;
       font-size: 25px;
+      padding: 3%;
   }
    .container-benefits {
       margin-left: 30px;
       margin-right: 30px;
       padding-bottom: 50px;
+}
+.title-benefits {
+   margin-bottom: 20px;
 }
 }
 
@@ -53,6 +56,9 @@
     .title-card-benefits{
       font-size: 18px;
       padding: 3%;
+   }
+   .title-benefits {
+      margin-bottom: 20px;
    }
   }
 

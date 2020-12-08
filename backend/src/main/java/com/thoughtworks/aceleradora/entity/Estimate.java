@@ -1,10 +1,6 @@
 package com.thoughtworks.aceleradora.entity;
 
-import com.thoughtworks.aceleradora.controller.request.EstimateRequest;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -14,9 +10,12 @@ import javax.persistence.*;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Estimate {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @EqualsAndHashCode.Include
     private Integer id;
 
     @OneToOne(cascade=CascadeType.ALL)
@@ -24,5 +23,8 @@ public class Estimate {
 
     @OneToOne(cascade=CascadeType.ALL)
     private ResidueAddress residueAddress;
+
+    @OneToOne(cascade =CascadeType.ALL)
+    private Residue residue;
 }
 

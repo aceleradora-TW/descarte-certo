@@ -38,19 +38,21 @@ function FaqComponent() {
                         <AccordionToggleButton eventKey="0">
                             {Texts.card1.title}
                         </AccordionToggleButton>
-                    <Accordion.Collapse eventKey="0">
-                        <Card.Body classname="body-faq">{Texts.card1.content}</Card.Body>
-                    </Accordion.Collapse>
+                        <Accordion.Collapse eventKey="0">
+                            <Card.Body classname="body-faq">{Texts.card1.content}</Card.Body>
+                        </Accordion.Collapse>
                     </Card.Header>
+
                 </Card>
-                <Card className="card-faq">
+                <Card>
                     <Card.Header>
                         < AccordionToggleButton eventKey="1">
                             {Texts.card2.title}
                         </AccordionToggleButton>
-                    <Accordion.Collapse eventKey="1">
-                        <Card.Body classname="body-faq">{Texts.card2.content}</Card.Body>
-                    </Accordion.Collapse>
+
+                        <Accordion.Collapse eventKey="1">
+                            <Card.Body classname="body-faq">{Texts.card2.content}</Card.Body>
+                        </Accordion.Collapse>
                     </Card.Header>
                 </Card>
 
@@ -59,39 +61,42 @@ function FaqComponent() {
                         <AccordionToggleButton eventKey="3">
                             {Texts.card3.title}
                         </AccordionToggleButton>
-                    <Accordion.Collapse eventKey="3">
-                        <Card.Body classname="body-faq">{Texts.card4.content}</Card.Body>
-                    </Accordion.Collapse>
+
+                        <Accordion.Collapse eventKey="3">
+                            <Card.Body classname="body-faq">{Texts.card4.content}</Card.Body>
+                        </Accordion.Collapse>
                     </Card.Header>
                 </Card>
                 <Card className="card-faq">
                     <Card.Header>
-                        < AccordionToggleButton eventKey="4"> 
-                            {Texts.card4.title} 
-                            </AccordionToggleButton>
-                            <Accordion.Collapse eventKey="4">
-                                <Card.Body classname="body-faq">{Texts.card5.content}</Card.Body>
-                            </Accordion.Collapse>
-                            </Card.Header>
-                 </Card>
+                        < AccordionToggleButton eventKey="4">
+                            {Texts.card4.title}
+                        </AccordionToggleButton>
+
+                        <Accordion.Collapse eventKey="4">
+                            <Card.Body classname="body-faq">{Texts.card5.content}</Card.Body>
+                        </Accordion.Collapse>
+                    </Card.Header>
+                </Card>
                 <Card>
                     <Card.Header>
-                        < AccordionToggleButton eventKey="5"> 
-                            {Texts.card5.title} 
-                            </AccordionToggleButton>
-                            <Accordion.Collapse eventKey="5">
-                                <Card.Body classname="body-faq">{Texts.card6.content}</Card.Body>
-                            </Accordion.Collapse>
-                            </Card.Header>
-                 </Card>
+                        < AccordionToggleButton eventKey="5">
+                            {Texts.card5.title}
+                        </AccordionToggleButton>
+                        <Accordion.Collapse eventKey="5">
+                            <Card.Body classname="body-faq">{Texts.card6.content}</Card.Body>
+                        </Accordion.Collapse>
+                    </Card.Header>
+                </Card>
                 <Card>
                     <Card.Header>
                         < AccordionToggleButton eventKey="6">
                             {Texts.card6.title}
                         </AccordionToggleButton>
-                    <Accordion.Collapse eventKey="6">
-                        <Card.Body classname="body-faq">{Texts.card7.content}</Card.Body>
-                    </Accordion.Collapse>
+
+                        <Accordion.Collapse eventKey="6">
+                            <Card.Body classname="body-faq">{Texts.card7.content}</Card.Body>
+                        </Accordion.Collapse>
                     </Card.Header>
                 </Card>
             </Accordion>
