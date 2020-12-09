@@ -99,6 +99,17 @@ function FaqComponent() {
                         </Accordion.Collapse>
                     </Card.Header>
                 </Card>
+                <Card>
+                    <Card.Header>
+                        < AccordionToggleButton eventKey="7">
+                            {Texts.card7.title}
+                        </AccordionToggleButton>
+
+                        <Accordion.Collapse eventKey="7">
+                            <Card.Body classname="body-faq">{Texts.card7.content}</Card.Body>
+                        </Accordion.Collapse>
+                    </Card.Header>
+                </Card>
             </Accordion>
 
             <img src={imgFaq} className="imgFaq" />
