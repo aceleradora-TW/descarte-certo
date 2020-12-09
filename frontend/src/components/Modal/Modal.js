@@ -27,7 +27,7 @@ function Modal(props) {
         cep: yup.string().required(ERRORS.REQUIRED_FIELD),
         cellphone: yup.string().required(ERRORS.REQUIRED_FIELD),
         localDescription: yup.string(),
-        residueDescription:yup.string(),
+        residueDescription: yup.string(),
 
     });
 
@@ -45,22 +45,22 @@ function Modal(props) {
         cellphone: "",
         cep: "",
         checked1: "",
-        checked2:"",
-        checked3:"",
-        andar:"",
+        checked2: "",
+        checked3: "",
+        andar: "",
         locationInfo: "",
-        localDescription:"",
+        localDescription: "",
         residueType: "",
-        residueAmount:"",
-        residueDescription:"",
-        residueMeasure:"",
-        residueInfo:""
+        residueAmount: "",
+        residueDescription: "",
+        residueMeasure: "",
+        residueInfo: ""
 
     };
-     let fieldText = false;
-     let fieldTextResidue= false;
-     let fieldTextFloor= false;
-     let fieldTextQuantity=false;
+    let fieldText = false;
+    let fieldTextResidue = false;
+    let fieldTextFloor = false;
+    let fieldTextQuantity = false;
 
     const onSubmit = (values, { setSubmitting, resetForm }) => {
 
@@ -73,57 +73,58 @@ function Modal(props) {
 
             residueAddress: {
                 cep: values.cep,
-                locationInfo: values.checked1 +" Andar: " + values.andar +"  " + values.checked2+"  "+ values.localDescription,
+                locationInfo: values.checked1 + " Andar: " + values.andar + "  " + values.checked2 + "  " + values.localDescription,
             },
 
-            residueRequest : {
+            residueRequest: {
                 residueType: values.residueType + values.residueDescription,
-                residueMeasure: values.residueAmount + values.residueMeasure ,
+                residueMeasure: values.residueAmount + values.residueMeasure,
             },
 
- }
+        }
         let BACKEND_URL = process.env.REACT_APP_IS_LOCAL_BACKEND ?
-           "http://localhost:8080" : "https://www.5marias.eco.br";
+            "http://localhost:8080" : "https://www.5marias.eco.br";
         setTimeout(() => {
-                   console.log("URL backend: "+ BACKEND_URL)
-                   Axios.post(`${BACKEND_URL}/estimate`,
-                       requestCreateEstimate
-                   ).then(function (response) {
-                       console.log(JSON.stringify(values));
-                       handleSubmitSuccess(true);
-                       setSubmitting(false);
-                   }).catch(function (error) {
-                       console.error(error)
-                       handleSubmitSuccess(false);
-                   }).then(function () {
-                       handleAlertClick();
-                   });
+            console.log("URL backend: " + BACKEND_URL)
+            Axios.post(`${BACKEND_URL}/estimate`,
+                requestCreateEstimate
+            ).then(function (response) {
+                console.log(JSON.stringify(values));
+                handleSubmitSuccess(true);
+                setSubmitting(false);
+            }).catch(function (error) {
+                console.error(error)
+                handleSubmitSuccess(false);
+            }).then(function () {
+                handleAlertClick();
+            });
 
         }, 400);
     };
 
-     const showingField = (values) =>{
-         if (fieldText === true){
+    const showingField = (values) => {
+        if (fieldText === true) {
             return (
-            <div><Field
-              maxLength="200"
-              type="text"
-              name="localDescription"
-              value={values.localDescription}
-              placeholder="Descreva..."
-              className="form-control field-input"
-              />
-              <ErrorMessage component="div" name="localDescription" />
-             </div> ) }else { return null;}
-        };
-      function fieldTextTrue() {
-       fieldText === true ? fieldText = false : fieldText = true
+                <div><Field
+                    maxLength="200"
+                    type="text"
+                    name="localDescription"
+                    value={values.localDescription}
+                    placeholder="Descreva..."
+                    className="form-control field-input"
+                />
+                    <ErrorMessage component="div" name="localDescription" />
+                </div>)
+        } else { return null; }
+    };
+    function fieldTextTrue() {
+        fieldText === true ? fieldText = false : fieldText = true
 
-      };
-      const showingFieldFloor = (values) =>{
-               if (fieldTextFloor === true){
-                  return (
-                  <div><Field
+    };
+    const showingFieldFloor = (values) => {
+        if (fieldTextFloor === true) {
+            return (
+                <div><Field
                     min="1"
                     max="4"
                     type="Number"
@@ -131,48 +132,93 @@ function Modal(props) {
                     value={values.andar}
                     placeholder="Informe o andar"
                     className="form-control field-input"
+                />
+                </div>)
+        } else { return null; }
+    };
+    function fieldTextTrueFloor() {
+        fieldTextFloor === true ? fieldTextFloor = false : fieldTextFloor = true
+
+    };
+
+
+    const showingFieldResidue = (values) => {
+        if (fieldTextResidue === true) {
+            return (
+                <Row className="quant"><Field
+                    maxLength="200"
+                    type="text"
+                    name="residueDescription"
+                    value={values.residueDescription}
+                    placeholder="Descreva..."
+                    className="form-control field-input"
+                />
+                    <ErrorMessage component="div" name="residueDescription" />
+                </Row>)
+        } else { return null; }
+    };
+    function fieldTextTrueResidue(value) {
+
+        if (value === "Outro:") {
+            fieldTextResidue = true
+            fieldTextQuantity = true
+
+        } else if (value !== "") {
+            fieldTextQuantity = true
+
+        } else {
+            fieldTextResidue = false
+        }
+
+
+    };
+
+    const showingFieldQuantity = (values, handleChange, handleBlur) => {
+        if (fieldTextQuantity === true) {
+            return (    
+                <div >
+                
+                    <Field 
+                        type="Number"
+                        placeholder="1"
+                        min="1"
+                        max="500"
+                        name="residueAmount"
+                        value={values.residueAmount}
+                        className="form-control field-input"
                     />
-                   </div> ) }else { return null;}
-      };
-      function fieldTextTrueFloor() {
-             fieldTextFloor === true ? fieldTextFloor = false : fieldTextFloor = true
-
-      };
-
-
-      const showingFieldResidue = (values) =>{
-        if (fieldTextResidue === true){
-           return (
-           <Row className="quant"><Field
-             maxLength="200"
-             type="text"
-             name="residueDescription"
-             value={values.residueDescription}
-             placeholder="Descreva..."
-             className="form-control field-input"
-             />
-             <ErrorMessage component="div" name="residueDescription" />
-            </Row> ) }else { return null;}
-       };
-       function fieldTextTrueResidue(value) {
-            if (value === "Outro:"){
-                fieldTextResidue = true
-            }else {
-                fieldTextResidue = false
-            }
-        };
-
-        const showingFieldQuantity = (values) =>{
-            if (fieldTextQuantity === true){
-               return (
-               <div>
-                </div> ) }else { return null;}
-   };
-   function fieldTextTrueQuantity() {
-    fieldTextQuantity === true ? fieldTextQuantity = false : fieldTextQuantity = true
-
-   };
-
+                    <ErrorMessage component="div" name="residueAmount" />
+                  
+                </div>)
+        } else { return null; }
+            };
+            const showingFieldQuantity2 = (values, handleChange, handleBlur) => {
+                if (fieldTextQuantity === true) {
+                    return (    
+                        <div >
+                                               
+                            <select
+                                    className="select-residuo"
+                                    name="residueMeasure"
+                                    value={values.residueMeasure}
+                                   onChange={handleChange}
+                                   onBlur={handleBlur}
+                                    style={{ display: 'block' }}
+                                    required
+                                >
+                                    <option label="Medida:" />
+                                    <option value="Sacos de 50L" label="Sacos de 50L" />
+                                    <option value="Kg" label="Kg" />
+                                    <option value="m³" label="m³" />
+                                    <option value="bags" label="bags" />
+                                    <option value="caçambas" label="caçambas" />
+                            </select> <ErrorMessage component="div" name="residueMeasure" />
+                          
+                        </div>)
+                } else { return null; }
+                    };
+            
+    
     return (
         <BootstrapModal
 
@@ -198,14 +244,14 @@ function Modal(props) {
                     }) => (
 
                             <Form className="form-inputs-style">
-                                    <Field
+                                <Field
                                     name="fullName" required
                                     className="form-control field-input"
                                     placeholder="Nome Completo"
                                     onChange={handleChange}
                                     value={values.fullName}
-                                    onBlur={handleBlur}/>
-                                    <ErrorMessage component="div" name="fullName" />
+                                    onBlur={handleBlur} />
+                                <ErrorMessage component="div" name="fullName" />
                                 <br />
                                 <Field
                                     className="form-control field-input"
@@ -233,74 +279,48 @@ function Modal(props) {
                                             <ErrorMessage component="div" name="cellphone" />
                                         </FormGroup>
                                     </Col>
-                                    </Row>
-                                    <Row>
-                                        <Col>
+                                </Row>
+                                <Row>
+                                    <Col>
                                         Informe o tipo e a quantidade do resíduo.<br></br>
                                         Saiba que: 1m³ = 1 piscina de mil litros, 1 caçamba = 4m³, 1 bag = 1m³.
                                         </Col>
-                                    </Row>
-                                    <Row>
-                                        <Col className="col-sm-8">
-                                    <select
-                                        className="select-residuo"
-                                        name="residueType"
-                                        value={values.residueType}
-                                        onChange={handleChange}
-                                        onBlur={handleBlur}
-                                        style={{ display: 'block' }}
-                                        onClick={fieldTextTrueResidue(values.residueType)}
-                                        required
-                                    >
-                                        <option label="Tipo de resíduo:" />
-                                        <option value="Caliça ( cimentícios, cerâmicos, solo, areia)" label="Caliça ( cimentícios, cerâmicos, solo, areia)" />
-                                        <option value="Gesso (acartonado, placas, drywall,...)" label="Gesso (acartonado, placas, drywall,...)" />
-                                        <option value="Madeira com tinta" label="Madeira com tinta" />
-                                        <option value="Madeira sem tinta" label="Madeira sem tinta" />
-                                        <option value="Mix" label="Mix (resíduos de obra contendo outros em menor volume: recicláveis, madeiras, metais...)" />
-                                        <option value="Outro:" label="Outro:" />
+                                </Row>
+                                <Row>
+                                    <Col className="col-sm-8">
+                                        <select
+                                            className="select-residuo rediduo"
+                                            name="residueType"
+                                            value={values.residueType}
+                                            onChange={handleChange}
+                                            onBlur={handleBlur}
+                                            style={{ display: 'block' }}
+                                            onClick={fieldTextTrueResidue(values.residueType)}
+                                            required
+                                        >
+                                            <option label="Tipo de resíduo:" />
+                                            <option value="Caliça ( cimentícios, cerâmicos, solo, areia)" label="Caliça ( cimentícios, cerâmicos, solo, areia)" />
+                                            <option value="Gesso (acartonado, placas, drywall,...)" label="Gesso (acartonado, placas, drywall,...)" />
+                                            <option value="Madeira com tinta" label="Madeira com tinta" />
+                                            <option value="Madeira sem tinta" label="Madeira sem tinta" />
+                                            <option value="Mix" label="Mix (resíduos de obra contendo outros em menor volume: recicláveis, madeiras, metais...)" />
+                                            <option value="Outro:" label="Outro:" />
 
-                                    </select> <ErrorMessage component="div" name="residueType" />
+                                        </select> <ErrorMessage component="div" name="residueType" />
                                     </Col>
-
+                                   
                                     <Col className="col-sm-1 residue-quantity">
-                                    <Field
-                                                      type="Number"
-                                                      placeholder="1"
-                                                      min="1"
-                                                      max="500"
-                                                      name="residueAmount"
-                                                      value={values.residueAmount}
-                                                      className="form-control field-input"
-                                                      />
-                                        <ErrorMessage component="div" name="residueAmount" />
-                                        </Col>
-
-                                        <Col className="col-sm-3 residue-measure">
-                                    <select
-                                        className="select-residuo"
-                                        name="residueMeasure"
-                                        value={values.residueMeasure}
-                                        onChange={handleChange}
-                                        onBlur={handleBlur}
-                                        style={{ display: 'block' }}
-                                        required
-                                    >
-                                        <option label="Medida:" />
-                                        <option value="Sacos de 50L" label="Sacos de 50L" />
-                                        <option value="Kg" label="Kg" />
-                                        <option value="m³" label="m³" />
-                                        <option value="bags" label="bags" />
-                                        <option value="caçambas" label="caçambas" />
-
-
-                                    </select> <ErrorMessage component="div" name="residueMeasure" />
+                                        {showingFieldQuantity(values, handleChange, handleBlur)}
                                     </Col>
-                                    </Row>
-                                    <Col>
+                                    <Col className="col-sm-3 .residue-measure">
+                                        {showingFieldQuantity2(values, handleChange, handleBlur)}
+                                    </Col>
+                           
+                                </Row>
+                                <Col>
                                     {showingFieldResidue(values)}
-                                    </Col>
-                                    <Row>
+                                </Col>
+                                <Row>
                                     <Col >
                                         <FormGroup>
                                             <Field name="cep" required>
@@ -316,66 +336,66 @@ function Modal(props) {
 
                                         </FormGroup>
                                     </Col>
-                                    </Row>
+                                </Row>
 
 
                                 <div><p>Informe se o local de coleta possui (múltiplas opções possíveis):</p></div>
-                                              <Row>
-                                                <Col lg="3">
-                                                  <FormGroup>
+                                <Row>
+                                    <Col lg="3">
+                                        <FormGroup>
 
-                                                   <Label >
+                                            <Label >
 
-                                                    <Field type="checkbox"
-                                                      className=""
-                                                      name="checked1"
-                                                      value="Escada"
-                                                      onClick={fieldTextTrueFloor}
-                                                      />
-                                                      <a> Escada</a>
+                                                <Field type="checkbox"
+                                                    className=""
+                                                    name="checked1"
+                                                    value="Escada"
+                                                    onClick={fieldTextTrueFloor}
+                                                />
+                                                <a> Escada</a>
 
-                                                      </Label>
-                                                      <div>
-                                                        {showingFieldFloor(values)}
-                                                      </div>
+                                            </Label>
+                                            <div>
+                                                {showingFieldFloor(values)}
+                                            </div>
 
-                                                  </FormGroup>
-                                                </Col>
+                                        </FormGroup>
+                                    </Col>
 
-                                                <Col lg="3">
-                                                  <FormGroup>
-                                                   <Label>
-                                                    <Field type="checkbox"
-                                                      className=""
-                                                      name="checked2"
-                                                      value="Elevador"
-                                                      />
-                                                      <a> Elevador</a>
-                                                      </Label>
-                                                  </FormGroup>
-                                                </Col>
+                                    <Col lg="3">
+                                        <FormGroup>
+                                            <Label>
+                                                <Field type="checkbox"
+                                                    className=""
+                                                    name="checked2"
+                                                    value="Elevador"
+                                                />
+                                                <a> Elevador</a>
+                                            </Label>
+                                        </FormGroup>
+                                    </Col>
 
-                                                <Col lg="6">
-                                                  <FormGroup>
-                                                   <Label>
-                                                    <Field type="checkbox"
-                                                      className=""
-                                                      name="checked3"
-                                                       value="Outro"
-                                                      onClick={fieldTextTrue}
+                                    <Col lg="6">
+                                        <FormGroup>
+                                            <Label>
+                                                <Field type="checkbox"
+                                                    className=""
+                                                    name="checked3"
+                                                    value="Outro"
+                                                    onClick={fieldTextTrue}
 
 
-                                                      />
-                                                      <a> Outro de difícil acesso:</a>
-                                                      </Label>
+                                                />
+                                                <a> Outro de difícil acesso:</a>
+                                            </Label>
 
-                                                      <div>
-                                                      {showingField(values)}
-                                                      </div>
-                                                  </FormGroup>
-                                                </Col>
+                                            <div>
+                                                {showingField(values)}
+                                            </div>
+                                        </FormGroup>
+                                    </Col>
 
-                                              </Row>
+                                </Row>
 
                                 <Button
                                     className="form-button"
@@ -386,13 +406,13 @@ function Modal(props) {
 
                                     Solicitar
                             </Button>
-                            <Alert color={submitSuccess ? "success" : "danger"} isOpen={isAlertVisible} toggle={handleAlertClick}>
+                                <Alert color={submitSuccess ? "success" : "danger"} isOpen={isAlertVisible} toggle={handleAlertClick}>
                                     {
 
-                                        submitSuccess ? "Sua solicitação foi enviada! Obrigada!" + values.locationInfo:
-                                                        "Ops! Tivemos um problema. Tente novamente mais tarde. " + values.locationInfo
+                                        submitSuccess ? "Sua solicitação foi enviada! Obrigada!" + values.locationInfo :
+                                            "Ops! Tivemos um problema. Tente novamente mais tarde. " + values.locationInfo
                                     }
-                            </Alert>
+                                </Alert>
 
                             </Form>
                         )}
