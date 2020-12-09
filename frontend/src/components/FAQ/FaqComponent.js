@@ -63,7 +63,7 @@ function FaqComponent() {
                         </AccordionToggleButton>
 
                         <Accordion.Collapse eventKey="3">
-                            <Card.Body classname="body-faq">{Texts.card4.content}</Card.Body>
+                            <Card.Body classname="body-faq">{Texts.card3.content}</Card.Body>
                         </Accordion.Collapse>
                     </Card.Header>
                 </Card>
@@ -74,7 +74,7 @@ function FaqComponent() {
                         </AccordionToggleButton>
 
                         <Accordion.Collapse eventKey="4">
-                            <Card.Body classname="body-faq">{Texts.card5.content}</Card.Body>
+                            <Card.Body classname="body-faq">{Texts.card4.content}</Card.Body>
                         </Accordion.Collapse>
                     </Card.Header>
                 </Card>
@@ -84,7 +84,7 @@ function FaqComponent() {
                             {Texts.card5.title}
                         </AccordionToggleButton>
                         <Accordion.Collapse eventKey="5">
-                            <Card.Body classname="body-faq">{Texts.card6.content}</Card.Body>
+                            <Card.Body classname="body-faq">{Texts.card5.content}</Card.Body>
                         </Accordion.Collapse>
                     </Card.Header>
                 </Card>
@@ -95,6 +95,17 @@ function FaqComponent() {
                         </AccordionToggleButton>
 
                         <Accordion.Collapse eventKey="6">
+                            <Card.Body classname="body-faq">{Texts.card6.content}</Card.Body>
+                        </Accordion.Collapse>
+                    </Card.Header>
+                </Card>
+                <Card>
+                    <Card.Header>
+                        < AccordionToggleButton eventKey="7">
+                            {Texts.card7.title}
+                        </AccordionToggleButton>
+
+                        <Accordion.Collapse eventKey="7">
                             <Card.Body classname="body-faq">{Texts.card7.content}</Card.Body>
                         </Accordion.Collapse>
                     </Card.Header>
