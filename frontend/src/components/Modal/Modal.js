@@ -392,13 +392,12 @@ function Modal(props) {
                                                     name="checked4"
                                                     value="Termos"
                                                 />
-                                                <a> Li e concordo com os <a target="_blank" href="https://drive.google.com/file/d/1Wty-Il4oz36PuOWGeX35BWPTmGREShlE/view?usp=sharing">Termos de Uso</a>, <a target="_blank" href="https://drive.google.com/file/d/1bBGVCMWoQ7vtBpjMF1YWljt6p1GYY5E5/view?usp=sharing">Política de Privacidade</a> e as <a target="_blank" href="https://drive.google.com/file/d/11Ao8wyvIDL1Yjus_Y8sZcaB-7Exau1wm/view?usp=sharing">Normas e nomenclatura geral sobre LGPD</a></a>
+                                                <a> Li e concordo com os </a> <a target="_blank" href="https://drive.google.com/file/d/1Wty-Il4oz36PuOWGeX35BWPTmGREShlE/view?usp=sharing">Termos de Uso</a>, <a target="_blank" href="https://drive.google.com/file/d/1bBGVCMWoQ7vtBpjMF1YWljt6p1GYY5E5/view?usp=sharing">Política de Privacidade</a> e as <a target="_blank" href="https://drive.google.com/file/d/11Ao8wyvIDL1Yjus_Y8sZcaB-7Exau1wm/view?usp=sharing">Normas e nomenclatura geral sobre LGPD</a>
                                             </Label>
                                         </FormGroup>
                                     </Col>
 
                                 </Row>
-
 
                                 <Button
                                     className="form-button"
@@ -406,7 +405,6 @@ function Modal(props) {
                                     block
                                     color="secondary"
                                     type="submit">
-
                                     Solicitar
                             </Button>
                                 <Alert color={submitSuccess ? "success" : "danger"} isOpen={isAlertVisible} toggle={handleAlertClick}>
