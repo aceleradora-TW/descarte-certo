@@ -15,7 +15,8 @@ public class MailFactory {
     private String emailSender;
     private String emailReceiver;
 
-    public MailFactory(@Value("${mailgun.username}")String username, @Value("${mailgun.password}")String password, @Value("${mailgun.emailSender}")String emailSender, @Value("${mailgun.emailReceiver}")String emailReceiver){
+    public MailFactory(@Value("${mailgun.username}")String username, @Value("${mailgun.password}")String password, @Value("${mailgun.emailSender}")
+            String emailSender, @Value("${mailgun.emailReceiver}")String emailReceiver){
         this.username = username;
         this.password = password;
         this.emailSender = emailSender;
@@ -26,7 +27,7 @@ public class MailFactory {
         HttpResponse<JsonNode> request = Unirest.post("https://api.mailgun.net/v3/" + username + "/messages")
                 .basicAuth("api",password)
                 .field("from",emailSender)
-                .field("to", emailReceiver)
+                .field("to",emailReceiver)
                 .field("subject", "E mail recebido com novo orçamento")
                 .field("text", mailBody)
                 .asJson();

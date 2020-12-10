@@ -17,7 +17,9 @@ import InputMask from "react-input-mask";
 import * as yup from "yup";
 import Axios from "axios";
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-
+import App from "../../App"
+import { ModalDialog } from "react-bootstrap";
+import { func } from "prop-types";
 
 
 function Modal(props) {
@@ -32,8 +34,8 @@ function Modal(props) {
     });
 
     const [isAlertVisible, setIsAlertVisible] = useState(false);
-    const handleAlertClick = () => setIsAlertVisible(!isAlertVisible);
-
+    function handleAlertClick (){ setIsAlertVisible(!isAlertVisible)};
+    function handlecloseWindow (){window.location.reload()};
     const [submitSuccess, setSubmitSuccess] = useState(false);
     const handleSubmitSuccess = (success) => setSubmitSuccess(success);
 
@@ -95,6 +97,7 @@ function Modal(props) {
             }).catch(function (error) {
                 console.error(error)
                 handleSubmitSuccess(false);
+                resetForm();
             }).then(function () {
                 handleAlertClick();
             });
@@ -218,15 +221,20 @@ function Modal(props) {
                 } else { return null; }
                     };
             
-    
+                   
+                   
     return (
         <BootstrapModal
-
+    
             border="light"
             isOpen={props.isModalVisible}
             toggle={props.handleBudgetClick}
+            
+           
         >
-            <ModalHeader toggle={props.handleBudgetClick}>
+            <ModalHeader toggle={handlecloseWindow}
+
+        >
                 Solicite seu Orçamento
             </ModalHeader>
             <ModalBody>
@@ -234,6 +242,7 @@ function Modal(props) {
                     initialValues={initialValues}
                     validationSchema={validationSchema}
                     onSubmit={onSubmit}
+                  
                 >
                     {({
                         values,
@@ -250,7 +259,8 @@ function Modal(props) {
                                     placeholder="Nome Completo"
                                     onChange={handleChange}
                                     value={values.fullName}
-                                    onBlur={handleBlur} />
+                                    onBlur={handleBlur} 
+                                    />
                                 <ErrorMessage component="div" name="fullName" />
                                 <br />
                                 <Field
@@ -402,21 +412,22 @@ function Modal(props) {
                                     disabled={!isValid || isSubmitting}
                                     block
                                     color="secondary"
-                                    type="submit">
-
+                                    type="submit"
+                                    onClick={FormGroup.disabled} >
                                     Solicitar
                             </Button>
-                                <Alert color={submitSuccess ? "success" : "danger"} isOpen={isAlertVisible} toggle={handleAlertClick}>
+                                <Alert color={submitSuccess ? "success" : "danger"} isOpen={isAlertVisible} >
                                     {
-
                                         submitSuccess ? "Sua solicitação foi enviada! Obrigada!" + values.locationInfo :
                                             "Ops! Tivemos um problema. Tente novamente mais tarde. " + values.locationInfo
                                     }
-                                </Alert>
-
+                                   
+                                 </Alert>
                             </Form>
+                        
                         )}
                 </Formik>
+              
             </ModalBody>
         </BootstrapModal>
     );
