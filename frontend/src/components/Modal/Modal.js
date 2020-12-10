@@ -59,16 +59,10 @@ function Modal(props) {
         residueInfo: ""
 
     };
-<<<<<<< HEAD
     let fieldText = false;
     let fieldTextResidue = false;
     let fieldTextFloor = false;
-=======
-     let fieldText = false;
-     let fieldTextResidue= false;
-     let fieldTextFloor= false;
-     let fieldTextQuantity=false;
->>>>>>> 278d2a3f11b29e27423b03457ad5b44683a2c7e9
+    let fieldTextQuantity = false;
 
     const onSubmit = (values, { setSubmitting, resetForm }) => {
 
@@ -91,7 +85,7 @@ function Modal(props) {
 
         }
         let BACKEND_URL = process.env.REACT_APP_IS_LOCAL_BACKEND ?
-           "http://localhost:8080" : "https://www.5marias.eco.br";
+            "http://localhost:8080" : "https://www.5marias.eco.br";
         setTimeout(() => {
             console.log("URL backend: " + BACKEND_URL)
             Axios.post(`${BACKEND_URL}/estimate`,
@@ -173,16 +167,17 @@ function Modal(props) {
         }
     };
 
-        const showingFieldQuantity = (values) =>{
-            if (fieldTextQuantity === true){
-               return (
-               <div>
-                </div> ) }else { return null;}
-   };
-   function fieldTextTrueQuantity() {
-    fieldTextQuantity === true ? fieldTextQuantity = false : fieldTextQuantity = true
+    const showingFieldQuantity = (values) => {
+        if (fieldTextQuantity === true) {
+            return (
+                <div>
+                </div>)
+        } else { return null; }
+    };
+    function fieldTextTrueQuantity() {
+        fieldTextQuantity === true ? fieldTextQuantity = false : fieldTextQuantity = true
 
-   };
+    };
 
     return (
         <BootstrapModal
