@@ -1,14 +1,14 @@
 
 .btn.btn-primary {
-  background-color: #f4f4f4;
-  color: #2d3d57;
+  background-color: #f4f4f4 !important;  
+  color: #2d3d57 !important;   
   font-size: 1.5rem;
 }
 
 .iconFaq {
  position: absolute;
   right: 20px;
-  top: 27px;
+  top: 22px;
 }
 
 .iconFaqActive {
@@ -16,51 +16,47 @@
   transition: 0.5s;
 }
 
-.imgFaq {
-  top:82%;
-  left: 90%;
-  position: absolute;
-  width: 50%;
-}
-
 .btn.btn {
   width: 95%;
   text-align: left;
-  color: #2d3d57;
+  color: #2d3d57 !important;  
   font-size: 18px;
+  text-decoration: none;  
   }
 
 .div {
-  background-color: #ffffff;
+  background-color: #ffffff !important;
   padding-bottom: 2000px;
 }
 
 .card {
   width: 100%;
   word-wrap: break-word;
-  background-color: #ffffff;
+  background-color: #ffffff !important;
   background-clip: border-box;
-  border: 2px 1px 2px 1px solid;
-  color: #2d3d57;
+  border: 2px 1px 2px 1px solid !important;
+  color: #2d3d57 !important;
   font-family: 'Montserrat', sans-serif;
   text-align: justify;
   opacity: 0.9 !important;
   margin-bottom: 30px;
-  box-shadow: 1px 1px 1px 5px #F5F4F6;
-  -moz-box-shadow: 3px 3px 10px 5px #ffffff;
-  -webkit-box-shadow: 0px 0px 5px 0px black;
+  box-shadow: 1px 1px 1px 5px #F5F4F6 !important;
+  -moz-box-shadow: 3px 3px 10px 5px #ffffff !important;
+  -webkit-box-shadow: 0px 0px 5px 0px black !important;
   border-radius: 50px;
-  z-index: 6;
+  z-index: 1;
 }
 
 .accordion>.card:not(:last-of-type) {
   border-bottom-right-radius: 50px;
   border-bottom-left-radius: 50px;
+  opacity: 0.9 !important;
 }
 
 .accordion>.card:not(:first-of-type) {
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
+  opacity: 0.9 !important;
 }
 
 .btn.focus, .btn:focus {
@@ -68,37 +64,43 @@
 }
 
 .card-header {
-  padding: .75rem 1.25rem;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 20px;
   margin-bottom: -1px;
-  background-color: #ffffff;
+  background-color: #ffffff !important;   
  }
 
  .body-faq {
-   color: #636363;
+   color: #636363 !important;
    font-weight: 200;
    font-size: 16px;
-   opacity:100%;
+   opacity: 100%;
  }
 
 .duvidas {
   text-align: center;
-  color: #2d3d57;
+  color: #2d3d57 !important;
   padding-top: 80px;
   padding-bottom: 20px;
+  font-weight: 350;
+  font-size: 32px;
+  font-family: 'Montserrat', sans-serif;
 }
 
  .flex-box {
-  background-color: #ffffff;
+  background-color: #ffffff !important;
 }
 
  .content-box {
-  background-color: #ffffff;
-  }
+  background-color: #ffffff !important;   
+  } 
 
   .jumbotron {
     padding: 0px;
     margin-bottom: 0rem;
-    background-color: #e9ecef;
+    background-color: #e9ecef !important;
     border-radius: .0rem;
   }
 
@@ -109,12 +111,12 @@
 
   .div.col-6 {
     margin: auto;
-    padding-bottom: 50px;
+    padding-bottom: 360px;
   }
 
   .imgFaq {
-    top:60%;
-    left: 85%;
+    top: 56%;
+    left: 54%;
     position: absolute;
-    width: 50%;
+    width: 70%;
 }
