@@ -49,9 +49,9 @@ padding: 12px 20px;
     border-color: lightgray;
     height: 50px;
     color: gray;
-    width: 100%;
-    
+    width: 100%;   
 }
+
 .form-control {
     width: 100%;
 }
@@ -63,10 +63,10 @@ padding: 12px 20px;
     margin-bottom: 15px;
 }
 .residue-quantity{
-    padding-left: 0px;
-    padding-right: 1px;
-  
+    padding-left: 10px;
+    padding-right: 0px; 
 }
 .residue-measure{
     padding-left: 0px;
 }
+

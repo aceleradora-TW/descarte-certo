@@ -17,7 +17,9 @@ import InputMask from "react-input-mask";
 import * as yup from "yup";
 import Axios from "axios";
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-
+import App from "../../App"
+import { ModalDialog } from "react-bootstrap";
+import { func } from "prop-types";
 
 
 function Modal(props) {
@@ -33,8 +35,8 @@ function Modal(props) {
     });
 
     const [isAlertVisible, setIsAlertVisible] = useState(false);
-    const handleAlertClick = () => setIsAlertVisible(!isAlertVisible);
-
+    function handleAlertClick (){ setIsAlertVisible(!isAlertVisible)};
+    function handlecloseWindow (){window.location.reload()};
     const [submitSuccess, setSubmitSuccess] = useState(false);
     const handleSubmitSuccess = (success) => setSubmitSuccess(success);
 
@@ -97,6 +99,7 @@ function Modal(props) {
             }).catch(function (error) {
                 console.error(error)
                 handleSubmitSuccess(false);
+                resetForm();
             }).then(function () {
                 handleAlertClick();
             });
@@ -160,33 +163,74 @@ function Modal(props) {
         } else { return null; }
     };
     function fieldTextTrueResidue(value) {
+
         if (value === "Outro:") {
             fieldTextResidue = true
+            fieldTextQuantity = true
+
+        } else if (value !== "") {
+            fieldTextQuantity = true
+
         } else {
             fieldTextResidue = false
         }
+
+
     };
 
-    const showingFieldQuantity = (values) => {
+    const showingFieldQuantity = (values, handleChange, handleBlur) => {
         if (fieldTextQuantity === true) {
-            return (
-                <div>
+            return (    
+                <div >
+                
+                    <Field 
+                        type="Number"
+                        placeholder="1"
+                        min="1"
+                        max="500"
+                        name="residueAmount"
+                        value={values.residueAmount}
+                        className="form-control field-input"
+                    />
+                    <ErrorMessage component="div" name="residueAmount" />
+                  
                 </div>)
         } else { return null; }
-    };
-    function fieldTextTrueQuantity() {
-        fieldTextQuantity === true ? fieldTextQuantity = false : fieldTextQuantity = true
-
-    };
-
+            };
+            const showingFieldQuantity2 = (values, handleChange, handleBlur) => {
+                if (fieldTextQuantity === true) {
+                    return (    
+                        <div >
+                                               
+                            <select
+                                    className="select-residuo"
+                                    name="residueMeasure"
+                                    value={values.residueMeasure}
+                                   onChange={handleChange}
+                                   onBlur={handleBlur}
+                                    style={{ display: 'block' }}
+                                    required
+                                >
+                                    <option label="Medida:" />
+                                    <option value="Sacos de 50L" label="Sacos de 50L" />
+                                    <option value="Kg" label="Kg" />
+                                    <option value="m³" label="m³" />
+                                    <option value="bags" label="bags" />
+                                    <option value="caçambas" label="caçambas" />
+                            </select> <ErrorMessage component="div" name="residueMeasure" />
+                          
+                        </div>)
+                } else { return null; }
+                    };
+            
+                   
+                   
     return (
         <BootstrapModal
-
             border="light"
             isOpen={props.isModalVisible}
-            toggle={props.handleBudgetClick}
-        >
-            <ModalHeader toggle={props.handleBudgetClick}>
+            toggle={props.handleBudgetClick}>
+            <ModalHeader toggle={handlecloseWindow}>
                 Solicite seu Orçamento
             </ModalHeader>
             <ModalBody>
@@ -194,6 +238,7 @@ function Modal(props) {
                     initialValues={initialValues}
                     validationSchema={validationSchema}
                     onSubmit={onSubmit}
+                  
                 >
                     {({
                         values,
@@ -210,7 +255,8 @@ function Modal(props) {
                                     placeholder="Nome Completo"
                                     onChange={handleChange}
                                     value={values.fullName}
-                                    onBlur={handleBlur} />
+                                    onBlur={handleBlur} 
+                                    />
                                 <ErrorMessage component="div" name="fullName" />
                                 <br />
                                 <Field
@@ -268,40 +314,14 @@ function Modal(props) {
 
                                         </select> <ErrorMessage component="div" name="residueType" />
                                     </Col>
-
+                                   
                                     <Col className="col-sm-1 residue-quantity">
-                                        <Field
-                                            type="Number"
-                                            placeholder="1"
-                                            min="1"
-                                            max="500"
-                                            name="residueAmount"
-                                            value={values.residueAmount}
-                                            className="form-control field-input"
-                                        />
-                                        <ErrorMessage component="div" name="residueAmount" />
+                                        {showingFieldQuantity(values, handleChange, handleBlur)}
                                     </Col>
-
-                                    <Col className="col-sm-3 residue-measure">
-                                        <select
-                                            className="select-residuo"
-                                            name="residueMeasure"
-                                            value={values.residueMeasure}
-                                            onChange={handleChange}
-                                            onBlur={handleBlur}
-                                            style={{ display: 'block' }}
-                                            required
-                                        >
-                                            <option label="Medida:" />
-                                            <option value="Sacos de 50L" label="Sacos de 50L" />
-                                            <option value="Kg" label="Kg" />
-                                            <option value="m³" label="m³" />
-                                            <option value="bags" label="bags" />
-                                            <option value="caçambas" label="caçambas" />
-
-
-                                        </select> <ErrorMessage component="div" name="residueMeasure" />
+                                    <Col className="col-sm-3 .residue-measure">
+                                        {showingFieldQuantity2(values, handleChange, handleBlur)}
                                     </Col>
+                           
                                 </Row>
                                 <Col>
                                     {showingFieldResidue(values)}
@@ -404,20 +424,22 @@ function Modal(props) {
                                     disabled={!isValid || isSubmitting}
                                     block
                                     color="secondary"
-                                    type="submit">
+                                    type="submit"
+                                    onClick={FormGroup.disabled} >
                                     Solicitar
                             </Button>
-                                <Alert color={submitSuccess ? "success" : "danger"} isOpen={isAlertVisible} toggle={handleAlertClick}>
+                                <Alert color={submitSuccess ? "success" : "danger"} isOpen={isAlertVisible} >
                                     {
-
                                         submitSuccess ? "Sua solicitação foi enviada! Obrigada!" + values.locationInfo :
                                             "Ops! Tivemos um problema. Tente novamente mais tarde. " + values.locationInfo
                                     }
-                                </Alert>
-
+                                   
+                                 </Alert>
                             </Form>
+                        
                         )}
                 </Formik>
+              
             </ModalBody>
         </BootstrapModal>
     );

@@ -26,6 +26,9 @@ function FooterComponent(){
                         </Col>
                     </Col>  
                 </Row>
+                <Row>
+                    <p className="copyright">Copyright © by Aceleradora Ágil</p>
+                </Row>
             </div>
         )
 }

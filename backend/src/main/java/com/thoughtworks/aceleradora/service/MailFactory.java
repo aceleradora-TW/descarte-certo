@@ -12,19 +12,22 @@ public class MailFactory {
 
     private String username ;
     private String password ;
-    private String email;
+    private String emailSender;
+    private String emailReceiver;
 
-    public MailFactory(@Value("${mailgun.username}")String username, @Value("${mailgun.password}")String password, @Value("${mailgun.email}")String email){
+    public MailFactory(@Value("${mailgun.username}")String username, @Value("${mailgun.password}")String password, @Value("${mailgun.emailSender}")
+            String emailSender, @Value("${mailgun.emailReceiver}")String emailReceiver){
         this.username = username;
         this.password = password;
-        this.email = email;
+        this.emailSender = emailSender;
+        this.emailReceiver = emailReceiver;
     }
 
     public JsonNode sendMessage(String mailBody) throws UnirestException {
         HttpResponse<JsonNode> request = Unirest.post("https://api.mailgun.net/v3/" + username + "/messages")
                 .basicAuth("api",password)
-                .field("from",email)
-                .field("to", email)
+                .field("from",emailSender)
+                .field("to",emailReceiver)
                 .field("subject", "E mail recebido com novo orçamento")
                 .field("text", mailBody)
                 .asJson();

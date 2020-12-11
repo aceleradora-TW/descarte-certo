@@ -13,4 +13,5 @@ spring:
 mailgun:
   username: ${MAILGUN_USERNAME}
   password: ${MAILGUN_PASSWORD}
-  email: "5marias.sustentaveis@gmail.com"
+  emailSender: "5marias.sustentaveis@gmail.com"
+  emailReceiver: "5marias.orcamento@gmail.com"
