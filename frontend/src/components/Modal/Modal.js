@@ -295,7 +295,7 @@ function Modal(props) {
                                 <Row>
                                     <Col className="col-sm-8">
                                         <select
-                                            className="select-residuo rediduo"
+                                            className="select-residuo"
                                             name="residueType"
                                             value={values.residueType}
                                             onChange={handleChange}
