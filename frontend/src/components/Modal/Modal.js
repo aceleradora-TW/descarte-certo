@@ -30,6 +30,7 @@ function Modal(props) {
         cellphone: yup.string().required(ERRORS.REQUIRED_FIELD),
         localDescription: yup.string(),
         residueDescription: yup.string(),
+        checked4: yup.string().required(ERRORS.REQUIRED_FIELD),
 
     });
 
@@ -49,6 +50,7 @@ function Modal(props) {
         checked1: "",
         checked2: "",
         checked3: "",
+        checked4: "",
         andar: "",
         locationInfo: "",
         localDescription: "",
@@ -225,16 +227,10 @@ function Modal(props) {
                    
     return (
         <BootstrapModal
-    
             border="light"
             isOpen={props.isModalVisible}
-            toggle={props.handleBudgetClick}
-            
-           
-        >
-            <ModalHeader toggle={handlecloseWindow}
-
-        >
+            toggle={props.handleBudgetClick}>
+            <ModalHeader toggle={handlecloseWindow}>
                 Solicite seu Orçamento
             </ModalHeader>
             <ModalBody>
@@ -402,6 +398,22 @@ function Modal(props) {
                                             <div>
                                                 {showingField(values)}
                                             </div>
+                                        </FormGroup>
+                                    </Col>
+
+                                </Row>
+
+                                <Row>
+                                    <Col lg="12">
+                                        <FormGroup>
+                                            <Label>
+                                                <Field type="checkbox"
+                                                    className=""
+                                                    name="checked4"
+                                                    value="Termos"
+                                                />
+                                                <a> Li e concordo com os </a> <a target="_blank" href="https://drive.google.com/file/d/1Wty-Il4oz36PuOWGeX35BWPTmGREShlE/view?usp=sharing">Termos de Uso</a>, <a target="_blank" href="https://drive.google.com/file/d/1bBGVCMWoQ7vtBpjMF1YWljt6p1GYY5E5/view?usp=sharing">Política de Privacidade</a> e as <a target="_blank" href="https://drive.google.com/file/d/11Ao8wyvIDL1Yjus_Y8sZcaB-7Exau1wm/view?usp=sharing">Normas e nomenclatura geral sobre LGPD</a>
+                                            </Label>
                                         </FormGroup>
                                     </Col>
 
