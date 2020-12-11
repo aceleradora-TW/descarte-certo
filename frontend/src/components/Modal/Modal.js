@@ -152,7 +152,7 @@ function Modal(props) {
             return (
                 <Row className="quant"><Field
                     maxLength="200"
-                    type="text"yarn 
+                    type="text"
                     name="residueDescription"
                     value={values.residueDescription}
                     placeholder="Descreva..."
