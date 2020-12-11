@@ -152,11 +152,11 @@ function Modal(props) {
             return (
                 <Row className="quant"><Field
                     maxLength="200"
-                    type="text"
+                    type="text"yarn 
                     name="residueDescription"
                     value={values.residueDescription}
                     placeholder="Descreva..."
-                    className="form-control field-input"
+                    className="form-control field-input "
                 />
                     <ErrorMessage component="div" name="residueDescription" />
                 </Row>)
@@ -293,7 +293,7 @@ function Modal(props) {
                                         </Col>
                                 </Row>
                                 <Row>
-                                    <Col className="col-sm-8">
+                                    <Col className="col-sm-7">
                                         <select
                                             className="select-residuo"
                                             name="residueType"
@@ -315,7 +315,7 @@ function Modal(props) {
                                         </select> <ErrorMessage component="div" name="residueType" />
                                     </Col>
                                    
-                                    <Col className="col-sm-1 residue-quantity">
+                                    <Col className="col-sm-2 residue-quantity">
                                         {showingFieldQuantity(values, handleChange, handleBlur)}
                                     </Col>
                                     <Col className="col-sm-3 .residue-measure">
