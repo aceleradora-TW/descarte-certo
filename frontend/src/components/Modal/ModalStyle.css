@@ -61,12 +61,16 @@ padding: 12px 20px;
 }
 .quant{
     margin-bottom: 15px;
+  
 }
 .residue-quantity{
     padding-left: 10px;
     padding-right: 0px; 
+    margin-right: 0px;
+  
 }
 .residue-measure{
     padding-left: 0px;
+    margin-left: 0px;
 }
 
