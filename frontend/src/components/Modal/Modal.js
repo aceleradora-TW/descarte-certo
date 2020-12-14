@@ -83,14 +83,11 @@ function Modal(props) {
             residueRequest: {
                 residueType: values.residueType + values.residueDescription,
                 residueMeasure: values.residueAmount + values.residueMeasure,
-            },
-
+            }
         }
-        let BACKEND_URL = process.env.REACT_APP_IS_LOCAL_BACKEND ?
-            "http://localhost:8080" : "https://www.5marias.eco.br";
         setTimeout(() => {
-            console.log("URL backend: " + BACKEND_URL)
-            Axios.post(`${BACKEND_URL}/estimate`,
+            console.log("Requesting to backend /estimate")
+            Axios.post(`/estimate`,
                 requestCreateEstimate
             ).then(function (response) {
                 console.log(JSON.stringify(values));
@@ -103,7 +100,6 @@ function Modal(props) {
             }).then(function () {
                 handleAlertClick();
             });
-
         }, 400);
     };
 
@@ -180,10 +176,10 @@ function Modal(props) {
 
     const showingFieldQuantity = (values, handleChange, handleBlur) => {
         if (fieldTextQuantity === true) {
-            return (    
+            return (
                 <div >
-                
-                    <Field 
+
+                    <Field
                         type="Number"
                         placeholder="1"
                         min="1"
@@ -193,15 +189,15 @@ function Modal(props) {
                         className="form-control field-input"
                     />
                     <ErrorMessage component="div" name="residueAmount" />
-                  
+
                 </div>)
         } else { return null; }
             };
             const showingFieldQuantity2 = (values, handleChange, handleBlur) => {
                 if (fieldTextQuantity === true) {
-                    return (    
+                    return (
                         <div >
-                                               
+
                             <select
                                     className="select-residuo"
                                     name="residueMeasure"
@@ -218,13 +214,13 @@ function Modal(props) {
                                     <option value="bags" label="bags" />
                                     <option value="caçambas" label="caçambas" />
                             </select> <ErrorMessage component="div" name="residueMeasure" />
-                          
+
                         </div>)
                 } else { return null; }
                     };
-            
-                   
-                   
+
+
+
     return (
         <BootstrapModal
             border="light"
@@ -238,7 +234,7 @@ function Modal(props) {
                     initialValues={initialValues}
                     validationSchema={validationSchema}
                     onSubmit={onSubmit}
-                  
+
                 >
                     {({
                         values,
@@ -255,7 +251,7 @@ function Modal(props) {
                                     placeholder="Nome Completo"
                                     onChange={handleChange}
                                     value={values.fullName}
-                                    onBlur={handleBlur} 
+                                    onBlur={handleBlur}
                                     />
                                 <ErrorMessage component="div" name="fullName" />
                                 <br />
@@ -314,14 +310,14 @@ function Modal(props) {
 
                                         </select> <ErrorMessage component="div" name="residueType" />
                                     </Col>
-                                   
+
                                     <Col className="col-sm-2 residue-quantity">
                                         {showingFieldQuantity(values, handleChange, handleBlur)}
                                     </Col>
                                     <Col className="col-sm-3 .residue-measure">
                                         {showingFieldQuantity2(values, handleChange, handleBlur)}
                                     </Col>
-                           
+
                                 </Row>
                                 <Col>
                                     {showingFieldResidue(values)}
@@ -433,13 +429,13 @@ function Modal(props) {
                                         submitSuccess ? "Sua solicitação foi enviada! Obrigada!" + values.locationInfo :
                                             "Ops! Tivemos um problema. Tente novamente mais tarde. " + values.locationInfo
                                     }
-                                   
+
                                  </Alert>
                             </Form>
-                        
+
                         )}
                 </Formik>
-              
+
             </ModalBody>
         </BootstrapModal>
     );
