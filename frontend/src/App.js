@@ -14,7 +14,7 @@ function App() {
   };
   return (
     <div className="App">
-      <main className="App-content">
+      <main id="Home" className="App-content">
         <Menu />
         <Banner />
         <div className="flex-box container-box">
