@@ -1,10 +1,10 @@
-package com.thoughtworks.aceleradora.controller;
+//package com.thoughtworks.aceleradora.controller;
 
-import com.thoughtworks.aceleradora.controller.response.ErrorResponse;
-import com.thoughtworks.aceleradora.exception.EstimateNotFoundException;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.ControllerAdvice;
+//import com.thoughtworks.aceleradora.controller.response.ErrorResponse;
+//import com.thoughtworks.aceleradora.exception.EstimateNotFoundException;
+//import org.springframework.http.HttpStatus;
+//import org.springframework.http.ResponseEntity;
+/*import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
@@ -17,3 +17,4 @@ public class ExceptionAdvice {
         return new ResponseEntity<>(new ErrorResponse(e.getMessage()), HttpStatus.NOT_FOUND);
     }
 }
+*/
