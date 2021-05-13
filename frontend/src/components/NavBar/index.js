@@ -7,7 +7,7 @@ import NavId from './texts.json'
 function NavBarComponent() {
     return (
         <Navbar className="NavBar" bg="light" expand="lg" sticky="top"  >
-            <img src={Logotipo} width="200px"></img>
+            <Nav.Link href="#Home"><img src={Logotipo} width="200px"></img></Nav.Link>
             <Navbar.Toggle aria-controls="basic-navbar-nav " />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto mx-auto nb-cont">
