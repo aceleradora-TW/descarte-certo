@@ -2,25 +2,39 @@ package com.thoughtworks.aceleradora.service.BucketCalculator;
 
 import java.math.BigDecimal;
 
-public class BucketCalculator {
-    public BigDecimal BucketCalculator(BucketEstimateParameters params) {
-        Double TripVallue1;
-        Double TripVallue2;
-        Double TripVallue3;
-        return BigDecimal.ZERO;
-    }
+import static com.thoughtworks.aceleradora.service.BucketCalculator.BucketZones.*;
+import static com.thoughtworks.aceleradora.service.BucketCalculator.Materials.*;
 
+public class BucketCalculator {
 
     public static void main(String[] args) {
 
         BucketCalculator calculator = new BucketCalculator();
 
-        BucketEstimateParameters params = new BucketEstimateParameters(1,BucketZones.DONWTOWN ,Materials.WOOD);
+        BucketEstimateParameters params = new BucketEstimateParameters(1, SOUTHZONE ,Materials.WOOD);
 
-        BigDecimal result = calculator.BucketCalculator(params);
+        BigDecimal result = calculator.calculateBucketEstimate(params);
 
         System.out.println(result);
 
+    }
+
+    private BigDecimal calculateBucketEstimate(BucketEstimateParameters params) {
+
+
+        int Numerodecacambas = params.getBucketAmount();
+        if (params.getBucketZones() == DONWTOWN || params.getBucketZones() == SOUTHZONE){
+            int Vallues = 350;
+            return new BigDecimal(Vallues).multiply(int.toString(params.));
+
+
+        }
+
+
+
+
+
+        return BigDecimal.ZERO;
     }
 
 
