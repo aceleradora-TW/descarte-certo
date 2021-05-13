@@ -6,36 +6,20 @@ import static com.thoughtworks.aceleradora.service.BucketCalculator.BucketZones.
 import static com.thoughtworks.aceleradora.service.BucketCalculator.Materials.*;
 
 public class BucketCalculator {
-
     public static void main(String[] args) {
-
         BucketCalculator calculator = new BucketCalculator();
-
-        BucketEstimateParameters params = new BucketEstimateParameters(1, SOUTHZONE ,Materials.WOOD);
-
+        BucketEstimateParameters params = new BucketEstimateParameters(2, OUTHERZONES, PLASTER);
         BigDecimal result = calculator.calculateBucketEstimate(params);
-
         System.out.println(result);
-
     }
 
     private BigDecimal calculateBucketEstimate(BucketEstimateParameters params) {
-
-
-        int Numerodecacambas = params.getBucketAmount();
-        if (params.getBucketZones() == DONWTOWN || params.getBucketZones() == SOUTHZONE){
-            int Vallues = 350;
-            return new BigDecimal(Vallues).multiply(int.toString(params.));
-
-
+        if (params.getBucketZones() == DONWTOWN || params.getBucketZones() == SOUTHZONE || params.getMaterials() == MIXED) {
+            return new BigDecimal("350").multiply(new BigDecimal(Integer.toString(params.getBucketAmount())));
         }
-
-
-
-
-
-        return BigDecimal.ZERO;
+        if(params.getMaterials() == RUBBLE){
+            return new BigDecimal("250").multiply(new BigDecimal(Integer.toString(params.getBucketAmount())));
+        }
+        return new BigDecimal("300").multiply(new BigDecimal(Integer.toString(params.getBucketAmount())));
     }
-
-
 }
