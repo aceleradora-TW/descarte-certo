@@ -1,5 +1,8 @@
 # Descarte Certo
 
+[![CircleCI](https://circleci.com/gh/aceleradora-TW/descarte-certo.svg?style=svg)](https://app.circleci.com/pipelines/github/aceleradora-TW/descarte-certo?branch=master)
+
+
 Projeto que visa a criação de uma plataforma com implementações back e frontend com intenção de facilitar a busca e contratação do serviço das 5 marias. Consta uma página, efetua o orçamento o envia por email para as proprietárias, e envia dados para o banco cujo apenas elas tem acesso.
 
 Esse projeto foi a ideia vencedora do Creathon de 2019 e posteriormente se juntou com a equipe da aceleradora ágil para desenvolver a plataforma, o time de POs é composto por 5 mulheres: Marcia Castro (empresária), Fernanda Sequeira (publicitária), Sonia Fagundes (engenheira ambiental), Edna Menegaz (engenheira agronoma) e Daniely Votto (advogada).
