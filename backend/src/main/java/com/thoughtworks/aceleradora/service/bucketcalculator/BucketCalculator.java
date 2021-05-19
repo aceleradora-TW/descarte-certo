@@ -1,14 +1,14 @@
-package com.thoughtworks.aceleradora.service.BucketCalculator;
+package com.thoughtworks.aceleradora.service.bucketcalculator;
 
 import java.math.BigDecimal;
 
-import static com.thoughtworks.aceleradora.service.BucketCalculator.BucketZones.*;
-import static com.thoughtworks.aceleradora.service.BucketCalculator.Materials.*;
+import static com.thoughtworks.aceleradora.service.bucketcalculator.BucketZones.*;
+import static com.thoughtworks.aceleradora.service.bucketcalculator.Materials.*;
 
 public class BucketCalculator {
     public static void main(String[] args) {
         BucketCalculator calculator = new BucketCalculator();
-        BucketEstimateParameters params = new BucketEstimateParameters(2, OUTHERZONES, PLASTER);
+        BucketEstimateParameters params = new BucketEstimateParameters(2, OTHERZONES, PLASTER);
         BigDecimal result = calculator.calculateBucketEstimate(params);
         System.out.println(result);
     }
