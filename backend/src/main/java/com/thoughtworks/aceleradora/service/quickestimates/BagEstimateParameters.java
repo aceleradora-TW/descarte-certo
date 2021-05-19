@@ -1,6 +1,6 @@
 package com.thoughtworks.aceleradora.service.quickestimates;
 
-class BagEstimateParameters {
+public class BagEstimateParameters {
     private int bagAmount;
     private FloorAccess floorAccess;
     private Material material;

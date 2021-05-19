@@ -1,6 +1,6 @@
 package com.thoughtworks.aceleradora.service.quickestimates;
 
-enum Material {
+public enum Material {
     RUBBLE,
     PLASTER,
     WOOD,
