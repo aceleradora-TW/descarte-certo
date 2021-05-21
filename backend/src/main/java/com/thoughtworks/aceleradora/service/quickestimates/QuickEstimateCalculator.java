@@ -4,8 +4,8 @@ import java.math.BigDecimal;
 
 import static com.thoughtworks.aceleradora.service.quickestimates.FloorAccess.ELEVATOR;
 import static com.thoughtworks.aceleradora.service.quickestimates.FloorAccess.GROUND_FLOOR;
-import static com.thoughtworks.aceleradora.service.quickestimates.Material.PLASTER;
-import static com.thoughtworks.aceleradora.service.quickestimates.Material.WOOD;
+import static com.thoughtworks.aceleradora.service.BucketCalculator.Materials.PLASTER;
+import static com.thoughtworks.aceleradora.service.BucketCalculator.Materials.WOOD;
 
 public class QuickEstimateCalculator {
 
@@ -19,6 +19,7 @@ public class QuickEstimateCalculator {
             floorValue = 40;
         }
         if (parameters.getMaterial() == PLASTER) {
+
             roundNumber = Math.ceil((parameters.getBagAmount() / 45.0));
             calculation = 200 * roundNumber + (floorValue * roundNumber);
         } else {

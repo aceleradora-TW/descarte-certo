@@ -14,7 +14,7 @@ public class BucketCalculator {
     }
 
     public BigDecimal calculateBucketEstimate(BucketEstimateParameters params) {
-        if (params.getBucketZones() == DONWTOWN || params.getBucketZones() == SOUTHZONE || params.getMaterials() == MIXED) {
+        if (params.getBucketZones() == DOWNTOWN || params.getBucketZones() == SOUTHZONE || params.getMaterials() == MIXED) {
             return new BigDecimal("350").multiply(new BigDecimal(Integer.toString(params.getBucketAmount())));
         }
         if(params.getMaterials() == RUBBLE){

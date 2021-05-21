@@ -5,4 +5,6 @@ public enum Material {
     PLASTER,
     WOOD,
     MIXED
+
+    //Esta classe não está sendo usada. Estamos utilizando a classe Materials no lugar.
 }
