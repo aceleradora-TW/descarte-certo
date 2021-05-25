@@ -1,20 +1,33 @@
 import React from 'react'
 import './OrderList.css'
-import TableList from './TableList'
+import TableOrderList from './TableList'
+import TableOrder from './Teste'
 
+const data = [{
+        transporte: 'caçamba',
+        cep: '94820-450',
+        material: 'Madeira',
+        nome: 'João Silva',
+        data: '10/03/2021',
+        quantidade: '2'
+    }, {
+        transporte: 'sacos',
+        cep: '94820-450',
+        material: 'Madeira',
+        nome: 'Roberto Medeiros',
+        data: '24/05/2021',
+        quantidade: '43'
+    }]
 
-function OrderListComponent(){
-    return(
-         <div id="Orders" classname="container-OrderList">
-            <div classname="OrderList-title">
+function OrderListComponent() {
+    return (
+        <div className="container-order-list">
+            <div className="order-list-title">
                 <h1>Lista de orçamentos</h1>
-                <TableList />
+                <TableOrderList infos={data} />
+                {/* <TableOrder/> */}
             </div>
-
-
-
         </div>
     )
 }
-
 export default OrderListComponent
