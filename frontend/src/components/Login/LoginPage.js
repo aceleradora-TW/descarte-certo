@@ -1,22 +1,24 @@
 import React from 'react'
-import IconUser from '../images/componenteLoginUsuario.png'
-import IconPass from '../images/componenteSenhaUsuario.png'
+import IconUser from '../images/icon_person.png'
+import IconPass from '../images/icon_lock.png'
 import './loginStyle.css';
 
 function LoginPage() {
   return (
-    <div >
-      <h1> Login </h1>
-      <div>
+    <div className="container" >
+      <div className="titleLogin">
+        <h1> Login </h1>
+      </div>
+      <div className="userItem">
         <label htmlFor="user"> <img alt="userIcone" class src={IconUser}></img></label>
-        <input id="user" class="form-control" field-input type="text" name="user" autoComplete="off" placeholder="Usuário" />
+        <input id="user" class="border" type="text" name="user" autoComplete="off" placeholder="Usuário" />
       </div>
-      <div>
+      <div className="passwordItem">
         <label htmlFor="password"><img alt="passIcone" src={IconPass}></img></label>
-        <input id="password" type="password" name="password" placeholder="Senha" />
+        <input id="password" class="border" type="password" name="password" placeholder="Senha" />
       </div>
-      <div>
-        <button type="submit" class="botaoLogin">Entrar</button>
+      <div className="buttonLog">
+       <button type="submit" class="buttonEnter">Entrar</button>
       </div>
     </div>
   )
