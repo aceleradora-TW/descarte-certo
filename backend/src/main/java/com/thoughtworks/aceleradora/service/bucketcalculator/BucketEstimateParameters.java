@@ -1,4 +1,4 @@
-package com.thoughtworks.aceleradora.service.BucketCalculator;
+package com.thoughtworks.aceleradora.service.bucketcalculator;
 
 public class BucketEstimateParameters {
     private int bucketAmount;
