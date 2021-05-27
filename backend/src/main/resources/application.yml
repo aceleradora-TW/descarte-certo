@@ -11,9 +11,9 @@ spring:
           lob:
             non_contextual_creation: true
 mailgun:
-  username: ${MAILGUN_USERNAME:"user"}
+  username: ${MAILGUN_USERNAME}
 
-  password: ${MAILGUN_PASSWORD:"password"}
+  password: ${MAILGUN_PASSWORD}
 
   emailSender: "5marias.sustentaveis@gmail.com"
   emailReceiver: "5marias.orcamento@gmail.com"
