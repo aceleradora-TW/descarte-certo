@@ -7,7 +7,6 @@ import App from './App';
 import Footer from './components/Footer/index';
 import Benefits from './components/Benefits/index';
 import LoginPage from './components/Login/LoginPage';
-
 ReactDOM.render(
   <BrowserRouter>
     <Switch>

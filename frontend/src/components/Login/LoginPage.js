@@ -10,11 +10,11 @@ function LoginPage() {
         <h1> Login </h1>
       </div>
       <div className="userItem">
-        <label htmlFor="user"> <img alt="userIcone" class src={IconUser}></img></label>
+        <label htmlFor="user"> <img alt="userIcone" class="imgIcons"  src={IconUser}></img></label>
         <input id="user" class="border" type="text" name="user" autoComplete="off" placeholder="Usuário" />
       </div>
       <div className="passwordItem">
-        <label htmlFor="password"><img alt="passIcone" src={IconPass}></img></label>
+        <label htmlFor="password"><img alt="passIcone" class="imgIcons"  src={IconPass}></img></label>
         <input id="password" class="border" type="password" name="password" placeholder="Senha" />
       </div>
       <div className="buttonLog">

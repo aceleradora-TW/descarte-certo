@@ -7,6 +7,7 @@
     font-size: medium;
     float: center;
     border-radius: 6px;
+    
 }
 .container{
     text-align: center;
@@ -14,7 +15,7 @@
     grid-template-areas:  "titleLogin"
                           "userItem"
                           "passwordItem"
-                          "buttonLog";
+                          "buttonLog" ;
     grid-gap:10px;
     grid-template-columns: auto;
     grid-template-rows: auto;
@@ -26,6 +27,7 @@
 .userItem{
  grid-area: userItem;
  
+ 
 }
 
 .passwordItem{
@@ -35,16 +37,18 @@
 
 .buttonLog{
     grid-area: buttonLog; 
+    padding: 20px 20px;
 }   
 
 .titleLogin{
     color: #2F3B5A;    
-    font: Montserrat;
+    font-family: 'Montserrat', sans-serif ;
+    padding: 10px;
     
 }
 
 .border{
-    width: 393px;
+    width: 300px;
     height: 54px;
     top: 350px;
     left: 527px;
@@ -59,3 +63,9 @@
 :placeholder-shown{
     padding: 20px;
 }
+
+.imgIcons{
+    padding: 15px 15px;
+
+}
+
