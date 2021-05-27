@@ -1,9 +1,9 @@
 package com.thoughtworks.aceleradora.controller;
 
-import com.thoughtworks.aceleradora.service.BucketCalculator.BucketCalculator;
-import com.thoughtworks.aceleradora.service.BucketCalculator.BucketEstimateParameters;
-import com.thoughtworks.aceleradora.service.BucketCalculator.BucketZones;
-import com.thoughtworks.aceleradora.service.BucketCalculator.Materials;
+import com.thoughtworks.aceleradora.service.bucketcalculator.BucketCalculator;
+import com.thoughtworks.aceleradora.service.bucketcalculator.BucketEstimateParameters;
+import com.thoughtworks.aceleradora.service.bucketcalculator.BucketZones;
+import com.thoughtworks.aceleradora.service.bucketcalculator.Materials;
 import com.thoughtworks.aceleradora.service.quickestimates.BagEstimateParameters;
 import com.thoughtworks.aceleradora.service.quickestimates.FloorAccess;
 import com.thoughtworks.aceleradora.service.quickestimates.QuickEstimateCalculator;
