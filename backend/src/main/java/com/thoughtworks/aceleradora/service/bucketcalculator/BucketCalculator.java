@@ -1,9 +1,10 @@
 package com.thoughtworks.aceleradora.service.bucketcalculator;
 
 import java.math.BigDecimal;
-
 import static com.thoughtworks.aceleradora.service.bucketcalculator.BucketZones.*;
 import static com.thoughtworks.aceleradora.service.bucketcalculator.Materials.*;
+
+
 
 public class BucketCalculator {
     public static void main(String[] args) {
@@ -13,7 +14,7 @@ public class BucketCalculator {
         System.out.println(result);
     }
 
-    private BigDecimal calculateBucketEstimate(BucketEstimateParameters params) {
+    public BigDecimal calculateBucketEstimate(BucketEstimateParameters params) {
         if (params.getBucketZones() == DOWNTOWN || params.getBucketZones() == SOUTHZONE || params.getMaterials() == MIXED) {
             return new BigDecimal("350").multiply(new BigDecimal(Integer.toString(params.getBucketAmount())));
         }
