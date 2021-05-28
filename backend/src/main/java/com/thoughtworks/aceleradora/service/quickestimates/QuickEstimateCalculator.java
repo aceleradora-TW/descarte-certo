@@ -4,8 +4,8 @@ import java.math.BigDecimal;
 
 import static com.thoughtworks.aceleradora.service.quickestimates.FloorAccess.ELEVATOR;
 import static com.thoughtworks.aceleradora.service.quickestimates.FloorAccess.GROUND_FLOOR;
-import static com.thoughtworks.aceleradora.service.BucketCalculator.Materials.PLASTER;
-import static com.thoughtworks.aceleradora.service.BucketCalculator.Materials.WOOD;
+import static com.thoughtworks.aceleradora.service.bucketcalculator.Materials.PLASTER;
+import static com.thoughtworks.aceleradora.service.bucketcalculator.Materials.WOOD;
 
 public class QuickEstimateCalculator {
 

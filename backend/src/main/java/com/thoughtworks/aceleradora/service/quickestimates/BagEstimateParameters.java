@@ -1,6 +1,6 @@
 package com.thoughtworks.aceleradora.service.quickestimates;
 
-import com.thoughtworks.aceleradora.service.BucketCalculator.Materials;
+import com.thoughtworks.aceleradora.service.bucketcalculator.Materials;
 
 public class BagEstimateParameters {
     private int bagAmount;
