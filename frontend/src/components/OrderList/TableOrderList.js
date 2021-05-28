@@ -1,5 +1,6 @@
 import React from 'react'
 import './styles.css'
+import axios from 'axios'
 
 const TableOrderList = ({ orders }) => {
   return (
@@ -7,22 +8,24 @@ const TableOrderList = ({ orders }) => {
       <thead>
         <tr>
           <th>Nome</th>
+          <th>Telefone</th>
+          <th>email</th>
           <th>CEP</th>
-          <th>Data</th>
-          <th>Material</th>
-          <th>Tipo de Transporte</th>
-          <th>Quantidade</th>
+          <th>Endereço</th>
+          <th>Tipo do material</th>
+          <th>Tipo de serviço</th>
         </tr>
       </thead>
       <tbody>
         {orders.map(order => (
           <tr>
-            <td>{order.nome}</td>
-            <td>{order.cep}</td>
-            <td>{order.data}</td>
-            <td>{order.material}</td>
-            <td>{order.transporte}</td>
-            <td>{order.quantidade}</td>
+            <td>{order.requester.fullName}</td>
+            <td>{order.requester.cellphone}</td>
+            <td>{order.requester.email}</td>
+            <td>{order.residueAddress.cep}</td>
+            <td>{order.residueAddress.locationInfo}</td>
+            <td>{order.residue.residueType}</td>
+            <td>{order.residue.residueMeasure}</td>
           </tr>
         ))}
       </tbody>

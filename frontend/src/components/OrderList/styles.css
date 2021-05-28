@@ -1,17 +1,28 @@
 .order-list-title{
   display: grid;
   justify-content: center;
+  border-collapse: collapse;
+  width: 100%;
 }
-th, td {
-  padding: 15px;
-  text-align: center;
-}
-th, td {
-  border-bottom: 1px solid #ddd;
-}
-tr:hover {background-color: #f5f5f5;}
-tr:nth-child(even) {background-color: #f2f2f2;}
-th {
+.order-list-title th {
   background-color: #04AA6D;
   color: white;
+}
+.order-list-title th, .order-list-title td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  justify-content: center;
+  
+  
+}
+.order-list-title tr:hover {background-color: #f5f5f5;}
+.order-list-title tr:nth-child(even) {background-color: #f2f2f2;}
+
+.paginator-container {
+  display: inline-block;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 25px;
+  
 }

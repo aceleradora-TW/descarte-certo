@@ -1,90 +1,178 @@
-
-export const data = [
+export const orders =[
     {
-        nome: "Roberto Rochedo",
-        cep: "920365-478",
-        data: "19/08/2021",
-        material: "Caliça",
-        transporte: "Caçambas",
-        quantidade: "2"
+        "id": 1,
+        "requester": {
+            "id": 1,
+            "fullName": "Juciene Dantas",
+            "cellphone": "99999999",
+            "email": "ju@gmail"
+        },
+        "residueAddress": {
+            "id": 1,
+            "cep": "9028900",
+            "locationInfo": "perto do carrefour"
+        },
+        "residue": {
+            "id": 1,
+            "residueType": "madeira",
+            "residueMeasure": "saco"
+        }
     },
     {
-        nome: "Carlos Silva",
-        cep: "94652-320",
-        data: "12/03/2021",
-        material: "Caliça",
-        transporte: "Sacos",
-        quantidade: "35"
+        "id": 1,
+        "requester": {
+            "id": 1,
+            "fullName": "Juciene Dantas",
+            "cellphone": "99999999",
+            "email": "ju@gmail"
+        },
+        "residueAddress": {
+            "id": 1,
+            "cep": "9028900",
+            "locationInfo": "perto do carrefour"
+        },
+        "residue": {
+            "id": 1,
+            "residueType": "madeira",
+            "residueMeasure": "saco"
+        }
     },
     {
-        nome: "Eduardo Rosa",
-        cep: "94652-320",
-        data: "12/03/2021",
-        material: "Madeira",
-        transporte: "Sacos",
-        quantidade: "20"
-    },{
-        nome: "Jhuan jhuan",
-        cep: "94652-320",
-        data: "12/03/2021",
-        material: "Gesso",
-        transporte: "Caçamba",
-        quantidade: "3"
-    },{
-        nome: "Thais Rochedo",
-        cep: "94652-320",
-        data: "12/03/2021",
-        material: "Caliça",
-        transporte: "Caçamba",
-        quantidade: "3"
-    },{
-        nome: "Juliano Arcari",
-        cep: "94652-322",
-        data: "12/03/2021",
-        material: "Caliça",
-        transporte: "Sacos",
-        quantidade: "10"
-    },{
-        nome: "Carlos Silva",
-        cep: "94652-320",
-        data: "12/03/2021",
-        material: "Caliça",
-        transporte: "Sacos",
-        quantidade: "35"
-    },{
-        nome: "Carlos Silva",
-        cep: "94652-320",
-        data: "12/03/2021",
-        material: "Caliça",
-        transporte: "Sacos",
-        quantidade: "35"
-    },{
-        nome: "Carlos Silva",
-        cep: "94652-320",
-        data: "12/03/2021",
-        material: "Caliça",
-        transporte: "Sacos",
-        quantidade: "35"
-    },{
-        nome: "Carlos Silva",
-        cep: "94652-320",
-        data: "12/03/2021",
-        material: "Caliça",
-        transporte: "Sacos",
-        quantidade: "35"
-    },{
-        nome: "Carlos Silva",
-        cep: "94652-320",
-        data: "12/03/2021",
-        material: "Caliça",
-        transporte: "Sacos",
-        quantidade: "35"
-    },{
-        nome: "Carlos Silva",
-        cep: "94652-320",
-        data: "12/03/2021",
-        material: "Caliça",
-        transporte: "Sacos",
-        quantidade: "35"
+        "id": 1,
+        "requester": {
+            "id": 1,
+            "fullName": "Juciene Dantas",
+            "cellphone": "99999999",
+            "email": "ju@gmail"
+        },
+        "residueAddress": {
+            "id": 1,
+            "cep": "9028900",
+            "locationInfo": "perto do carrefour"
+        },
+        "residue": {
+            "id": 1,
+            "residueType": "madeira",
+            "residueMeasure": "saco"
+        }
     },
+    {
+        "id": 1,
+        "requester": {
+            "id": 1,
+            "fullName": "Juciene Dantas",
+            "cellphone": "99999999",
+            "email": "ju@gmail"
+        },
+        "residueAddress": {
+            "id": 1,
+            "cep": "9028900",
+            "locationInfo": "perto do carrefour"
+        },
+        "residue": {
+            "id": 1,
+            "residueType": "madeira",
+            "residueMeasure": "saco"
+        }
+    },
+    {
+        "id": 1,
+        "requester": {
+            "id": 1,
+            "fullName": "Juciene Dantas",
+            "cellphone": "99999999",
+            "email": "ju@gmail"
+        },
+        "residueAddress": {
+            "id": 1,
+            "cep": "9028900",
+            "locationInfo": "perto do carrefour"
+        },
+        "residue": {
+            "id": 1,
+            "residueType": "madeira",
+            "residueMeasure": "saco"
+        }
+    },
+    {
+        "id": 1,
+        "requester": {
+            "id": 1,
+            "fullName": "Juciene Dantas",
+            "cellphone": "99999999",
+            "email": "ju@gmail"
+        },
+        "residueAddress": {
+            "id": 1,
+            "cep": "9028900",
+            "locationInfo": "perto do carrefour"
+        },
+        "residue": {
+            "id": 1,
+            "residueType": "madeira",
+            "residueMeasure": "saco"
+        }
+    },
+    {
+        "id": 1,
+        "requester": {
+            "id": 1,
+            "fullName": "Juciene Dantas",
+            "cellphone": "99999999",
+            "email": "ju@gmail"
+        },
+        "residueAddress": {
+            "id": 1,
+            "cep": "9028900",
+            "locationInfo": "perto do carrefour"
+        },
+        "residue": {
+            "id": 1,
+            "residueType": "madeira",
+            "residueMeasure": "saco"
+        }
+    },
+    {
+        "id": 1,
+        "requester": {
+            "id": 1,
+            "fullName": "Juciene Dantas",
+            "cellphone": "99999999",
+            "email": "ju@gmail"
+        },
+        "residueAddress": {
+            "id": 1,
+            "cep": "9028900",
+            "locationInfo": "perto do carrefour"
+        },
+        "residue": {
+            "id": 1,
+            "residueType": "madeira",
+            "residueMeasure": "saco"
+        }
+    },
+    {
+        "id": 1,
+        "requester": {
+            "id": 1,
+            "fullName": "Juciene Dantas",
+            "cellphone": "99999999",
+            "email": "ju@gmail"
+        },
+        "residueAddress": {
+            "id": 1,
+            "cep": "9028900",
+            "locationInfo": "perto do carrefour"
+        },
+        "residue": {
+            "id": 1,
+            "residueType": "madeira",
+            "residueMeasure": "saco"
+        }
+    }
 ]
+
+
+export const paginator = {
+    qtdPaginas: 10
+}
