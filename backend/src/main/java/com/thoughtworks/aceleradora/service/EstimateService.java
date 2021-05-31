@@ -6,6 +6,7 @@ import com.thoughtworks.aceleradora.entity.Estimate;
 import com.thoughtworks.aceleradora.repository.EstimateRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -18,9 +19,8 @@ public class EstimateService {
     EstimateService(EstimateRepository repository, EstimateConverterService estimateConverter,MailFactory mailFactory) {
         this.estimateRepository = repository;
         this.estimateConverterService = estimateConverter;
-        this.mailFactory=mailFactory;
+        this.mailFactory= mailFactory;
     }
-
 
 
     public Estimate create(EstimateRequest estimateRequest) {
@@ -31,6 +31,10 @@ public class EstimateService {
 
     public Optional<Estimate> getEstimate(int codigo) {
         return estimateRepository.findById(codigo);
+    }
+
+    public List<Estimate> getAllEstimates() {
+        return estimateRepository.findAll();
     }
 
     private void sendEstimateEmail(Estimate estimateEntity){

@@ -1,14 +1,14 @@
-package com.thoughtworks.aceleradora.service.BucketCalculator;
+package com.thoughtworks.aceleradora.service.bucketcalculator;
 
 public class BucketEstimateParameters {
     private int bucketAmount;
     private BucketZones zonesLocation;
-    private Materials materials;
+    private Materials material;
 
-    public BucketEstimateParameters(int bucketAmount, BucketZones zonesLocation, Materials materials) {
+    public BucketEstimateParameters(int bucketAmount, BucketZones zonesLocation, Materials material) {
         this.bucketAmount = bucketAmount;
         this.zonesLocation = zonesLocation;
-        this.materials = materials;
+        this.material = material;
     }
 
     public int getBucketAmount() {
@@ -18,7 +18,7 @@ public class BucketEstimateParameters {
         return zonesLocation;
     }
     public Materials getMaterials() {
-        return materials;
+        return material;
     }
 
     @java.lang.Override
@@ -26,7 +26,7 @@ public class BucketEstimateParameters {
         return "BucketEstimateParameters{" +
                 "bucketAmount=" + bucketAmount +
                 ", zonesLocation=" + zonesLocation +
-                ", materials=" + materials +
+                ", materials=" + material +
                 '}';
     }
 }

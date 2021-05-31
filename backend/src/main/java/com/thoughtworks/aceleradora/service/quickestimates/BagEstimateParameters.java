@@ -1,11 +1,13 @@
 package com.thoughtworks.aceleradora.service.quickestimates;
 
-class BagEstimateParameters {
+import com.thoughtworks.aceleradora.service.bucketcalculator.Materials;
+
+public class BagEstimateParameters {
     private int bagAmount;
     private FloorAccess floorAccess;
-    private Material material;
+    private Materials material;
 
-    public BagEstimateParameters(int bagAmount, FloorAccess floorAccess, Material material) {
+    public BagEstimateParameters(int bagAmount, FloorAccess floorAccess, Materials material) {
         this.bagAmount = bagAmount;
         this.floorAccess = floorAccess;
         this.material = material;
@@ -19,7 +21,7 @@ class BagEstimateParameters {
         return floorAccess;
     }
 
-    public Material getMaterial() {
+    public Materials getMaterial() {
         return material;
     }
 

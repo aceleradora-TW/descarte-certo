@@ -1,7 +1,7 @@
-package com.thoughtworks.aceleradora.service.BucketCalculator;
+package com.thoughtworks.aceleradora.service.bucketcalculator;
 
 public enum BucketZones {
-    DONWTOWN,
+    DOWNTOWN,
     SOUTHZONE,
     OUTHERZONES
 }
