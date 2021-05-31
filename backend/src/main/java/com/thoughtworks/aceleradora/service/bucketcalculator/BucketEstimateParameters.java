@@ -1,5 +1,7 @@
 package com.thoughtworks.aceleradora.service.bucketcalculator;
 
+//Teste
+
 public class BucketEstimateParameters {
     private int bucketAmount;
     private BucketZones zonesLocation;
