@@ -2,14 +2,11 @@ import React from 'react'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import  './FooterStyle.css'
-import FaceIcon from '../images/icon-face.png'
-import InstaIcon from '../images/icon-insta.png'
-import WhatsIcon from '../images/icon-whats.png'
-import MailIcon from '../images/icon-mail.png'
 import Contact from './texts.json'
-import ReactDOM from 'react-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
+import { faFacebook, faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+
 
 function FooterComponent(){
     return (  
@@ -22,9 +19,9 @@ function FooterComponent(){
                     <Col>
                         <Col className="social-media-icons" >
                             <a className="icon-style" target="_blank" href="whatsapp://send?text=SUA_MENSAGEM_AQUI&phone=+5551998517154+"><FontAwesomeIcon icon={faWhatsapp} /></a>
-                            <a className="icon-style" target="_blank" href="mailto:5marias.orcamento@gmail.com"><img src={MailIcon} width="50px"></img></a>
-                            <a className="icon-style" target="_blank" href="https://www.facebook.com/5marias.sustentaveis"><img src={FaceIcon} width="50px"></img></a>
-                            <a className="icon-style" target="_blank" href="https://www.instagram.com/_5marias_/"><img src={InstaIcon} width="50px"></img></a>
+                            <a className="icon-style" target="_blank" href="mailto:5marias.orcamento@gmail.com"><FontAwesomeIcon icon={faEnvelope} /></a>
+                            <a className="icon-style" target="_blank" href="https://www.facebook.com/5marias.sustentaveis"><FontAwesomeIcon icon={faFacebook} /></a>
+                            <a className="icon-style" target="_blank" href="https://www.instagram.com/_5marias_/"><FontAwesomeIcon icon={faInstagram} /></a>
                         </Col>
                     </Col>  
                 </Row>
