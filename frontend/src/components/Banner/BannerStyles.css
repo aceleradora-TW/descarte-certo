@@ -17,6 +17,17 @@
       
   }
   
+.buttonBanner {
+    font-size: 1.4rem;
+    width: 250px;
+    text-align: center;
+    color:#2E3C5B;
+    background-color: #71DECE;
+    border-radius: 15px;
+    border-color: #71DECE;
+    
+}
+  
   @media only screen  and (max-width:739px){
     .font{
      
