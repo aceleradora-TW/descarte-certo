@@ -7,7 +7,9 @@ import InstaIcon from '../images/icon-insta.png'
 import WhatsIcon from '../images/icon-whats.png'
 import MailIcon from '../images/icon-mail.png'
 import Contact from './texts.json'
-
+import ReactDOM from 'react-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 
 function FooterComponent(){
     return (  
@@ -19,7 +21,7 @@ function FooterComponent(){
                     </Col>
                     <Col>
                         <Col className="social-media-icons" >
-                            <a className="icon-style" target="_blank" href="whatsapp://send?text=SUA_MENSAGEM_AQUI&phone=+5551998517154+"><img src={WhatsIcon} width="50px"></img></a>
+                            <a className="icon-style" target="_blank" href="whatsapp://send?text=SUA_MENSAGEM_AQUI&phone=+5551998517154+"><FontAwesomeIcon icon={faWhatsapp} /></a>
                             <a className="icon-style" target="_blank" href="mailto:5marias.orcamento@gmail.com"><img src={MailIcon} width="50px"></img></a>
                             <a className="icon-style" target="_blank" href="https://www.facebook.com/5marias.sustentaveis"><img src={FaceIcon} width="50px"></img></a>
                             <a className="icon-style" target="_blank" href="https://www.instagram.com/_5marias_/"><img src={InstaIcon} width="50px"></img></a>
