@@ -5,15 +5,15 @@ import org.springframework.stereotype.Service;
 @Service
 public class User {
 
-        private String user = "Sonia";
-        private String password = "1234abc";
+    private String user ;
+    private String password ;
 
-        public String getUser() {
-            return user;
-        }
+    public String getUser() {
+        return user;
+    }
 
-        public String getPassword() {
-            return password;
-        }
+    public String getPassword() {
+        return password;
+    }
 
 }

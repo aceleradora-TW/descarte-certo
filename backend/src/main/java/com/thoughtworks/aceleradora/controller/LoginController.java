@@ -1,20 +1,24 @@
 package com.thoughtworks.aceleradora.controller;
 
+import com.thoughtworks.aceleradora.controller.response.LoginResponse;
 import com.thoughtworks.aceleradora.service.User;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import javax.ws.rs.POST;
 
 @RestController
 @RequestMapping("/login")
 
 public class LoginController {
+    @PostMapping
+    public String returnAPI(@RequestBody User user) {
 
-    private User user;
-    public LoginController(User user) {
-        this.user = user;
+        LoginResponse login = new LoginResponse();
+
+        String data = login.returnLogin(user.getUser(), user.getPassword());
+        return data;
+
     }
 
 }
