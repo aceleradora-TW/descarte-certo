@@ -12,7 +12,7 @@ function OrderListComponent() {
           <TableOrderList orders={orders} /> :
           <h2>Não há orçamentos disponíveis</h2>
         }
-        <Pagination qtdPaginas={paginator.qtdPaginas} />
+        <Pagination qtdPages={paginator.qtdPages} />
       </div>
     </div>
   )

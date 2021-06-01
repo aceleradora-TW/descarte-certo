@@ -23,7 +23,7 @@ function App() {
             <Benefits />
           </div>
           <div className="content-box">
-                <Depositions/>     
+                <Depositions/>
           </div>
         </div>
         <div className="flex-box container-box">
@@ -32,8 +32,8 @@ function App() {
           <FaqComponent></FaqComponent>
         </div>
         <div className="content-box">
-                <OrderList/>     
-          </div>
+          <OrderList/>
+        </div>
         <Footer />
       </main>
     </div>

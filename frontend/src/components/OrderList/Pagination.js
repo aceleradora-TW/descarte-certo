@@ -1,7 +1,7 @@
 import React from 'react'
 import './styles.css'
 
-const Pagination = ({ qtdPaginas }) => {
+const Pagination = ({ qtdPages }) => {
   const createPages = qtd => {
     let rows = []
     for (let i = 1; i <= qtd; i++) {
@@ -12,7 +12,7 @@ const Pagination = ({ qtdPaginas }) => {
   return (
     <div className="paginator-container">
       <a href="#">&laquo;</a>
-      {createPages(qtdPaginas)}
+      {createPages(qtdPages)}
       <a href="#">&raquo;</a>
     </div>
     
