@@ -19,7 +19,7 @@
     grid-gap:10px;
     grid-template-columns: auto;
     grid-template-rows: auto;
-    padding: 220px 100px 100px 100px;
+    padding: 100px;
     
 }
 
@@ -43,7 +43,7 @@
 .titleLogin{
     color: #2F3B5A;    
     font-family: 'Montserrat', sans-serif ;
-    padding: 10px;
+    
     
 }
 
