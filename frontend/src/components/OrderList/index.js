@@ -1,6 +1,6 @@
 import React from 'react'
 import './styles.css'
-import TableOrderList from './TableOrderList'
+import OrderList from './OrderList'
 import { paginator, orders } from './data'
 import Pagination from './Pagination'
 
@@ -9,10 +9,10 @@ function OrderListComponent() {
     <div className="container-order-list">
       <div className="order-list-title">
         {orders.length > 0 ?
-          <TableOrderList orders={orders} /> :
+          <OrderList orders={orders} /> :
           <h2>Não há orçamentos disponíveis</h2>
         }
-        <Pagination qtdPages={paginator.qtdPages} />
+        <Pagination totalPages={paginator.totalPages} />
       </div>
     </div>
   )

@@ -174,5 +174,5 @@ export const orders =[
 
 
 export const paginator = {
-    qtdPages: 10
+    totalPages: 10
 }

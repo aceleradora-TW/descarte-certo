@@ -1,7 +1,7 @@
 import React from 'react'
 import './styles.css'
 
-const TableOrderList = ({ orders }) => {
+const OrderList = ({ orders }) => {
   return (
     <table>
       <thead>
@@ -31,4 +31,4 @@ const TableOrderList = ({ orders }) => {
     </table>
   )
 }
-export default TableOrderList
+export default OrderList

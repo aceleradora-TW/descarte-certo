@@ -31,9 +31,6 @@ function App() {
           </Jumbotron>
           <FaqComponent></FaqComponent>
         </div>
-        <div className="content-box">
-          <OrderList/>
-        </div>
         <Footer />
       </main>
     </div>
