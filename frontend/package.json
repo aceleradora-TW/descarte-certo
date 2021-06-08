@@ -31,6 +31,8 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
     "react-slick": "^0.27.12",
+    "react-toastify": "^7.0.4",
+    "react-toastr": "^3.0.0",
     "reactstrap": "^8.6.0",
     "styled-components": "^5.2.0",
     "yup": "^0.29.3"

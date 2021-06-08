@@ -1,0 +1,78 @@
+.buttonEnter{
+    background-color:#333333;
+    color: #ffffff !important;
+    width: 175px;
+    height: 38px;
+    text-align: center;
+    font-size: medium;
+    float: center;
+    border-radius: 6px;
+    
+}
+.container{
+    text-align: center;
+    display: grid;
+    grid-template-areas:  "titleLogin"
+                          "userItem"
+                          "passwordItem"
+                          "buttonLog" ;
+    grid-gap:10px;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    padding: 100px;
+    width: 600px;   
+}
+
+
+.userItem{
+ grid-area: userItem;
+ 
+ 
+}
+
+.passwordItem{
+    grid-area: passwordItem;
+    
+   }
+
+.buttonLog{
+    grid-area: buttonLog; 
+    padding: 20px 20px;
+}   
+
+.titleLogin{
+    color: #2F3B5A;    
+    font-family: 'Montserrat', sans-serif ;
+    
+    
+}
+
+.border{
+    width: 300px;
+    height: 54px;
+    top: 350px;
+    left: 527px;
+    border-radius: 15px; 
+    
+}
+
+.password{
+    padding: 40px 50px;
+}
+
+:placeholder-shown{
+    padding: 20px;
+}
+
+.form-fields {
+    margin-left: 10px;
+    border-radius: 15px;
+    height: 54px; 
+}
+
+.btn-login {
+    text-align: center;    
+    width: 50%;
+    margin: 0 auto;
+    color: white !important;
+}
