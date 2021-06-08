@@ -7,6 +7,7 @@ import Banner from'./components/Banner/index'
 import Benefits from './components/Benefits/index'
 import Depositions from './components/Depositions/index'
 import Footer from './components/Footer'
+import OrderList from './components/OrderList/index'
 
 function App() {
   const headerProps = {
@@ -14,7 +15,7 @@ function App() {
   };
   return (
     <div className="App">
-      <main className="App-content">
+      <main id="Home" className="App-content">
         <Menu />
         <Banner />
         <div className="flex-box container-box">
@@ -22,7 +23,7 @@ function App() {
             <Benefits />
           </div>
           <div className="content-box">
-                <Depositions/>     
+                <Depositions/>
           </div>
         </div>
         <div className="flex-box container-box">

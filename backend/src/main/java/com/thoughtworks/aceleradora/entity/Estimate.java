@@ -26,5 +26,6 @@ public class Estimate {
 
     @OneToOne(cascade =CascadeType.ALL)
     private Residue residue;
+
 }
 

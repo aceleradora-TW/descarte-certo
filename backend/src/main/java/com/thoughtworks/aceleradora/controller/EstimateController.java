@@ -14,7 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import static com.thoughtworks.aceleradora.controller.response.EstimateResponse.from;
+import java.util.List;
+
 
 @RestController
 @RequestMapping("/estimate")
@@ -22,9 +23,7 @@ public class EstimateController {
 
     private EstimateService estimateService;
 
-    public EstimateController(EstimateService estimateService) {
-        this.estimateService = estimateService;
-    }
+    public EstimateController(EstimateService estimateService) { this.estimateService = estimateService; }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
@@ -42,4 +41,13 @@ public class EstimateController {
                 .getEstimate(id)
                 .orElseThrow(() -> new EstimateNotFoundException(id));
     }
+
+    @GetMapping(path = "/all")
+    @ResponseStatus(HttpStatus.OK)
+    public List<Estimate> getAll() {
+        return estimateService
+                   .getAllEstimates();
+    }
+
+
 }
