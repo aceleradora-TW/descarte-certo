@@ -16,7 +16,7 @@ public class LoginController {
 
         LoginResponse login = new LoginResponse();
 
-        String data = login.returnLogin(user.getUser(), user.getPassword());
+        String data = login.returnLogin(user.getEmail(), user.getPassword());
         return data;
 
     }
