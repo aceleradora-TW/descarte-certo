@@ -8,16 +8,30 @@ import { useHistory } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Nav } from 'react-bootstrap';
+import axios from 'axios';
+
+
 
 function LoginPage() {
   const [user, setUser] = useState({ email: "", password: "" })
+
 
   let history = useHistory();
 
   function handleLogin(e) {
     e.preventDefault();
 
-    if (user.email === "teste@teste.com.br" && user.password === "1234") {
+     const pessoa = {
+      email: user.email,
+      password: user.password
+      }
+
+    axios.post('https://api-descarte-certo.herokuapp.com/login', {...pessoa})
+    .then(res => {
+        console.log(res.data)
+    })
+
+    /*if (user.email === "teste@teste.com.br" && user.password === "1234") {
 
       toast.success("Login efetuado com sucesso. Você será redirecionado!");
       setTimeout(function () {
@@ -26,7 +40,7 @@ function LoginPage() {
 
     } else {
       toast.error("Usuário ou senha incorreto. Verifique e tente novamente!");
-    }
+    }*/
   }
 
   function handleChange(e) {
