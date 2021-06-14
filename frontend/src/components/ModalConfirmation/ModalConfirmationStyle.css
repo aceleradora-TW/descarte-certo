@@ -1,0 +1,80 @@
+div.modalContainer{
+  margin: 2.5vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr 1fr 2fr 1fr 1fr;
+  column-gap: 5vh;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h3.totalBudget{
+  grid-column: 1/3;
+  grid-row: 1/2;
+  text-align: center;
+  font-size: 2.3rem;
+  align-self: center;
+}
+
+p.message{
+  grid-column: 1/3;
+  grid-row: 2/3;
+  text-align: center;
+}
+
+/*======= Carrossel ====== */
+/* #TODO: arrumar espaçamento botões do carrossel */
+.carouselModal{
+  grid-column: 1/3;
+  grid-row: 3/4;
+}
+
+.rec-arrow{
+  display: none;
+}
+
+.sc-gKsewC.gUWalH.rec.rec-dot{
+  box-shadow: 0 0 0 0.1rem rgb(153, 153, 153);
+}
+.sc-gKsewC.DIuaA.rec.rec-dot.rec.rec-dot_active{
+  box-shadow: 0 0 0 0.1rem rgb(96, 214, 197);
+  background-color: rgb(96, 214, 197);
+}
+
+.sc-gKsewC.gUWalH.rec.rec-dot:hover{
+  box-shadow: 0 0 0 0.1rem rgb(96, 214, 197);
+}
+
+p.eptcTaxes{
+  grid-column: 1/3;
+  grid-row: 4/5;
+  text-align: center;
+}
+
+button.btnCancel{
+  grid-column: 1/2;
+  grid-row: 5/6; 
+  justify-self: start;
+  background-color: #999999;
+  color: white; 
+}
+
+button.btnApprove{
+  grid-column: 2/3;
+  grid-row: 5/6;
+  justify-self: end;
+  background-color: #60D6C5;
+  color: #3F3D56;
+}
+
+button.btnCancel,
+button.btnApprove{  
+  width: calc(100%/1.5);
+  border-radius: 7px;
+  border: none;
+  box-shadow: 1px 1px #878787;  
+}
+
+button.btnCancel:active,
+button.btnApprove:active{ 
+  box-shadow: -1px -1px #878787;
+}
