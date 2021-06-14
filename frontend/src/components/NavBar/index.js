@@ -3,6 +3,7 @@ import { Navbar, Nav } from 'react-bootstrap'
 import "./NavBarStyle.css"
 import Logotipo from '../images/logo-5marias.png'
 import NavId from './texts.json'
+import Login from '../Login'
 
 function NavBarComponent() {
     return (
@@ -17,7 +18,9 @@ function NavBarComponent() {
                     <Nav.Link href="#Duvidas">{NavId.id.duvidas}</Nav.Link>
                     <Nav.Link href="#Orcamento">{NavId.id.budget}</Nav.Link>
                 </Nav>
+                <Login />
             </Navbar.Collapse>
+            
         </Navbar>
     )
 }
