@@ -3,8 +3,6 @@ import Banner from '../images/banner.png'
 import './BannerStyles.css';
 import Modal from '../Modal/Modal.js';
 
-//criando branch 157
-
 function BannerComponent() {
     const [isModalVisible, setIsModalVisible] = useState(false);
     const handleBudgetClick = () => setIsModalVisible(!isModalVisible);
