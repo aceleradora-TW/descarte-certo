@@ -13,7 +13,7 @@ function BannerComponent() {
             <div className="titulo">
                 <h1 className="font">Não deixe o seu resíduo ir para o lugar errado. Faça o descarte correto.</h1>
                 <div className="positionButton">
-                    <button class="buttonBanner btn-lg" onClick={handleBudgetClick}>Orçamento Rápido </button>
+                    <button className="buttonBanner btn-lg" onClick={handleBudgetClick}>Orçamento Rápido </button>
                     <Modal isModalVisible={isModalVisible} handleBudgetClick={handleBudgetClick} />
                 </div>
             </div>
