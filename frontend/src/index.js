@@ -13,9 +13,9 @@ ReactDOM.render(
   <BrowserRouter>
     <Switch>
       <Route path="/" exact={true} component={App} />
-      <Route path="./contato" component={Footer} />
+      <Route path="/contato" component={Footer} />
       <Route path="/beneficios" component={Benefits} />
-      <Route path="/login" component={LoginPage} />
+      <Route path="/usuario/login" component={LoginPage} />
       <Route path="/orcamentos" component={OrderListComponent} />
     </Switch>
 
