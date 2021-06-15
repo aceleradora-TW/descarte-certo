@@ -1,0 +1,39 @@
+div.acceptance-content {
+  margin: 2.5vh;
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-rows: 1fr 5fr 4fr;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+button.acceptance-close-btn {
+  grid-row: 1/2;
+  grid-column: 3/4;
+  justify-self: end;
+  color: #505051;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  align-self: start;
+}
+
+h3.acceptance-title {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #303C5B;
+  align-self: center;
+  margin: 0;
+}
+
+p.acceptance-text {
+  grid-row: 3/4;
+  grid-column: 2/3;
+  align-self: center;
+  color: #505051;
+  font-size: 1.8rem;
+  margin: 0;
+  line-height: 2rem;
+}
