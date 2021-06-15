@@ -21,26 +21,11 @@ function LoginPage() {
   function handleLogin(e) {
     e.preventDefault();
 
-     const pessoa = {
-      email: user.email,
-      password: user.password
-      }
-
-    axios.post('https://api-descarte-certo.herokuapp.com/login', {...pessoa})
+    axios.post('https://api-descarte-certo.herokuapp.com/login', {...user})
     .then(res => {
-        console.log(res.data)
+        localStorage.setItem("token-descarte-certo", res.data.token)
+        window.location.reload()
     })
-
-    /*if (user.email === "teste@teste.com.br" && user.password === "1234") {
-
-      toast.success("Login efetuado com sucesso. Você será redirecionado!");
-      setTimeout(function () {
-        history.push("/solicitacoes")
-      }, 4000)
-
-    } else {
-      toast.error("Usuário ou senha incorreto. Verifique e tente novamente!");
-    }*/
   }
 
   function handleChange(e) {
