@@ -172,7 +172,3 @@ export const orders =[
     }
 ]
 
-
-export const paginator = {
-    totalPages: 10
-}
