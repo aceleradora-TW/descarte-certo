@@ -2,7 +2,7 @@ div.modalContainer{
   margin: 2.5vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 3fr 1fr 3fr 2fr 1fr;
+  grid-template-rows: 1fr 1fr max(20vh) max(6vh) max(6.5vh);
   column-gap: 5vh;
   row-gap: 1vh;
   font-family: 'Montserrat', sans-serif;
@@ -30,7 +30,7 @@ p.message{
   grid-row: 3/4;
   height: 15vh;
   padding-left: 7vh;
-  padding-right: 7vh;
+  padding-right: 7vh;  
 }
 
 .sc-jSgupP.ewJlEB.rec.rec-carousel-wrapper.carouselModal{
