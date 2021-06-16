@@ -18,10 +18,10 @@ function FooterComponent(){
                     </Col>
                     <Col>
                         <Col className="social-media-icons" >
-                            <a className="icon-style" target="_blank" href="whatsapp://send?text=SUA_MENSAGEM_AQUI&phone=+5551998517154+"><FontAwesomeIcon icon={faWhatsapp} /></a>
-                            <a className="icon-style" target="_blank" href="mailto:5marias.orcamento@gmail.com"><FontAwesomeIcon icon={faEnvelope} /></a>
-                            <a className="icon-style" target="_blank" href="https://www.facebook.com/5marias.sustentaveis"><FontAwesomeIcon icon={faFacebook} /></a>
-                            <a className="icon-style" target="_blank" href="https://www.instagram.com/_5marias_/"><FontAwesomeIcon icon={faInstagram} /></a>
+                            <a className="icon-style" target="_blank" rel="noopener noreferrer" href="whatsapp://send?text=SUA_MENSAGEM_AQUI&phone=+5551998517154+"><FontAwesomeIcon icon={faWhatsapp} /></a>
+                            <a className="icon-style" target="_blank" rel="noopener noreferrer" href="mailto:5marias.orcamento@gmail.com"><FontAwesomeIcon icon={faEnvelope} /></a>
+                            <a className="icon-style" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/5marias.sustentaveis"><FontAwesomeIcon icon={faFacebook} /></a>
+                            <a className="icon-style" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/_5marias_/"><FontAwesomeIcon icon={faInstagram} /></a>
                         </Col>
                     </Col>  
                 </Row>

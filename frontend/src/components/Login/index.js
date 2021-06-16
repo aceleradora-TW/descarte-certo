@@ -5,7 +5,7 @@ import IconUser from '../images/icon_person.png'
 function Login() {
     return (
        <>
-        <Nav.Link href="/login"><img alt="userIcone" class="imgIcons" src={IconUser}></img>Login</Nav.Link>
+        <Nav.Link href="/login"><img alt="userIcone" className="imgIcons" src={IconUser}></img>Login</Nav.Link>
        </>
     )
 }
