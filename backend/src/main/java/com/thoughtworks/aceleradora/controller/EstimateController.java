@@ -1,19 +1,19 @@
 package com.thoughtworks.aceleradora.controller;
 
 import com.thoughtworks.aceleradora.controller.request.EstimateRequest;
+import com.thoughtworks.aceleradora.controller.request.GetEstimatesRequest;
 import com.thoughtworks.aceleradora.controller.response.EstimateResponse;
+import com.thoughtworks.aceleradora.exception.AccessTokenDeniedExeption;
+import com.thoughtworks.aceleradora.service.AuthorizedEstimateService;
 import com.thoughtworks.aceleradora.service.EstimateService;
 import com.thoughtworks.aceleradora.entity.Estimate;
 import com.thoughtworks.aceleradora.exception.EstimateNotFoundException;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 
@@ -22,8 +22,12 @@ import java.util.List;
 public class EstimateController {
 
     private EstimateService estimateService;
+    private AuthorizedEstimateService authorizedEstimateService;
 
-    public EstimateController(EstimateService estimateService) { this.estimateService = estimateService; }
+    public EstimateController(EstimateService estimateService, AuthorizedEstimateService authorizedEstimateService) {
+        this.estimateService = estimateService;
+        this.authorizedEstimateService = authorizedEstimateService;
+    }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
@@ -43,11 +47,22 @@ public class EstimateController {
     }
 
     @GetMapping(path = "/all")
-    @ResponseStatus(HttpStatus.OK)
-    public List<Estimate> getAll() {
-        return estimateService
-                   .getAllEstimates();
+    public ResponseEntity<List<Estimate>> getAll(@RequestParam(name = "accesstoken") String accesstoken) {
+        try {
+            List<Estimate> estimates =
+                    authorizedEstimateService.getEstimatesIfAuthorized(
+                            GetEstimatesRequest.builder()
+                                    .accessToken(accesstoken)
+                                    .build());
+            return ResponseEntity.ok(estimates);
+        } catch (AccessTokenDeniedExeption e) {
+            //Existem outros mecanismos no spring para lidar com exeptions no controller
+            return ResponseEntity
+                    .status(HttpStatus.FORBIDDEN)
+                    .build();
+        }
     }
+
 
 
 }

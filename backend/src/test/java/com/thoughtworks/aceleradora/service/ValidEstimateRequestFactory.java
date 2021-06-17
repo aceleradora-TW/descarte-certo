@@ -4,10 +4,23 @@ import com.thoughtworks.aceleradora.controller.request.EstimateRequest;
 import com.thoughtworks.aceleradora.controller.request.RequesterRequest;
 import com.thoughtworks.aceleradora.controller.request.ResidueAddressRequest;
 import com.thoughtworks.aceleradora.controller.request.ResidueRequest;
+import com.thoughtworks.aceleradora.entity.Estimate;
+import com.thoughtworks.aceleradora.entity.Residue;
+import com.thoughtworks.aceleradora.entity.ResidueAddress;
+
+import java.util.Random;
 
 public class ValidEstimateRequestFactory {
 
     private ValidEstimateRequestFactory(){}
+
+    public static Estimate crateValidEstimate() {
+        return Estimate.builder()
+                .id(new Random().nextInt())
+                .residue(Residue.builder().build())
+                .residueAddress(ResidueAddress.builder().build())
+                .build();
+    }
 
     public static EstimateRequest createValidRequest() {
         EstimateRequest estimateRequest = EstimateRequest.builder()

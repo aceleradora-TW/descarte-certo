@@ -1,4 +1,4 @@
-package com.thoughtworks.aceleradora.controller.response;
+package com.thoughtworks.aceleradora.controller.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,10 +11,10 @@ import javax.validation.constraints.NotNull;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class LoginResponse {
+public class GetEstimatesRequest {
 
     @NotNull
-    private String msg;
-    private boolean authenticated;
-
+    private String accessToken ;
+    //TODO aqui pode ser colocado filtros de pesquisa vindo do frontend
 }
+
