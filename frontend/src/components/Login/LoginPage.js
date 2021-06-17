@@ -24,11 +24,10 @@ function LoginPage() {
     axios.post('https://api-descarte-certo.herokuapp.com/login', {...user})
     .then(res => {
         localStorage.setItem("token-descarte-certo", res.data.token)
-        /*
         toast.success("Login efetuado com sucesso. Você será redirecionado!");
         setTimeout(function () {
           history.push("/solicitacoes")
-        }, 4000)*/
+        }, 4000)
     })
   }
 
@@ -39,7 +38,7 @@ function LoginPage() {
 
   return (
     <div>
-      <Nav.Link href="/"> <img alt="userIcone" class="imgIcons" src={IconBack}></img></Nav.Link>
+      <Nav.Link href="/"> <img alt="userIcone" className="imgIcons" src={IconBack}></img></Nav.Link>
       <div className="container">
         <ToastContainer
           position="top-center"
@@ -65,7 +64,7 @@ function LoginPage() {
                 <label htmlFor="user"> <img alt="userIcone" className="imgIcons" src={IconUser}></img></label>
               </Col>
               <Col xs="11">
-                <Input className="form-fields" onChange={handleChange} class="border" type="email" name="email" id="email" placeholder="Usuário" required />
+                <Input className="form-fields" onChange={handleChange} className="border" type="email" name="email" id="email" placeholder="Usuário" required />
               </Col>
             </Row>
           </FormGroup>
@@ -75,7 +74,7 @@ function LoginPage() {
                 <label htmlFor="password"><img alt="passIcone" className="imgIcons" src={IconPass}></img></label>
               </Col>
               <Col xs="11">
-                <Input className="form-fields" onChange={handleChange} class="border" type="password" name="password" id="password" placeholder="Senha" required />
+                <Input className="form-fields" onChange={handleChange} className="border" type="password" name="password" id="password" placeholder="Senha" required />
               </Col>
             </Row>
           </FormGroup>
