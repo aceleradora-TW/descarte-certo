@@ -1,5 +1,10 @@
+div.modal-dialog{
+  display: flex;
+  justify-content: center;
+}
 div.modal-content{
-  width: clamp(300px, 60vw, 600px);
+  width: clamp(300px, 80vw, 700px);
+  margin: 0;
 }
 
 div.modalContainer{
@@ -90,33 +95,36 @@ p.eptcTaxes{
   font-size: 0.8rem;
 }
 
-button.btnCancel{
+button.btn-cancel{
   grid-column: 1/2;
   grid-row: 5/6; 
   justify-self: start;
   background-color: #999999;
   color: white;
   font-size: clamp(0.7rem, 1.5vw, 1rem);
+  width: clamp(96px, 10vw, 197px);
 }
 
-button.btnApprove{
+button.btn-approve{
   grid-column: 2/3;
   grid-row: 5/6;
   justify-self: end;
   background-color: #60D6C5;
   color: #3F3D56;
   font-size: clamp(0.7rem, 1.5vw, 1rem);
+  width: clamp(96px, 10vw, 197px);
+  height: clamp(52px, 1.2vw, 45px);
 }
 
-button.btnCancel,
-button.btnApprove{  
+button.btn-cancel,
+button.btn-approve{  
   width: calc(100%/1.5);
   border-radius: 7px;
   border: none;
   box-shadow: 1px 1px #878787; 
 }
 
-button.btnCancel:active,
-button.btnApprove:active{ 
+button.btn-cancel:active,
+button.btn-approve:active{ 
   box-shadow: -1px -1px #878787;
 }

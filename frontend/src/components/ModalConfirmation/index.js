@@ -1,6 +1,9 @@
 import React from 'react';
 import Carousel from 'react-elastic-carousel'
 import './ModalConfirmationStyle.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCheckCircle } from '@fortawesome/free-solid-svg-icons'
+import { faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 
 function ModalConfirmation () {
   return (
@@ -24,8 +27,10 @@ function ModalConfirmation () {
         </Carousel>
       </div>
       <p className="eptcTaxes">* Sujeito às taxas de área azul - EPTC, não incluso no valor.</p>
-      <button className="btnCancel">Cancelar Orçamento</button>
-      <button className="btnApprove">Aprovar e Agendar</button>
+      <button className="btn-cancel">Cancelar Orçamento</button>
+      <button className="btn-cancel-mobile"><FontAwesomeIcon icon={faTimesCircle} /></button>
+      <button className="btn-approve">Aprovar e Agendar</button>
+      <button className="btn-approve-mobile"><FontAwesomeIcon icon={faCheckCircle} /></button>
     </div>    
   )
 }
