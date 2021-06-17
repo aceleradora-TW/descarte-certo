@@ -8,34 +8,16 @@ import { useHistory } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Nav } from 'react-bootstrap';
-import Axios from "axios";
 
 function LoginPage() {
-  const [getEstimatesRequest, setUser] = useState({ email: "", password: "" })
+  const [user, setUser] = useState({ email: "", password: "" })
 
   let history = useHistory();
 
   function handleLogin(e) {
     e.preventDefault();
 
-    setTimeout(() => {
-      console.log("Requesting to backend /estimate")
-      Axios.post(`/login`,
-          requestCreateEstimate
-      ).then(function (response) {
-        console.log(JSON.stringify(values));
-        handleSubmitSuccess(true);
-        setSubmitting(false);
-      }).catch(function (error) {
-        console.error(error)
-        handleSubmitSuccess(false);
-        resetForm();
-      }).then(function () {
-        handleAlertClick();
-      });
-    }, 400);
-
-    if (getEstimatesRequest.email === "teste@teste.com.br" && getEstimatesRequest.password === "1234") {
+    if (user.email === "teste@teste.com.br" && user.password === "1234") {
 
       toast.success("Login efetuado com sucesso. Você será redirecionado!");
       setTimeout(function () {
@@ -49,7 +31,7 @@ function LoginPage() {
 
   function handleChange(e) {
     const { value, name } = e.target
-    setUser({ ...getEstimatesRequest, [name]: value })
+    setUser({ ...user, [name]: value })
   }
 
   return (
@@ -77,7 +59,7 @@ function LoginPage() {
           <FormGroup>
             <Row>
               <Col xs="1">
-                <label htmlFor="getEstimatesRequest"> <img alt="userIcone" className="imgIcons" src={IconUser}></img></label>
+                <label htmlFor="user"> <img alt="userIcone" className="imgIcons" src={IconUser}></img></label>
               </Col>
               <Col xs="11">
                 <Input className="form-fields" onChange={handleChange} class="border" type="email" name="email" id="email" placeholder="Usuário" required />
