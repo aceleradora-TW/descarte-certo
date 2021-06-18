@@ -7,7 +7,7 @@ import java.util.List;
 
 @org.springframework.stereotype.Repository
 public interface EstimateRepository extends JpaRepository<Estimate, Integer>{
-
+    List<Estimate> findAllByOrderByDateEstimateDesc();
 }
 
 

@@ -3,6 +3,7 @@ package com.thoughtworks.aceleradora.entity;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name = "estimate")
@@ -27,5 +28,7 @@ public class Estimate {
     @OneToOne(cascade =CascadeType.ALL)
     private Residue residue;
 
+    @Column(name = "date_estimate")
+    private Date dateEstimate;
 }
 
