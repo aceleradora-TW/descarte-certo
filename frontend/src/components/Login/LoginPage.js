@@ -24,10 +24,7 @@ function LoginPage() {
     axios.post('https://api-descarte-certo.herokuapp.com/login', {...user})
     .then(res => {
         localStorage.setItem("token-descarte-certo", res.data.token)
-        toast.success("Login efetuado com sucesso. Você será redirecionado!");
-        setTimeout(function () {
-          history.push("/solicitacoes")
-        }, 4000)
+        history.push("/")
     })
   }
 
