@@ -1,2 +1,2 @@
 ALTER TABLE estimate
-    ADD COLUMN date_estimate date;
+    ADD COLUMN creation_date date;

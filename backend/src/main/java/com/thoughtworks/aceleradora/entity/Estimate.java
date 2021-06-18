@@ -29,7 +29,7 @@ public class Estimate {
     @OneToOne(cascade =CascadeType.ALL)
     private Residue residue;
 
-    @Column(name = "date_estimate")
+    @Column(name = "creation_date")
     private LocalDate creationDate;
 }
 

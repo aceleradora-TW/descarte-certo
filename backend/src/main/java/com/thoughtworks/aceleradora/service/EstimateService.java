@@ -35,7 +35,7 @@ public class EstimateService {
     }
 
     public List<Estimate> getAllEstimates() {
-        return estimateRepository.findAllByOrderByDateEstimateDesc();
+        return estimateRepository.findAllByOrderByCreationDateDesc();
     }
 
     private void sendEstimateEmail(Estimate estimateEntity){
