@@ -3,6 +3,7 @@ package com.thoughtworks.aceleradora.entity;
 import lombok.*;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -29,6 +30,6 @@ public class Estimate {
     private Residue residue;
 
     @Column(name = "date_estimate")
-    private Date dateEstimate;
+    private LocalDate creationDate;
 }
 
