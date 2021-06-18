@@ -22,7 +22,7 @@ public class LoginResponse {
                     .sign(algorithm);
             return token;
         } else {
-            return "USER NOT FOUND";
+            return null;
         }
     }
 }
