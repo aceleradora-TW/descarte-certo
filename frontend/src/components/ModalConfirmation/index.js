@@ -28,9 +28,9 @@ function ModalConfirmation () {
       </div>
       <p className="eptcTaxes">* Sujeito às taxas de área azul - EPTC, não incluso no valor.</p>
       <button className="btn-cancel">Cancelar Orçamento</button>
-      <button className="btn-cancel-mobile"><FontAwesomeIcon icon={faTimesCircle} /></button>
+      <button className="btn-cancel-mobile">Cancelar <FontAwesomeIcon icon={faTimesCircle} /></button>
       <button className="btn-approve">Aprovar e Agendar</button>
-      <button className="btn-approve-mobile"><FontAwesomeIcon icon={faCheckCircle} /></button>
+      <button className="btn-approve-mobile">Confirmar <FontAwesomeIcon icon={faCheckCircle} /></button>
     </div>    
   )
 }

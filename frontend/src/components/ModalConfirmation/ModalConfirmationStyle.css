@@ -95,36 +95,73 @@ p.eptcTaxes{
   font-size: 0.8rem;
 }
 
-button.btn-cancel{
-  grid-column: 1/2;
-  grid-row: 5/6; 
-  justify-self: start;
-  background-color: #999999;
-  color: white;
-  font-size: clamp(0.7rem, 1.5vw, 1rem);
-  width: clamp(96px, 10vw, 197px);
+@media only screen and (min-width:451px) {
+  button.btn-cancel-mobile,
+  button.btn-approve-mobile {
+    display: none;
+  }
+
+  button.btn-cancel{
+    grid-column: 1/2;
+    grid-row: 5/6; 
+    justify-self: start;
+    background-color: #999999;
+    color: white;
+    font-size: clamp(0.7rem, 1.5vw, 1rem);
+    width: clamp(96px, 10vw, 197px);
+  }
+  
+  button.btn-approve{
+    grid-column: 2/3;
+    grid-row: 5/6;
+    justify-self: end;
+    background-color: #60D6C5;
+    color: #3F3D56;
+    font-size: clamp(0.7rem, 1.5vw, 1rem);
+    width: clamp(96px, 10vw, 197px);
+    height: clamp(52px, 1.2vw, 45px);
+  }
+  
+  button.btn-cancel,
+  button.btn-approve{  
+    width: calc(100%/1.5);
+    border-radius: 7px;
+    border: none;
+    box-shadow: 1px 1px #878787; 
+  }
+  
+  button.btn-cancel:active,
+  button.btn-approve:active{ 
+    box-shadow: -1px -1px #878787;
+  }
 }
 
-button.btn-approve{
-  grid-column: 2/3;
-  grid-row: 5/6;
-  justify-self: end;
-  background-color: #60D6C5;
-  color: #3F3D56;
-  font-size: clamp(0.7rem, 1.5vw, 1rem);
-  width: clamp(96px, 10vw, 197px);
-  height: clamp(52px, 1.2vw, 45px);
-}
+@media only screen and (min-width:10px) and (max-width:450px){
+  button.btn-cancel,
+  button.btn-approve{ 
+    display: none;
+  }
 
-button.btn-cancel,
-button.btn-approve{  
-  width: calc(100%/1.5);
-  border-radius: 7px;
-  border: none;
-  box-shadow: 1px 1px #878787; 
-}
+  button.btn-cancel-mobile,
+  button.btn-approve-mobile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: clamp(82px, 4vw, 85px);
+    color: white;
+    border-radius: 7px;
+    box-shadow: 1px 1px #878787;
+    border: none;
+    padding-bottom: 4px;
+  }
 
-button.btn-cancel:active,
-button.btn-approve:active{ 
-  box-shadow: -1px -1px #878787;
+  button.btn-approve-mobile {
+    background-color: rgb(8, 138, 8);
+  }
+
+  button.btn-cancel-mobile {
+    background-color: rgb(202, 13, 13);
+  }
+
 }
