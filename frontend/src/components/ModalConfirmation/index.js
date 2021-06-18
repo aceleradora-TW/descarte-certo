@@ -7,11 +7,11 @@ import { faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 
 function ModalConfirmation () {
   return (
-    <div className="modalContainer">
-      <h3 className="totalBudget">Seu orçamento: <span>R$250,00</span><span>(Gesso)</span>*</h3>
+    <div className="modal-container">
+      <h3 className="total-budget">Seu orçamento: <span>R$250,00</span><span>(Gesso)</span>*</h3>
       <p className="message">Utilizando o serviço da 5 Marias, você garante o descarte correto do seu resíduo.</p>
       <div className="div-car">
-        <Carousel enableAutoPlay autoPlaySpeed={6500} className="carouselModal">
+        <Carousel enableAutoPlay autoPlaySpeed={6500} className="carousel-modal">
           <p className="carousel-text">
             Você sabia que  no Brasil, por ano,  são descartadas xxx 
             toneladas de resíduos de construção civil irregularmente no 
@@ -26,7 +26,7 @@ function ModalConfirmation () {
           </p>
         </Carousel>
       </div>
-      <p className="eptcTaxes">* Sujeito às taxas de área azul - EPTC, não incluso no valor.</p>
+      <p className="eptc-taxes">* Sujeito às taxas de área azul - EPTC, não incluso no valor.</p>
       <button className="btn-cancel">Cancelar Orçamento</button>
       <button className="btn-cancel-mobile">Cancelar <FontAwesomeIcon icon={faTimesCircle} /></button>
       <button className="btn-approve">Aprovar e Agendar</button>
