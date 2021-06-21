@@ -21,7 +21,7 @@ function LoginPage() {
 
       toast.success("Login efetuado com sucesso. Você será redirecionado!");
       setTimeout(function () {
-        history.push("/orcamentos")
+        history.push("/solicitacoes")
       }, 4000)
 
     } else {
