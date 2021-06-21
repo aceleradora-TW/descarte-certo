@@ -1,6 +1,4 @@
 export const isAuthenticated = () => {
-    return (
-        ((localStorage.getItem("token-descarte-certo") !== null) && (localStorage.getItem("token-descarte-certo") !== "")) ? true : false
-    );
+  const token = localStorage.getItem("token-descarte-certo");
+  return token !== null && token !== "";
 };
-
