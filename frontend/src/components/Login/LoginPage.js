@@ -17,7 +17,6 @@ function LoginPage() {
 
   function handleLogin(e) {
     e.preventDefault();
-    console.log({ user });
     axios
       .post("https://api-descarte-certo.herokuapp.com/login", { ...user })
       .then((res) => {
