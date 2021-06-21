@@ -27,5 +27,7 @@ public class Estimate {
     @OneToOne(cascade =CascadeType.ALL)
     private Residue residue;
 
+    @Column(name = "status")
+    private String status;
 }
 

@@ -1,0 +1,2 @@
+ALTER TABLE estimate
+    ADD COLUMN status VARCHAR(15);
