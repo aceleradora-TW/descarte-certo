@@ -28,6 +28,7 @@ public class EstimateConverterService {
                         .residueType(request.getResidueRequest().getResidueType())
                         .build()
                 )
+                .status("Criado")
                 .build();
 
     }
