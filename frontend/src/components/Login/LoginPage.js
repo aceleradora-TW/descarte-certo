@@ -15,6 +15,8 @@ function LoginPage() {
 
   let history = useHistory();
 
+  const timeOut = 2000;
+
   function handleLogin(e) {
     e.preventDefault();
     axios
@@ -22,7 +24,9 @@ function LoginPage() {
       .then((res) => {
         localStorage.setItem("token-descarte-certo", res.data.token);
         toast.success("Usuario logado com sucesso!!");
-        history.push("/");
+        setTimeout(function () {
+          history.push("/");
+        }, timeOut);
       })
       .catch((err) => toast.error(err.message));
   }
@@ -40,7 +44,7 @@ function LoginPage() {
       <div className="container">
         <ToastContainer
           position="top-center"
-          autoClose={3000}
+          autoClose={timeOut}
           hideProgressBar={false}
           newestOnTop={false}
           closeOnClick
@@ -68,9 +72,8 @@ function LoginPage() {
               </Col>
               <Col xs="11">
                 <Input
-                  className="form-fields"
+                  className="form-fields border"
                   onChange={handleChange}
-                  className="border"
                   type="email"
                   name="email"
                   id="email"
@@ -93,9 +96,8 @@ function LoginPage() {
               </Col>
               <Col xs="11">
                 <Input
-                  className="form-fields"
+                  className="form-fields border"
                   onChange={handleChange}
-                  className="border"
                   type="password"
                   name="password"
                   id="password"
