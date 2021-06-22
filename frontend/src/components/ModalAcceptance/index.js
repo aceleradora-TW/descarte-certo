@@ -5,7 +5,7 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons'
 
 
 function ModalAcceptance () {
-  // #TODO: refatorar o onclick
+  // #TODO: refatorar o onclick para close ao invés de reload
   function handlecloseWindow() { window.location.reload() };
 
   return (

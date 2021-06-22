@@ -133,6 +133,7 @@ p.eptc-taxes {
     display: none;
   }
 
+
   button.btn-cancel-mobile,
   button.btn-approve-mobile {
     display: flex;
@@ -145,6 +146,14 @@ p.eptc-taxes {
     box-shadow: 1px 1px #878787;
     border: none;
     padding-bottom: 4px;
+  }
+
+  button.btn-cancel-mobile{
+    justify-self: start;
+  }
+
+  button.btn-approve-mobile{
+    justify-self: end;
   }
 
   button.btn-approve-mobile {

@@ -6,6 +6,9 @@ import { faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 import { faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 
 function ModalConfirmation () {
+  // #TODO: refatorar o onclick para ser close e não reload
+  function handlecloseWindow() { window.location.reload() };
+
   return (
     <div className="modal-container">
       <h3 className="total-budget">Seu orçamento: <span>R$250,00</span><span>(Gesso)</span>*</h3>
@@ -27,8 +30,8 @@ function ModalConfirmation () {
         </Carousel>
       </div>
       <p className="eptc-taxes">* Sujeito às taxas de área azul - EPTC, não incluso no valor.</p>
-      <button className="btn-cancel">Cancelar Orçamento</button>
-      <button className="btn-cancel-mobile">Cancelar <FontAwesomeIcon icon={faTimesCircle} /></button>
+      <button className="btn-cancel" onClick={handlecloseWindow} >Cancelar Orçamento</button>
+      <button className="btn-cancel-mobile" onClick={handlecloseWindow}>Cancelar <FontAwesomeIcon icon={faTimesCircle} /></button>
       <button className="btn-approve">Aprovar e Agendar</button>
       <button className="btn-approve-mobile">Confirmar <FontAwesomeIcon icon={faCheckCircle} /></button>
     </div>    
