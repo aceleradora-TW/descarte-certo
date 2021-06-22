@@ -37,6 +37,16 @@ public class EstimateService {
         return estimateRepository.findAll();
     }
 
+    public Estimate updateStatus(int id){
+        Optional<Estimate> estimate = this.getEstimate(id);
+        if(estimate.isPresent()) {
+            Estimate est = estimate.get();
+            est.setStatus("Aceito");
+             return estimateRepository.save(est);
+         }
+        return null;
+    }
+
     private void sendEstimateEmail(Estimate estimateEntity){
         StringBuffer sb =new StringBuffer();
         sb.append("NOVO ORÇAMENTO: ");

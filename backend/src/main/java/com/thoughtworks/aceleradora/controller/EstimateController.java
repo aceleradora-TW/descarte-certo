@@ -40,8 +40,7 @@ public class EstimateController {
     @ResponseStatus(HttpStatus.OK)
     public Estimate confirm(@PathVariable int id) {
         return estimateService
-                .getEstimate(id)
-                .orElseThrow(() -> new EstimateNotFoundException(id));
+                .updateStatus(id);
     }
 
     @GetMapping(path = "/all")
