@@ -97,7 +97,8 @@ p.eptc-taxes {
     justify-self: start;
     background-color: #999999;
     color: white;
-    font-size: clamp(0.7rem, 1.5vw, 1rem);
+    height: clamp(52px, 1.2vw, 45px);
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
     width: clamp(96px, 10vw, 197px);
   }
 
@@ -107,7 +108,7 @@ p.eptc-taxes {
     justify-self: end;
     background-color: #60d6c5;
     color: #3f3d56;
-    font-size: clamp(0.7rem, 1.5vw, 1rem);
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
     width: clamp(96px, 10vw, 197px);
     height: clamp(52px, 1.2vw, 45px);
   }
