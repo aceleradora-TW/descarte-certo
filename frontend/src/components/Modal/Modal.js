@@ -16,10 +16,7 @@ import { ERRORS } from "../../constant";
 import InputMask from "react-input-mask";
 import * as yup from "yup";
 import Axios from "axios";
-import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-import App from "../../App"
-import { ModalDialog } from "react-bootstrap";
-import { func } from "prop-types";
+
 
 
 function Modal(props) {
@@ -354,7 +351,7 @@ function Modal(props) {
                                                     value="Escada"
                                                     onClick={fieldTextTrueFloor}
                                                 />
-                                                <a> Escada</a>
+                                               Escada
 
                                             </Label>
                                             <div>
@@ -372,7 +369,7 @@ function Modal(props) {
                                                     name="checked2"
                                                     value="Elevador"
                                                 />
-                                                <a> Elevador</a>
+                                                 Elevador
                                             </Label>
                                         </FormGroup>
                                     </Col>
@@ -388,7 +385,7 @@ function Modal(props) {
 
 
                                                 />
-                                                <a> Outro de difícil acesso:</a>
+                                                 Outro de difícil acesso:
                                             </Label>
 
                                             <div>
@@ -408,7 +405,7 @@ function Modal(props) {
                                                     name="checked4"
                                                     value="Termos"
                                                 />
-                                                <a> Li e concordo com os </a> <a target="_blank" href="https://drive.google.com/file/d/1Wty-Il4oz36PuOWGeX35BWPTmGREShlE/view?usp=sharing">Termos de Uso</a>, <a target="_blank" href="https://drive.google.com/file/d/1bBGVCMWoQ7vtBpjMF1YWljt6p1GYY5E5/view?usp=sharing">Política de Privacidade</a> e as <a target="_blank" href="https://drive.google.com/file/d/11Ao8wyvIDL1Yjus_Y8sZcaB-7Exau1wm/view?usp=sharing">Normas e nomenclatura geral sobre LGPD</a>
+                                                Li e concordo com os  <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1Wty-Il4oz36PuOWGeX35BWPTmGREShlE/view?usp=sharing">Termos de Uso</a>, <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1bBGVCMWoQ7vtBpjMF1YWljt6p1GYY5E5/view?usp=sharing">Política de Privacidade</a> e as <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/11Ao8wyvIDL1Yjus_Y8sZcaB-7Exau1wm/view?usp=sharing">Normas e nomenclatura geral sobre LGPD</a>
                                             </Label>
                                         </FormGroup>
                                     </Col>

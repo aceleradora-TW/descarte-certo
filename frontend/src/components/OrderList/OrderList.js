@@ -9,10 +9,13 @@ const OrderList = ({ orders }) => {
           <th>Nome</th>
           <th>Telefone</th>
           <th>email</th>
-          <th>CEP</th>
-          <th>Endereço</th>
-          <th>Tipo do material</th>
-          <th>Tipo de serviço</th>
+          <th>Tipo de coleta</th>
+          <th>Quantidade</th>
+          <th>Mateirial</th>
+          <th>Acesso</th>
+          <th>Região</th>
+          <th>Data</th>
+          <th>Status</th>
         </tr>
       </thead>
       <tbody>
@@ -21,10 +24,13 @@ const OrderList = ({ orders }) => {
             <td>{order.requester.fullName}</td>
             <td>{order.requester.cellphone}</td>
             <td>{order.requester.email}</td>
-            <td>{order.residueAddress.cep}</td>
-            <td>{order.residueAddress.locationInfo}</td>
-            <td>{order.residue.residueType}</td>
             <td>{order.residue.residueMeasure}</td>
+            <td></td>         
+            <td>{order.residue.residueType}</td>            
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
         ))}
       </tbody>

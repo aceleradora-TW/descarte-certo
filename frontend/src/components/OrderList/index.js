@@ -1,8 +1,7 @@
 import React from 'react'
 import './styles.css'
 import OrderList from './OrderList'
-import { paginator, orders } from './data'
-import Pagination from './Pagination'
+import {  orders } from './data'
 
 function OrderListComponent() {
    return (
@@ -12,7 +11,6 @@ function OrderListComponent() {
           <OrderList orders={orders} /> :
           <h2>Não há orçamentos disponíveis</h2>
         }
-        <Pagination totalPages={paginator.totalPages} />
       </div>
     </div>
   )

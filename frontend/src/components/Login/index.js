@@ -5,7 +5,6 @@ import IconUser from '../images/icon_person.png'
 function Login() {
     return (
        <>
-        <Nav.Link href="/login"></Nav.Link>
        </>
     )
 }
