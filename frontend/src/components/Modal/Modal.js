@@ -301,7 +301,7 @@ function Modal(props) {
                   </FormGroup>
                 </Col>
                 <Col className="col-lg-3">
-                  <div>
+                  <div id="quantity">
                     <Field
                       type="Number"
                       placeholder="1"
@@ -333,7 +333,7 @@ function Modal(props) {
                     <option value="Somente Madeira" label="Somente Madeira" />
                     <option
                       value="Mix"
-                      label="Mix (mistura de resíduos de obra)"
+                      label="Resíduos Misturados (mistura de resíduos de obra)"
                     />
                   </select>{' '}
                   <ErrorMessage component="div" name="residueType" />
@@ -421,7 +421,7 @@ function Modal(props) {
                 type="submit"
                 onClick={FormGroup.disabled}
               >
-                Solicitar
+                Ver Orçamento
               </Button>
               <Alert
                 color={submitSuccess ? 'success' : 'danger'}
