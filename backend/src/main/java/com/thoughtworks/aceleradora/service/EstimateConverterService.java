@@ -6,6 +6,7 @@ import com.thoughtworks.aceleradora.entity.Requester;
 import com.thoughtworks.aceleradora.entity.Residue;
 import com.thoughtworks.aceleradora.entity.ResidueAddress;
 import org.springframework.stereotype.Service;
+import java.time.LocalDate;
 
 @Service
 public class EstimateConverterService {
@@ -28,7 +29,11 @@ public class EstimateConverterService {
                         .residueType(request.getResidueRequest().getResidueType())
                         .build()
                 )
+<<<<<<< HEAD
                 .status("Criado")
+=======
+                .creationDate(LocalDate.now())
+>>>>>>> d1d77c9509d898aaf7eb62cb67b78559ecffb392
                 .build();
 
     }
