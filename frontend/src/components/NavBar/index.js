@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar} from "react-bootstrap"
+import { Navbar, Nav} from "react-bootstrap"
 import { HashLink as Link } from "react-router-hash-link"
 import "./NavBarStyle.css"
 import Logotipo from '../images/logo-5marias.png'
