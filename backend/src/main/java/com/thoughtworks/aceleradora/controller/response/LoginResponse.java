@@ -4,10 +4,11 @@ import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 public class LoginResponse {
 
-    public String returnLogin(String email, String password) {
+    public Optional<String> returnLogin(String email, String password) {
 
         Map<String, Object> payloadClaims1 = new HashMap<>();
         payloadClaims1.put("email", email);
@@ -20,9 +21,9 @@ public class LoginResponse {
                     .withPayload(payloadClaims1)
                     .withPayload(payloadClaims2)
                     .sign(algorithm);
-            return token;
+            return Optional.of(token);
         } else {
-            return "USER NOT FOUND";
+            return Optional.empty();
         }
     }
 }
