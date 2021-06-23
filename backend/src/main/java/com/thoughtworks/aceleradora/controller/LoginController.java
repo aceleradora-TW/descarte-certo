@@ -6,6 +6,7 @@ import com.thoughtworks.aceleradora.service.JwtToken;
 import org.springframework.http.HttpStatus;
 import com.thoughtworks.aceleradora.exception.UserNotFoundException;
 import org.springframework.web.bind.annotation.*;
+import java.util.Optional;
 
 import javax.ws.rs.POST;
 
@@ -18,13 +19,13 @@ public class LoginController {
 
         LoginResponse login = new LoginResponse();
 
-        String data = login.returnLogin(user.getEmail(), user.getPassword());
+        Optional<String> data = login.returnLogin(user.getEmail(), user.getPassword());
 
-        if (data != null) {
-            JwtToken token = new JwtToken(data);
+        if (data.isPresent()) {
+            JwtToken token = new JwtToken(data.get());
             return token;
         }else{
-            throw new UserNotFoundException("Usuario não encontrado. Verefique se os dados foram digitados corretamente");
+            throw new UserNotFoundException("Usuario não encontrado! Verifique se os dados foram digitados corretamente.");
         }
     }
 

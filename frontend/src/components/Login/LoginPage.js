@@ -20,7 +20,7 @@ function LoginPage() {
   function handleLogin(e) {
     e.preventDefault();
     axios
-      .post("https://api-descarte-certo.herokuapp.com/login", { ...user })
+      .post("/login", { ...user })
       .then((res) => {
         localStorage.setItem("token-descarte-certo", res.data.token);
         toast.success("Usuario logado com sucesso!!");
