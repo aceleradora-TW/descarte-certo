@@ -8,7 +8,7 @@ import { faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 function ModalConfirmation () {
   // #TODO: refatorar o onclick para ser close e não reload
   function handlecloseWindow() { window.location.reload() };
-
+  //#TODO: substituir os spans pelos endpoints da modal anterior
   return (
     <div className="modal-container">
       <h3 className="total-budget">Seu orçamento: <span>R$250,00</span><span>(Gesso)</span>*</h3>
