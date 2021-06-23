@@ -29,8 +29,8 @@ public class EstimateConverterService {
                         .residueType(request.getResidueRequest().getResidueType())
                         .build()
                 )
+                .status(OrderStatus.CRIADO)
                 .creationDate(LocalDate.now())
                 .build();
-
     }
 }
