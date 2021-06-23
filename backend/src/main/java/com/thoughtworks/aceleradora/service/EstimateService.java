@@ -70,12 +70,11 @@ public class EstimateService {
         sb.append("Quantidade dos residuo: ");
         sb.append(estimateEntity.getResidue().getResidueMeasure());
 
-
-//        try {
-//            mailFactory.sendMessage(sb.toString());
-//        } catch (UnirestException e) {
-//            e.printStackTrace();
-//        }
+        try {
+            mailFactory.sendMessage(sb.toString());
+        } catch (UnirestException e) {
+            e.printStackTrace();
+        }
     }
 
 }
