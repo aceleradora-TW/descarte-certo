@@ -29,12 +29,10 @@ public class Estimate {
     @OneToOne(cascade =CascadeType.ALL)
     private Residue residue;
 
-<<<<<<< HEAD
     @Column(name = "status")
     private String status;
-=======
+
     @Column(name = "creation_date")
     private LocalDate creationDate;
->>>>>>> d1d77c9509d898aaf7eb62cb67b78559ecffb392
 }
 
