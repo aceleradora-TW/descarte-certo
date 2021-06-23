@@ -42,7 +42,7 @@ public class EstimateService {
         Optional<Estimate> estimate = this.getEstimate(id);
         if(estimate.isPresent()) {
             Estimate est = estimate.get();
-            est.setStatus("Aceito");
+            est.setStatus(OrderStatus.ACEITO);
              return estimateRepository.save(est);
          }
         return null;
