@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 import App from "./App";
@@ -14,7 +14,7 @@ ReactDOM.render(
   <HashRouter>
     <Switch>
       <Route exact path="/" component={App} />
-      <Route path="./contato" component={Footer} />
+      <Route path="/contato" component={Footer} />
       <Route path="/beneficios" component={Benefits} />
       <Route path="/login" component={LoginPage} />
       <PrivateRouterComponent
