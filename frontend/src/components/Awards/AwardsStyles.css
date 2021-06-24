@@ -1,0 +1,23 @@
+section.awards-section{
+  display: flex;
+  /* width: 100%; */
+  flex-direction: column;
+  height: 280px;
+  justify-content: center;
+  background-color: #F5F4F6;
+}
+
+div.logos-section{
+  display: flex;
+  flex-direction: row;
+}
+
+div.logo-image {
+  display: flex;
+  flex-direction: row;
+}
+
+div.logo-image img{
+  width: 100px;
+  height: 100px;
+}
