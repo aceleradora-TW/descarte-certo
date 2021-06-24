@@ -1,5 +1,6 @@
 package com.thoughtworks.aceleradora.entity;
 
+import com.thoughtworks.aceleradora.service.OrderStatus;
 import lombok.*;
 
 import javax.persistence.*;
@@ -28,6 +29,9 @@ public class Estimate {
 
     @OneToOne(cascade =CascadeType.ALL)
     private Residue residue;
+
+    @Column(name = "status")
+    private OrderStatus status;
 
     @Column(name = "creation_date")
     private LocalDate creationDate;

@@ -29,6 +29,7 @@
     "react-elastic-carousel": "^0.9.4",
     "react-input-mask": "^2.0.4",
     "react-router-dom": "^5.1.2",
+    "react-router-hash-link": "^2.4.3",
     "react-scripts": "3.4.1",
     "react-slick": "^0.27.12",
     "react-toastify": "^7.0.4",
