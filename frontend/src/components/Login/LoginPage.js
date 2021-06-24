@@ -28,7 +28,7 @@ function LoginPage() {
           history.push("/orcamentos");
         }, timeOut);
       })
-      .catch((err) => toast.error(err.message));
+      .catch((err) => toast.error("Usuario não encontrado.", err.massage));
   }
 
   function handleChange(e) {
