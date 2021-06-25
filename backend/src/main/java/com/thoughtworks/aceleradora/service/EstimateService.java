@@ -5,6 +5,9 @@ import com.thoughtworks.aceleradora.controller.request.EstimateRequest;
 import com.thoughtworks.aceleradora.entity.Estimate;
 import com.thoughtworks.aceleradora.repository.EstimateRepository;
 import org.springframework.context.event.ApplicationEventMulticaster;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -34,8 +37,14 @@ public class EstimateService {
         return estimateRepository.findById(codigo);
     }
 
-    public List<Estimate> getAllEstimates() {
-        return estimateRepository.findAllByOrderByCreationDateDesc();
+    public Page<Estimate> getAllEstimates(Optional<Integer> page, Optional<String> sortBy) {
+        return estimateRepository.findAll(
+                PageRequest.of(
+                        page.orElse(0),
+                        20,
+                        Sort.Direction.ASC, sortBy.orElse("id")
+                )
+        );
     }
 
     public Estimate updateStatus(int id){

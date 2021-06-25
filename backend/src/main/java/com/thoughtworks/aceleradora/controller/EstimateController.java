@@ -6,8 +6,6 @@ import com.thoughtworks.aceleradora.service.EstimateService;
 import com.thoughtworks.aceleradora.entity.Estimate;
 import com.thoughtworks.aceleradora.exception.EstimateNotFoundException;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import com.thoughtworks.aceleradora.repository.EstimateRepository;
@@ -55,13 +53,8 @@ public class EstimateController {
             @RequestParam Optional<Integer> page,
             @RequestParam Optional<String> sortBy
     ) {
-        return estimateRepository.findAll(
-                PageRequest.of(
-                        page.orElse(0),
-                        20,
-                        Sort.Direction.ASC, sortBy.orElse("id")
-                )
-        );
+        return estimateService
+                .getAllEstimates(page, sortBy);
     }
 
 
