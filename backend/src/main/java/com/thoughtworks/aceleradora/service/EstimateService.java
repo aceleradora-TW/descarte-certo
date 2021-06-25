@@ -23,6 +23,10 @@ public class EstimateService {
         this.mailFactory= mailFactory;
     }
 
+    public void configureMailFactory(String email){
+        this.mailFactory.setEmailReceiver(email);
+    }
+
 
     public Estimate create(EstimateRequest estimateRequest) {
         Estimate estimateEntity = estimateConverterService.converter(estimateRequest);

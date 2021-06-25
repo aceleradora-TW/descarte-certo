@@ -23,6 +23,10 @@ public class MailFactory {
         this.emailReceiver = emailReceiver;
     }
 
+    public void setEmailReceiver(String email){
+        this.emailReceiver = email;
+    }
+
     public JsonNode sendMessage(String mailBody) throws UnirestException {
         HttpResponse<JsonNode> request = Unirest.post("https://api.mailgun.net/v3/" + username + "/messages")
                 .basicAuth("api",password)
