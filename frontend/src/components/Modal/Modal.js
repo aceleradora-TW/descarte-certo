@@ -8,23 +8,16 @@ import {
   Col,
   FormGroup,
   Label,
-  Alert,
-} from 'reactstrap';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
-import './ModalStyle.css';
-import { ERRORS } from '../../constant';
-import InputMask from 'react-input-mask';
-import * as yup from 'yup';
-import Axios from 'axios';
-import {
-  Dropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-} from 'reactstrap';
-import App from '../../App';
-import { ModalDialog } from 'react-bootstrap';
-import { func } from 'prop-types';
+  Alert
+} from "reactstrap";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import "./ModalStyle.css";
+import { ERRORS } from "../../constant";
+import InputMask from "react-input-mask";
+import * as yup from "yup";
+import Axios from "axios";
+
+
 
 function Modal(props) {
   const validationSchema = yup.object().shape({
@@ -41,13 +34,17 @@ function Modal(props) {
   });
 
   const [isAlertVisible, setIsAlertVisible] = useState(false);
+
   function handleAlertClick() {
     setIsAlertVisible(!isAlertVisible);
   }
+
   function handlecloseWindow() {
     window.location.reload();
   }
+
   const [submitSuccess, setSubmitSuccess] = useState(false);
+
   const handleSubmitSuccess = (success) => setSubmitSuccess(success);
 
   const initialValues = {
@@ -66,6 +63,7 @@ function Modal(props) {
     accessType: '',
     status: '',
   };
+
   let fieldText = false;
   let fieldTextFloor = false;
   let fieldTextQuantity = false;
@@ -111,6 +109,7 @@ function Modal(props) {
         });
     }, 400);
   };
+
   const showingField = (values) => {
     if (fieldText === true) {
       return (
@@ -130,6 +129,7 @@ function Modal(props) {
       return null;
     }
   };
+
   const showingFieldFloor = (values) => {
     if (fieldTextFloor === true) {
       return (
@@ -149,6 +149,7 @@ function Modal(props) {
       return null;
     }
   };
+
   function fieldTextTrueFloor(value) {
     if (value === 'Escada') {
       fieldTextFloor = true;
@@ -161,6 +162,7 @@ function Modal(props) {
       fieldTextFloor = false;
     }
   }
+
   function radioTrueMeasure(value) {
     if (value === 'Sacos') {
       radioMeasure = true;
@@ -169,6 +171,7 @@ function Modal(props) {
       radioMeasure = false;
     }
   }
+
   const showingFieldAccessType = (values, handleChange, handleBlur) => {
     if (radioMeasure === true) {
       return (
@@ -196,6 +199,7 @@ function Modal(props) {
       return null;
     }
   };
+
   return (
     <BootstrapModal
       border="light"
@@ -205,6 +209,7 @@ function Modal(props) {
       <ModalHeader toggle={handlecloseWindow}>
         Solicite seu Orçamento
       </ModalHeader>
+
       <ModalBody>
         <Formik
           initialValues={initialValues}
@@ -222,8 +227,11 @@ function Modal(props) {
                 value={values.fullName}
                 onBlur={handleBlur}
               />
+
               <ErrorMessage component="div" name="fullName" />
+
               <br />
+
               <Row>
                 <Col className="col-sm-4">
                   <FormGroup>
@@ -260,7 +268,9 @@ function Modal(props) {
                   </FormGroup>
                 </Col>
               </Row>
+
               <br />
+
               <Row>
                 <Col>
                   <h4>Tipo de Coleta: </h4>
@@ -271,6 +281,7 @@ function Modal(props) {
                   <br />
                 </Col>
               </Row>
+
               <Row>
                 <Col lg="2">
                   <FormGroup>
@@ -286,6 +297,7 @@ function Modal(props) {
                     </Label>
                   </FormGroup>
                 </Col>
+
                 <Col lg="4">
                   <FormGroup>
                     <Label>
@@ -300,6 +312,7 @@ function Modal(props) {
                     </Label>
                   </FormGroup>
                 </Col>
+
                 <Col className="col-lg-3">
                   <div id="quantity">
                     <Field
@@ -429,9 +442,9 @@ function Modal(props) {
               >
                 {submitSuccess
                   ? 'Sua solicitação foi enviada! Obrigada!' +
-                    values.locationInfo
+                  values.locationInfo
                   : 'Ops! Tivemos um problema. Tente novamente mais tarde. ' +
-                    values.locationInfo}
+                  values.locationInfo}
               </Alert>
             </Form>
           )}

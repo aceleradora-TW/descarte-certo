@@ -16,19 +16,25 @@
   width: 40%;
 }
 
-.btn.form-button {
-  background-color: #333333;
-  color: #ffffff !important;
-  width: 25%;
-  text-align: center;
-  font-size: small;
-  float: right;
+.btn.form-button{
+    background-color:#333333;
+    color: #ffffff !important;
+    box-shadow: 1px 1px #878787!important;
+    width: 25%;
+    text-align: center;
+    font-size: small;
+    float: right;
 }
 
-.field-input {
-  border-radius: 10px;
-  width: 100%;
-  height: 50px;
+.btn.form-button:active{
+    background-color:#333333 !important;
+    box-shadow: -1px -1px #878787!important; 
+}
+
+.field-input{
+    border-radius: 10px;
+    width: 100%;
+    height: 50px;
 }
 
 .modal-content {

@@ -7,6 +7,8 @@ import com.thoughtworks.aceleradora.service.bucketcalculator.Materials;
 import com.thoughtworks.aceleradora.service.quickestimates.BagEstimateParameters;
 import com.thoughtworks.aceleradora.service.quickestimates.FloorAccess;
 import com.thoughtworks.aceleradora.service.quickestimates.QuickEstimateCalculator;
+import com.thoughtworks.aceleradora.service.quickestimates.BagEstimate;
+import com.thoughtworks.aceleradora.service.bucketcalculator.BucketEstimate;
 import org.springframework.web.bind.annotation.*;
 
 import java.math.BigDecimal;
@@ -15,7 +17,7 @@ import java.math.BigDecimal;
 @RequestMapping("/quick_estimate")
 public class QuickEstimatesController {
     @GetMapping("/bags")
-    public BigDecimal returnEstimateBag(
+    public BagEstimate returnEstimateBag(
             @RequestParam("amount") int amount,
             @RequestParam("access") FloorAccess access,
             @RequestParam("materials") Materials materials){
@@ -24,14 +26,16 @@ public class QuickEstimatesController {
 
             BagEstimateParameters params = new BagEstimateParameters(amount, access, materials);
 
-            BigDecimal result = calculator.calculateEstimate(params);
+            BigDecimal value = calculator.calculateEstimate(params);
 
-            return result;
+            BagEstimate estimate = new BagEstimate(materials, value);
+
+            return estimate;
 
     }
 
     @GetMapping("/bucket")
-    public BigDecimal returnEstimateBucket(
+    public BucketEstimate returnEstimateBucket(
             @RequestParam("amount") int amount,
             @RequestParam("zone")BucketZones zone,
             @RequestParam("materials") Materials materials){
@@ -40,9 +44,11 @@ public class QuickEstimatesController {
 
             BucketEstimateParameters params = new BucketEstimateParameters(amount, zone, materials);
 
-            BigDecimal result = calculator.calculateBucketEstimate(params);
+            BigDecimal value = calculator.calculateBucketEstimate(params);
 
-            return result;
+            BucketEstimate estimate = new BucketEstimate(materials, value);
+
+            return estimate;
     }
 
 }

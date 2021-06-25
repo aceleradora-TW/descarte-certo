@@ -20,6 +20,8 @@ Esse projeto foi a ideia vencedora do Creathon de 2019 e posteriormente se junto
 * [CircleCI - Descarte Certo](https://app.circleci.com/pipelines/github/aceleradora-TW/descarte-certo)
 * [Heroku - Descarte Certo](https://dashboard.heroku.com/apps/descartecerto)
 ### Como ver os logs da aplicação
+- Precisa primeiro instalar o client no terminal https://devcenter.heroku.com/articles/heroku-cli
+
 ### Stage
 ```
 heroku logs --app descartecerto --tail

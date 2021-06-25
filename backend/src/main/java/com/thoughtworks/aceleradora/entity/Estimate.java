@@ -1,8 +1,11 @@
 package com.thoughtworks.aceleradora.entity;
 
+import com.thoughtworks.aceleradora.service.OrderStatus;
 import lombok.*;
 
 import javax.persistence.*;
+import java.time.LocalDate;
+import java.util.Date;
 
 @Entity
 @Table(name = "estimate")
@@ -28,6 +31,9 @@ public class Estimate {
     private Residue residue;
 
     @Column(name = "status")
-    private String status;
+    private OrderStatus status;
+
+    @Column(name = "creation_date")
+    private LocalDate creationDate;
 }
 

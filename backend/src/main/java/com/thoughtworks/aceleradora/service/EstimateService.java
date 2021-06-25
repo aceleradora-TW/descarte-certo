@@ -4,6 +4,7 @@ import com.mashape.unirest.http.exceptions.UnirestException;
 import com.thoughtworks.aceleradora.controller.request.EstimateRequest;
 import com.thoughtworks.aceleradora.entity.Estimate;
 import com.thoughtworks.aceleradora.repository.EstimateRepository;
+import org.springframework.context.event.ApplicationEventMulticaster;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -34,11 +35,21 @@ public class EstimateService {
     }
 
     public List<Estimate> getAllEstimates() {
-        return estimateRepository.findAll();
+        return estimateRepository.findAllByOrderByCreationDateDesc();
+    }
+
+    public Estimate updateStatus(int id){
+        Optional<Estimate> estimate = this.getEstimate(id);
+        if(estimate.isPresent()) {
+            Estimate est = estimate.get();
+            est.setStatus(OrderStatus.ACEITO);
+             return estimateRepository.save(est);
+         }
+        return null;
     }
 
     private void sendEstimateEmail(Estimate estimateEntity){
-        StringBuffer sb =new StringBuffer();
+        StringBuffer sb = new StringBuffer();
         sb.append("NOVO ORÇAMENTO: ");
         sb.append( System.getProperty("line.separator"));
         sb.append( System.getProperty("line.separator"));
