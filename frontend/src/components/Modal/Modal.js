@@ -66,7 +66,6 @@ function Modal(props) {
 
   let fieldText = false;
   let fieldTextFloor = false;
-  let fieldTextQuantity = false;
   let radioMeasure = true;
 
   const onSubmit = (values, { setSubmitting, resetForm }) => {
@@ -293,7 +292,7 @@ function Modal(props) {
                         value="Caçambas"
                         onClick={radioTrueMeasure(values.residueMeasure)}
                       />
-                      <a> Caçamba</a>
+                      Caçamba
                     </Label>
                   </FormGroup>
                 </Col>
@@ -308,7 +307,7 @@ function Modal(props) {
                         value="Sacos"
                         onClick={radioTrueMeasure(values.residueMeasure)}
                       />
-                      <a> Sacos (Padrão 50 Litros)</a>
+                      Sacos (Padrão 50 Litros)
                     </Label>
                   </FormGroup>
                 </Col>
@@ -401,23 +400,23 @@ function Modal(props) {
                         name="checkedTerms"
                         value="Termos"
                       />
-                      <a> Li e concordo com os </a>{' '}
+                      Li e concordo com os
                       <a
-                        target="_blank"
+                        target="_blank" rel="noopener noreferrer"
                         href="https://drive.google.com/file/d/1Wty-Il4oz36PuOWGeX35BWPTmGREShlE/view?usp=sharing"
                       >
                         Termos de Uso
                       </a>
                       ,{' '}
                       <a
-                        target="_blank"
+                        target="_blank" rel="noopener noreferrer"
                         href="https://drive.google.com/file/d/1bBGVCMWoQ7vtBpjMF1YWljt6p1GYY5E5/view?usp=sharing"
                       >
                         Política de Privacidade
                       </a>{' '}
                       e as{' '}
                       <a
-                        target="_blank"
+                        target="_blank" rel="noopener noreferrer"
                         href="https://drive.google.com/file/d/11Ao8wyvIDL1Yjus_Y8sZcaB-7Exau1wm/view?usp=sharing"
                       >
                         Normas e nomenclatura geral sobre LGPD
