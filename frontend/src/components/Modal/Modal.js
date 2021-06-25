@@ -16,15 +16,6 @@ import { ERRORS } from '../../constant';
 import InputMask from 'react-input-mask';
 import * as yup from 'yup';
 import Axios from 'axios';
-import {
-  Dropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-} from 'reactstrap';
-import App from '../../App';
-import { ModalDialog } from 'react-bootstrap';
-import { func } from 'prop-types';
 
 function Modal(props) {
   const validationSchema = yup.object().shape({

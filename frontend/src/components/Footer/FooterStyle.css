@@ -46,3 +46,13 @@
     left:50%;
     transform: translate(-50%, -50%);
 }
+
+.social-media-icons .icon-style{
+    color: white;
+    font-size: 50px;
+}
+.social-media-icons .icon-style:hover{
+    color: rgb(13, 197, 168);
+    -webkit-filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+    filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+}

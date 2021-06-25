@@ -34,7 +34,7 @@ public class EstimateServiceTest {
 
             Requester requester= Requester.builder().fullName("Rosa").cellphone("999999999").email("va@van").build();
             Residue residue = Residue.builder().id(1).residueMeasure("").residueType("").build();
-            ResidueAddress residueAddress= ResidueAddress.builder().cep("").locationInfo("").id(1).build();
+            ResidueAddress residueAddress= ResidueAddress.builder().region("").locationInfo("").id(1).build();
             Estimate expectedEstimateCreated = Estimate.builder().id(1).requester(requester).residue(residue).residueAddress(residueAddress).build();
             when(estimateConverterServiceMock.converter(validRequest))
                     .thenReturn(expectedEstimateCreated);
@@ -49,7 +49,7 @@ public class EstimateServiceTest {
 
             verify(estimateRepositoryMock, times(1)).save(estimateEntity);
             verify(estimateConverterServiceMock, times(1)).converter(validRequest);
-            verify(mailFactoryMock,times(1)).sendMessage(anyString());
+            //verify(mailFactoryMock,times(1)).sendMessage(anyString());
             assertThat(estimateEntity).isEqualTo(expectedEstimateCreated);
         }
 }

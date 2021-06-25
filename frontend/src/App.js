@@ -8,10 +8,9 @@ import Benefits from './components/Benefits/index'
 import Depositions from './components/Depositions/index'
 import Footer from './components/Footer'
 
+
 function App() {
-  const headerProps = {
-    title: 'Template Aceleradora'
-  };
+  
   return (
     <div className="App">
       <main id="Home" className="App-content">
@@ -22,7 +21,7 @@ function App() {
             <Benefits />
           </div>
           <div className="content-box">
-                <Depositions/>     
+                <Depositions/>
           </div>
         </div>
         <div className="flex-box container-box">
