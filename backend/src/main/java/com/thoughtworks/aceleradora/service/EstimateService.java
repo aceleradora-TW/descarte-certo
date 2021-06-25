@@ -4,13 +4,11 @@ import com.mashape.unirest.http.exceptions.UnirestException;
 import com.thoughtworks.aceleradora.controller.request.EstimateRequest;
 import com.thoughtworks.aceleradora.entity.Estimate;
 import com.thoughtworks.aceleradora.repository.EstimateRepository;
-import org.springframework.context.event.ApplicationEventMulticaster;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.Optional;
 
 @Service
