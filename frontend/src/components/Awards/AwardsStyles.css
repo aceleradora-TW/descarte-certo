@@ -1,20 +1,30 @@
 section.awards-section{
   display: flex;
-  width: 100%;
+  width: 100vw;
   flex-direction: column;
-  height: 280px;
+  height: 40vh;
   justify-content: center;
   align-content: center;
   background-color: #F5F4F6;
+  margin: 8vh 0 0 0;
 }
 
-div.logos-section{
+.awards-section > h3 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.awards-div {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 8vw 0 8vw;
 }
 
-
-img {
-  width: 100px;
-  height: 100px;
+img.awards-logo {
+  margin: 0 4px;
 }
+
+/* #TODO: Ajustar responsividade */
+

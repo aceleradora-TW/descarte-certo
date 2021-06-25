@@ -26,10 +26,13 @@ function App() {
           </div>
         </div>
         <div className="flex-box container-box">
-          <Jumbotron className="content-box">
-          </Jumbotron>
+          <Jumbotron className="content-box" />
+        <div className="awards-container content-box">
           <Awards />
-          <FaqComponent></FaqComponent>
+        </div>
+        <div className="flex-box container-box">
+          <FaqComponent />
+        </div>
         </div>
         <Footer />
       </main>

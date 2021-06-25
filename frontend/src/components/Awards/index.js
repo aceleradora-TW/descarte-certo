@@ -11,13 +11,15 @@ function Awards() {
   return (
     <section className="awards-section">
       <h3>Nossas Conquistas</h3>
-      <div clasName="logos-setcion">
-       <img src={LogoFounder} alt="Logo tipo do Founder Institute"></img>
-       <img src={LogoAgil} alt="Logo tipo da Aceleradora Ágil" ></img>
-       <img src={LogoGarage} alt="Logo tipo da Aceleradora Ágil" ></img>
-       <img src={logoCreathon} alt="Logo tipo da Aceleradora Ágil" ></img>
-       <img src={logoGoogle} alt="Logo tipo da Aceleradora Ágil" ></img>
-       <img src={logoIclei} alt="Logo tipo da Aceleradora Ágil" ></img>
+      <div clasName="logos-section">
+        <div className="awards-div" >
+          <img className="awards-logo" src={LogoFounder} alt="Logo tipo do Founder Institute"></img>
+          <img className="awards-logo" src={LogoAgil} alt="Logo tipo da Aceleradora Ágil" ></img>
+          <img className="awards-logo" src={LogoGarage} alt="Logo tipo da Aceleradora Ágil" ></img>
+          <img className="awards-logo" src={logoCreathon} alt="Logo tipo da Aceleradora Ágil" ></img>
+          <img className="awards-logo" width="200px" src={logoGoogle} alt="Logo tipo da Aceleradora Ágil" ></img>
+          <img className="awards-logo" width="200px" src={logoIclei} alt="Logo tipo da Aceleradora Ágil" ></img>
+        </div>
       </div>
    </section>
   )
