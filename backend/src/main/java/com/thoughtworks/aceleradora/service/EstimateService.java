@@ -35,11 +35,11 @@ public class EstimateService {
         return estimateRepository.findById(codigo);
     }
 
-    public Page<Estimate> getAllEstimates(Optional<Integer> page, Optional<String> sortBy) {
+    public Page<Estimate> getAllEstimates(Optional<Integer> page, Optional<String> sortBy, Optional<Integer> totalPage) {
         return estimateRepository.findAll(
                 PageRequest.of(
                         page.orElse(0),
-                        20,
+                        totalPage.orElse(20),
                         Sort.Direction.ASC, sortBy.orElse("id")
                 )
         );
