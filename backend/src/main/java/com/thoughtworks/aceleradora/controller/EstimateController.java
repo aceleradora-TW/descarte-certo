@@ -48,9 +48,10 @@ public class EstimateController {
     @ResponseStatus(HttpStatus.OK)
     public Page<Estimate> getAll(
             @RequestParam Optional<Integer> page,
+            @RequestParam Optional<Integer> totalPage,
             @RequestParam Optional<String> sortBy
     ) {
         return estimateService
-                .getAllEstimates(page, sortBy);
+                .getAllEstimates(page, sortBy, totalPage);
     }
 }
