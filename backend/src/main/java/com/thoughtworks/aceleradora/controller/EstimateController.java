@@ -5,10 +5,14 @@ import com.thoughtworks.aceleradora.controller.response.EstimateResponse;
 import com.thoughtworks.aceleradora.service.EstimateService;
 import com.thoughtworks.aceleradora.entity.Estimate;
 import com.thoughtworks.aceleradora.exception.EstimateNotFoundException;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import com.thoughtworks.aceleradora.repository.EstimateRepository;
+import java.util.Optional;
 
-import java.util.List;
 
 
 @RestController
@@ -16,6 +20,8 @@ import java.util.List;
 public class EstimateController {
 
     private EstimateService estimateService;
+
+    private  EstimateRepository estimateRepository;
 
     public EstimateController(EstimateService estimateService) { this.estimateService = estimateService; }
 
@@ -45,10 +51,22 @@ public class EstimateController {
 
     @GetMapping(path = "/all")
     @ResponseStatus(HttpStatus.OK)
-    public List<Estimate> getAll() {
-        return estimateService
-                   .getAllEstimates();
+    public Page<Estimate> getAll(
+            @RequestParam Optional<Integer> page,
+            @RequestParam Optional<String> sortBy
+    ) {
+        return estimateRepository.findAll(
+                PageRequest.of(
+                        page.orElse(0),
+                        20,
+                        Sort.Direction.ASC, sortBy.orElse("id")
+                )
+        );
     }
 
 
 }
+/*
+* estimateService
+                   .getAllEstimates();
+* */

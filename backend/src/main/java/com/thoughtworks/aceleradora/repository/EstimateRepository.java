@@ -9,7 +9,3 @@ import java.util.List;
 public interface EstimateRepository extends JpaRepository<Estimate, Integer>{
     List<Estimate> findAllByOrderByCreationDateDesc();
 }
-
-
-
-
