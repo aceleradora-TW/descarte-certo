@@ -36,7 +36,7 @@ public class EstimateConverterServiceTest {
 
         String expectedAddressCep = "9109020304";
         ResidueAddressRequest residueAddressRequest = ResidueAddressRequest.builder()
-               .cep(expectedAddressCep)
+               .region(expectedAddressCep)
                .build();
 
         EstimateRequest validEstimateRequest = createValidRequest();
@@ -46,7 +46,7 @@ public class EstimateConverterServiceTest {
         Estimate estimateEntity = estimateConverterService.converter(validEstimateRequest);
 
 
-        assertThat(estimateEntity.getResidueAddress().getCep()).isEqualTo(expectedAddressCep);
+        assertThat(estimateEntity.getResidueAddress().getRegion()).isEqualTo(expectedAddressCep);
     }
 
     @Test
