@@ -8,7 +8,6 @@ import com.thoughtworks.aceleradora.exception.EstimateNotFoundException;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import com.thoughtworks.aceleradora.repository.EstimateRepository;
 import java.util.Optional;
 
 
@@ -18,8 +17,6 @@ import java.util.Optional;
 public class EstimateController {
 
     private EstimateService estimateService;
-
-    private  EstimateRepository estimateRepository;
 
     public EstimateController(EstimateService estimateService) { this.estimateService = estimateService; }
 
@@ -56,10 +53,4 @@ public class EstimateController {
         return estimateService
                 .getAllEstimates(page, sortBy);
     }
-
-
 }
-/*
-* estimateService
-                   .getAllEstimates();
-* */
