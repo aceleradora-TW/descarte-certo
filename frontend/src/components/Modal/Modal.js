@@ -55,11 +55,9 @@ function Modal(props) {
     residueAmount: '',
     residueMeasure: '',
     accessType: '',
-    status: '',
   };
   let fieldText = false;
   let fieldTextFloor = false;
-  let fieldTextQuantity = false;
   let radioMeasure = true;
 
   const onSubmit = (values, { setSubmitting, resetForm }) => {
@@ -82,7 +80,6 @@ function Modal(props) {
         residueType: values.residueType,
         residueMeasure: values.residueAmount + ' ' + values.residueMeasure,
       },
-      status: 'submetido',
     };
     setTimeout(() => {
       console.log('Requesting to backend /estimate');
