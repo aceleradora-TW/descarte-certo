@@ -48,7 +48,7 @@ public class EstimateServiceTest {
             Estimate estimateEntity = estimateService.create(validRequest);
 
             verify(estimateRepositoryMock, times(1)).save(estimateEntity);
-            verify(estimateConverterServiceMock, times(1)).converter(validRequest);
+            verify(estimateConverterServiceMock, times(1)).converter(validRequest);            
             //verify(mailFactoryMock,times(1)).sendMessage(anyString());
             assertThat(estimateEntity).isEqualTo(expectedEstimateCreated);
         }

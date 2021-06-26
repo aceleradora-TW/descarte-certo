@@ -18,6 +18,12 @@ import * as yup from 'yup';
 import Axios from 'axios';
 
 function Modal(props) {
+  var accessTypeValidation;
+  if (props.residueMeasure === 'Sacos') {
+    accessTypeValidation = yup.string().required(ERRORS.REQUIRED_FIELD);
+  } else {
+    accessTypeValidation = yup.string();
+  }
   const validationSchema = yup.object().shape({
     email: yup
       .string()
@@ -29,16 +35,22 @@ function Modal(props) {
     localDescription: yup.string(),
     checkedTerms: yup.string().required(ERRORS.REQUIRED_FIELD),
     residueMeasure: yup.string().required(ERRORS.REQUIRED_FIELD),
+    accessType: accessTypeValidation,
+    residueAmount: yup.number().required(ERRORS.REQUIRED_FIELD),
   });
 
   const [isAlertVisible, setIsAlertVisible] = useState(false);
+
   function handleAlertClick() {
     setIsAlertVisible(!isAlertVisible);
   }
+
   function handlecloseWindow() {
     window.location.reload();
   }
+
   const [submitSuccess, setSubmitSuccess] = useState(false);
+
   const handleSubmitSuccess = (success) => setSubmitSuccess(success);
 
   const initialValues = {
@@ -56,11 +68,16 @@ function Modal(props) {
     residueMeasure: '',
     accessType: '',
   };
+
   let fieldText = false;
   let fieldTextFloor = false;
   let radioMeasure = true;
 
   const onSubmit = (values, { setSubmitting, resetForm }) => {
+    if (values.accessType === 'Escada') {
+      values.accessType += ' Andar ';
+    }
+
     const requestCreateEstimate = {
       requester: {
         fullName: values.fullName,
@@ -70,11 +87,7 @@ function Modal(props) {
       residueAddress: {
         region: values.region,
         locationInfo:
-          values.accessType +
-          ' Andar: ' +
-          values.andar +
-          '  ' +
-          values.localDescription,
+          values.accessType + values.localDescription + values.andar,
       },
       residueRequest: {
         residueType: values.residueType,
@@ -99,6 +112,7 @@ function Modal(props) {
         });
     }, 400);
   };
+
   const showingField = (values) => {
     if (fieldText === true) {
       return (
@@ -118,6 +132,7 @@ function Modal(props) {
       return null;
     }
   };
+
   const showingFieldFloor = (values) => {
     if (fieldTextFloor === true) {
       return (
@@ -137,6 +152,7 @@ function Modal(props) {
       return null;
     }
   };
+
   function fieldTextTrueFloor(value) {
     if (value === 'Escada') {
       fieldTextFloor = true;
@@ -149,14 +165,17 @@ function Modal(props) {
       fieldTextFloor = false;
     }
   }
+
   function radioTrueMeasure(value) {
     if (value === 'Sacos') {
       radioMeasure = true;
     } else {
       fieldTextFloor = false;
       radioMeasure = false;
+      fieldText = false;
     }
   }
+
   const showingFieldAccessType = (values, handleChange, handleBlur) => {
     if (radioMeasure === true) {
       return (
@@ -184,6 +203,7 @@ function Modal(props) {
       return null;
     }
   };
+
   return (
     <BootstrapModal
       border="light"
@@ -193,6 +213,7 @@ function Modal(props) {
       <ModalHeader toggle={handlecloseWindow}>
         Solicite seu Orçamento
       </ModalHeader>
+
       <ModalBody>
         <Formik
           initialValues={initialValues}
@@ -210,8 +231,11 @@ function Modal(props) {
                 value={values.fullName}
                 onBlur={handleBlur}
               />
+
               <ErrorMessage component="div" name="fullName" />
+
               <br />
+
               <Row>
                 <Col className="col-sm-4">
                   <FormGroup>
@@ -248,7 +272,9 @@ function Modal(props) {
                   </FormGroup>
                 </Col>
               </Row>
+
               <br />
+
               <Row>
                 <Col>
                   <h4>Tipo de Coleta: </h4>
@@ -259,6 +285,7 @@ function Modal(props) {
                   <br />
                 </Col>
               </Row>
+
               <Row>
                 <Col lg="2">
                   <FormGroup>
@@ -270,10 +297,11 @@ function Modal(props) {
                         value="Caçambas"
                         onClick={radioTrueMeasure(values.residueMeasure)}
                       />
-                      <a> Caçamba</a>
+                      Caçamba
                     </Label>
                   </FormGroup>
                 </Col>
+
                 <Col lg="4">
                   <FormGroup>
                     <Label>
@@ -284,10 +312,11 @@ function Modal(props) {
                         value="Sacos"
                         onClick={radioTrueMeasure(values.residueMeasure)}
                       />
-                      <a> Sacos (Padrão 50 Litros)</a>
+                      Sacos (Padrão 50 Litros)
                     </Label>
                   </FormGroup>
                 </Col>
+
                 <Col className="col-lg-3">
                   <div id="quantity">
                     <Field
@@ -376,9 +405,10 @@ function Modal(props) {
                         name="checkedTerms"
                         value="Termos"
                       />
-                      <a> Li e concordo com os </a>{' '}
+                      Li e concordo com os
                       <a
                         target="_blank"
+                        rel="noopener noreferrer"
                         href="https://drive.google.com/file/d/1Wty-Il4oz36PuOWGeX35BWPTmGREShlE/view?usp=sharing"
                       >
                         Termos de Uso
@@ -386,6 +416,7 @@ function Modal(props) {
                       ,{' '}
                       <a
                         target="_blank"
+                        rel="noopener noreferrer"
                         href="https://drive.google.com/file/d/1bBGVCMWoQ7vtBpjMF1YWljt6p1GYY5E5/view?usp=sharing"
                       >
                         Política de Privacidade
@@ -393,6 +424,7 @@ function Modal(props) {
                       e as{' '}
                       <a
                         target="_blank"
+                        rel="noopener noreferrer"
                         href="https://drive.google.com/file/d/11Ao8wyvIDL1Yjus_Y8sZcaB-7Exau1wm/view?usp=sharing"
                       >
                         Normas e nomenclatura geral sobre LGPD

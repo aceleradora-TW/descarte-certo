@@ -13,5 +13,4 @@ public class EstimateRequest {
     private RequesterRequest requester;
     private ResidueAddressRequest residueAddress;
     private ResidueRequest residueRequest;
-    private String status;
 }
