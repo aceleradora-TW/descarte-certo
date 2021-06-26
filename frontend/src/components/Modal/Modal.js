@@ -350,7 +350,7 @@ function Modal(props) {
                     <option value="Somente Madeira" label="Somente Madeira" />
                     <option
                       value="Mix"
-                      label="Resíduos Misturados (mistura de resíduos de obra)"
+                      label="Resíduos Misturados (Mistura de resíduos de obra)"
                     />
                   </select>{' '}
                   <ErrorMessage component="div" name="residueType" />
