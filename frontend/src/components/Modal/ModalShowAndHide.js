@@ -29,7 +29,7 @@ const ModalAcceptance = ({ display }) => {
 const ContentModal = () => {
 
   const initialState = {
-  /*orderForm: true,*/
+  /*orderForm:  true,*/
     ModalConfirmation: true,
     ModalAcceptance: false
   }
