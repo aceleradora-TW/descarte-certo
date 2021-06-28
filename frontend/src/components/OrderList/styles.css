@@ -31,3 +31,24 @@
   justify-content: space-evenly;
   margin-top: 25px;
 }
+
+.export-all {
+  background-color: #04aa6d;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: #04aa6d;
+  font-size: 18px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: aliceblue;
+  position: absolute;
+  left: 44%;
+  margin: 30px;
+  transition-duration: 0.3s;
+}
+
+.export-all:hover {
+  background-color: #ffffff;
+  color: #04aa6d;
+  border-color: #04aa6d;
+}
