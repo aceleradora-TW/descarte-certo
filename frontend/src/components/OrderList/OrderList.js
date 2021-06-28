@@ -1,5 +1,5 @@
-import React from 'react'
-import './styles.css'
+import React from "react";
+import "./styles.css";
 
 const OrderList = ({ orders }) => {
   return (
@@ -19,22 +19,22 @@ const OrderList = ({ orders }) => {
         </tr>
       </thead>
       <tbody>
-        {orders.map(order => (
+        {orders.map((order) => (
           <tr>
             <td>{order.requester.fullName}</td>
             <td>{order.requester.cellphone}</td>
             <td>{order.requester.email}</td>
             <td>{order.residue.residueMeasure}</td>
-            <td></td>         
-            <td>{order.residue.residueType}</td>            
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>{order.residue.residueMeasure}</td>
+            <td>{order.residue.residueType}</td>
+            <td>{order.residueAddress.locationInfo}</td>
+            <td>{order.residueAddress.cep}</td>
+            <td>{order.creationDate}</td>
+            <td>{order.status}</td>
           </tr>
         ))}
       </tbody>
     </table>
-  )
-}
-export default OrderList
+  );
+};
+export default OrderList;
