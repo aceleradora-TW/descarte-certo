@@ -15,7 +15,9 @@ export const orders =[
         "residue": {
             "id": 1,
             "residueType": "Misto",
-            "residueMeasure": "Saco"
+            "residueMeasure": "Saco",
+            "quantity": "10",
+            "status": "criado"
         }
     },
     {
@@ -34,7 +36,9 @@ export const orders =[
         "residue": {
             "id": 2,
             "residueType": "Madeira",
-            "residueMeasure": "Saco"
+            "residueMeasure": "Saco",
+            "quantity": "10",
+            "status": "criado"
         }
     },
     {
@@ -53,7 +57,9 @@ export const orders =[
         "residue": {
             "id": 3,
             "residueType": "Madeira",
-            "residueMeasure": "Caçamba"
+            "residueMeasure": "Caçamba",
+            "quantity": "1",
+            "status": "criado"
         }
     },
     {
@@ -72,7 +78,9 @@ export const orders =[
         "residue": {
             "id": 4,
             "residueType": "Gesso",
-            "residueMeasure": "Saco"
+            "residueMeasure": "Saco",
+            "quantity": "10",
+            "status": "criado"
         }
     },
     {
@@ -91,7 +99,9 @@ export const orders =[
         "residue": {
             "id": 5,
             "residueType": "Misto",
-            "residueMeasure": "Caçamba"
+            "residueMeasure": "Caçamba",
+            "quantity": "2",
+            "status": "aceito"
         }
     },
     {
@@ -110,7 +120,9 @@ export const orders =[
         "residue": {
             "id": 6,
             "residueType": "Gesso",
-            "residueMeasure": "Saco"
+            "residueMeasure": "Saco",
+            "quantity": "11",
+            "status": "aceito"
         }
     },
     {
@@ -129,7 +141,9 @@ export const orders =[
         "residue": {
             "id": 7,
             "residueType": "Misto",
-            "residueMeasure": "Caçamba"
+            "residueMeasure": "Caçamba",
+            "quantity": "4",
+            "status": "aceito"
         }
     },
     {
@@ -148,7 +162,9 @@ export const orders =[
         "residue": {
             "id": 8,
             "residueType": "Caliça",
-            "residueMeasure": "Saco"
+            "residueMeasure": "Saco",
+            "quantity": "14",
+            "status": "aceito"
         }
     },
     {
@@ -167,7 +183,9 @@ export const orders =[
         "residue": {
             "id": 9,
             "residueType": "Mdeira",
-            "residueMeasure": "Saco"
+            "residueMeasure": "Saco",
+            "quantity": "8",
+            "status": "aceito"
         }
     }
 ]
