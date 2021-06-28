@@ -13,20 +13,20 @@ function Awards() {
       <h3>Nossas Conquistas</h3>
       <div clasName="logos-section">
         <div className="awards-div">
+          <img className="awards-logo"  width="170px" src={LogoFounder} alt="Logo tipo do Founder Institute"></img>
+          <img className="awards-logo"  width="100" src={LogoAgil} alt="Logo tipo da Aceleradora Ágil" ></img>
+          <img className="awards-logo"  width="180px" src={LogoGarage} alt="Logo tipo da Aceleradora Ágil" ></img>
+          <img className="awards-logo"  width="130" src={logoCreathon} alt="Logo tipo da Aceleradora Ágil" ></img>
+          <img className="awards-logo" width="220px" src={logoGoogle} alt="Logo tipo da Aceleradora Ágil" ></img>
+          <img className="awards-logo" width="165px" src={logoIclei} alt="Logo tipo da Aceleradora Ágil" ></img>
+        </div>
+        <div className="awards-div-mobile" >
           <img className="awards-logo"  width="120px" src={LogoFounder} alt="Logo tipo do Founder Institute"></img>
           <img className="awards-logo"  width="70" src={LogoAgil} alt="Logo tipo da Aceleradora Ágil" ></img>
           <img className="awards-logo"  width="130px" src={LogoGarage} alt="Logo tipo da Aceleradora Ágil" ></img>
           <img className="awards-logo"  width="80" src={logoCreathon} alt="Logo tipo da Aceleradora Ágil" ></img>
           <img className="awards-logo" width="150px" src={logoGoogle} alt="Logo tipo da Aceleradora Ágil" ></img>
-          <img className="awards-logo" width="115px" src={logoIclei} alt="Logo tipo da Aceleradora Ágil" ></img>
-        </div>
-        <div className="awards-div-mobile" >
-        <img className="awards-logo"  width="120px" src={LogoFounder} alt="Logo tipo do Founder Institute"></img>
-          <img className="awards-logo"  width="70" src={LogoAgil} alt="Logo tipo da Aceleradora Ágil" ></img>
-          <img className="awards-logo"  width="130px" src={LogoGarage} alt="Logo tipo da Aceleradora Ágil" ></img>
-          <img className="awards-logo"  width="80" src={logoCreathon} alt="Logo tipo da Aceleradora Ágil" ></img>
-          <img className="awards-logo" width="150px" src={logoGoogle} alt="Logo tipo da Aceleradora Ágil" ></img>
-          <img className="awards-logo" width="115px" src={logoIclei} alt="Logo tipo da Aceleradora Ágil" ></img>
+          <img className="awards-logo" width="90px" src={logoIclei} alt="Logo tipo da Aceleradora Ágil" ></img>
         </div>
       </div>
    </section>

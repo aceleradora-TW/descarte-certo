@@ -29,7 +29,6 @@ img.awards-logo {
     align-items: center;
     margin: 0 2vw;
   }
-
 }
 
 @media only screen and (min-width:991px) and (max-width:3006px){
@@ -44,7 +43,4 @@ img.awards-logo {
     align-items: center;
     margin: 0 10vw;
   }
-  
 }
-
-/* #TODO: Ajustar responsividade */
