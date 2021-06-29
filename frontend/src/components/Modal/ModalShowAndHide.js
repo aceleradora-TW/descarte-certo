@@ -10,23 +10,23 @@ import ModalConfirmation from '../ModalConfirmation';
       <input onClick={onClick} type="button" name="confirmOrder" value="Enviar" />
     </div>
   ) : null
-}*/
+  */
 //Modal confirmation/confirm order
-const ModalConfirmation = ({ display, onClick }) => {
+const ModalConfirmation2 = ({ display, onClick }) => {
   return display ? (
     <div className="modal-container">
       <input onClick={onClick} type="button" name="btn-approve" value="Aprovar e Agendar" />
     </div>) : null
 }
 //Modal acceptance/finish order
-const ModalAcceptance = ({ display }) => {
+const ModalAcceptance2 = ({ display }) => {
   return display ? (
     <div className="acceptance-content">
     </div>
   ) : null
 }
 
-const ContentModal = () => {
+const ModalShowAndHide = () => {
 
   const initialState = {
   /*orderForm:  true,*/
