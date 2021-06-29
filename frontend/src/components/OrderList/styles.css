@@ -12,7 +12,7 @@
 
 .order-list-title th,
 .order-list-title td {
-  padding: 15px;
+  padding: 13px;
   text-align: center;
   border-bottom: 1px solid #ddd;
   justify-content: center;
@@ -30,4 +30,30 @@
   display: flex;
   justify-content: space-evenly;
   margin-top: 25px;
+}
+
+.export-button{
+  position: relative;
+  left: 40%;
+  bottom: 1%;
+}
+
+.export-all {
+  background-color: #04aa6d;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: #04aa6d;
+  font-size: 18px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: aliceblue;
+  margin: 30px;
+  margin-bottom: 15px;
+  transition-duration: 0.3s;
+}
+
+.export-all:hover {
+  background-color: #ffffff;
+  color: #04aa6d;
+  border-color: #04aa6d;
 }

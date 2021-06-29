@@ -1,8 +1,10 @@
 import React from 'react'
 import './styles.css'
+import ExportAll from './ExportButton'
 
 const OrderList = ({ orders }) => {
-  return (
+  return (<>
+  <div className="table-body">
     <table>
       <thead>
         <tr>
@@ -21,20 +23,25 @@ const OrderList = ({ orders }) => {
       <tbody>
         {orders.map(order => (
           <tr>
-            <td>{order.requester.fullName}</td>
-            <td>{order.requester.cellphone}</td>
-            <td>{order.requester.email}</td>
-            <td>{order.residue.residueMeasure}</td>
-            <td></td>         
-            <td>{order.residue.residueType}</td>            
+            <td>{order.fullName}</td>
+            <td>{order.cellphone}</td>
+            <td>{order.email}</td>
+            <td>{order.residueMeasure}</td>
+            <td>{order.quantity}</td>         
+            <td>{order.residueType}</td>            
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
+            <td>{order.status}</td>
           </tr>
         ))}
       </tbody>
     </table>
+    <div className="export-button">
+      <ExportAll/>
+    </div>
+    </div>
+    </>
   )
 }
 export default OrderList
