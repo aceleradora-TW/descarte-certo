@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-
 import ModalAcceptance from '../ModalAcceptance';
 import ModalConfirmation from '../ModalConfirmation';
 
