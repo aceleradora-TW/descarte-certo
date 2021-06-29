@@ -32,6 +32,12 @@
   margin-top: 25px;
 }
 
+.export-button{
+  position: relative;
+  left: 40%;
+  bottom: 1%;
+}
+
 .export-all {
   background-color: #04aa6d;
   border-style: solid;
@@ -41,34 +47,12 @@
   padding-left: 10px;
   padding-right: 10px;
   color: aliceblue;
-  position: absolute;
-  left: 44%;
-  bottom: 1%;
   margin: 30px;
   margin-bottom: 15px;
   transition-duration: 0.3s;
 }
 
 .export-all:hover {
-  background-color: #ffffff;
-  color: #04aa6d;
-  border-color: #04aa6d;
-}
-
-.export-one{
-  background-color: #04aa6d;
-  border-style: solid;
-  border-radius: 10px;
-  border-color: #04aa6d;
-  font-size: 15px;
-  padding-left: 6px;
-  padding-right: 6px;
-  padding-bottom: 2px;
-  color: aliceblue;
-  transition-duration: 0.3s;
-}
-
-.export-one:hover {
   background-color: #ffffff;
   color: #04aa6d;
   border-color: #04aa6d;

@@ -4,6 +4,7 @@ import ExportAll from './ExportButton'
 
 const OrderList = ({ orders }) => {
   return (<>
+  <div className="table-body">
     <table>
       <thead>
         <tr>
@@ -38,6 +39,7 @@ const OrderList = ({ orders }) => {
     </table>
     <div className="export-button">
       <ExportAll/>
+    </div>
     </div>
     </>
   )
