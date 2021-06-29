@@ -2,28 +2,31 @@ import React, { useState, useEffect } from "react";
 import "./styles.css";
 import OrderList from "./OrderList";
 import axios from "axios";
-//import Pagination from "./Pagination";
-import ReactPaginate from "react-paginate";
+import Pagination from "./Pagination";
+// import ReactPaginate from "react-paginate";
 
 function OrderListComponent() {
+
+
   const [orders, setOrders] = useState("");
-  const [pageNumber, setPageNumber] = useState(0);
+  let [pageNumber, setPageNumber] = useState(0);
+  
 
-  const ordersPerPage = 2;
-  const pagesVisited = pageNumber * ordersPerPage;
 
-  axios
-    .get("https://descartecerto.herokuapp.com/estimate/all?totalPage=2")
-    .then((res) => {
-      console.log(res.data.content);
-      setOrders(res.data.content);
-      setPageNumber(res.data.pageSize);
-    });
+  useEffect(() => {
+    const url = new URL(window.location.href.replace("/#",""))
+    const page = url.searchParams.get("page")
+    
+    axios
+      .get(`https://descartecerto.herokuapp.com/estimate/all?page=${page}&totalPage=1`)
+      .then((res) => {
+        setOrders(res.data.content);
+        setPageNumber(res.data.totalPages);
+      });
 
-  const pageCount = Math.ceil(orders.length / ordersPerPage);
-  const changePage = ({ selected }) => {
-    setPageNumber(selected);
-  };
+  }, [pageNumber])
+
+  
 
   return (
     <div className="container-order-list">
@@ -31,8 +34,8 @@ function OrderListComponent() {
         {orders.length > 0 ? (
           <>
             <OrderList orders={orders} />
-            {/* <Pagination totalPages={pageNumber} /> */}
-            <ReactPaginate
+            <Pagination totalPages={pageNumber} />
+            {/* <ReactPaginate
               previousLabel={"Previous"}
               nextLabel={"Next"}
               pageCount={pageCount}
@@ -42,7 +45,7 @@ function OrderListComponent() {
               nextLinkClassName={"nextBtn"}
               disabledClassName={"paginationDisabled"}
               activeLinkClassName={"paginationActive"}
-            />
+            /> */}
           </>
         ) : (
           <h2>Não há orçamentos disponíveis</h2>

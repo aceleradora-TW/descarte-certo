@@ -2,6 +2,7 @@ import React from "react";
 import "./styles.css";
 
 const OrderList = ({ orders }) => {
+  
   return (
     <table>
       <thead>
@@ -20,7 +21,7 @@ const OrderList = ({ orders }) => {
       </thead>
       <tbody>
         {orders.map((order) => (
-          <tr>
+          <tr key={order.id}>
             <td>{order.requester.fullName}</td>
             <td>{order.requester.cellphone}</td>
             <td>{order.requester.email}</td>

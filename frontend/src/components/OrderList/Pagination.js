@@ -1,19 +1,18 @@
-import React from "react";
+import React  from "react";
+import { Link } from 'react-router-dom'
 import "./styles.css";
 
-const Pagination = ({ totalPages }) => {
-  const createPages = (qtValue) => {
+const Pagination = ({ pages }) => {
+  const createPages = () => {
     let rows = [];
-    for (let i = 1; i <= qtValue; i++) {
-      rows.push(<a href="/#">{i}</a>);
+    for (let i = 1; i <= pages; i++) {
+      rows.push(<Link to={`/orcamentos?page=${i}`}>{i}</Link>);
     }
     return rows;
   };
   return (
-    <div className="paginator-container">
-      <a href="/#">&laquo;</a>
-      {createPages(totalPages)}
-      <a href="/#">&raquo;</a>
+    <div className="paginator-container">      
+      {createPages()}
     </div>
   );
 };
