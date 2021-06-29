@@ -15,13 +15,13 @@ class ExportAll extends React.Component{
                         <ExcelColumn label="Nome" value="fullName" />
                         <ExcelColumn label="Telefone" value="cellphone" />
                         <ExcelColumn label="Email" value="email" />
-                        <ExcelColumn label="Tipo de Coleta" value="..." />
-                        <ExcelColumn label="Quantidade" value="residueMeasure" />
+                        <ExcelColumn label="Quantidade" value="quantity" />
+                        <ExcelColumn label="Tipo de coleta" value="residueMeasure" />
                         <ExcelColumn label="Material" value="residueType" />
                         <ExcelColumn label="Acesso" value="..." />
                         <ExcelColumn label="Região" value="..." />
                         <ExcelColumn label="Data" value="..." />   
-                        <ExcelColumn label="Status" value="..." />  
+                        <ExcelColumn label="Status" value="status" />  
                     </ExcelSheet>
                 </ExcelFile>
         );
