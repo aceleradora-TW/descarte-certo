@@ -5,17 +5,14 @@ import axios from "axios";
 import Pagination from "./Pagination";
 // import ReactPaginate from "react-paginate";
 
-function OrderListComponent() {
-
-
+const OrderListComponent = () => {
   const [orders, setOrders] = useState("");
   let [pageNumber, setPageNumber] = useState(0);
-  
 
-
-  useEffect(() => {
+  useEffect(() => {    
     const url = new URL(window.location.href.replace("/#",""))
-    const page = url.searchParams.get("page")
+    const page = url.searchParams.get("page") || 0
+    console.log(page)
     
     axios
       .get(`https://descartecerto.herokuapp.com/estimate/all?page=${page}&totalPage=1`)
@@ -34,7 +31,7 @@ function OrderListComponent() {
         {orders.length > 0 ? (
           <>
             <OrderList orders={orders} />
-            <Pagination totalPages={pageNumber} />
+            <Pagination pages={pageNumber} />
             {/* <ReactPaginate
               previousLabel={"Previous"}
               nextLabel={"Next"}

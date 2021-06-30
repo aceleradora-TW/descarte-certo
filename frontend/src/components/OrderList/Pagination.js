@@ -6,10 +6,13 @@ const Pagination = ({ pages }) => {
   const createPages = () => {
     let rows = [];
     for (let i = 1; i <= pages; i++) {
-      rows.push(<Link to={`/orcamentos?page=${i}`}>{i}</Link>);
+      rows.push(<Link onClick={()=>{}}to={`/orcamentos?page=${i-1}`}>{i}</Link>);
     }
     return rows;
   };
+
+  // const totalpages 
+  // const currentPage
   return (
     <div className="paginator-container">      
       {createPages()}
