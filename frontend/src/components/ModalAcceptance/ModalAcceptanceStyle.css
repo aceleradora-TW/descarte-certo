@@ -21,7 +21,7 @@ button.acceptance-close-btn {
 h3.acceptance-title {
   grid-row: 2/3;
   grid-column: 2/3;
-  font-size: 2.5rem;
+  font-size: clamp(1.5rem, 2.5vw, 2.3rem);
   font-weight: bold;
   color: #303C5B;
   align-self: center;
@@ -33,7 +33,7 @@ p.acceptance-text {
   grid-column: 2/3;
   align-self: center;
   color: #505051;
-  font-size: 1.8rem;
+  font-size: clamp(1rem, 1.7vw, 1.8rem);
   margin: 0;
   line-height: 2rem;
 }
