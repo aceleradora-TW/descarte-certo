@@ -37,3 +37,10 @@ p.acceptance-text {
   margin: 0;
   line-height: 2rem;
 }
+
+/* ======= 
+#TODO: fazer media query para resoluções menores
+  #TODO: solucionar centralização do texto
+  #TODO: botão close dentro da caixa
+  #TODO: tamanhos das fontes
+*/
