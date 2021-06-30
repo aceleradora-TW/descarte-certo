@@ -37,9 +37,9 @@ const OrderList = ({ orders }) => {
         ))}
       </tbody>
     </table>
-    <div className="export-button">
+    {/* <div className="export-button">
       <ExportAll/>
-    </div>
+    </div> */}
     </div>
     </>
   )
