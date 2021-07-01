@@ -2,23 +2,28 @@ import React, { useState } from "react";
 import "./styles.css";
 import OrderList from "./OrderList";
 import axios from "axios";
-// import NavBarComponent from '../NavBar/index'
+import { Nav } from "react-bootstrap";
+import IconBack from "../images/iconevoltar.png";
+
 
 
 const OrderListComponent = () => {
   const [orders, setOrders] = useState("");
-  const [pageNumber, setPageNumber] = useState(0);    
+      
       
   axios
     .get(`https://descartecerto.herokuapp.com/estimate/all`)
     .then((res) => {
         setOrders(res.data.content);
-        setPageNumber(res.data.totalPages);
+        
       })  
 
   return (
-    <>
-    
+  <>
+  <Nav.Link href="/">
+        <img alt="userIcone" className="imgIcons" src={IconBack}></img>
+      </Nav.Link>
+      
     <div className="container-order-list">
       <div className="order-list-title">
         {orders.length > 0 

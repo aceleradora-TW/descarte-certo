@@ -2,14 +2,13 @@ import React from "react";
 import "./styles.css";
 import { useState } from "react";
 import ReactPaginate from "react-paginate";
-import axios from 'axios';
+
 
 const OrderList = ({ orders }) => {
-  const [order, setOrder] = useState("");
   const [pageNumber, setPageNumber] = useState(0);
-  const usersPerPage = 5;
-  const pagesVisited = pageNumber * usersPerPage;
-  const pageCount = Math.ceil(orders.length / usersPerPage);
+  const ordersPerPage = 5;
+  const pagesVisited = pageNumber * ordersPerPage;
+  const pageCount = Math.ceil(orders.length / ordersPerPage);
 
   const changePage = ({ selected }) => {
     setPageNumber(selected);
@@ -31,7 +30,7 @@ const OrderList = ({ orders }) => {
         </tr>
       </thead>
       <tbody>
-        {orders.slice(pagesVisited, pagesVisited + usersPerPage)
+        {orders.slice(pagesVisited, pagesVisited + ordersPerPage)
         .map((order) => (
           <tr key={order.id}>
             <td>{order.creationDate}</td>
