@@ -29,15 +29,15 @@ const ModalShowAndHide = () => {
 
   const initialState = {
   /*orderForm:  true,*/
-    ModalConfirmation: true,
-    ModalAcceptance: false
+    ModalConfirmation2: true,
+    ModalAcceptance2: false
   }
 
   const [contentControler, setContentControler] = useState(initialState)
  
   const controlDisplayContent = (e) => {
     const { name } = e.target
-    setContentControler({ ModalConfirmation: true, ModalAcceptance: false })/*TODO: acrescentar orderForm: false,*/
+    setContentControler({ ModalConfirmation2: true, ModalAcceptance2: false })/*TODO: acrescentar orderForm: false,*/
     setContentControler({ [name]: true })
   }
 
@@ -53,3 +53,9 @@ const ModalShowAndHide = () => {
 }
 
 export default ModalShowAndHide
+
+
+/* ========
+#TODO: puxar a modal nº 1
+#TODO: refatorar nomes
+*/
