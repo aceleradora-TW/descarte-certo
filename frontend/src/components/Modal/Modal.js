@@ -385,7 +385,7 @@ function Modal(props) {
                   </select>{' '}
                   <ErrorMessage className="error"component="div" name="region" />
                 </Col>
-              </Row>
+              </Row> 
               <Row>
                 <Col className="col-sm-6">
                   {showingFieldAccessType(values, handleChange, handleBlur)}
