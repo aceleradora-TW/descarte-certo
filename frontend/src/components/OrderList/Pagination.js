@@ -1,12 +1,17 @@
 import React  from "react";
-import { Link } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import "./styles.css";
 
 const Pagination = ({ pages }) => {
+  const history = useHistory()
   const createPages = () => {
     let rows = [];
-    for (let i = 1; i <= pages; i++) {
-      rows.push(<Link onClick={()=>{}}to={`/orcamentos?page=${i-1}`}>{i}</Link>);
+    for (let i = 0; i <= (pages - 1); i++) {
+      rows.push(<button id={`page=${i}`} onClick={(e)=>{
+        const { id } = e.target
+        history.push(`/orcamentos?${id}`)
+        window.location.reload()
+      }}>{i + 1}</button>);
     }
     return rows;
   };
