@@ -20,7 +20,7 @@ public class EstimateConverterService {
                                 .build()
                 )
                 .residueAddress(ResidueAddress.builder()
-                        .cep(request.getResidueAddress().getCep())
+                        .region(request.getResidueAddress().getRegion())
                         .locationInfo(request.getResidueAddress().getLocationInfo())
                         .build()
                 )
