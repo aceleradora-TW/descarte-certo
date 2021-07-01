@@ -42,7 +42,7 @@ public class EstimateController {
     @PutMapping(path = "/{id}/confirm")
     @ResponseStatus(HttpStatus.OK)
     public Estimate confirm(@PathVariable int id) {
-        Estimate estimate= estimateService.updateStatus(id);
+        Estimate estimate = estimateService.updateStatus(id);
         //Não remover as linhas abaixo.
         //estimateService.sendEmail(estimate,"entulhinho@gmail.com");
         //estimateService.sendEmail(estimate,"retroentulho@hotmail.com");
