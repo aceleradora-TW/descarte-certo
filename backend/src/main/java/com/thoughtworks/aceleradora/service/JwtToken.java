@@ -37,7 +37,4 @@ public class JwtToken {
         DecodedJWT jwt = verifier.verify(token);
     }
 
-    public String getToken() {
-		return this.token;
-	}
 }

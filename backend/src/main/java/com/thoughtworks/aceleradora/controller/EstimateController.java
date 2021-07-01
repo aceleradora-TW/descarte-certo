@@ -2,12 +2,15 @@ package com.thoughtworks.aceleradora.controller;
 
 import com.thoughtworks.aceleradora.controller.request.EstimateRequest;
 import com.thoughtworks.aceleradora.controller.response.EstimateResponse;
+import com.thoughtworks.aceleradora.service.Authorize;
 import com.thoughtworks.aceleradora.service.EstimateService;
 import com.thoughtworks.aceleradora.entity.Estimate;
 import com.thoughtworks.aceleradora.exception.EstimateNotFoundException;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+
+import javax.ws.rs.GET;
 import java.util.Optional;
 
 
@@ -44,6 +47,8 @@ public class EstimateController {
                 .updateStatus(id);
     }
 
+    @Authorize
+    @GET
     @GetMapping(path = "/all")
     @ResponseStatus(HttpStatus.OK)
     public Page<Estimate> getAll(
@@ -51,6 +56,7 @@ public class EstimateController {
             @RequestParam Optional<Integer> totalPage,
             @RequestParam Optional<String> sortBy
     ) {
+
         return estimateService
                 .getAllEstimates(page, sortBy, totalPage);
     }
