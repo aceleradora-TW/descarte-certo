@@ -37,11 +37,18 @@ public class EstimateController {
                 .orElseThrow(() -> new EstimateNotFoundException(id));
     }
 
+
+
     @PutMapping(path = "/{id}/confirm")
     @ResponseStatus(HttpStatus.OK)
     public Estimate confirm(@PathVariable int id) {
-        return estimateService
-                .updateStatus(id);
+        Estimate estimate= estimateService.updateStatus(id);
+        //Não remover as linhas abaixo.
+        //estimateService.sendEmail(estimate,"entulhinho@gmail.com");
+        //estimateService.sendEmail(estimate,"retroentulho@hotmail.com");
+        estimateService.sendEmail(estimate, estimate.getRequester().getEmail());
+
+        return estimate;
     }
 
     @GetMapping(path = "/all")
