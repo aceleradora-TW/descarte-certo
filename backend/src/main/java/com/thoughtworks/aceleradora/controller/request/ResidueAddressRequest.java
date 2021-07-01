@@ -10,6 +10,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ResidueAddressRequest {
-    private String cep;
+    private String region;
     private String locationInfo;
 }

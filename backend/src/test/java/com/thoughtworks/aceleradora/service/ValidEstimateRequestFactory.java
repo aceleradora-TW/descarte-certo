@@ -17,7 +17,7 @@ public class ValidEstimateRequestFactory {
                         .email("HodineyGatinho69@gmail.com")
                         .build())
                 .residueAddress(ResidueAddressRequest.builder()
-                        .cep("900000000")
+                        .region("900000000")
                         .locationInfo("Tem Elevador")
                         .build())
                 .residueRequest(ResidueRequest.builder()
