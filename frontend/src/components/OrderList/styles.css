@@ -1,5 +1,5 @@
-.order-list-title {
-  display: grid;
+/* .order-list-title {
+  display: block;
   justify-content: center;
   border-collapse: collapse;
   width: 100%;
@@ -23,11 +23,95 @@
 }
 .order-list-title tr:nth-child(even) {
   background-color: #f2f2f2;
-}
+} */
 
+
+/* Estilo da Paginação */
 .paginator-container {
   display: inline-block;
   display: flex;
   justify-content: space-evenly;
   margin-top: 25px;
 }
+
+.paginationBttns {
+  padding-top: 50px;
+  width: 90%;
+  height: 40px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.paginationBttns a {
+  padding: 10px;
+  margin: 8px;
+  border-radius: 5px;
+  border: 1px solid #0DC5A8;
+  color: #0DC5A8;
+  cursor: pointer;
+}
+
+.paginationBttns a:hover {
+  color: white;
+  background-color: #0DC5A8;
+}
+
+.paginationActive a {
+  color: white;
+  background-color: #0DC5A8;
+}
+
+.paginationDisabled a {
+  display: none;
+  color: grey;
+  background-color: grey;
+}
+
+/* Estilo da Tabela */
+.content-table {
+  width: 95vw;
+  border-collapse: collapse;
+  margin: 25px 30px;
+  font-size: 0.9em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
+  text-align: center;
+}
+
+
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.content-table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+
+/* .container-order-list {
+  border: solid 4px black;
+} */
+
