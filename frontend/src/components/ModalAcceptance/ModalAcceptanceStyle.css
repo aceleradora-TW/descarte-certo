@@ -1,3 +1,4 @@
+
 div.acceptance-content {
   margin: 2.5vh;
   display: grid;
@@ -36,6 +37,26 @@ p.acceptance-text {
   font-size: clamp(1rem, 1.7vw, 1.8rem);
   margin: 0;
   line-height: 2rem;
+}
+
+br.breakTitle{
+  display: none;
+}
+
+@media only screen and (min-width: 451px) {
+  div.acceptance-content {
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-rows: 3vh 3fr 2fr;
+  } 
+}
+
+@media only screen and (max-width: 464px) {
+  br.breakTitle{
+    display: inline;
+  }
+  br.breakLine{
+    display:none;
+  }
 }
 
 
