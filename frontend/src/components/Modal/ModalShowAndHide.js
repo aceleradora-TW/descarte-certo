@@ -18,9 +18,10 @@ const ModalConfirmation2 = ({ display, onClick }) => {
     </div>) : null
 }
 //Modal acceptance/finish order
-const ModalAcceptance2 = ({ display }) => {
+const ModalAcceptance2 = ({ display, onClick }) => {
   return display ? (
     <div className="acceptance-content">
+      <input onClick={onclick} type="button" className="acceptance-close-btn"/>
     </div>
   ) : null
 }
