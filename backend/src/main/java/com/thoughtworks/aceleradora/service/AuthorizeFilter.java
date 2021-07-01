@@ -27,8 +27,7 @@ public class AuthorizeFilter implements ContainerRequestFilter {
 
             Algorithm algorithm = Algorithm.HMAC256("secret");
             JWTVerifier verifier = JWT.require(algorithm)
-                    .withIssuer("auth0")
-                    .build(); //Reusable verifier instance
+                    .build();
             DecodedJWT jwt = verifier.verify(token);
 
 

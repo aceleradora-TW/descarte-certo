@@ -22,8 +22,7 @@ public class LoginController {
         Optional<String> data = login.returnLogin(user.getEmail(), user.getPassword());
 
         if (data.isPresent()) {
-            JwtToken token = new JwtToken(data.get());
-            return token;
+            return new JwtToken(data.get());
         }else{
             throw new UserNotFoundException("Usuario não encontrado! Verifique se os dados foram digitados corretamente.");
         }
