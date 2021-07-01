@@ -2,7 +2,7 @@ div.acceptance-content {
   margin: 2.5vh;
   display: grid;
   grid-template-columns: 1fr 8fr 1fr;
-  grid-template-rows: 1fr 5fr 4fr;
+  grid-template-rows: 3vh 3fr 2fr;
   font-family: 'Montserrat', sans-serif;
   text-align: center;
 }
@@ -37,6 +37,8 @@ p.acceptance-text {
   margin: 0;
   line-height: 2rem;
 }
+
+
 
 /* ======= 
 #TODO: fazer media query para resoluções menores
