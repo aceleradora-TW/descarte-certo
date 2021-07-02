@@ -52,7 +52,7 @@
   border-radius: 10px;
   border-color: lightgray;
   height: 50px;
-  color: gray;
+  color: black;
   width: 100%;
 }
 
@@ -76,7 +76,13 @@
   padding-left: 0px;
   margin-left: 0px;
 }
-
+#quantity{
+ position: relative;
+ top: -25px;   
+ left:7px;
+ width: 100px;
+ border-radius: 100px;
+}
 #quantity ::-webkit-input-placeholder {
   text-align: center;
 }
@@ -95,5 +101,13 @@
 .h4, h4{
   font-size: 1.25rem;
 }
+.error{
+    color: red;
+    padding-right: 15px;
+    white-space: nowrap;
+   
+}
 
-
+.submitSuccess{
+    width: 10px;
+}
