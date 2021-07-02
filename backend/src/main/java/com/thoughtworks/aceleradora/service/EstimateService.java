@@ -25,6 +25,7 @@ public class EstimateService {
     }
 
     public void configureMailFactory(String email) {
+        System.out.println("===== EMAIL" + email);
         this.mailFactory.setEmailReceiver(email);
     }
 

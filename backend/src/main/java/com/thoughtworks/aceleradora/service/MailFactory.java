@@ -23,9 +23,9 @@ public class MailFactory {
         this.emailSender = emailSender;
         this.emailReceiver = emailReceiver;
     }
+
     public void setEmailReceiver (String email){
         this.emailReceiver = email;
-
     }
 
     public JsonNode sendMessage(String mailBody) throws UnirestException {
