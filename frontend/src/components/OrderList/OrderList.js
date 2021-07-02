@@ -3,19 +3,22 @@ import "./styles.css";
 import { useState } from "react";
 import ReactPaginate from "react-paginate";
 
+import ReactHTMLTableToExcel from 'react-html-table-to-excel'
 
-const OrderList = ({ orders }) => {
+
+const OrderList = ({ orders}) => {
   const [pageNumber, setPageNumber] = useState(0);
-  const ordersPerPage = 5;
-  const pagesVisited = pageNumber * ordersPerPage;
-  const pageCount = Math.ceil(orders.length / ordersPerPage);
-
+  const ordersPerPage1 = 5
+  console.log(orders)
+  const pagesVisited = pageNumber * ordersPerPage1;
+  const pageCount = Math.ceil(orders.length / ordersPerPage1)
   const changePage = ({ selected }) => {
     setPageNumber(selected);
   };
   
-  return (<>
-    <table className="content-table">
+  return (
+  <>
+    <table className="content-table" id="emp-table">
       <thead>
         <tr>
           <th>Data</th>
@@ -28,9 +31,9 @@ const OrderList = ({ orders }) => {
           <th>Região</th>
           <th>Status</th>
         </tr>
-      </thead>
-      <tbody>
-        {orders.slice(pagesVisited, pagesVisited + ordersPerPage)
+        </thead>
+        <tbody>
+        {orders.slice(pagesVisited, pagesVisited + ordersPerPage1)
         .map((order) => (
           <tr key={order.id}>
             <td>{order.creationDate}</td>
@@ -46,6 +49,16 @@ const OrderList = ({ orders }) => {
         ))}        
       </tbody>      
     </table>
+    <div className="btn-wrapper">
+<ReactHTMLTableToExcel
+className="btn-export"
+table="emp-table"
+filename="Emp Excel file"
+sheet="Sheet"
+buttonText="Export to Excel"
+/>
+</div>
+      
     <ReactPaginate
         previousLabel={"Anterior"}
         nextLabel={"Próximo"}

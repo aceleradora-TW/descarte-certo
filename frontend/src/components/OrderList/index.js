@@ -9,12 +9,16 @@ import IconBack from "../images/iconevoltar.png";
 
 const OrderListComponent = () => {
   const [orders, setOrders] = useState("");
+  // const [page, setPage] = useState();
+  // const [ordersPerPage, setOrdersPerPage] = useState()
       
       
   axios
     .get(`https://descartecerto.herokuapp.com/estimate/all`)
     .then((res) => {
         setOrders(res.data.content);
+        // setPage(res.data.totalPages)
+        // setOrdersPerPage(res.data.size)
         
       })  
 
@@ -28,7 +32,10 @@ const OrderListComponent = () => {
       <div className="order-list-title">
         {orders.length > 0 
         ? (
-        <OrderList orders={orders} />)
+        <OrderList orders={orders}
+          // page={page}
+          // ordersPerPage={ordersPerPage} 
+          />)
         : (
           <h2>Não há orçamentos disponíveis</h2>
         )}
