@@ -18,27 +18,17 @@
 }
 
 .btn.form-button{
-    background-color:#333333;
-    color: #ffffff !important;
-    width: 25%;
-    text-align: center;
-    font-size: 14px;
-    float: right;
-    font-family: 'Montserrat', sans-serif;
+  background-color:#333333;
+  color: #ffffff !important;
+  width: 25%;
+  text-align: center;
+  font-size: small;
+  float: right;
 }
 
 .btn.form-button:active{
-    background-color:#333333 !important;
-    box-shadow: -1px -1px #878787!important; 
-}
-
-.btn.form-button:hover{
-  background-color:#ffffff;
-  color: #333333 !important;
-  border-width: 2px;
-  border-color: #333333;
-  font-family: 'Montserrat', sans-serif !important;
-  font-size: 14px;
+  background-color:#333333 !important;
+  box-shadow: -1px -1px #878787!important; 
 }
 
 .field-input{

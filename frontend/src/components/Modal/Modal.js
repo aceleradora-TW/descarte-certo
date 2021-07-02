@@ -406,13 +406,11 @@ function Modal(props) {
                         value="Termos"
                       />
                       Li e concordo com os
-                      <a
+                       <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://drive.google.com/file/d/1Wty-Il4oz36PuOWGeX35BWPTmGREShlE/view?usp=sharing"
-                      >
-                        Termos de Uso
-                      </a>
+                      > Termos de Uso</a>
                       ,{' '}
                       <a
                         target="_blank"
