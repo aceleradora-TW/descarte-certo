@@ -74,8 +74,8 @@ public class EstimateService {
         sb.append(estimateEntity.getRequester().getEmail());
         sb.append( System.getProperty("line.separator"));
 
-        sb.append("Cep: ");
-        sb.append(estimateEntity.getResidueAddress().getCep());
+        sb.append("Region: ");
+        sb.append(estimateEntity.getResidueAddress().getRegion());
         sb.append( System.getProperty("line.separator"));
 
         sb.append("Informações do local: ");
@@ -87,6 +87,7 @@ public class EstimateService {
         sb.append( System.getProperty("line.separator"));
         sb.append("Quantidade dos residuo: ");
         sb.append(estimateEntity.getResidue().getResidueMeasure());
+
         try {
             mailFactory.sendMessage(sb.toString());
         } catch (UnirestException e) {

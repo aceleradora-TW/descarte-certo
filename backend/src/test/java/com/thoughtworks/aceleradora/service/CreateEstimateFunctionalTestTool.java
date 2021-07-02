@@ -27,7 +27,7 @@ public class CreateEstimateFunctionalTestTool {
                                     .email("")
                                     .build())
                             .residueAddress(ResidueAddressRequest.builder()
-                                    .cep("00000000")
+                                    .region("00000000")
                                     .locationInfo("alguma coisa")
                                     .build())
                             .residueRequest(

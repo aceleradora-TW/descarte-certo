@@ -16,6 +16,6 @@ public class ResidueAddress {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
     private Integer id;
-    private String cep;
+    private String region;
     private String locationInfo;
 }
