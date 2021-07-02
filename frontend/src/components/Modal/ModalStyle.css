@@ -62,7 +62,7 @@
   border-radius: 10px;
   border-color: lightgray;
   height: 50px;
-  color: gray;
+  color: black;
   width: 100%;
 }
 
@@ -113,6 +113,11 @@
 }
 .error{
     color: red;
-    word-wrap: normal;
+    padding-right: 15px;
+    white-space: nowrap;
+   
 }
 
+.submitSuccess{
+    width: 10px;
+}

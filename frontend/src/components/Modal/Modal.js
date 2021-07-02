@@ -405,7 +405,7 @@ function Modal(props) {
                         name="checkedTerms"
                         value="Termos"
                       />
-                      Li e concordo com os
+                      Li e concordo com os 
                       <a
                         target="_blank"
                         rel="noopener noreferrer"
