@@ -277,7 +277,7 @@ function Modal(props) {
 
               <Row>
                 <Col>
-                <div id="coleta">
+                <div id="collectionType">
                   <h4>Tipo de Coleta: </h4>
                   <br />
                 </div>
@@ -292,7 +292,7 @@ function Modal(props) {
               <Row>
                 <Col lg="2">
                   <FormGroup>
-                    <Label className="colect">
+                    <Label className="bags">
                       <Field
                         type="radio"
                         className=""
@@ -307,7 +307,7 @@ function Modal(props) {
 
                 <Col lg="4">
                   <FormGroup>
-                    <Label className="colect">
+                    <Label className="bags">
                       <Field
                         type="radio"
                         className=""

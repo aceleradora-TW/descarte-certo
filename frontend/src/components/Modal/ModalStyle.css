@@ -125,11 +125,11 @@ select option {
 p{
   font-size: 13px;
 }
- .colect{
+ .bags{
    position:absolute;
    top: -18px;
  }
-#coleta{
+ #collectionType{
   position:absolute;
   top: 3px;
 }
