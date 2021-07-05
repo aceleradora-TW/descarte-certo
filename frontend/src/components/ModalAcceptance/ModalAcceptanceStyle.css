@@ -43,10 +43,9 @@ br.breakTitle{
   display: none;
 }
 
-@media only screen and (min-width: 451px) {
-  div.acceptance-content {
-    grid-template-columns: 1fr 8fr 1fr;
-    grid-template-rows: 3vh 3fr 2fr;
+@media only screen and (max-width: 451px) {
+  div.acceptance-content {    
+    grid-template-rows: 3vh 2.5fr 2fr;
   } 
 }
 
