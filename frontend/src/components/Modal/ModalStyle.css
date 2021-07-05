@@ -126,11 +126,8 @@
 }
 
 select {
-  color: black;
-}
-
-select {
   text-indent: 7px;
+  color: black;
 }
 select option {
   color: gray;
