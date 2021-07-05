@@ -43,6 +43,16 @@ br.breakTitle{
   display: none;
 }
 
+br.break-mobile{
+  display: none;
+}
+
+@media only screen and (max-width: 375.5px) {
+  br.break-mobile {
+    display: inline;
+  }
+}
+
 @media only screen and (max-width: 451px) {
   div.acceptance-content {    
     grid-template-rows: 3vh 2.5fr 2fr;
