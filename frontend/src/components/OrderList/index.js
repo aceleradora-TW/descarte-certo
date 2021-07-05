@@ -20,7 +20,7 @@ const OrderListComponent = () => {
   const findAllOrders = (currentPage) => {
     currentPage -= 1
     axios
-      .get(`https://descartecerto.herokuapp.com/estimate/all?page=${currentPage}`)
+      .get(`/estimate/all?page=${currentPage}`)
       .then((res) => {
         setOrders(res.data.content);
         setCurrentPage(res.data.number + 1)
