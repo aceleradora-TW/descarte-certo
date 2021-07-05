@@ -4,7 +4,6 @@ import com.thoughtworks.aceleradora.controller.request.EstimateRequest;
 import com.thoughtworks.aceleradora.controller.response.EstimateResponse;
 import com.thoughtworks.aceleradora.exception.AccessTokenDeniedException;
 import com.thoughtworks.aceleradora.service.AuthenticationService;
-import com.thoughtworks.aceleradora.service.Authorize;
 import com.thoughtworks.aceleradora.service.EstimateService;
 import com.thoughtworks.aceleradora.entity.Estimate;
 import com.thoughtworks.aceleradora.exception.EstimateNotFoundException;
@@ -49,8 +48,6 @@ public class EstimateController {
                 .updateStatus(id);
     }
 
-    @Authorize
-    @GET
     @GetMapping(path = "/all")
     @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<Page<Estimate>> getAll(
