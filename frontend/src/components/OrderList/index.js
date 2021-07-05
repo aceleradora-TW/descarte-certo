@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./styles.css";
-
 import axios from "axios";
 import { Nav } from "react-bootstrap";
 import IconBack from "../images/iconevoltar.png";
@@ -26,7 +25,7 @@ const OrderListComponent = () => {
         setCurrentPage(res.data.number + 1)
         setTotalElements(res.data.totalElements)
         setOrdersPerPage(res.data.size)
-      })
+      },[])
   }
 
   const firstPage = () => {
