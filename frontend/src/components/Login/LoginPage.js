@@ -8,7 +8,7 @@ import { useHistory } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Nav } from "react-bootstrap";
-import axios from "axios";
+import { post } from "../../services/client";
 
 function LoginPage() {
   const [user, setUser] = useState({ email: "", password: "" });
@@ -19,8 +19,7 @@ function LoginPage() {
 
   function handleLogin(e) {
     e.preventDefault();
-    axios
-      .post("/login", { ...user })
+    post("/login", { ...user })
       .then((res) => {
         localStorage.setItem("token-descarte-certo", res.data.token);
         toast.success("Usuario logado com sucesso!!");

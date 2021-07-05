@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import { post } from "../../services/client";
 import {
   Button,
   Modal as BootstrapModal,
@@ -9,17 +10,16 @@ import {
   FormGroup,
   Label,
   Alert,
-} from 'reactstrap';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
-import './ModalStyle.css';
-import { ERRORS } from '../../constant';
-import InputMask from 'react-input-mask';
-import * as yup from 'yup';
-import Axios from 'axios';
+} from "reactstrap";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import "./ModalStyle.css";
+import { ERRORS } from "../../constant";
+import InputMask from "react-input-mask";
+import * as yup from "yup";
 
 function Modal(props) {
   var accessTypeValidation;
-  if (props.residueMeasure === 'Sacos') {
+  if (props.residueMeasure === "Sacos") {
     accessTypeValidation = yup.string().required(ERRORS.REQUIRED_FIELD);
   } else {
     accessTypeValidation = yup.string();
@@ -27,7 +27,7 @@ function Modal(props) {
   const validationSchema = yup.object().shape({
     email: yup
       .string()
-      .email('e-mail inválido')
+      .email("e-mail inválido")
       .required(ERRORS.REQUIRED_FIELD),
     fullName: yup.string().required(ERRORS.REQUIRED_FIELD),
     region: yup.string().required(ERRORS.REQUIRED_FIELD),
@@ -54,19 +54,19 @@ function Modal(props) {
   const handleSubmitSuccess = (success) => setSubmitSuccess(success);
 
   const initialValues = {
-    fullName: '',
-    email: '',
-    cellphone: '',
-    region: '',
-    radio: '',
-    checkedTerms: '',
-    andar: '',
-    locationInfo: '',
-    localDescription: '',
-    residueType: '',
-    residueAmount: '',
-    residueMeasure: '',
-    accessType: '',
+    fullName: "",
+    email: "",
+    cellphone: "",
+    region: "",
+    radio: "",
+    checkedTerms: "",
+    andar: "",
+    locationInfo: "",
+    localDescription: "",
+    residueType: "",
+    residueAmount: "",
+    residueMeasure: "",
+    accessType: "",
   };
 
   let fieldText = false;
@@ -74,8 +74,8 @@ function Modal(props) {
   let radioMeasure = true;
 
   const onSubmit = (values, { setSubmitting, resetForm }) => {
-    if (values.accessType === 'Escada') {
-      values.accessType += ' Andar ';
+    if (values.accessType === "Escada") {
+      values.accessType += " Andar ";
     }
 
     const requestCreateEstimate = {
@@ -91,12 +91,12 @@ function Modal(props) {
       },
       residueRequest: {
         residueType: values.residueType,
-        residueMeasure: values.residueAmount + ' ' + values.residueMeasure,
+        residueMeasure: values.residueAmount + " " + values.residueMeasure,
       },
     };
     setTimeout(() => {
-      console.log('Requesting to backend /estimate');
-      Axios.post(`/estimate`, requestCreateEstimate)
+      console.log("Requesting to backend /estimate");
+      post(`/estimate`, requestCreateEstimate)
         .then(function (response) {
           console.log(JSON.stringify(values));
           handleSubmitSuccess(true);
@@ -154,10 +154,10 @@ function Modal(props) {
   };
 
   function fieldTextTrueFloor(value) {
-    if (value === 'Escada') {
+    if (value === "Escada") {
       fieldTextFloor = true;
       fieldText = false;
-    } else if (value === 'Outro') {
+    } else if (value === "Outro") {
       fieldTextFloor = false;
       fieldText = true;
     } else {
@@ -167,7 +167,7 @@ function Modal(props) {
   }
 
   function radioTrueMeasure(value) {
-    if (value === 'Sacos') {
+    if (value === "Sacos") {
       radioMeasure = true;
     } else {
       fieldTextFloor = false;
@@ -186,7 +186,7 @@ function Modal(props) {
             value={values.accessType}
             onChange={handleChange}
             onBlur={handleBlur}
-            style={{ display: 'block' }}
+            style={{ display: "block" }}
             onClick={fieldTextTrueFloor(values.accessType)}
             required
           >
@@ -195,7 +195,7 @@ function Modal(props) {
             <option value="Elevador" label="Elevador" />
             <option value="Terreo" label="Terreo" />
             <option value="Outro" label="Outro de difícil" />
-          </select>{' '}
+          </select>{" "}
           <ErrorMessage component="div" name="accessType" />
         </div>
       );
@@ -341,7 +341,7 @@ function Modal(props) {
                     value={values.residueType}
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    style={{ display: 'block' }}
+                    style={{ display: "block" }}
                     required
                   >
                     <option label="Tipo de resíduo:" />
@@ -352,7 +352,7 @@ function Modal(props) {
                       value="Mix"
                       label="Resíduos Misturados (Mistura de resíduos de obra)"
                     />
-                  </select>{' '}
+                  </select>{" "}
                   <ErrorMessage component="div" name="residueType" />
                 </Col>
                 <Col className="col-sm-5">
@@ -362,7 +362,7 @@ function Modal(props) {
                     value={values.region}
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    style={{ display: 'block' }}
+                    style={{ display: "block" }}
                     required
                   >
                     <option label="Região:" />
@@ -382,7 +382,7 @@ function Modal(props) {
                       value="Porto Alegre - Leste"
                       label="Porto Alegre - Leste"
                     />
-                  </select>{' '}
+                  </select>{" "}
                   <ErrorMessage component="div" name="region" />
                 </Col>
               </Row>
@@ -413,15 +413,15 @@ function Modal(props) {
                       >
                         Termos de Uso
                       </a>
-                      ,{' '}
+                      ,{" "}
                       <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://drive.google.com/file/d/1bBGVCMWoQ7vtBpjMF1YWljt6p1GYY5E5/view?usp=sharing"
                       >
                         Política de Privacidade
-                      </a>{' '}
-                      e as{' '}
+                      </a>{" "}
+                      e as{" "}
                       <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -444,13 +444,13 @@ function Modal(props) {
                 Ver Orçamento
               </Button>
               <Alert
-                color={submitSuccess ? 'success' : 'danger'}
+                color={submitSuccess ? "success" : "danger"}
                 isOpen={isAlertVisible}
               >
                 {submitSuccess
-                  ? 'Sua solicitação foi enviada! Obrigada!' +
+                  ? "Sua solicitação foi enviada! Obrigada!" +
                     values.locationInfo
-                  : 'Ops! Tivemos um problema. Tente novamente mais tarde. ' +
+                  : "Ops! Tivemos um problema. Tente novamente mais tarde. " +
                     values.locationInfo}
               </Alert>
             </Form>
