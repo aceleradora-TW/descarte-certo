@@ -1,19 +1,12 @@
 package com.thoughtworks.aceleradora.controller.response;
 
-import com.thoughtworks.aceleradora.service.JwtToken;
-import com.thoughtworks.aceleradora.service.User;
+import lombok.Value;
 
-import java.util.Optional;
-
+@Value
 public class LoginResponse {
+    private String token;
 
-    public Optional<String> returnLogin(String email, String password) {
-        JwtToken jwtToken = new JwtToken();
-
-        if (email.equals("5marias.sustentaveis@gmail.com") && password.equals("1234abc")) {
-            return Optional.of(jwtToken.createTokenByUser(new User(email, password)));
-        }
-
-        return Optional.empty();
+    public LoginResponse(String token) {
+        this.token = token;
     }
 }
