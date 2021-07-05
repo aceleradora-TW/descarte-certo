@@ -15,8 +15,7 @@ function ModalAcceptance ({ display, onClick }) {
         Agradecemos <br className="breakTitle" />por escolher a 5MARIAS!
       </h3>
       <p className="acceptance-text">
-        Os detalhes da sua solicitação <br className="breakLine" /> foram enviadas 
-        através do email.
+        Os detalhes da sua solicitação <br className="breakLine" /> foram enviadas através <br className="break-mobile" />do email.
       </p>
     </div>
   ) : null
