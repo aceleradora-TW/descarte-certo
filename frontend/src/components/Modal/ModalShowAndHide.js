@@ -38,7 +38,7 @@ const ModalShowAndHide = () => {
  
   const controlDisplayContent = (e) => {
     const { name } = e.target
-    setContentControler({ ModalConfirmation2: true, ModalAcceptance2: false })/*TODO: acrescentar orderForm: false,*/
+    setContentControler({ ModalConfirmation2: false, ModalAcceptance2: true })/*TODO: acrescentar orderForm: false,*/
     setContentControler({ [name]: true })
   }
 
@@ -47,8 +47,8 @@ const ModalShowAndHide = () => {
   return (
     <div className="content-modal">
       {/*TODO: acrescentar  <OrderForm display={orderForm} onClick={controlDisplayContent} />*/}
-      <ModalConfirmation display={ModalConfirmation} onClick={controlDisplayContent} />
-      <ModalAcceptance display={ModalAcceptance} />
+      <ModalConfirmation display={initialState.ModalConfirmation2} onClick={controlDisplayContent} />
+      <ModalAcceptance display={initialState.ModalAcceptance2} onClick={controlDisplayContent}/>
     </div>
   )
 }
