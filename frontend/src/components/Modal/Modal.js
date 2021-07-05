@@ -277,19 +277,22 @@ function Modal(props) {
 
               <Row>
                 <Col>
+                <div id="coleta">
                   <h4>Tipo de Coleta: </h4>
                   <br />
-                </Col>
+                </div>
+               </Col>
                 <Col>
                   <h4>Quantidade: </h4>
                   <br />
+                
                 </Col>
               </Row>
 
               <Row>
                 <Col lg="2">
                   <FormGroup>
-                    <Label>
+                    <Label className="colect">
                       <Field
                         type="radio"
                         className=""
@@ -304,7 +307,7 @@ function Modal(props) {
 
                 <Col lg="4">
                   <FormGroup>
-                    <Label>
+                    <Label className="colect">
                       <Field
                         type="radio"
                         className=""
@@ -312,7 +315,8 @@ function Modal(props) {
                         value="Sacos"
                         onClick={radioTrueMeasure(values.residueMeasure)}
                       />
-                      Sacos (Padrão 50 Litros)
+                      Sacos 
+                     <p>(Padrão 50 Litros)</p>
                     </Label>
                   </FormGroup>
                 </Col>
@@ -355,6 +359,7 @@ function Modal(props) {
                   </select>{' '}
                   <ErrorMessage className="error" component="div" name="residueType" />
                 </Col>
+                
                 <Col className="col-sm-5">
                   <select
                     className="select-residuo"
@@ -383,7 +388,7 @@ function Modal(props) {
                       label="Porto Alegre - Leste"
                     />
                   </select>{' '}
-                  <ErrorMessage className="error"component="div" name="region" />
+                  <ErrorMessage className="regiao"component="div" name="region" />
                 </Col>
               </Row> 
               <Row>
