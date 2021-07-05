@@ -52,7 +52,6 @@
   border-radius: 10px;
   border-color: lightgray;
   height: 50px;
-  color: black;
   width: 100%;
 }
 
@@ -62,6 +61,7 @@
 .col {
   margin-bottom: 0px;
   padding-bottom: 0px;
+  
 }
 .quant {
   margin-bottom: 15px;
@@ -75,6 +75,7 @@
 .residue-measure {
   padding-left: 0px;
   margin-left: 0px;
+
 }
 #quantity{
  position: relative;
@@ -107,7 +108,29 @@
     white-space: nowrap;
    
 }
-
-.submitSuccess{
-    width: 10px;
+.regiao{
+  position:absolute;
+  top: 50px;
+  color: red;
 }
+
+select {
+  color: black;
+}
+
+select option {
+  color: gray;
+}
+
+p{
+  font-size: 13px;
+}
+ .colect{
+   position:absolute;
+   top: -18px;
+ }
+#coleta{
+  position:absolute;
+  top: 3px;
+}
+ 
