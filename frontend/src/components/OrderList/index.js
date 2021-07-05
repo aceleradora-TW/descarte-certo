@@ -14,7 +14,7 @@ const OrderListComponent = () => {
 
   useEffect(() => {
     findAllOrders(currentPage)
-  })
+  },[])
 
   const findAllOrders = (currentPage) => {
     currentPage -= 1
@@ -25,7 +25,7 @@ const OrderListComponent = () => {
         setCurrentPage(res.data.number + 1)
         setTotalElements(res.data.totalElements)
         setOrdersPerPage(res.data.size)
-      },[])
+      })
   }
 
   const firstPage = () => {
