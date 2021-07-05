@@ -65,4 +65,33 @@ h2 {
   text-align: center;
 }
 
+/* Botão Excel */
+.btn-export {
+  background-color: #009879;
+  justify-items: center;
+  border-radius: 5px;
+  align-content: center;
+  width: 10vw;
+  border: 2px solid #009879;
+  color: white;
+  }
+  
+.btn-excel-wrapper {
+    padding-left: 45%;
+    margin-bottom: 10px;
+  }
+.btn-excel-wrapper :hover {
+  color: black;
+  background-color: white;
+}
+
+  /* .btn-wrapper {
+  padding-left: 40%;
+  }
+  .btn-wrapper :hover {
+  color: black;
+  background-color: white;
+  }
+   */
+
 

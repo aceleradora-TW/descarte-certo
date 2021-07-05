@@ -3,6 +3,7 @@ import "./styles.css";
 import axios from "axios";
 import { Nav } from "react-bootstrap";
 import IconBack from "../images/iconevoltar.png";
+import ReactHTMLTableToExcel from 'react-html-table-to-excel'
 
 
 
@@ -98,6 +99,15 @@ const OrderListComponent = () => {
                   ))}
                 </tbody>
               </table>
+              <div className="btn-excel-wrapper">
+                  <ReactHTMLTableToExcel
+                  className="btn-export"
+                  table="emp-table"
+                  filename="5Marias Orcamento Excel file"
+                  sheet="Sheet"
+                  buttonText="Exportar Excel"
+                  />
+                  </div>
                <div className="btn-wrapper">
                   <button className="btn-pagination" onClick={firstPage}>Primeira Página</button>
                   <button className="btn-pagination" onClick={prevPage}>Anterior</button>
