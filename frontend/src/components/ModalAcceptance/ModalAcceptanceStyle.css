@@ -39,22 +39,37 @@ p.acceptance-text {
   line-height: 2rem;
 }
 
-br.breakTitle{
+br.break-title{
   display: none;
 }
 
-@media only screen and (min-width: 451px) {
-  div.acceptance-content {
-    grid-template-columns: 1fr 8fr 1fr;
-    grid-template-rows: 3vh 3fr 2fr;
+br.break-mobile{
+  display: none;
+}
+
+@media only screen and (max-width: 375.5px) {
+  br.break-mobile {
+    display: inline;
+  }
+}
+
+@media only screen and (max-width: 451px) {
+  div.acceptance-content {    
+    grid-template-rows: 3vh 2.5fr 2fr;
   } 
 }
 
-@media only screen and (max-width: 464px) {
-  br.breakTitle{
+@media only screen and (min-width: 426px) and (max-width: 454.5px) {
+  br.break-mobile {
     display: inline;
   }
-  br.breakLine{
+}
+
+@media only screen and (max-width: 464px) {
+  br.break-title{
+    display: inline;
+  }
+  br.break-line{
     display:none;
   }
 }
