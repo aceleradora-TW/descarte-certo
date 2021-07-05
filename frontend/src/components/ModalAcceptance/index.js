@@ -12,10 +12,10 @@ function ModalAcceptance ({ display, onClick }) {
     <div className="acceptance-content">
       <button className="acceptance-close-btn"><FontAwesomeIcon icon={faTimes} onClick={handlecloseWindow} /></button>
       <h3 className="acceptance-title">
-        Agradecemos <br className="breakTitle" />por escolher a 5MARIAS!
+        Agradecemos <br className="break-title" />por escolher a 5MARIAS!
       </h3>
       <p className="acceptance-text">
-        Os detalhes da sua solicitação <br className="breakLine" /> foram enviadas através <br className="break-mobile" />do email.
+        Os detalhes da sua solicitação <br className="break-line" /> foram enviadas através <br className="break-mobile" />do email.
       </p>
     </div>
   ) : null

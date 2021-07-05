@@ -39,7 +39,7 @@ p.acceptance-text {
   line-height: 2rem;
 }
 
-br.breakTitle{
+br.break-title{
   display: none;
 }
 
@@ -60,10 +60,10 @@ br.break-mobile{
 }
 
 @media only screen and (max-width: 464px) {
-  br.breakTitle{
+  br.break-title{
     display: inline;
   }
-  br.breakLine{
+  br.break-line{
     display:none;
   }
 }
