@@ -166,7 +166,7 @@ function Modal(props) {
     }
   }
 
-  function radioTrueMeasure(value) {
+  const radioTrueMeasure = (value) => {
     if (value === "Sacos") {
       radioMeasure = true;
     } else {
