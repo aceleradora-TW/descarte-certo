@@ -1,7 +1,5 @@
 package com.thoughtworks.aceleradora.service;
-
 import org.springframework.stereotype.Service;
-
 import javax.validation.constraints.NotNull;
 
 @Service
@@ -24,5 +22,4 @@ public class User {
     public String getPassword() {
         return password;
     }
-
 }
