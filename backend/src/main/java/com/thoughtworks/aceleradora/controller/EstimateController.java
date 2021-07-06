@@ -43,13 +43,23 @@ public class EstimateController {
     @ResponseStatus(HttpStatus.OK)
     public Estimate confirm(@PathVariable int id) {
         Estimate estimate = estimateService.updateStatus(id);
-        //Não remover as linhas abaixo.
-        //estimateService.sendEmail(estimate,"entulhinho@gmail.com");
-        //estimateService.sendEmail(estimate,"retroentulho@hotmail.com");
+
+        if (estimate.getResidue().getResidueMeasure().contains("Caçamba")){
+            //retroentulho@hotmail.com
+            estimateService.sendEmail(estimate,"5mariasteste1@gmail.com");
+            // Senha do email teste1: 123456maria
+
+        } else {
+            //entulhinho@gmail.com
+            estimateService.sendEmail(estimate,"5mariasteste2@gmail.com");
+            // Senha do email teste2: 123456maria
+        }
         estimateService.sendEmail(estimate, estimate.getRequester().getEmail());
 
         return estimate;
     }
+
+
 
     @GetMapping(path = "/all")
     @ResponseStatus(HttpStatus.OK)
