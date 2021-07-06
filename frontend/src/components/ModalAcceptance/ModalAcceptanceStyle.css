@@ -72,10 +72,3 @@ br.break-mobile {
     display: none;
   }
 }
-
-/* ======= 
-#TODO: fazer media query para resoluções menores
-  #TODO: solucionar centralização do texto
-  #TODO: adicionar no @media 2ª row: 2fr
-  #TODO: adicionar no @media max 382 px <br> "do email"
-*/
