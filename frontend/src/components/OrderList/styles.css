@@ -85,4 +85,67 @@ h2 {
   background-color: white;
 }
 
+/* Preloader */
+
+
+.spinner {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  margin-left: 35%;
+  }
+  
+  .spinner span {
+  font-size: 2rem;
+  animation: fade 1s linear 0s infinite;
+  padding-right: 1rem;
+  }
+  
+  .half-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #03fc4e;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  animation: spin 0.5s linear 0s infinite;
+  }
+  
+  .completed {
+  font-size: 2rem;
+  color: #03fc4e;
+  
+  animation: bigger 1s linear;
+  }
+  
+  @keyframes bigger {
+  from {
+  transform: scale(0);
+  }
+  to {
+  transform: scale(2);
+  }
+  }
+  
+  @keyframes spin {
+  from {
+  transform: rotate(0);
+  }
+  to {
+  transform: rotate(360deg);
+  }
+  }
+  
+  @keyframes fade {
+  from {
+  opacity: 0;
+  }
+  to {
+  opacity: 1;
+  }
+  }
+  
+  
 
