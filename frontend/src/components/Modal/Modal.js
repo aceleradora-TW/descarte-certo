@@ -153,7 +153,17 @@ function Modal(props) {
     }
   };
 
-  function fieldTextTrueFloor(value) {
+  const radioTrueMeasure = (value) => {
+    if (value === "Sacos") {
+      radioMeasure = true;
+    } else {
+      fieldTextFloor = false;
+      radioMeasure = false;
+      fieldText = false;
+    }
+  }
+
+  const fieldTextTrueFloor = (value) => {
     if (value === "Escada") {
       fieldTextFloor = true;
       fieldText = false;
@@ -163,16 +173,6 @@ function Modal(props) {
     } else {
       fieldText = false;
       fieldTextFloor = false;
-    }
-  }
-
-  const radioTrueMeasure = (value) => {
-    if (value === "Sacos") {
-      radioMeasure = true;
-    } else {
-      fieldTextFloor = false;
-      radioMeasure = false;
-      fieldText = false;
     }
   }
 
