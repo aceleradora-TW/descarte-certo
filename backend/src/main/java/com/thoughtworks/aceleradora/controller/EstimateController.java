@@ -50,7 +50,7 @@ public class EstimateController {
             // Senha do email teste1: 123456maria
 
         } else {
-            //entulhinho@gmail.com
+            //entulhinho@gmail.com ...
             estimateService.sendEmail(estimate,"5mariasteste2@gmail.com");
             // Senha do email teste2: 123456maria
         }
