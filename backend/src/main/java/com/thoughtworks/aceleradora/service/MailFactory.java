@@ -14,7 +14,7 @@ public class MailFactory {
     private String password ;
     private String emailSender;
     private String emailReceiver;
-    private int uma;
+
 
     public MailFactory(@Value("${mailgun.username}")String username, @Value("${mailgun.password}")String password, @Value("${mailgun.emailSender}")
             String emailSender, @Value("${mailgun.emailReceiver}")String emailReceiver){
