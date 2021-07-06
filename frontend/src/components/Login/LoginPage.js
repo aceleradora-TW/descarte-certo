@@ -21,7 +21,7 @@ function LoginPage() {
     e.preventDefault();
     post("/login", { ...user })
       .then((res) => {
-        localStorage.setItem("token-descarte-certo", res.data.token);
+        localStorage.setItem("token-descarte-certo", res.token);
         toast.success("Usuario logado com sucesso!!");
         setTimeout(function () {
           history.push("/orcamentos");

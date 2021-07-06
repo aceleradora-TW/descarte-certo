@@ -7,17 +7,10 @@ export const client = axios.create({
 client.defaults.headers.common["Authorization"] = localStorage.getItem(
   "token-descarte-certo"
 );
+console.log(client.defaults.headers.common["Authorization"])
 
-export const post = (path, payload) => {
-  client
-    .post(path, payload)
-    .then((res) => res.json())
-    .then((res) => res.data);
-};
+export const post = (path, payload) => client.post(path, payload).then((res) => res.data);
 
-export const get = (path) => {
-  client
-    .get(path)
-    .then((res) => res.json())
-    .then((res) => res.data);
-};
+
+export const get = (path) => client.get(path).then((res) => res.data);
+

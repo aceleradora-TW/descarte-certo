@@ -18,10 +18,10 @@ const OrderListComponent = () => {
   const findAllOrders = (currentPage) => {
     currentPage -= 1;
     get(`/estimate/all?page=${currentPage}`).then((res) => {
-      setOrders(res.data.content);
-      setCurrentPage(res.data.number + 1);
-      setTotalElements(res.data.totalElements);
-      setOrdersPerPage(res.data.size);
+      setOrders(res.content);
+      setCurrentPage(res.number + 1);
+      setTotalElements(res.totalElements);
+      setOrdersPerPage(res.size);
     });
   };
 
@@ -79,16 +79,16 @@ const OrderListComponent = () => {
                 </thead>
                 <tbody>
                   {orders.map((order) => (
-                    <tr key={order.id}>
-                      <td>{order.creationDate}</td>
-                      <td>{order.requester.fullName}</td>
-                      <td>{order.requester.cellphone}</td>
-                      <td>{order.requester.email}</td>
-                      <td>{order.residue.residueMeasure}</td>
-                      <td>{order.residue.residueType}</td>
-                      <td>{order.residueAddress.locationInfo}</td>
-                      <td>{order.residueAddress.region}</td>
-                      <td>{order.status}</td>
+                    <tr key={order?.id}>
+                      <td>{order?.creationDate}</td>
+                      <td>{order?.requester?.fullName}</td>
+                      <td>{order?.requester?.cellphone}</td>
+                      <td>{order?.requester?.email}</td>
+                      <td>{order?.residue?.residueMeasure}</td>
+                      <td>{order?.residue?.residueType}</td>
+                      <td>{order?.residueAddress?.locationInfo}</td>
+                      <td>{order?.residueAddress?.region}</td>
+                      <td>{order?.status}</td>
                     </tr>
                   ))}
                 </tbody>
