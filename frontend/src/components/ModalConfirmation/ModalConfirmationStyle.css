@@ -105,7 +105,7 @@ p.eptc-taxes {
     grid-row: 5/6;
     justify-self: end;
     background-color: #60d6c5;
-    color: #3f3d56;    
+    color: #3f3d56;
     width: clamp(96px, 10vw, 197px);
     height: clamp(52px, 1.2vw, 45px);
   }
@@ -131,7 +131,6 @@ p.eptc-taxes {
     display: none;
   }
 
-
   button.btn-cancel-mobile,
   button.btn-approve-mobile {
     display: flex;
@@ -147,11 +146,11 @@ p.eptc-taxes {
     padding-bottom: 4px;
   }
 
-  button.btn-cancel-mobile{
+  button.btn-cancel-mobile {
     justify-self: start;
   }
 
-  button.btn-approve-mobile{
+  button.btn-approve-mobile {
     justify-self: end;
     color: #3f3d56;
   }

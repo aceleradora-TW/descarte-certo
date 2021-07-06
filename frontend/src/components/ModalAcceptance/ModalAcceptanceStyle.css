@@ -1,10 +1,9 @@
-
 div.acceptance-content {
   margin: 2.5vh;
   display: grid;
   grid-template-columns: 1fr 8fr 1fr;
   grid-template-rows: 3vh 3fr 2fr;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-align: center;
 }
 
@@ -24,7 +23,7 @@ h3.acceptance-title {
   grid-column: 2/3;
   font-size: clamp(1.5rem, 2.5vw, 2.3rem);
   font-weight: bold;
-  color: #303C5B;
+  color: #303c5b;
   align-self: center;
   margin: 0;
 }
@@ -39,11 +38,11 @@ p.acceptance-text {
   line-height: 2rem;
 }
 
-br.break-title{
+br.break-title {
   display: none;
 }
 
-br.break-mobile{
+br.break-mobile {
   display: none;
 }
 
@@ -54,9 +53,9 @@ br.break-mobile{
 }
 
 @media only screen and (max-width: 451px) {
-  div.acceptance-content {    
+  div.acceptance-content {
     grid-template-rows: 3vh 2.5fr 2fr;
-  } 
+  }
 }
 
 @media only screen and (min-width: 426px) and (max-width: 454.5px) {
@@ -66,11 +65,11 @@ br.break-mobile{
 }
 
 @media only screen and (max-width: 464px) {
-  br.break-title{
+  br.break-title {
     display: inline;
   }
-  br.break-line{
-    display:none;
+  br.break-line {
+    display: none;
   }
 }
 
