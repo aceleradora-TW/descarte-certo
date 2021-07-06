@@ -10,7 +10,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { Nav } from "react-bootstrap";
 import { post } from "../../services/client";
 
-function LoginPage() {
+const LoginPage = ({ signToken }) => {
   const [user, setUser] = useState({ email: "", password: "" });
 
   let history = useHistory();
@@ -22,6 +22,7 @@ function LoginPage() {
     post("/login", { ...user })
       .then((res) => {
         localStorage.setItem("token-descarte-certo", res.token);
+        signToken(res.token)
         toast.success("Usuario logado com sucesso!!");
         setTimeout(function () {
           history.push("/orcamentos");

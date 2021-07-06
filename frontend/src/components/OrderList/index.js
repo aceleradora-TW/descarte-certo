@@ -13,7 +13,7 @@ const OrderListComponent = () => {
 
   useEffect(() => {
     findAllOrders(currentPage);
-  }, []);
+  }, [currentPage]);
 
   const findAllOrders = (currentPage) => {
     currentPage -= 1;
