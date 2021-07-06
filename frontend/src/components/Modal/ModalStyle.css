@@ -16,14 +16,17 @@
 .form[type='number'] {
   width: 40%;
 }
-
 .btn.form-button{
   background-color:#333333;
   color: #ffffff !important;
-  width: 25%;
+  width: 22%;
   text-align: center;
   font-size: small;
   float: right;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #333333 !important; 
+  font-size: 14px;
 }
 
 .btn.form-button:active{
@@ -31,10 +34,11 @@
   box-shadow: -1px -1px #878787!important; 
 }
 
-.btn.form-button:active:hover{
-  background-color:#ffffff;
-  box-shadow: -1px -1px #878787; 
-  color: #333333 ;
+.btn.form-button:hover:enabled{
+  background-color:#ffffff !important;
+  color: #333333 !important;
+  border-style: solid;
+  border-width: 2px;
 }
 
 .field-input{
@@ -114,10 +118,29 @@
     white-space: nowrap;
 }
 
-.submitSuccess{
-    width: 10px;
+.regiao{
+  position:absolute;
+  top: 50px;
+  color: red;
 }
 
-select{
-  text-indent: 14px;
+select {
+  text-indent: 7px;
+  color: black;
+}
+
+select option {
+  color: gray;
+}
+
+p{
+  font-size: 13px;
+}
+ .bags{
+   position:absolute;
+   top: -18px;
+ }
+ #collectionType{
+  position:absolute;
+  top: 3px;
 }
