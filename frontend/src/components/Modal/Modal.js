@@ -232,7 +232,7 @@ function Modal(props) {
                 onBlur={handleBlur}
               />
 
-              <ErrorMessage component="div" name="fullName" />
+              <ErrorMessage className="error" component="div" name="fullName" />
 
               <br />
 
@@ -254,7 +254,7 @@ function Modal(props) {
                         );
                       }}
                     </Field>
-                    <ErrorMessage component="div" name="cellphone" />
+                    <ErrorMessage className="error" component="div" name="cellphone" />
                   </FormGroup>
                 </Col>
                 <Col className="col-sm-8">
@@ -265,10 +265,10 @@ function Modal(props) {
                       value={values.email}
                       onChange={handleChange}
                       onBlur={handleBlur}
-                      placeholder="seuemailaqui@gmail.com"
+                      placeholder="Email@email.com"
                       required
                     />
-                    <ErrorMessage component="div" name="email" />
+                    <ErrorMessage className="error" component="div" name="email" />
                   </FormGroup>
                 </Col>
               </Row>
@@ -328,7 +328,7 @@ function Modal(props) {
                       value={values.residueAmount}
                       className="form-control field-input"
                     />
-                    <ErrorMessage component="div" name="residueAmount" />
+                    <ErrorMessage className="error" component="div" name="residueAmount" />
                   </div>
                 </Col>
               </Row>
@@ -353,7 +353,7 @@ function Modal(props) {
                       label="Resíduos Misturados (Mistura de resíduos de obra)"
                     />
                   </select>{' '}
-                  <ErrorMessage component="div" name="residueType" />
+                  <ErrorMessage className="error" component="div" name="residueType" />
                 </Col>
                 <Col className="col-sm-5">
                   <select
@@ -383,7 +383,7 @@ function Modal(props) {
                       label="Porto Alegre - Leste"
                     />
                   </select>{' '}
-                  <ErrorMessage component="div" name="region" />
+                  <ErrorMessage className="error"component="div" name="region" />
                 </Col>
               </Row>
               <Row>
@@ -406,13 +406,11 @@ function Modal(props) {
                         value="Termos"
                       />
                       Li e concordo com os
-                      <a
+                       <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://drive.google.com/file/d/1Wty-Il4oz36PuOWGeX35BWPTmGREShlE/view?usp=sharing"
-                      >
-                        Termos de Uso
-                      </a>
+                      > Termos de Uso</a>
                       ,{' '}
                       <a
                         target="_blank"
