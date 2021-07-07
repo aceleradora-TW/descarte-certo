@@ -2,6 +2,7 @@
   "dependencies": {
     "bootstrap": "^4.5.2",
     "bootswatch": "^4.5.2",
+    "react-html-table-to-excel": "^2.0.0",
     "react-router": "^5.2.0",
     "react-router-hash-link": "^2.1.0"
   }

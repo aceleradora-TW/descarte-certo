@@ -11,7 +11,7 @@ function Awards() {
   return (
     <section className="awards-section">
       <h3>Nossas Conquistas</h3>
-      <div clasName="logos-section">
+      <div className="logos-section">
         <div className="awards-div">
           <img className="awards-logo"  width="170px" src={LogoFounder} alt="Logo tipo do Founder Institute"></img>
           <img className="awards-logo"  width="100" src={LogoAgil} alt="Logo tipo da Aceleradora Ágil" ></img>
