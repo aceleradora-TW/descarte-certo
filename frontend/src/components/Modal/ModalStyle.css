@@ -62,7 +62,7 @@
   border-radius: 10px;
   border-color: lightgray;
   height: 50px;
-  color: black;
+  color: gray;
   width: 100%;
 }
 
@@ -126,21 +126,22 @@
 
 select {
   text-indent: 7px;
-  color: black;
-}
-
-select option {
-  color: gray;
 }
 
 p{
   font-size: 13px;
 }
+
  .bags{
    position:absolute;
    top: -18px;
  }
+
  #collectionType{
   position:absolute;
   top: 3px;
+}
+
+@media only screen and (min-width:414px) and (max-width:736px){
+  
 }
