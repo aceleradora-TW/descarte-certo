@@ -75,6 +75,7 @@
 }
 .quant {
   margin-bottom: 15px;
+  
 }
 .residue-quantity {
   padding-left: 10px;
@@ -86,7 +87,7 @@
   padding-left: 0px;
   margin-left: 0px;
 }
-#quantity{
+#buttonQuantity{
  position: relative;
  top: -25px;   
  left:7px;
@@ -94,7 +95,7 @@
  border-radius: 100px;
 }
 
-#quantity ::-webkit-input-placeholder {
+#buttonQuantity ::-webkit-input-placeholder {
   text-align: center;
 }
 
@@ -127,21 +128,26 @@
 select {
   text-indent: 7px;
 }
-
-p{
-  font-size: 13px;
-}
-
- .bags{
-   position:absolute;
-   top: -18px;
- }
-
- #collectionType{
+.bucket{
   position:absolute;
-  top: 3px;
+  top: -15px;
+  right: -57px;
 }
 
-@media only screen and (min-width:414px) and (max-width:736px){
+.bags{
+  position:relative;
+  top: 15px;
+  left:  -40px;
+ }
+#collectionType{
+  position: relative;
+  top: 3px;
+  left: 80px;
+}
+#quantity{
+  position:relative;
+  top: -15px;
+  left: 5px;
+  width: 100px;;
   
 }
