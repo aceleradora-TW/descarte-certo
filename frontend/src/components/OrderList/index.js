@@ -4,6 +4,7 @@ import axios from "axios";
 import { Nav } from "react-bootstrap";
 import IconBack from "../images/iconevoltar.png";
 import ReactHTMLTableToExcel from 'react-html-table-to-excel'
+import Preload from '../Preload/Preload'
 
 
 
@@ -12,7 +13,7 @@ const OrderListComponent = () => {
   const [ordersPerPage, setOrdersPerPage] = useState()
   const [currentPage, setCurrentPage] = useState(1);
   const [totalElements, setTotalElements] = useState()
-  const [loading, setLoading] = useState(undefined)
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     setTimeout(() => {
@@ -70,10 +71,7 @@ const OrderListComponent = () => {
       <div className="container-order-list">
         <div className="order-list-title">
           {!loading ? (
-            <div className="spinner">
-              <span>Carregando...</span>
-              <div className="half-spinner"></div>
-            </div>
+            <Preload/>
           )
             : (
               <>
