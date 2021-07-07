@@ -45,11 +45,11 @@ const Modal = (props) => {
   {
     /* #TODO: entender e modificar function */
   }
-  function handleAlertClick() {
+  const handleAlertClick = () => {
     setIsAlertVisible(!isAlertVisible);
   }
 
-  function handlecloseWindow() {
+  const handlecloseWindow = () => {
     window.location.reload();
   }
 
