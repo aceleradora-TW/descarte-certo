@@ -98,20 +98,18 @@ const Modal = (props) => {
         residueMeasure: values.residueAmount + " " + values.residueMeasure,
       },
     };
+
     setTimeout(() => {
-      console.log("Requesting to backend /estimate");
       Axios.post(`/estimate`, requestCreateEstimate)
-        .then(function (response) {
-          console.log(JSON.stringify(values));
+        .then((response) => {
           handleSubmitSuccess(true);
           setSubmitting(false);
         })
-        .catch(function (error) {
-          console.error(error);
+        .catch((error) => {
           handleSubmitSuccess(false);
           resetForm();
         })
-        .then(function () {
+        .then(() => {
           handleAlertClick();
         });
     }, 400);
