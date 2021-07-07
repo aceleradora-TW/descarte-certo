@@ -30,7 +30,7 @@ public class EstimateService {
 
     public Estimate create(EstimateRequest estimateRequest) {
         Estimate estimateEntity = estimateConverterService.converter(estimateRequest);
-        sendEstimateEmail(estimateEntity);
+        this.sendEmail(estimateEntity,"5marias.orcamento@gmail.com");
         return estimateRepository.save(estimateEntity);
     }
 
