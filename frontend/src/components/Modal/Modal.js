@@ -98,11 +98,11 @@ const Modal = (props) => {
 
     setTimeout(() => {
       Axios.post(`/estimate`, requestCreateEstimate)
-        .then((response) => {
+        .then((_response) => {
           handleSubmitSuccess(true);
           setSubmitting(false);
         })
-        .catch((error) => {
+        .catch((_error) => {
           handleSubmitSuccess(false);
           resetForm();
         })
