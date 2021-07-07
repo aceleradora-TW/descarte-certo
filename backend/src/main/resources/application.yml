@@ -15,3 +15,4 @@ mailgun:
   password: ${MAILGUN_PASSWORD}
   emailSender: "5marias.sustentaveis@gmail.com"
   emailReceiver: "5marias.orcamento@gmail.com"
+

@@ -41,12 +41,29 @@ public class EstimateController {
                 .orElseThrow(() -> new EstimateNotFoundException(id));
     }
 
+
+
     @PutMapping(path = "/{id}/confirm")
     @ResponseStatus(HttpStatus.OK)
     public Estimate confirm(@PathVariable int id) {
-        return estimateService
-                .updateStatus(id);
+        Estimate estimate = estimateService.updateStatus(id);
+
+        if (estimate.getResidue().getResidueMeasure().contains("Caçamba")){
+            //retroentulho@hotmail.com
+            estimateService.sendEmail(estimate,"5mariasteste1@gmail.com");
+            // Senha do email teste1: 123456maria
+
+        } else {
+            //entulhinho@gmail.com ...
+            estimateService.sendEmail(estimate,"5mariasteste2@gmail.com");
+            // Senha do email teste2: 123456maria
+        }
+        estimateService.sendEmail(estimate, estimate.getRequester().getEmail());
+
+        return estimate;
     }
+
+
 
     @GetMapping(path = "/all")
     @ResponseStatus(HttpStatus.OK)
