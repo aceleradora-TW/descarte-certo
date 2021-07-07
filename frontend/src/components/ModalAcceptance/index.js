@@ -3,9 +3,9 @@ import "./ModalAcceptanceStyle.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
-function ModalAcceptance({ display, onClick }) {
+const ModalAcceptance = ({ display, onClick }) => {
   // #TODO: refatorar o onclick para close ao invés de reload
-  function handlecloseWindow() {
+  const handlecloseWindow = () => {
     window.location.reload();
   }
 
