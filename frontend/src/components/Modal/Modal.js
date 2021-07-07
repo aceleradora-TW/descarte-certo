@@ -41,6 +41,7 @@ function Modal(props) {
 
   const [isAlertVisible, setIsAlertVisible] = useState(false);
 
+  {/* #TODO: entender e modificar function */}
   function handleAlertClick() {
     setIsAlertVisible(!isAlertVisible);
   }
