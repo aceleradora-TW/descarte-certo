@@ -5,6 +5,7 @@ import { Nav } from "react-bootstrap";
 import IconBack from "../images/iconevoltar.png";
 import ReactHTMLTableToExcel from 'react-html-table-to-excel'
 import Preload from '../Preload/Preload'
+import Tabela from  './TabelaOrcamento'
 
 
 
@@ -18,7 +19,7 @@ const OrderListComponent = () => {
   useEffect(() => {
     setTimeout(() => {
       findAllOrders(currentPage)
-    }, 2000)
+    })
   }, [])
 
   const findAllOrders = (currentPage) => {
@@ -75,51 +76,23 @@ const OrderListComponent = () => {
           )
             : (
               <>
-                <table className="content-table" id="emp-table">
-                  <thead>
-                    <tr>
-                      <th>Data</th>
-                      <th>Nome</th>
-                      <th>Telefone</th>
-                      <th>email</th>
-                      <th>Quantidade</th>
-                      <th>Material</th>
-                      <th>Acesso</th>
-                      <th>Região</th>
-                      <th>Status</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {orders.map((order) => (
-                      <tr key={order.id}>
-                        <td>{order.creationDate}</td>
-                        <td>{order.requester.fullName}</td>
-                        <td>{order.requester.cellphone}</td>
-                        <td>{order.requester.email}</td>
-                        <td>{order.residue.residueMeasure}</td>
-                        <td>{order.residue.residueType}</td>
-                        <td>{order.residueAddress.locationInfo}</td>
-                        <td>{order.residueAddress.region}</td>
-                        <td>{order.status}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-                <div className="btn-excel-wrapper">
-                  <ReactHTMLTableToExcel
-                    className="btn-export"
-                    table="emp-table"
-                    filename="5Marias Orcamento Excel file"
-                    sheet="Sheet"
-                    buttonText="Exportar Excel"
-                  />
-                </div>
-                <div className="btn-wrapper">
-                  <button className="btn-pagination" onClick={firstPage}>Primeira Página</button>
-                  <button className="btn-pagination" onClick={prevPage}>Anterior</button>
-                  <button className="btn-pagination" onClick={nextPage}>Próximo</button>
-                  <button className="btn-pagination" onClick={lastPage}>Última Página</button>
-                </div>
+                <Tabela orders={orders}/>
+                  
+                  <div className="btn-excel-wrapper">
+                    <ReactHTMLTableToExcel
+                      className="btn-export"
+                      table="emp-table"
+                      filename="5Marias Orcamento Excel file"
+                      sheet="Sheet"
+                      buttonText="Exportar Excel"
+                    />
+                  </div>
+                  <div className="btn-wrapper">
+                    <button className="btn-pagination" onClick={firstPage}>Primeira Página</button>
+                    <button className="btn-pagination" onClick={prevPage}>Anterior</button>
+                    <button className="btn-pagination" onClick={nextPage}>Próximo</button>
+                    <button className="btn-pagination" onClick={lastPage}>Última Página</button>
+                  </div>
               </>
             )}
         </div>
