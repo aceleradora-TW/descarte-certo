@@ -37,6 +37,7 @@ function Modal(props) {
     residueMeasure: yup.string().required(ERRORS.REQUIRED_FIELD),
     accessType: accessTypeValidation,
     residueAmount: yup.number().required(ERRORS.REQUIRED_FIELD),
+    residueType: yup.string().required(ERRORS.REQUIRED_FIELD)
   });
 
   const [isAlertVisible, setIsAlertVisible] = useState(false);
@@ -277,14 +278,10 @@ function Modal(props) {
 
               <Row>
                 <Col>
-                <div id="collectionType">
                   <h4>Tipo de Coleta: </h4>
-                  <br />
-                </div>
                 </Col>
                 <Col>
                   <h4>Quantidade: </h4>
-                  <br />
                 </Col>
               </Row>
 
@@ -302,9 +299,7 @@ function Modal(props) {
                       Caçamba
                     </Label>
                   </FormGroup>
-                </Col>
 
-                <Col lg="4">
                   <FormGroup>
                     <Label className="bags">
                       <Field
