@@ -315,7 +315,7 @@ function Modal(props) {
                 </Col>
 
                 <Col className="col-lg-3">
-                  <div id="quantity">
+                  <div className="quantity-field">               
                     <Field
                       type="Number"
                       placeholder="1"
@@ -326,7 +326,7 @@ function Modal(props) {
                       className="form-control field-input"
                     />
                     <ErrorMessage className="error" component="div" name="residueAmount" />
-                  </div>
+                    </div>
                 </Col>
               </Row>
               <br />

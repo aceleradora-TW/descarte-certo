@@ -75,37 +75,9 @@
   width: 100%;
 }
 
-.col {
-  margin-bottom: 0px;
-  padding-bottom: 0px;
-}
-
-.quant {
-  margin-bottom: 15px;
-  
-}
-
-.residue-quantity {
-  padding-left: 10px;
-  padding-right: 0px;
-  margin-right: 0px;
-}
-
-.residue-measure {
-  padding-left: 0px;
-  margin-left: 0px;
-}
-
-#buttonQuantity{
- position: relative;
- top: -25px;   
- left:7px;
- width: 100px;
- border-radius: 100px;
-}
-
-#buttonQuantity ::-webkit-input-placeholder {
-  text-align: center;
+.form-control:focus {
+  border-color: #ced4da;
+  box-shadow: none;
 }
 
 .button, input {
@@ -119,30 +91,29 @@
   font-size: 1.50rem
 }
 
+.bucket{
+  margin-bottom: 7px;
+}
+
 .h4, h4{
   font-size: 1.25rem;
 }
+
 .error{
     color: red;
     white-space: nowrap;
 }
 
-.regiao{
-  position:absolute;
-  top: 50px;
-  color: red;
+.quantity-field{
+  width: 80px;
 }
 
 select {
   text-indent: 7px;
 }
 
-#quantity{
-  width: 80px;
-}
-
 .form-group{
-  margin-bottom: 13px;
+  margin-bottom: 5px;
 }
 
 @media only screen and (min-width:414px) and (max-width:736px){ 
@@ -158,5 +129,17 @@ select {
 
   .btn.form-button{
     width: 35%;
+  }
+
+}
+
+@media only screen and (min-width: 992px){
+  .col-lg-2 {
+    flex: 0 0 50.0%;
+    max-width: 50.0%;
+  }
+  .col-lg-3 {
+    flex: 0 0 50.0%;
+    max-width: 50.0%;
   }
 }
