@@ -42,16 +42,13 @@ const Modal = (props) => {
 
   const [isAlertVisible, setIsAlertVisible] = useState(false);
 
-  {
-    /* #TODO: entender e modificar function */
-  }
   const handleAlertClick = () => {
     setIsAlertVisible(!isAlertVisible);
-  }
+  };
 
   const handlecloseWindow = () => {
     window.location.reload();
-  }
+  };
 
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
