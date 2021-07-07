@@ -17,13 +17,14 @@ import InputMask from "react-input-mask";
 import * as yup from "yup";
 import Axios from "axios";
 
-function Modal(props) {
+const Modal = (props) => {
   var accessTypeValidation;
   if (props.residueMeasure === "Sacos") {
     accessTypeValidation = yup.string().required(ERRORS.REQUIRED_FIELD);
   } else {
     accessTypeValidation = yup.string();
   }
+
   const validationSchema = yup.object().shape({
     email: yup
       .string()
@@ -41,7 +42,9 @@ function Modal(props) {
 
   const [isAlertVisible, setIsAlertVisible] = useState(false);
 
-  {/* #TODO: entender e modificar function */}
+  {
+    /* #TODO: entender e modificar function */
+  }
   function handleAlertClick() {
     setIsAlertVisible(!isAlertVisible);
   }
@@ -162,7 +165,7 @@ function Modal(props) {
       radioMeasure = false;
       fieldText = false;
     }
-  }
+  };
 
   const fieldTextTrueFloor = (value) => {
     if (value === "Escada") {
@@ -175,7 +178,7 @@ function Modal(props) {
       fieldText = false;
       fieldTextFloor = false;
     }
-  }
+  };
 
   const showingFieldAccessType = (values, handleChange, handleBlur) => {
     if (radioMeasure === true) {
@@ -460,5 +463,5 @@ function Modal(props) {
       </ModalBody>
     </BootstrapModal>
   );
-}
+};
 export default Modal;
