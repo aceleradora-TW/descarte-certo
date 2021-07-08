@@ -43,7 +43,7 @@ public class EstimateService {
                 PageRequest.of(
                         page.orElse(0),
                         totalPage.orElse(20),
-                        Sort.Direction.ASC, sortBy.orElse("id")
+                        Sort.Direction.DESC, sortBy.orElse("id")
                 )
         );
     }
