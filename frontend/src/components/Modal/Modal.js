@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { post } from "../../services/client";
 import {
   Button,
   Modal as BootstrapModal,
@@ -15,7 +16,6 @@ import "./ModalStyle.css";
 import { ERRORS } from "../../constant";
 import InputMask from "react-input-mask";
 import * as yup from "yup";
-import Axios from "axios";
 
 const Modal = (props) => {
   var accessTypeValidation;
@@ -97,8 +97,8 @@ const Modal = (props) => {
     };
 
     setTimeout(() => {
-      Axios.post(`/estimate`, requestCreateEstimate)
-        .then((_response) => {
+      post(`/estimate`, requestCreateEstimate)
+        .then(function (response) {
           handleSubmitSuccess(true);
           setSubmitting(false);
         })

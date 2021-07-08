@@ -8,9 +8,9 @@ import { useHistory } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Nav } from "react-bootstrap";
-import axios from "axios";
+import { post } from "../../services/client";
 
-function LoginPage() {
+const LoginPage = ({ signToken }) => {
   const [user, setUser] = useState({ email: "", password: "" });
 
   let history = useHistory();
@@ -19,10 +19,10 @@ function LoginPage() {
 
   function handleLogin(e) {
     e.preventDefault();
-    axios
-      .post("/login", { ...user })
+    post("/login", { ...user })
       .then((res) => {
-        localStorage.setItem("token-descarte-certo", res.data.token);
+        localStorage.setItem("token-descarte-certo", res.token);
+        signToken(res.token)
         toast.success("Usuario logado com sucesso!!");
         setTimeout(function () {
           history.push("/orcamentos");
