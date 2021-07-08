@@ -18,7 +18,7 @@ import InputMask from "react-input-mask";
 import * as yup from "yup";
 
 const Modal = (props) => {
-  var accessTypeValidation;
+  let accessTypeValidation;
   if (props.residueMeasure === "Sacos") {
     accessTypeValidation = yup.string().required(ERRORS.REQUIRED_FIELD);
   } else {
