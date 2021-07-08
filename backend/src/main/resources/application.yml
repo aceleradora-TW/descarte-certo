@@ -16,3 +16,6 @@ mailgun:
   emailSender: "5marias.sustentaveis@gmail.com"
   emailReceiver: "5marias.orcamento@gmail.com"
 
+login:
+  email: "teste@gmail.com"
+  password: "123456"

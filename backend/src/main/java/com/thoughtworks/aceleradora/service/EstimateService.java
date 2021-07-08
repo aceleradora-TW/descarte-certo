@@ -4,6 +4,7 @@ import com.mashape.unirest.http.exceptions.UnirestException;
 import com.thoughtworks.aceleradora.controller.request.EstimateRequest;
 import com.thoughtworks.aceleradora.entity.Estimate;
 import com.thoughtworks.aceleradora.repository.EstimateRepository;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Page;
@@ -18,6 +19,9 @@ public class EstimateService {
     private EstimateConverterService estimateConverterService;
     private MailFactory mailFactory;
 
+    @Value("${login.email}")
+    private String emailDefault;
+
     EstimateService(EstimateRepository repository, EstimateConverterService estimateConverter,MailFactory mailFactory) {
         this.estimateRepository = repository;
         this.estimateConverterService = estimateConverter;
@@ -30,7 +34,7 @@ public class EstimateService {
 
     public Estimate create(EstimateRequest estimateRequest) {
         Estimate estimateEntity = estimateConverterService.converter(estimateRequest);
-        this.sendEmail(estimateEntity,"5marias.orcamento@gmail.com");
+        this.sendEmail(estimateEntity,emailDefault);
         return estimateRepository.save(estimateEntity);
     }
 
