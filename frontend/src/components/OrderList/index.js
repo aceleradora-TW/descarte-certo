@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./styles.css";
-import axios from "axios";
+import { get } from "../../services/client";
 import { Nav } from "react-bootstrap";
 import IconBack from "../images/iconevoltar.png";
 import ReactHTMLTableToExcel from 'react-html-table-to-excel'
@@ -24,12 +24,11 @@ const OrderListComponent = () => {
 
   const findAllOrders = (currentPage) => {
     currentPage -= 1
-    axios
-      .get(`/estimate/all?page=${currentPage}`)
+    get(`/estimate/all?page=${currentPage}`)
       .then((res) => {
-        setOrders(res.data.content);
-        setCurrentPage(res.data.number + 1)
-        setTotalElements(res.data.totalElements)
+        setOrders(res.content);
+        setCurrentPage(res.number + 1)
+        setTotalElements(res.totalElements)
         setOrdersPerPage(res.data.size)
         setLoading(true)
       })
@@ -37,27 +36,27 @@ const OrderListComponent = () => {
 
   const firstPage = () => {
     if (currentPage > 1) {
-      findAllOrders(1)
+      findAllOrders(1);
     }
-  }
+  };
 
   const prevPage = () => {
-    let prevPage = 1
+    let prevPage = 1;
     if (currentPage > 1) {
-      findAllOrders(currentPage - prevPage)
+      findAllOrders(currentPage - prevPage);
     }
-  }
+  };
 
   const lastPage = () => {
-    let condition = Math.ceil(totalElements / ordersPerPage)
+    let condition = Math.ceil(totalElements / ordersPerPage);
     if (currentPage < condition) {
-      findAllOrders(condition)
+      findAllOrders(condition);
     }
-  }
+  };
 
   const nextPage = () => {
     if (currentPage < Math.ceil(totalElements / ordersPerPage)) {
-      findAllOrders(currentPage + 1)
+      findAllOrders(currentPage + 1);
     }
   }
 
