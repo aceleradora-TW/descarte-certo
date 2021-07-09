@@ -1,0 +1,96 @@
+.order-form-container {
+    padding: 25px;
+    padding-top: 0;
+  }
+  
+  .order-residue-residues-region select,
+  .order-residue-type-quantity input[type=number],
+  .requester input[type=text],
+  .requester input[type=email] {
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 0 10px;
+  }
+  
+  .requester input[type=text] {
+    width: 100%;
+  }
+  
+  .requester input[type=text],
+  .requester input[type=email] {
+    margin-bottom: 15px;
+  }
+  
+  .order-residue-residues-region select {
+    color: rgb(154, 154, 154);
+  }
+  
+  .order-residue-residues-region select,
+  .requester input[type=text],
+  .requester input[type=email] {
+    height: 50px;
+  }
+  
+  .order-form-container .requester > div {
+    display: flex;
+  }
+  
+  .order-form-container .requester 
+  > div:last-child {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .order-form-container .requester 
+  > div:last-child 
+  > div:first-child {
+    width: 30%;
+  }
+  
+  .order-form-container .requester 
+  > div:last-child 
+  > div:last-child {
+    width: 60%;
+  }
+  
+  .order-residue-type-quantity {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+  }
+  .order-residue-type-quantity > div {
+    width: 49%;
+  }
+  
+  .order-residue-type-quantity div:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .order-residue-type-quantity 
+  div:first-child input[type=number]{
+    width: 150px;
+    height: 50px;
+    text-align: center;
+  }
+  
+  .order-residue-type-quantity 
+  div:first-child div{
+    width: 100%;
+    height: 50px;
+    padding-right: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .order-residue-residues-region {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .order-form-container 
+  .order-residue-residues-region select {
+    width: 49%;
+  }
