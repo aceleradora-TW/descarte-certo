@@ -27,6 +27,7 @@ public class EstimateConverterService {
                 .residue(Residue.builder()
                         .residueMeasure(request.getResidueRequest().getResidueMeasure())
                         .residueType(request.getResidueRequest().getResidueType())
+                        .estimateValue()
                         .build()
                 )
                 .status(OrderStatus.CRIADO)

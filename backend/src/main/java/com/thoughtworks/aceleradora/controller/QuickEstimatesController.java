@@ -4,10 +4,10 @@ import com.thoughtworks.aceleradora.service.bucketcalculator.BucketCalculator;
 import com.thoughtworks.aceleradora.service.bucketcalculator.BucketEstimateParameters;
 import com.thoughtworks.aceleradora.service.bucketcalculator.BucketZones;
 import com.thoughtworks.aceleradora.service.bucketcalculator.Materials;
-import com.thoughtworks.aceleradora.service.quickestimates.BagEstimateParameters;
-import com.thoughtworks.aceleradora.service.quickestimates.FloorAccess;
-import com.thoughtworks.aceleradora.service.quickestimates.QuickEstimateCalculator;
-import com.thoughtworks.aceleradora.service.quickestimates.BagEstimate;
+import com.thoughtworks.aceleradora.service.bagCalculator.BagEstimateParameters;
+import com.thoughtworks.aceleradora.service.bagCalculator.FloorAccess;
+import com.thoughtworks.aceleradora.service.bagCalculator.BagCalculator;
+import com.thoughtworks.aceleradora.service.bagCalculator.BagEstimate;
 import com.thoughtworks.aceleradora.service.bucketcalculator.BucketEstimate;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,7 +22,7 @@ public class QuickEstimatesController {
             @RequestParam("access") FloorAccess access,
             @RequestParam("materials") Materials materials){
 
-            QuickEstimateCalculator calculator = new QuickEstimateCalculator();
+            BagCalculator calculator = new BagCalculator();
 
             BagEstimateParameters params = new BagEstimateParameters(amount, access, materials);
 

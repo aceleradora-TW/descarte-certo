@@ -11,6 +11,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
+//Modificar o método create em EstimateService, para sempre criar estimativas com estimateValue calculador. Usar o BucketCalculator para o calculo da informação.
+
 @Service
 public class EstimateService {
 

@@ -1,13 +1,13 @@
-package com.thoughtworks.aceleradora.service.quickestimates;
+package com.thoughtworks.aceleradora.service.bagCalculator;
 
 import java.math.BigDecimal;
 
-import static com.thoughtworks.aceleradora.service.quickestimates.FloorAccess.ELEVATOR;
-import static com.thoughtworks.aceleradora.service.quickestimates.FloorAccess.GROUND_FLOOR;
+import static com.thoughtworks.aceleradora.service.bagCalculator.FloorAccess.ELEVATOR;
+import static com.thoughtworks.aceleradora.service.bagCalculator.FloorAccess.GROUND_FLOOR;
 import static com.thoughtworks.aceleradora.service.bucketcalculator.Materials.PLASTER;
 import static com.thoughtworks.aceleradora.service.bucketcalculator.Materials.WOOD;
 
-public class QuickEstimateCalculator {
+public class BagCalculator {
 
     public BigDecimal calculateEstimate(BagEstimateParameters parameters) {
         BigDecimal totalValue = new BigDecimal(0.0);
@@ -33,7 +33,7 @@ public class QuickEstimateCalculator {
 
     public static void main(String[] args) {
 
-        QuickEstimateCalculator calculator = new QuickEstimateCalculator();
+        BagCalculator calculator = new BagCalculator();
 
         BagEstimateParameters params = new BagEstimateParameters(55, ELEVATOR, WOOD);
 
