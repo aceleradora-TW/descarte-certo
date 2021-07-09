@@ -1,0 +1,172 @@
+div.modal-dialog {
+  display: flex;
+  justify-content: center;
+}
+div.modal-content {
+  width: clamp(300px, 80vw, 700px);
+  margin: 0;
+}
+
+div.modal-container {
+  margin: 2.5vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr max(20vh) max(6vh) max(6.5vh);
+  column-gap: 5vh;
+  row-gap: 1vh;
+  font-family: "Montserrat", sans-serif;
+}
+
+h3.total-budget {
+  grid-column: 1/3;
+  grid-row: 1/2;
+  text-align: center;
+  font-size: clamp(1.5rem, 2.5vw, 2.3rem);
+  font-weight: bold;
+  align-self: center;
+}
+
+p.message {
+  grid-column: 1/3;
+  grid-row: 2/3;
+  text-align: center;
+  font-size: clamp(0.9rem, 1.6vw, 1.8rem);
+}
+
+/*======= Carrossel ====== */
+
+.div-car {
+  grid-column: 1/3;
+  grid-row: 3/4;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+p.carousel-text {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  height: 12vh;
+  text-align: center;
+  font-size: clamp(0.8rem, 1.4vw, 1.2rem);
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.sc-iBPRYJ.bkVSTc.rec.rec-pagination {
+  justify-content: center;
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.rec-arrow {
+  display: none;
+}
+
+.sc-gKsewC.gUWalH.rec.rec-dot {
+  box-shadow: 0 0 0 0.1rem rgb(153, 153, 153);
+}
+.sc-gKsewC.DIuaA.rec.rec-dot.rec.rec-dot_active {
+  box-shadow: 0 0 0 0.1rem rgb(96, 214, 197);
+  background-color: rgb(96, 214, 197);
+}
+
+.sc-gKsewC.gUWalH.rec.rec-dot:hover {
+  box-shadow: 0 0 0 0.1rem rgb(96, 214, 197);
+}
+
+/*==== fim do carrossel ====*/
+
+p.eptc-taxes {
+  grid-column: 1/3;
+  grid-row: 4/5;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+@media only screen and (min-width: 451px) {
+  button.btn-cancel-mobile,
+  button.btn-approve-mobile {
+    display: none;
+  }
+
+  button.btn-cancel {
+    grid-column: 1/2;
+    grid-row: 5/6;
+    justify-self: start;
+    background-color: #999999;
+    color: white;
+    height: clamp(52px, 1.2vw, 45px);
+    width: clamp(96px, 10vw, 197px);
+  }
+
+  button.btn-approve {
+    grid-column: 2/3;
+    grid-row: 5/6;
+    justify-self: end;
+    background-color: #60d6c5;
+    color: #3f3d56;
+    width: clamp(96px, 10vw, 197px);
+    height: clamp(52px, 1.2vw, 45px);
+  }
+
+  button.btn-cancel,
+  button.btn-approve {
+    width: calc(100% / 1.5);
+    border-radius: 7px;
+    border: none;
+    box-shadow: 1px 1px #878787;
+    font-size: clamp(0.9rem, 1.6vw, 1rem);
+  }
+
+  button.btn-cancel:active,
+  button.btn-approve:active {
+    box-shadow: -1px -1px #878787;
+  }
+}
+
+@media only screen and (min-width: 10px) and (max-width: 450px) {
+  button.btn-cancel,
+  button.btn-approve {
+    display: none;
+  }
+
+  button.btn-cancel-mobile,
+  button.btn-approve-mobile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: clamp(82px, 4vw, 85px);
+    font-size: 0.9rem;
+    color: white;
+    border-radius: 7px;
+    box-shadow: 1px 1px #878787;
+    border: none;
+    padding-bottom: 4px;
+  }
+
+  button.btn-cancel-mobile {
+    justify-self: start;
+  }
+
+  button.btn-approve-mobile {
+    justify-self: end;
+    color: #3f3d56;
+  }
+
+  button.btn-approve-mobile {
+    background-color: #60d6c5;
+    box-shadow: 1px 1px #878787;
+  }
+
+  button.btn-approve-mobile:active,
+  button.btn-cancel-mobile:active {
+    box-shadow: -1px -1px #878787;
+  }
+
+  button.btn-cancel-mobile {
+    background-color: #999999;
+    box-shadow: 1px 1px #878787;
+  }
+}
