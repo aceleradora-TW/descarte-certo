@@ -259,7 +259,7 @@ const OrderForm = (props) => {
 
         <Row>
           <Col>
-            <h4>Tipo de Coleta: </h4>
+            <h4 id="collection">Tipo de Coleta: </h4>
           </Col>
           <Col>
             <h4>Quantidade: </h4>
@@ -321,7 +321,7 @@ const OrderForm = (props) => {
               style={{ display: 'block' }}
               required
             >
-              <option label="Tipo de resíduo:" />
+              <option label="Tipo de resíduo:" disabled/>
               <option value="Somente Caliça" label="Somente Caliça" />
               <option value="Somento Gesso" label="Somente Gesso" />
               <option value="Somente Madeira" label="Somente Madeira" />
@@ -342,7 +342,7 @@ const OrderForm = (props) => {
               style={{ display: 'block' }}
               required
             >
-              <option label="Região:" />
+              <option label="Região:" disabled/>
               <option
                 value="Porto Alegre - Centro"
                 label="Porto Alegre - Centro"
@@ -364,7 +364,7 @@ const OrderForm = (props) => {
           </Col>
         </Row>
         <Row>
-          <Col className="col-sm-6">
+          <Col className="col-sm-6" id="accessType">
             {showingFieldAccessType(values, handleChange, handleBlur)}
           </Col>
           <Col className="col-sm-5">

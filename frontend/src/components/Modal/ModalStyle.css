@@ -58,7 +58,6 @@
 }
 .select-residuo {
   margin-right: 15px;
-  margin-bottom: 10px;
   border-radius: 10px;
   border-color: lightgray;
   height: 50px;
@@ -97,7 +96,7 @@
 }
 
 .bucket{
-  margin-bottom: 7px;
+  margin-bottom: 1px;
 }
 
 .h4, h4{
@@ -111,6 +110,15 @@
 
 select {
   text-indent: 7px;
+}
+
+#accessType{
+  margin-top: 8px;
+  margin-bottom: 3px;
+}
+
+.button, select:enabled{
+  color: black ;
 }
 
 .form-group{
@@ -143,7 +151,7 @@ select {
 @media only screen and (min-width: 992px){
   .col-lg-2 {
     flex: 0 0 50.0%;
-    max-width: 50.0%;
+    max-width: 50.0%; 
   }
   .col-lg-3 {
     flex: 0 0 50.0%;
