@@ -4,16 +4,16 @@
   padding: 12px 20px;
 }
 
-.form[type='text'] {
+.form[type="text"] {
   width: 40%;
   margin-right: 4px;
 }
 
-.form[type='email'] {
+.form[type="email"] {
   width: 40%;
 }
 
-.form[type='number'] {
+.form[type="number"] {
   width: 40%;
 }
 .btn.form-button{
