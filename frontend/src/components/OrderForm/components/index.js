@@ -83,7 +83,7 @@ export const Region = ({ onChange }) => {
 }
 
 export const Floor = ({ onChange }) =>
-  <input type="number" placeholder="Informe o andar" onChange={onChange} />
+  <input type="number" name="floor" placeholder="Informe o andar" onChange={onChange} />
 
 export const ResidueType = ({ onChange }) => {
   return (
