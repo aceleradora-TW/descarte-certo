@@ -30,15 +30,4 @@ public class BagCalculator {
 
         return totalValue;
     }
-
-    public static void main(String[] args) {
-
-        BagCalculator calculator = new BagCalculator();
-
-        BagEstimateParameters params = new BagEstimateParameters(55, ELEVATOR, WOOD);
-
-        BigDecimal result = calculator.calculateEstimate(params);
-
-        System.out.println("Total: " +result);
-    }
 }
