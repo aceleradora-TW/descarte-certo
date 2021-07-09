@@ -80,6 +80,11 @@
   box-shadow: none;
 }
 
+#quantity{
+  text-align: center;
+  width: 80px
+}
+
 .button, input {
   overflow: visible;
   margin-right: 4px;
@@ -104,16 +109,19 @@
     white-space: nowrap;
 }
 
-.quantity-field{
-  width: 80px;
-}
-
 select {
   text-indent: 7px;
 }
 
 .form-group{
   margin-bottom: 5px;
+}
+
+
+@media only screen and (min-width:375px) and (max-width:667px){
+  .btn.form-button{
+    width: 38%;
+  }
 }
 
 @media only screen and (min-width:414px) and (max-width:736px){ 
@@ -130,7 +138,6 @@ select {
   .btn.form-button{
     width: 35%;
   }
-
 }
 
 @media only screen and (min-width: 992px){
