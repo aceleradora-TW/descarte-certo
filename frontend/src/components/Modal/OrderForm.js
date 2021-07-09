@@ -259,7 +259,7 @@ const OrderForm = (props) => {
 
         <Row>
           <Col>
-            <h4 id="collection">Tipo de Coleta: </h4>
+            <h4>Tipo de Coleta: </h4>
           </Col>
           <Col>
             <h4>Quantidade: </h4>

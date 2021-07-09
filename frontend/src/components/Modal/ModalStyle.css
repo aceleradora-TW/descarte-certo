@@ -61,7 +61,7 @@
   border-radius: 10px;
   border-color: lightgray;
   height: 50px;
-  color: gray;
+  color: black;
   width: 100%;
 }
 
@@ -98,9 +98,12 @@
 .bucket{
   margin-bottom: 1px;
 }
+.bags{
+  margin-bottom: 7px;
+}
 
 .h4, h4{
-  font-size: 1.25rem;
+  font-size: 1.05rem;
 }
 
 .error{
@@ -145,6 +148,16 @@ select {
 
   .btn.form-button{
     width: 35%;
+  }
+}
+@media only screen and (min-width:360px) and (max-width:640px){
+  .btn.form-button{
+    width: 42%;
+  }
+}
+@media only screen and (min-width:320px) and (max-width:568px){
+  .btn.form-button{
+    width: 62%;
   }
 }
 
