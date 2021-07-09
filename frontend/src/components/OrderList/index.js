@@ -6,10 +6,12 @@ import IconBack from "../images/iconevoltar.png";
 import ReactHTMLTableToExcel from 'react-html-table-to-excel'
 import Preload from '../Preload/Preload'
 import Tabela from  './TabelaOrcamento'
+import Pagination from "../Pagination/Pagination";
 
 
 
 const OrderListComponent = () => {
+
   const [orders, setOrders] = useState([]);
   const [ordersPerPage, setOrdersPerPage] = useState()
   const [currentPage, setCurrentPage] = useState(1);
@@ -34,32 +36,7 @@ const OrderListComponent = () => {
       })
   }
 
-  const firstPage = () => {
-    if (currentPage > 1) {
-      findAllOrders(1);
-    }
-  };
-
-  const prevPage = () => {
-    let prevPage = 1;
-    if (currentPage > 1) {
-      findAllOrders(currentPage - prevPage);
-    }
-  };
-
-  const lastPage = () => {
-    let condition = Math.ceil(totalElements / ordersPerPage);
-    if (currentPage < condition) {
-      findAllOrders(condition);
-    }
-  };
-
-  const nextPage = () => {
-    if (currentPage < Math.ceil(totalElements / ordersPerPage)) {
-      findAllOrders(currentPage + 1);
-    }
-  }
-
+ 
   return (
     <>
       <div className="btn-back">
@@ -75,8 +52,7 @@ const OrderListComponent = () => {
           )
             : (
               <>
-                <Tabela orders={orders}/>
-                  
+                <Tabela orders={orders}/>                  
                   <div className="btn-excel-wrapper">
                     <ReactHTMLTableToExcel
                       className="btn-export"
@@ -86,12 +62,12 @@ const OrderListComponent = () => {
                       buttonText="Exportar Excel"
                     />
                   </div>
-                  <div className="btn-wrapper">
-                    <button className="btn-pagination" onClick={firstPage}>Primeira Página</button>
-                    <button className="btn-pagination" onClick={prevPage}>Anterior</button>
-                    <button className="btn-pagination" onClick={nextPage}>Próximo</button>
-                    <button className="btn-pagination" onClick={lastPage}>Última Página</button>
-                  </div>
+                  <Pagination
+                  currentPage={currentPage}
+                  totalElements={totalElements}
+                  ordersPerPage={ordersPerPage}
+                  onClick={findAllOrders}
+                  />
               </>
             )}
         </div>
