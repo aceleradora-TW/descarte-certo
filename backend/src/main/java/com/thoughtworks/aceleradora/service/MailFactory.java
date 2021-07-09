@@ -15,12 +15,17 @@ public class MailFactory {
     private String emailSender;
     private String emailReceiver;
 
+
     public MailFactory(@Value("${mailgun.username}")String username, @Value("${mailgun.password}")String password, @Value("${mailgun.emailSender}")
             String emailSender, @Value("${mailgun.emailReceiver}")String emailReceiver){
         this.username = username;
         this.password = password;
         this.emailSender = emailSender;
         this.emailReceiver = emailReceiver;
+    }
+    public void setEmailReceiver (String email){
+        this.emailReceiver = email;
+
     }
 
     public JsonNode sendMessage(String mailBody) throws UnirestException {

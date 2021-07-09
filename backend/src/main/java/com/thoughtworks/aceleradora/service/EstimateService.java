@@ -24,10 +24,13 @@ public class EstimateService {
         this.mailFactory= mailFactory;
     }
 
+    public void configureMailFactory(String email) {
+        this.mailFactory.setEmailReceiver(email);
+    }
 
     public Estimate create(EstimateRequest estimateRequest) {
         Estimate estimateEntity = estimateConverterService.converter(estimateRequest);
-        sendEstimateEmail(estimateEntity);
+        this.sendEmail(estimateEntity,"5marias.orcamento@gmail.com");
         return estimateRepository.save(estimateEntity);
     }
 
@@ -40,7 +43,7 @@ public class EstimateService {
                 PageRequest.of(
                         page.orElse(0),
                         totalPage.orElse(20),
-                        Sort.Direction.ASC, sortBy.orElse("id")
+                        Sort.Direction.DESC, sortBy.orElse("id")
                 )
         );
     }
@@ -53,6 +56,11 @@ public class EstimateService {
              return estimateRepository.save(est);
          }
         return null;
+    }
+
+    public void sendEmail(Estimate estimate, String email){
+        this.configureMailFactory(email);
+        this.sendEstimateEmail(estimate);
     }
 
     private void sendEstimateEmail(Estimate estimateEntity){
