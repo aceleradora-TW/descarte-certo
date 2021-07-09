@@ -11,10 +11,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import javax.ws.rs.GET;
 import java.util.Optional;
-
-
 
 @RestController
 @RequestMapping("/estimate")
@@ -41,8 +38,6 @@ public class EstimateController {
                 .orElseThrow(() -> new EstimateNotFoundException(id));
     }
 
-
-
     @PutMapping(path = "/{id}/confirm")
     @ResponseStatus(HttpStatus.OK)
     public Estimate confirm(@PathVariable int id) {
@@ -62,8 +57,6 @@ public class EstimateController {
 
         return estimate;
     }
-
-
 
     @GetMapping(path = "/all")
     @ResponseStatus(HttpStatus.OK)

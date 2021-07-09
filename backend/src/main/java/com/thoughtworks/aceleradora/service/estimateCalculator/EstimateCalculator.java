@@ -8,17 +8,21 @@ import com.thoughtworks.aceleradora.service.bucketcalculator.BucketEstimateParam
 import java.math.BigDecimal;
 
 public class EstimateCalculator {
+    private BagCalculator bagCalculator;
+    private BucketCalculator bucketCalculator;
+
+    public EstimateCalculator() {
+        this.bagCalculator = new BagCalculator();
+        this.bucketCalculator = new BucketCalculator();
+    }
 
     public BigDecimal calculate(CalculateRequest params){
-
         if (params.getType().equals(ServiceType.BAG)) {
-            BagCalculator calculator = new BagCalculator();
             BagEstimateParameters bagParams = new BagEstimateParameters(params.getAmount(), params.getAccess(), params.getMaterial());
-            return calculator.calculateEstimate(bagParams);
+            return bagCalculator.calculateEstimate(bagParams);
         }
 
-        BucketCalculator calculator = new BucketCalculator();
         BucketEstimateParameters bucketParams= new BucketEstimateParameters(params.getAmount(), params.getZones(), params.getMaterial());
-        return calculator.calculateBucketEstimate(bucketParams);
+        return bucketCalculator.calculateBucketEstimate(bucketParams);
     }
 }
