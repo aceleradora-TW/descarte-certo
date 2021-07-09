@@ -5,10 +5,8 @@ import { Nav } from "react-bootstrap";
 import IconBack from "../images/iconevoltar.png";
 import ReactHTMLTableToExcel from 'react-html-table-to-excel'
 import Preload from '../Preload/Preload'
-import Tabela from  './TabelaOrcamento'
+import Tabela from './TabelaOrcamento'
 import Pagination from "../Pagination/Pagination";
-
-
 
 const OrderListComponent = () => {
 
@@ -16,13 +14,11 @@ const OrderListComponent = () => {
   const [ordersPerPage, setOrdersPerPage] = useState()
   const [currentPage, setCurrentPage] = useState(1);
   const [totalElements, setTotalElements] = useState()
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    setTimeout(() => {
       findAllOrders(currentPage)
-    })
-  }, [])
+  },[])
 
   const findAllOrders = (currentPage) => {
     currentPage -= 1
@@ -31,12 +27,10 @@ const OrderListComponent = () => {
         setOrders(res.content);
         setCurrentPage(res.number + 1)
         setTotalElements(res.totalElements)
-        setOrdersPerPage(res.data.size)
-        setLoading(true)
+        setOrdersPerPage(res.size)
+        setLoading(false)
       })
   }
-
- 
   return (
     <>
       <div className="btn-back">
@@ -47,29 +41,25 @@ const OrderListComponent = () => {
 
       <div className="container-order-list">
         <div className="order-list-title">
-          {!loading ? (
-            <Preload/>
-          )
-            : (
-              <>
-                <Tabela orders={orders}/>                  
-                  <div className="btn-excel-wrapper">
-                    <ReactHTMLTableToExcel
-                      className="btn-export"
-                      table="emp-table"
-                      filename="5Marias Orcamento Excel file"
-                      sheet="Sheet"
-                      buttonText="Exportar Excel"
-                    />
-                  </div>
-                  <Pagination
-                  currentPage={currentPage}
-                  totalElements={totalElements}
-                  ordersPerPage={ordersPerPage}
-                  onClick={findAllOrders}
-                  />
-              </>
-            )}
+
+          <Preload loading={loading}>
+            <Tabela orders={orders} />
+            <div className="btn-excel-wrapper">
+              <ReactHTMLTableToExcel
+                className="btn-export"
+                table="emp-table"
+                filename="5Marias Orcamento Excel file"
+                sheet="Sheet"
+                buttonText="Exportar Excel"
+              />
+            </div>
+            <Pagination
+              currentPage={currentPage}
+              totalElements={totalElements}
+              ordersPerPage={ordersPerPage}
+              findAllOrders={findAllOrders}
+            />
+          </Preload>
         </div>
       </div>
     </>

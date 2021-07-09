@@ -1,12 +1,14 @@
-import React from  'react'
+import React from 'react'
 import './Preload.css'
-function Preload() {
+
+function Preload({ loading, children }) {
     return (
         <>
-        <div className="spinner">
-            <span>Carregando...</span>
-            <div className="half-spinner"></div>
-        </div>
+            {loading ? (<div className="spinner">
+                <span>Carregando...</span>
+                <div className="half-spinner"></div>
+            </div>) : (
+                <>{ children }</>)}
         </>
     )
 }

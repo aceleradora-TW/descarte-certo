@@ -1,5 +1,6 @@
 import React from 'react'
 import './styles.css'
+
 function Tabela({orders}) {
     
     return (

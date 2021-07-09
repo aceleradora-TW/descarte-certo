@@ -1,7 +1,6 @@
 import React from 'react'
-// import {findAllOrders} from '../OrderList/index'
 
-function Pagination(currentPage,totalElements,ordersPerPage) {
+function Pagination({findAllOrders,currentPage,totalElements,ordersPerPage}) {
 
     const firstPage = () => {
         if (currentPage > 1) {
