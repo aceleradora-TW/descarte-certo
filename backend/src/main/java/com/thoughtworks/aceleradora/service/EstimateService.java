@@ -84,7 +84,7 @@ public class EstimateService {
         sb.append(estimateEntity.getRequester().getEmail());
         sb.append( System.getProperty("line.separator"));
 
-        sb.append("Region: ");
+        sb.append("Região: ");
         sb.append(estimateEntity.getResidueAddress().getRegion());
         sb.append( System.getProperty("line.separator"));
 
@@ -92,10 +92,11 @@ public class EstimateService {
         sb.append(estimateEntity.getResidueAddress().getLocationInfo());
         sb.append( System.getProperty("line.separator"));
 
-        sb.append("Informações do residuo: ");
+        sb.append("Informações do resíduo: ");
         sb.append(estimateEntity.getResidue().getResidueType());
         sb.append( System.getProperty("line.separator"));
-        sb.append("Quantidade dos residuo: ");
+
+        sb.append("Quantidade dos resíduo: ");
         sb.append(estimateEntity.getResidue().getResidueMeasure());
 
         try {
@@ -104,5 +105,4 @@ public class EstimateService {
             e.printStackTrace();
         }
     }
-
 }
