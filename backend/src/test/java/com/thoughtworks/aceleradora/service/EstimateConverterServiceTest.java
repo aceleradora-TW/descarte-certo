@@ -1,10 +1,8 @@
 package com.thoughtworks.aceleradora.service;
 
 import com.thoughtworks.aceleradora.controller.request.EstimateRequest;
-import com.thoughtworks.aceleradora.controller.request.RequesterRequest;
 import com.thoughtworks.aceleradora.controller.request.ResidueAddressRequest;
 import com.thoughtworks.aceleradora.entity.Estimate;
-import junit.framework.TestCase;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -24,7 +22,7 @@ public class EstimateConverterServiceTest {
     public void shouldCreateEstimateWithRequestName() {
         String expectedRequesterName = "Pedro";
         EstimateRequest validEstimateRequest = createValidRequest();
-        validEstimateRequest.getRequester().setFullName(expectedRequesterName);
+        validEstimateRequest.getRequester().setName(expectedRequesterName);
 
         Estimate estimateEntity = estimateConverterService.converter(validEstimateRequest);
 

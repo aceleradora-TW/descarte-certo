@@ -10,8 +10,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class RequesterRequest {
-    private String cellphone;
+    private String phone;
     private String email;
-    private String fullName;
+    private String name;
     
 }

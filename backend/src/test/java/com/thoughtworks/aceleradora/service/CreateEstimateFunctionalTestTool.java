@@ -5,7 +5,6 @@ import com.thoughtworks.aceleradora.controller.request.EstimateRequest;
 import com.thoughtworks.aceleradora.controller.request.RequesterRequest;
 import com.thoughtworks.aceleradora.controller.request.ResidueAddressRequest;
 import com.thoughtworks.aceleradora.controller.request.ResidueRequest;
-import com.thoughtworks.aceleradora.entity.Residue;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -22,8 +21,8 @@ public class CreateEstimateFunctionalTestTool {
             EstimateRequest estimateRequest =
                     EstimateRequest.builder()
                             .requester(RequesterRequest.builder()
-                                    .fullName("Leo")
-                                    .cellphone("")
+                                    .name("Leo")
+                                    .phone("")
                                     .email("")
                                     .build())
                             .residueAddress(ResidueAddressRequest.builder()

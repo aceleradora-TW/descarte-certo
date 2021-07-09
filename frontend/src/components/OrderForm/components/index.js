@@ -18,13 +18,13 @@ const ResidueTypeOption = ({ value, onChange, label }) => {
 }
 
 const Name = ({ onChange }) =>
-  <input type="text" name="fullName" placeholder="Nome Completo" onChange={onChange} />
+  <input type="text" name="name" placeholder="Nome Completo" onChange={onChange} />
 
 const Email = ({ onChange }) =>
   <input type="email" name="email" placeholder="Digite seu email" onChange={onChange} />
 
 const Phone = ({ onChange }) =>
-  <input type="text" name="cellphone" placeholder="(00) 0 0000-0000" onChange={onChange} />
+  <input type="text" name="phone" placeholder="(00) 0 0000-0000" onChange={onChange} />
 
 const Quantity = ({ onChange }) =>
   <input type="number" name="residueAmount" placeholder="0" onChange={onChange} />

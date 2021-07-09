@@ -14,8 +14,8 @@ public class EstimateConverterService {
         return Estimate
                 .builder()
                 .requester(Requester.builder()
-                                .fullName(request.getRequester().getFullName())
-                                .cellphone(request.getRequester().getCellphone())
+                                .fullName(request.getRequester().getName())
+                                .cellphone(request.getRequester().getPhone())
                                 .email(request.getRequester().getEmail())
                                 .build()
                 )
