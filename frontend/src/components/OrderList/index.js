@@ -17,8 +17,8 @@ const OrderListComponent = () => {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-      findAllOrders(currentPage)
-  },[])
+    findAllOrders(currentPage)
+  }, [])
 
   const findAllOrders = (currentPage) => {
     currentPage -= 1
@@ -43,7 +43,8 @@ const OrderListComponent = () => {
         <div className="order-list-title">
 
           <Preload loading={loading}>
-            <Tabela orders={orders} />
+            {orders.lenght > 0 ? (<Tabela orders={orders} />) :
+              (<h2>Não há orçamentos disponíveis</h2>)}
             <div className="btn-excel-wrapper">
               <ReactHTMLTableToExcel
                 className="btn-export"
