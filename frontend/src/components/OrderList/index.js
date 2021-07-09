@@ -43,8 +43,11 @@ const OrderListComponent = () => {
         <div className="order-list-title">
 
           <Preload loading={loading}>
-            {orders.lenght > 0 ? (<Tabela orders={orders} />) :
-              (<h2>Não há orçamentos disponíveis</h2>)}
+            {
+              orders.length > 0 ?
+                (<Tabela orders={orders} />) :
+                (<h2>Não há orçamentos disponíveis</h2>)
+            }
             <div className="btn-excel-wrapper">
               <ReactHTMLTableToExcel
                 className="btn-export"
