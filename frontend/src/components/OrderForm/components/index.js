@@ -9,7 +9,6 @@ const Select = ({ options, name, onChange, placeholder }) => {
   )
 }
 
-
 const ResidueTypeOption = ({ value, onChange, label }) => {
   return (
     <label>
@@ -43,10 +42,10 @@ const Box = ({ title, children }) => {
 export const Residues = ({ onChange }) => {
   const placeholder = "Tipos de resíduos:"
   const options = [
-    { value: "", label: "Somente Caliça" },
-    { value: "", label: "Somente Gesso" },
-    { value: "", label: "Somente Madeira" },
-    { value: "", label: "Resíduos Misturados (Mistura de resíduo de obra)" },
+    { value: "Somente Caliça", label: "Somente Caliça" },
+    { value: "Somente Gesso", label: "Somente Gesso" },
+    { value: "Somente Madeira", label: "Somente Madeira" },
+    { value: "Mix", label: "Resíduos Misturados (Mistura de resíduo de obra)" },
   ]
 
   return (
