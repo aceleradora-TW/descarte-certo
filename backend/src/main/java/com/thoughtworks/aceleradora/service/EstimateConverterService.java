@@ -30,11 +30,11 @@ public class EstimateConverterService {
                 .residue(Residue.builder()
                         .residueMeasure(request.getResidueRequest().getResidueMeasure())
                         .residueType(request.getResidueRequest().getResidueType())
-                        .estimateValue(estimateCalculator.calculate(request.getCalculateRequeste()))
                         .build()
                 )
                 .status(OrderStatus.CRIADO)
                 .creationDate(LocalDate.now())
+                .estimateValue(estimateCalculator.calculate(request.getCalculate()))
                 .build();
     }
 }

@@ -17,6 +17,7 @@ public class EstimateCalculator {
     }
 
     public BigDecimal calculate(CalculateRequest params){
+        System.out.println(params.toString());
         if (params.getType().equals(ServiceType.BAG)) {
             BagEstimateParameters bagParams = new BagEstimateParameters(params.getAmount(), params.getAccess(), params.getMaterial());
             return bagCalculator.calculateEstimate(bagParams);
