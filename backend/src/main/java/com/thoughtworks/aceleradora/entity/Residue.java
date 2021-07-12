@@ -7,7 +7,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.math.BigDecimal;
 
 @Entity
 @Table(name = "residue")
@@ -23,7 +22,4 @@ public class Residue {
     private int id;
     private String residueType;
     private String residueMeasure;
-    private BigDecimal estimateValue;
-
-
 }
