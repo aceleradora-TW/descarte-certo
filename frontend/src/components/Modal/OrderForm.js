@@ -102,6 +102,8 @@ const OrderForm = (props) => {
           handleAlertClick();
         });
     }, 400);
+    console.log(props)
+    props.nextStep({ target: { name: "confirmOrder" } })
   };
 
   const showingField = (values) => {

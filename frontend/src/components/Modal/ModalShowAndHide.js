@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import ModalAcceptance from "../ModalAcceptance";
 import ModalConfirmation from "../ModalConfirmation";
+import Form from "./OrderForm";
 
-/*const OrderForm = ({ display, onClick }) => {
+const OrderForm = ({ display, onClick }) => {
   return display ? (
-    <div className="order-form">
-      <p>formulario de orçamentos</p>
-      <input onClick={onClick} type="button" name="confirmOrder" value="Enviar" />
+    <div className="form-inputs-style">
+      <Form nextStep={onClick} />
     </div>
   ) : null
-  */
+  };
 //Modal confirmation/confirm order
 const ModalConfirmation2 = ({ display, onClick }) => {
   return display ? (
@@ -27,15 +27,15 @@ const ModalConfirmation2 = ({ display, onClick }) => {
 const ModalAcceptance2 = ({ display, onClick }) => {
   return display ? (
     <div className="acceptance-content">
-      <input onClick={onclick} type="button" className="acceptance-close-btn" />
+      <input onClick={onClick} type="button" className="acceptance-close-btn" />
     </div>
   ) : null;
 };
 
 const ModalShowAndHide = () => {
   const initialState = {
-    /*orderForm:  true,*/
-    confirmOrder: true,
+    orderForm:  true,
+    confirmOrder: false,
     finishOrder: false,
   };
 
@@ -45,29 +45,22 @@ const ModalShowAndHide = () => {
     const { name } = e.target;
     console.log(name);
     setContentControler({
+      orderForm: false,
       confirmOrder: false,
       finishOrder: false,
-    }); /*TODO: acrescentar orderForm: false,*/
+    }); 
     setContentControler({ [name]: true });
   };
 
-  const { confirmOrder, finishOrder } = contentControler;
+  const { orderForm, confirmOrder, finishOrder } = contentControler;
 
   return (
     <div className="content-modal">
-      {/*TODO: acrescentar  <OrderForm display={orderForm} onClick={controlDisplayContent} />*/}
-      <ModalConfirmation
-        display={confirmOrder}
-        onClick={controlDisplayContent}
-      />
+      <OrderForm display={orderForm} onClick={controlDisplayContent} />
+      <ModalConfirmation display={confirmOrder} onClick={controlDisplayContent} />
       <ModalAcceptance display={finishOrder} />
     </div>
   );
 };
 
 export default ModalShowAndHide;
-
-/* ========
-#TODO: puxar a modal nº 1
-#TODO: refatorar nomes
-*/

@@ -1,5 +1,6 @@
 import React from "react";
 import { Modal as BootstrapModal, ModalHeader, ModalBody } from "reactstrap";
+import ModalShowAndHide from "./ModalShowAndHide";
 import "./ModalStyle.css";
 import OrderForm from "./OrderForm";
 
@@ -15,11 +16,11 @@ const Modal = (props) => {
       toggle={props.handleBudgetClick}
     >
       <ModalHeader toggle={handlecloseWindow}>
-        Solicite seu Orçamento
+        Orçamento Rápido
       </ModalHeader>
 
       <ModalBody>
-        <OrderForm {...props} />
+        <ModalShowAndHide />
       </ModalBody>
     </BootstrapModal>
   );
