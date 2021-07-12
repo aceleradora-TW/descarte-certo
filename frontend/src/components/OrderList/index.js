@@ -3,54 +3,34 @@ import "./styles.css";
 import { get } from "../../services/client";
 import { Nav } from "react-bootstrap";
 import IconBack from "../images/iconevoltar.png";
-import ReactHTMLTableToExcel from "react-html-table-to-excel";
+import ReactHTMLTableToExcel from 'react-html-table-to-excel'
+import Preload from '../Preload/Preload'
+import Tabela from './TabelaOrcamento'
+import Pagination from "../Pagination/Pagination";
 
 const OrderListComponent = () => {
+
   const [orders, setOrders] = useState([]);
-  const [ordersPerPage, setOrdersPerPage] = useState();
+  const [ordersPerPage, setOrdersPerPage] = useState()
   const [currentPage, setCurrentPage] = useState(1);
-  const [totalElements, setTotalElements] = useState();
+  const [totalElements, setTotalElements] = useState()
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    findAllOrders(currentPage);
-  }, [currentPage]);
+    findAllOrders(currentPage)
+  }, [])
 
   const findAllOrders = (currentPage) => {
-    currentPage -= 1;
-    get(`/estimate/all?page=${currentPage}`).then((res) => {
-      setOrders(res.content);
-      setCurrentPage(res.number + 1);
-      setTotalElements(res.totalElements);
-      setOrdersPerPage(res.size);
-    });
-  };
-
-  const firstPage = () => {
-    if (currentPage > 1) {
-      findAllOrders(1);
-    }
-  };
-
-  const prevPage = () => {
-    let prevPage = 1;
-    if (currentPage > 1) {
-      findAllOrders(currentPage - prevPage);
-    }
-  };
-
-  const lastPage = () => {
-    let condition = Math.ceil(totalElements / ordersPerPage);
-    if (currentPage < condition) {
-      findAllOrders(condition);
-    }
-  };
-
-  const nextPage = () => {
-    if (currentPage < Math.ceil(totalElements / ordersPerPage)) {
-      findAllOrders(currentPage + 1);
-    }
-  };
-
+    currentPage -= 1
+    get(`/estimate/all?page=${currentPage}`)
+      .then((res) => {
+        setOrders(res.content);
+        setCurrentPage(res.number + 1)
+        setTotalElements(res.totalElements)
+        setOrdersPerPage(res.size)
+        setLoading(false)
+      })
+  }
   return (
     <>
       <div className="btn-back">
@@ -61,68 +41,32 @@ const OrderListComponent = () => {
 
       <div className="container-order-list">
         <div className="order-list-title">
-          {orders.length > 0 ? (
-            <>
-              <table className="content-table" id="emp-table">
-                <thead>
-                  <tr>
-                    <th>Data</th>
-                    <th>Nome</th>
-                    <th>Telefone</th>
-                    <th>email</th>
-                    <th>Quantidade</th>
-                    <th>Material</th>
-                    <th>Acesso</th>
-                    <th>Região</th>
-                    <th>Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {orders.map((order) => (
-                    <tr key={order?.id}>
-                      <td>{order?.creationDate}</td>
-                      <td>{order?.requester?.fullName}</td>
-                      <td>{order?.requester?.cellphone}</td>
-                      <td>{order?.requester?.email}</td>
-                      <td>{order?.residue?.residueMeasure}</td>
-                      <td>{order?.residue?.residueType}</td>
-                      <td>{order?.residueAddress?.locationInfo}</td>
-                      <td>{order?.residueAddress?.region}</td>
-                      <td>{order?.status}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-              <div className="btn-excel-wrapper">
-                <ReactHTMLTableToExcel
-                  className="btn-export"
-                  table="emp-table"
-                  filename="5Marias Orcamento Excel file"
-                  sheet="Sheet"
-                  buttonText="Exportar Excel"
-                />
-              </div>
-              <div className="btn-wrapper">
-                <button className="btn-pagination" onClick={firstPage}>
-                  Primeira Página
-                </button>
-                <button className="btn-pagination" onClick={prevPage}>
-                  Anterior
-                </button>
-                <button className="btn-pagination" onClick={nextPage}>
-                  Próximo
-                </button>
-                <button className="btn-pagination" onClick={lastPage}>
-                  Última Página
-                </button>
-              </div>
-            </>
-          ) : (
-            <h2>Não há orçamentos disponíveis</h2>
-          )}
+
+          <Preload loading={loading}>
+            {
+              orders.length > 0 ?
+                (<Tabela orders={orders} />) :
+                (<h2>Não há orçamentos disponíveis</h2>)
+            }
+            <div className="btn-excel-wrapper">
+              <ReactHTMLTableToExcel
+                className="btn-export"
+                table="emp-table"
+                filename="5Marias Orcamento Excel file"
+                sheet="Sheet"
+                buttonText="Exportar Excel"
+              />
+            </div>
+            <Pagination
+              currentPage={currentPage}
+              totalElements={totalElements}
+              ordersPerPage={ordersPerPage}
+              findAllOrders={findAllOrders}
+            />
+          </Preload>
         </div>
       </div>
     </>
   );
-};
+}
 export default OrderListComponent;
