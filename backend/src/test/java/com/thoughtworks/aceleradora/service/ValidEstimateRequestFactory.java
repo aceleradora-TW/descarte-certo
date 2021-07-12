@@ -5,6 +5,10 @@ import com.thoughtworks.aceleradora.controller.request.EstimateRequest;
 import com.thoughtworks.aceleradora.controller.request.RequesterRequest;
 import com.thoughtworks.aceleradora.controller.request.ResidueAddressRequest;
 import com.thoughtworks.aceleradora.controller.request.ResidueRequest;
+import com.thoughtworks.aceleradora.service.bagCalculator.FloorAccess;
+import com.thoughtworks.aceleradora.service.bucketcalculator.BucketZones;
+import com.thoughtworks.aceleradora.service.bucketcalculator.Materials;
+import com.thoughtworks.aceleradora.service.estimateCalculator.ServiceType;
 
 public class ValidEstimateRequestFactory {
 
@@ -27,10 +31,10 @@ public class ValidEstimateRequestFactory {
                         .build())
                 .calculate(CalculateRequest.builder()
                         .amount(60)
-                        .access("ELEVATOR")
-                        .zones("DOWNTOWN")
-                        .type("BAG")
-                        .material("WOOD")
+                        .access(FloorAccess.ELEVATOR)
+                        .zones(BucketZones.DOWNTOWN)
+                        .type(ServiceType.BAG)
+                        .material(Materials.WOOD)
                         .build())
                 .build();
         return estimateRequest;
