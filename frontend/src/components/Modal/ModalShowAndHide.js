@@ -3,43 +3,28 @@ import ModalAcceptance from "../ModalAcceptance";
 import ModalConfirmation from "../ModalConfirmation";
 import Form from "./OrderForm";
 
-const OrderForm = ({ display, onClick }) => {
+const OrderForm = ({ display, onClick, setEstimateValue, setMaterial }) => {
   return display ? (
     <div className="form-inputs-style">
-      <Form nextStep={onClick} />
-    </div>
-  ) : null
-  };
-//Modal confirmation/confirm order
-const ModalConfirmation2 = ({ display, onClick }) => {
-  return display ? (
-    <div className="modal-container">
-      <input
-        onClick={onClick}
-        type="button"
-        name="btn-approve"
-        value="Aprovar e Agendar"
+      <Form 
+        nextStep={onClick} 
+        setEstimateValue={setEstimateValue} 
+        setMaterial={setMaterial}
       />
-    </div>
-  ) : null;
-};
-//Modal acceptance/finish order
-const ModalAcceptance2 = ({ display, onClick }) => {
-  return display ? (
-    <div className="acceptance-content">
-      <input onClick={onClick} type="button" className="acceptance-close-btn" />
     </div>
   ) : null;
 };
 
 const ModalShowAndHide = () => {
   const initialState = {
-    orderForm:  true,
+    orderForm: true,
     confirmOrder: false,
     finishOrder: false,
   };
 
   const [contentControler, setContentControler] = useState(initialState);
+  const [estimateValue, setEstimateValue] = useState(0);
+  const [material, setMaterial] = useState('');
 
   const controlDisplayContent = (e) => {
     const { name } = e.target;
@@ -48,7 +33,7 @@ const ModalShowAndHide = () => {
       orderForm: false,
       confirmOrder: false,
       finishOrder: false,
-    }); 
+    });
     setContentControler({ [name]: true });
   };
 
@@ -56,8 +41,18 @@ const ModalShowAndHide = () => {
 
   return (
     <div className="content-modal">
-      <OrderForm display={orderForm} onClick={controlDisplayContent} />
-      <ModalConfirmation display={confirmOrder} onClick={controlDisplayContent} />
+      <OrderForm 
+        display={orderForm} 
+        onClick={controlDisplayContent}
+        setEstimateValue={setEstimateValue}
+        setMaterial={setMaterial} 
+      />
+      <ModalConfirmation
+        estimateValue={estimateValue}
+        material={material}
+        display={confirmOrder}
+        onClick={controlDisplayContent}
+      />
       <ModalAcceptance display={finishOrder} />
     </div>
   );
