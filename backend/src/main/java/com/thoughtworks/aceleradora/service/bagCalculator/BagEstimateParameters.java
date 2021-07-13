@@ -1,4 +1,4 @@
-package com.thoughtworks.aceleradora.service.quickestimates;
+package com.thoughtworks.aceleradora.service.bagCalculator;
 
 import com.thoughtworks.aceleradora.service.bucketcalculator.Materials;
 

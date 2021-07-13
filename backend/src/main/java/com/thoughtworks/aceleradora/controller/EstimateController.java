@@ -11,10 +11,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import javax.ws.rs.GET;
 import java.util.Optional;
-
-
 
 @RestController
 @RequestMapping("/estimate")
@@ -26,13 +23,10 @@ public class EstimateController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public EstimateResponse create(@RequestBody EstimateRequest estimateRequest) {
+    public Estimate create(@RequestBody EstimateRequest estimateRequest) {
         Estimate estimateEntity = estimateService.create(estimateRequest);
-        return EstimateResponse.builder()
-                .estimateCode(estimateEntity.getId())
-                .build();
+        return estimateEntity;
     }
-
     @GetMapping(path = "/{id}")
     @ResponseStatus(HttpStatus.OK)
     public Estimate get(@PathVariable int id) {
@@ -40,8 +34,6 @@ public class EstimateController {
                 .getEstimate(id)
                 .orElseThrow(() -> new EstimateNotFoundException(id));
     }
-
-
 
     @PutMapping(path = "/{id}/confirm")
     @ResponseStatus(HttpStatus.OK)
@@ -62,8 +54,6 @@ public class EstimateController {
 
         return estimate;
     }
-
-
 
     @GetMapping(path = "/all")
     @ResponseStatus(HttpStatus.OK)
