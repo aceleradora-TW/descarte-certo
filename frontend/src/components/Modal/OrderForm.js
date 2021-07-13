@@ -34,6 +34,7 @@ const OrderForm = (props) => {
     residueMeasure: yup.string().required(ERRORS.REQUIRED_FIELD),
     accessType: accessTypeValidation,
     residueAmount: yup.number().required(ERRORS.REQUIRED_FIELD),
+    residueType: yup.string().required(ERRORS.REQUIRED_FIELD)
   });
 
   const [isAlertVisible, setIsAlertVisible] = useState(false);
@@ -198,243 +199,240 @@ const OrderForm = (props) => {
   };
 
   return (
-    <Formik
-      initialValues={initialValues}
-      validationSchema={validationSchema}
-      onSubmit={onSubmit}
-    >
-      {({ values, handleChange, handleBlur, isSubmitting, isValid }) => (
-        <Form className="form-inputs-style">
-          <Field
-            name="fullName"
-            required
-            className="form-control field-input"
-            placeholder="Nome Completo"
-            onChange={handleChange}
-            value={values.fullName}
-            onBlur={handleBlur}
-          />
+  <Formik
+    initialValues={initialValues}
+    validationSchema={validationSchema}
+    onSubmit={onSubmit}
+  >
+    {({ values, handleChange, handleBlur, isSubmitting, isValid }) => (
+      <Form className="form-inputs-style">
+        <Field
+          name="fullName"
+          required
+          className="form-control field-input"
+          placeholder="Nome Completo"
+          onChange={handleChange}
+          value={values.fullName}
+          onBlur={handleBlur}
+        />
 
-          <ErrorMessage component="div" name="fullName" />
+        <ErrorMessage className="error" component="div" name="fullName" />
 
-          <br />
+        <br />
 
-          <Row>
-            <Col className="col-sm-4">
-              <FormGroup>
-                <Field name="cellphone" required>
-                  {({ field }) => {
-                    return (
-                      <InputMask
-                        mask="(99) 99999-9999"
-                        className="form-control field-input"
-                        placeholder="(51) 90000-0000"
-                        value={values.cellphone}
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                        {...field}
-                      />
-                    );
-                  }}
-                </Field>
-                <ErrorMessage component="div" name="cellphone" />
-              </FormGroup>
-            </Col>
-            <Col className="col-sm-8">
-              <FormGroup>
-                <Field
-                  className="form-control field-input"
-                  name="email"
-                  value={values.email}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  placeholder="seuemailaqui@gmail.com"
-                  required
-                />
-                <ErrorMessage component="div" name="email" />
-              </FormGroup>
-            </Col>
-          </Row>
-
-          <br />
-
-          <Row>
-            <Col>
-              <h4>Tipo de Coleta: </h4>
-              <br />
-            </Col>
-            <Col>
-              <h4>Quantidade: </h4>
-              <br />
-            </Col>
-          </Row>
-
-          <Row>
-            <Col lg="2">
-              <FormGroup>
-                <Label>
-                  <Field
-                    type="radio"
-                    className=""
-                    name="residueMeasure"
-                    value="Caçambas"
-                    onClick={radioTrueMeasure(values.residueMeasure)}
-                  />
-                  Caçamba
-                </Label>
-              </FormGroup>
-            </Col>
-
-            <Col lg="4">
-              <FormGroup>
-                <Label>
-                  <Field
-                    type="radio"
-                    className=""
-                    name="residueMeasure"
-                    value="Sacos"
-                    onClick={radioTrueMeasure(values.residueMeasure)}
-                  />
-                  Sacos (Padrão 50 Litros)
-                </Label>
-              </FormGroup>
-            </Col>
-
-            <Col className="col-lg-3">
-              <div id="quantity">
-                <Field
-                  type="Number"
-                  placeholder="0"
-                  min="1"
-                  max="500"
-                  name="residueAmount"
-                  value={values.residueAmount}
-                  className="form-control field-input"
-                />
-                <ErrorMessage component="div" name="residueAmount" />
-              </div>
-            </Col>
-          </Row>
-          <br />
-          <Row>
-            <Col className="col-sm-6">
-              <select
-                className="select-residuo"
-                name="residueType"
-                value={values.residueType}
+        <Row>
+          <Col className="col-sm-4">
+            <FormGroup>
+              <Field name="cellphone" required>
+                {({ field }) => {
+                  return (
+                    <InputMask
+                      mask="(99) 99999-9999"
+                      className="form-control field-input"
+                      placeholder="(51) 90000-0000"
+                      value={values.cellphone}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      {...field}
+                    />
+                  );
+                }}
+              </Field>
+              <ErrorMessage className="error" component="div" name="cellphone" />
+            </FormGroup>
+          </Col>
+          <Col className="col-sm-8">
+            <FormGroup>
+              <Field
+                className="form-control field-input"
+                name="email"
+                value={values.email}
                 onChange={handleChange}
                 onBlur={handleBlur}
-                style={{ display: "block" }}
+                placeholder="Email@email.com"
                 required
-              >
-                <option label="Tipo de resíduo:" />
-                <option value="Somente Caliça" label="Somente Caliça" />
-                <option value="Somento Gesso" label="Somente Gesso" />
-                <option value="Somente Madeira" label="Somente Madeira" />
-                <option
-                  value="Mix"
-                  label="Resíduos Misturados (Mistura de resíduos de obra)"
+              />
+              <ErrorMessage className="error" component="div" name="email" />
+            </FormGroup>
+          </Col>
+        </Row>
+
+        <br />
+
+        <Row>
+          <Col>
+            <h4>Tipo de Coleta: </h4>
+          </Col>
+          <Col>
+            <h4>Quantidade: </h4>
+          </Col>
+        </Row>
+
+        <Row>
+          <Col lg="2">
+            <FormGroup>
+              <Label className="bucket">
+                <Field
+                  type="radio"
+                  className=""
+                  name="residueMeasure"
+                  value="Caçambas"
+                  onClick={radioTrueMeasure(values.residueMeasure)}
                 />
-              </select>{" "}
-              <ErrorMessage component="div" name="residueType" />
-            </Col>
-            <Col className="col-sm-5">
-              <select
-                className="select-residuo"
-                name="region"
-                value={values.region}
-                onChange={handleChange}
-                onBlur={handleBlur}
-                style={{ display: "block" }}
-                required
-              >
-                <option label="Região:" />
-                <option
-                  value="Porto Alegre - Centro"
-                  label="Porto Alegre - Centro"
+                Caçamba
+              </Label>
+            </FormGroup>
+
+            <FormGroup>
+              <Label className="bags">
+                <Field
+                  type="radio"
+                  className=""
+                  name="residueMeasure"
+                  value="Sacos"
+                  onClick={radioTrueMeasure(values.residueMeasure)}
                 />
-                <option value="Porto Alegre - Sul" label="Porto Alegre - Sul" />
-                <option
-                  value="Porto Alegre - Norte"
-                  label="Porto Alegre - Norte"
+                Sacos (Padrão 50 Litros)
+              </Label>
+            </FormGroup>
+          </Col>
+
+          <Col className="col-lg-3">               
+              <Field
+                type="Number"
+                placeholder="1"
+                min="1"
+                max="500"
+                name="residueAmount"
+                value={values.residueAmount}
+                className="form-control field-input"
+                id="quantity"
+              />
+              <ErrorMessage className="error" component="div" name="residueAmount" />
+          </Col>
+        </Row>
+        <br />
+        <Row>
+          <Col className="col-sm-6">
+            <select
+              className="select-residuo"
+              name="residueType"
+              value={values.residueType}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              style={{ display: 'block' }}
+              required
+            >
+              <option label="Tipo de resíduo:" disabled/>
+              <option value="Somente Caliça" label="Somente Caliça" />
+              <option value="Somento Gesso" label="Somente Gesso" />
+              <option value="Somente Madeira" label="Somente Madeira" />
+              <option
+                value="Mix"
+                label="Resíduos Misturados (Mistura de resíduos de obra)"
+              />
+            </select>{' '}
+            <ErrorMessage className="error" component="div" name="residueType" />
+          </Col>
+          <Col className="col-sm-5">
+            <select
+              className="select-residuo"
+              name="region"
+              value={values.region}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              style={{ display: 'block' }}
+              required
+            >
+              <option label="Região:" disabled/>
+              <option
+                value="Porto Alegre - Centro"
+                label="Porto Alegre - Centro"
+              />
+              <option
+                value="Porto Alegre - Sul"
+                label="Porto Alegre - Sul"
+              />
+              <option
+                value="Porto Alegre - Norte"
+                label="Porto Alegre - Norte"
+              />
+              <option
+                value="Porto Alegre - Leste"
+                label="Porto Alegre - Leste"
+              />
+            </select>{' '}
+            <ErrorMessage className="error"component="div" name="region" />
+          </Col>
+        </Row>
+        <Row>
+          <Col className="col-sm-6" id="accessType">
+            {showingFieldAccessType(values, handleChange, handleBlur)}
+          </Col>
+          <Col className="col-sm-5">
+            {showingFieldFloor(values, handleChange, handleBlur)}
+            {showingField(values, handleChange, handleBlur)}
+          </Col>
+        </Row>
+        <Row>
+          <Col lg="12">
+            <FormGroup>
+              <Label>
+                <Field
+                  type="radio"
+                  className=""
+                  name="checkedTerms"
+                  value="Termos"
                 />
-                <option
-                  value="Porto Alegre - Leste"
-                  label="Porto Alegre - Leste"
-                />
-              </select>{" "}
-              <ErrorMessage component="div" name="region" />
-            </Col>
-          </Row>
-          <Row>
-            <Col className="col-sm-6">
-              {showingFieldAccessType(values, handleChange, handleBlur)}
-            </Col>
-            <Col className="col-sm-5">
-              {showingFieldFloor(values, handleChange, handleBlur)}
-              {showingField(values, handleChange, handleBlur)}
-            </Col>
-          </Row>
-          <Row>
-            <Col lg="12">
-              <FormGroup>
-                <Label>
-                  <Field
-                    type="radio"
-                    className=""
-                    name="checkedTerms"
-                    value="Termos"
-                  />
-                  Li e concordo com os
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://drive.google.com/file/d/1Wty-Il4oz36PuOWGeX35BWPTmGREShlE/view?usp=sharing"
-                  >
-                    Termos de Uso
-                  </a>
-                  ,{" "}
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://drive.google.com/file/d/1bBGVCMWoQ7vtBpjMF1YWljt6p1GYY5E5/view?usp=sharing"
-                  >
-                    Política de Privacidade
-                  </a>{" "}
-                  e as{" "}
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://drive.google.com/file/d/11Ao8wyvIDL1Yjus_Y8sZcaB-7Exau1wm/view?usp=sharing"
-                  >
-                    Normas e nomenclatura geral sobre LGPD
-                  </a>
-                </Label>
-              </FormGroup>
-            </Col>
-          </Row>
-          <Button
-            className="form-button"
-            disabled={!isValid || isSubmitting}
-            block
-            color="secondary"
-            type="submit"
-            onClick={FormGroup.disabled}
-          >
-            Ver Orçamento
-          </Button>
-          <Alert
-            color={submitSuccess ? "success" : "danger"}
-            isOpen={isAlertVisible}
-          >
-            {submitSuccess
-              ? "Sua solicitação foi enviada! Obrigada!" + values.locationInfo
-              : "Ops! Tivemos um problema. Tente novamente mais tarde. " +
-                values.locationInfo}
-          </Alert>
-        </Form>
-      )}
-    </Formik>
+                Li e concordo com os
+                 <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://drive.google.com/file/d/1Wty-Il4oz36PuOWGeX35BWPTmGREShlE/view?usp=sharing"
+                > Termos de Uso</a>
+                ,{' '}
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://drive.google.com/file/d/1bBGVCMWoQ7vtBpjMF1YWljt6p1GYY5E5/view?usp=sharing"
+                >
+                  Política de Privacidade
+                </a>{' '}
+                e as{' '}
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://drive.google.com/file/d/11Ao8wyvIDL1Yjus_Y8sZcaB-7Exau1wm/view?usp=sharing"
+                >
+                  Normas e nomenclatura geral sobre LGPD
+                </a>
+              </Label>
+            </FormGroup>
+          </Col>
+        </Row>
+        <Button
+          className="form-button"
+          disabled={!isValid || isSubmitting}
+          block
+          color="secondary"
+          type="submit"
+          onClick={FormGroup.disabled}
+        >
+          Ver Orçamento
+        </Button>
+        <Alert
+          color={submitSuccess ? 'success' : 'danger'}
+          isOpen={isAlertVisible}
+        >
+          {submitSuccess
+            ? 'Sua solicitação foi enviada! Obrigada!' +
+              values.locationInfo
+            : 'Ops! Tivemos um problema. Tente novamente mais tarde. ' +
+              values.locationInfo}
+        </Alert>
+      </Form>
+    )}
+  </Formik>
   );
 };
 
