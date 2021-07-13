@@ -2,7 +2,6 @@ import React from "react";
 import { Modal as BootstrapModal, ModalHeader, ModalBody } from "reactstrap";
 import ModalShowAndHide from "./ModalShowAndHide";
 import "./ModalStyle.css";
-import OrderForm from "./OrderForm";
 
 const Modal = (props) => {
   const handlecloseWindow = () => {
