@@ -12,6 +12,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { ERRORS } from "../../constant";
 import InputMask from "react-input-mask";
 import * as yup from "yup";
+import {adapterZone, adapterType, adapterMaterial, adapterAccess} from './Adapters'
 
 const OrderForm = (props) => {
   let accessTypeValidation;
@@ -87,6 +88,13 @@ const OrderForm = (props) => {
         residueType: values.residueType,
         residueMeasure: values.residueAmount + " " + values.residueMeasure,
       },
+      calculate: {
+        amount: values.residueAmount,
+        zones: adapterZone(values.region),
+        type: adapterType(values.residueMeasure),
+        material: adapterMaterial(values.residueType),
+        access: values.accessType
+      }
     };
 
     setTimeout(() => {
