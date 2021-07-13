@@ -249,7 +249,7 @@ const OrderForm = (props) => {
                 value={values.email}
                 onChange={handleChange}
                 onBlur={handleBlur}
-                placeholder="Email@email.com"
+                placeholder="email@email.com"
                 required
               />
               <ErrorMessage className="error" component="div" name="email" />
