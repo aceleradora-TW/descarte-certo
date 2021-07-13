@@ -300,7 +300,7 @@ const OrderForm = (props) => {
           <Col className="col-lg-3">               
               <Field
                 type="Number"
-                placeholder="1"
+                placeholder="0"
                 min="1"
                 max="500"
                 name="residueAmount"
