@@ -95,8 +95,8 @@ const OrderForm = (props) => {
       .then(function (response) {
         handleSubmitSuccess(true);
         setSubmitting(false);
-        props.setEstimateValue(response.content.estimateValue);
-        props.setID(response.content.id);
+        props.setEstimateValue(response.estimateValue);
+        props.setID(response.id);
       })
       .catch((_error) => {
         handleSubmitSuccess(false);
