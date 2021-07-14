@@ -17,7 +17,7 @@ export const adapterZone = (region) => {
     return 'PLASTER'
   }
   export const adapterAccess = (accessType) => {
-    if (!accessType) return ''
-    if (accessType.toUpperCase().includes('ELEVADOR')) return 'ELEVATOR'
-    return 'GROUND_FLOOR'
+    const residueType = accessType.toUpperCase()
+    if (residueType.toUpperCase().includes('ELEVADOR') || residueType.toUpperCase().includes('TERREO')) return 'EASY_ACCESS'
+    return 'HARD_ACCESS'
   }

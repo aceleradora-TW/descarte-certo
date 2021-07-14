@@ -93,7 +93,7 @@ const OrderForm = (props) => {
         zones: adapterZone(values.region),
         type: adapterType(values.residueMeasure),
         material: adapterMaterial(values.residueType),
-        access: values.accessType
+        access: adapterAccess(values.accessType)
       }
     };
 
