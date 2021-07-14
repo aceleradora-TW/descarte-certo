@@ -1,19 +1,14 @@
 import React from "react";
 import "./ModalAcceptanceStyle.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
-const ModalAcceptance = ({ display, onClick }) => {
+const ModalAcceptance = ({ display}) => {
   // #TODO: refatorar o onclick para close ao invés de reload
   const handlecloseWindow = () => {
     window.location.reload();
   }
 
   return display ? (
-    <div className="acceptance-content">
-      <button className="acceptance-close-btn">
-        <FontAwesomeIcon icon={faTimes} onClick={handlecloseWindow} />
-      </button>
+    <div className="acceptance-content">      
       <h3 className="acceptance-title">
         Agradecemos <br className="break-title" />
         por escolher a 5MARIAS!
