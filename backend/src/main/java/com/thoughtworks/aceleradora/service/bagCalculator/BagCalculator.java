@@ -15,7 +15,7 @@ public class BagCalculator {
         double calculation = 0.0;
         int floorValue = 0;
 
-        if (parameters.getFloorAccess() == OTHERS){
+        if (parameters.getFloorAccess() == HARD_ACCESS){
             floorValue = 40;
         }
         if (parameters.getMaterial() == PLASTER) {

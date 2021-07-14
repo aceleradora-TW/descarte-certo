@@ -1,7 +1,6 @@
 package com.thoughtworks.aceleradora.service.bagCalculator;
 
 public enum FloorAccess {
-    GROUND_FLOOR,
-    ELEVATOR,
-    OTHERS
+    EASY_ACCESS,
+    HARD_ACCESS
 }
