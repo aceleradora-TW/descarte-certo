@@ -67,7 +67,7 @@ public class EstimateService {
 
     private void sendEstimateEmail(Estimate estimateEntity){
         StringBuffer sb = new StringBuffer();
-        sb.append("NOVO ORÇAMENTO: ");
+        sb.append("ORÇAMENTO SOLICITADO: ");
         sb.append( System.getProperty("line.separator"));
         sb.append( System.getProperty("line.separator"));
 
@@ -100,8 +100,27 @@ public class EstimateService {
         sb.append(estimateEntity.getResidue().getResidueMeasure());
         sb.append( System.getProperty("line.separator"));
 
-        sb.append("Valor do pedido: ");
+        sb.append("Valor do pedido: R$");
         sb.append(estimateEntity.getEstimateValue());
+
+
+        Estimate estimate = new Estimate();
+
+        if (estimate.getResidue().getResidueMeasure().contains("Caçamba")){
+           sb.append("Nome");
+           sb.append("Whatsapp");
+           sb.append("Email");
+
+        } else {
+
+            sb.append("Nome2");
+            sb.append("Whatsapp2");
+            sb.append("Email2");
+        }
+
+
+
+
 
         try {
             mailFactory.sendMessage(sb.toString());
