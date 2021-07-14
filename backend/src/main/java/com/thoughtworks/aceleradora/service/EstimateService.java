@@ -20,6 +20,7 @@ public class EstimateService {
     private EstimateConverterService estimateConverterService;
     private MailFactory mailFactory;
 
+
     EstimateService(EstimateRepository repository, EstimateConverterService estimateConverter,MailFactory mailFactory) {
         this.estimateRepository = repository;
         this.estimateConverterService = estimateConverter;
@@ -65,7 +66,11 @@ public class EstimateService {
         this.sendEstimateEmail(estimate);
     }
 
+
     private void sendEstimateEmail(Estimate estimateEntity){
+
+        Estimate estimates = new Estimate();
+
         StringBuffer sb = new StringBuffer();
         sb.append("ORÇAMENTO SOLICITADO: ");
         sb.append( System.getProperty("line.separator"));
@@ -103,10 +108,8 @@ public class EstimateService {
         sb.append("Valor do pedido: R$");
         sb.append(estimateEntity.getEstimateValue());
 
+        if (estimates.getResidue().getResidueMeasure().contains("Caçamba")){
 
-        Estimate estimate = new Estimate();
-
-        if (estimate.getResidue().getResidueMeasure().contains("Caçamba")){
            sb.append("Nome");
            sb.append("Whatsapp");
            sb.append("Email");
@@ -117,10 +120,6 @@ public class EstimateService {
             sb.append("Whatsapp2");
             sb.append("Email2");
         }
-
-
-
-
 
         try {
             mailFactory.sendMessage(sb.toString());
