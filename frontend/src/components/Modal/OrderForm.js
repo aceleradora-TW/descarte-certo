@@ -80,6 +80,13 @@ const OrderForm = (props) => {
         residueType: values.residueType,
         residueMeasure: values.residueAmount + " " + values.residueMeasure,
       },
+      calculate:{
+        amount: 0,
+        access:"ELEVATOR",
+        zones:"DOWNTOWN",
+        type:"BAG",
+        material:"WOOD"
+      }
     };
 
     props.setMaterial(values.residueType)
