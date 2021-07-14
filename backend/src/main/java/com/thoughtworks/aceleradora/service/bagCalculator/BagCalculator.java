@@ -2,8 +2,7 @@ package com.thoughtworks.aceleradora.service.bagCalculator;
 
 import java.math.BigDecimal;
 
-import static com.thoughtworks.aceleradora.service.bagCalculator.FloorAccess.ELEVATOR;
-import static com.thoughtworks.aceleradora.service.bagCalculator.FloorAccess.GROUND_FLOOR;
+import static com.thoughtworks.aceleradora.service.bagCalculator.FloorAccess.HARD_ACCESS;
 import static com.thoughtworks.aceleradora.service.bucketcalculator.Materials.PLASTER;
 import static com.thoughtworks.aceleradora.service.bucketcalculator.Materials.WOOD;
 
