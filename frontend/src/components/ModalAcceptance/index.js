@@ -1,7 +1,7 @@
 import React from "react";
 import "./ModalAcceptanceStyle.css";
 
-const ModalAcceptance = ({ display, onClick }) => {
+const ModalAcceptance = ({ display}) => {
   // #TODO: refatorar o onclick para close ao invés de reload
   const handlecloseWindow = () => {
     window.location.reload();
