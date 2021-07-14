@@ -8,6 +8,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.Optional;
 
@@ -69,7 +70,7 @@ public class EstimateService {
 
     private void sendEstimateEmail(Estimate estimateEntity){
 
-        Estimate estimates = new Estimate();
+
 
         StringBuffer sb = new StringBuffer();
         sb.append("ORÇAMENTO SOLICITADO: ");
@@ -108,18 +109,19 @@ public class EstimateService {
         sb.append("Valor do pedido: R$");
         sb.append(estimateEntity.getEstimateValue());
 
-        if (estimates.getResidue().getResidueMeasure().contains("Caçamba")){
 
-           sb.append("Nome");
-           sb.append("Whatsapp");
-           sb.append("Email");
+            if (estimateEntity.getResidue().getResidueMeasure().contains("Caçamba")) {
 
-        } else {
+                sb.append("Nome");
+                sb.append("Whatsapp");
+                sb.append("Email");
 
-            sb.append("Nome2");
-            sb.append("Whatsapp2");
-            sb.append("Email2");
-        }
+            } else {
+
+                sb.append("Nome2");
+                sb.append("Whatsapp2");
+                sb.append("Email2");
+            }
 
         try {
             mailFactory.sendMessage(sb.toString());
