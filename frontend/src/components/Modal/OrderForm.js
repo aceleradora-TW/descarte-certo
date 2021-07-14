@@ -275,6 +275,7 @@ const OrderForm = (props) => {
                   className=""
                   name="residueMeasure"
                   value="Caçambas"
+                  id="checkbox-modal"
                   onClick={radioTrueMeasure(values.residueMeasure)}
                 />
                 Caçamba
@@ -288,6 +289,7 @@ const OrderForm = (props) => {
                   className=""
                   name="residueMeasure"
                   value="Sacos"
+                  id="checkbox-modal"
                   onClick={radioTrueMeasure(values.residueMeasure)}
                 />
                 Sacos (Padrão 50 Litros)
@@ -380,6 +382,7 @@ const OrderForm = (props) => {
                   type="radio"
                   className=""
                   name="checkedTerms"
+                  id="checkbox-modal"
                   value="Termos"
                 />
                 Li e concordo com os

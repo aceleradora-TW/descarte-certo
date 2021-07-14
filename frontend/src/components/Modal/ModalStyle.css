@@ -84,7 +84,7 @@
   width: 80px
 }
 
-.button, input {
+#checkbox-modal{
   overflow: visible;
   margin-right: 4px;
   position: relative;
