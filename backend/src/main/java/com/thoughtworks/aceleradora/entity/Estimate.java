@@ -4,6 +4,8 @@ import com.thoughtworks.aceleradora.service.OrderStatus;
 import lombok.*;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.time.LocalDate;
 import java.util.Date;
 
@@ -35,5 +37,8 @@ public class Estimate {
 
     @Column(name = "creation_date")
     private LocalDate creationDate;
+
+    @Column(name = "estimate_value")
+    private BigDecimal estimateValue;
 }
 
