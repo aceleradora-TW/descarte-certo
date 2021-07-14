@@ -5,17 +5,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 
-function ModalConfirmation({ display, onClick }) {
+function ModalConfirmation({ display, onClick, estimateValue, material }) {
   // #TODO: refatorar o onclick para ser close e não reload
   function handlecloseWindow() {
     window.location.reload();
   }
-  //#TODO: substituir os spans pelos endpoints da modal anterior
+
   return display ? (
     <div className="modal-container">
       <h3 className="total-budget">
-        Seu orçamento: <span>R$250,00</span>
-        <span>(Gesso)</span>*
+        Seu orçamento: R${estimateValue} - {material}*
       </h3>
       <p className="message">
         Utilizando o serviço da 5 Marias, você garante o descarte correto do seu

@@ -16,8 +16,17 @@ export const adapterZone = (region) => {
     if (residueType.includes('MIX')) return 'MIXED'
     return 'PLASTER'
   }
+
   export const adapterAccess = (accessType) => {
     const residueType = accessType.toUpperCase()
     if (residueType.toUpperCase().includes('ELEVADOR') || residueType.toUpperCase().includes('TERREO')) return 'EASY_ACCESS'
     return 'HARD_ACCESS'
+  }
+
+  export const adapterReducedMaterial = (material) => {
+    const residueType = material.toUpperCase()
+    if (residueType.includes('CALIÇA')) return 'Caliça'
+    if (residueType.includes('MADEIRA')) return 'Madeira'
+    if (residueType.includes('MIX')) return 'Misto'
+    return 'Gesso'
   }
