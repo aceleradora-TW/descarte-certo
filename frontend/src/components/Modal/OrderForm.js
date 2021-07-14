@@ -84,22 +84,20 @@ const OrderForm = (props) => {
 
     props.setMaterial(values.residueType)
 
-    setTimeout(() => {
-      post(`/estimate`, requestCreateEstimate)
-        .then(function (response) {
-          handleSubmitSuccess(true);
-          setSubmitting(false);
-          props.setEstimateValue(250);
-        })
-        .catch((_error) => {
-          handleSubmitSuccess(false);
-          resetForm();
-        })
-        .then(() => {
-          handleAlertClick();
-        });
-    }, 400);
-    console.log(props);
+    post(`/estimate`, requestCreateEstimate)
+      .then(function (response) {
+        handleSubmitSuccess(true);
+        setSubmitting(false);
+        props.setEstimateValue(response.content.estimateValue);
+        props.setID(response.content.id);
+      })
+      .catch((_error) => {
+        handleSubmitSuccess(false);
+        resetForm();
+      })
+      .then(() => {
+        handleAlertClick();
+      });
     props.nextStep({ target: { name: "confirmOrder" } });
   };
 
@@ -435,7 +433,7 @@ const OrderForm = (props) => {
             {submitSuccess
               ? "Sua solicitação foi enviada! Obrigada!" + values.locationInfo
               : "Ops! Tivemos um problema. Tente novamente mais tarde. " +
-                values.locationInfo}
+              values.locationInfo}
           </Alert>
         </Form>
       )}
