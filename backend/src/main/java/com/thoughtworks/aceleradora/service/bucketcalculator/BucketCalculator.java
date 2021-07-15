@@ -9,12 +9,6 @@ import static com.thoughtworks.aceleradora.service.bucketcalculator.Materials.PL
 import static com.thoughtworks.aceleradora.service.bucketcalculator.Materials.RUBBLE;
 
 public class BucketCalculator {
-    public static void main(String[] args) {
-        BucketCalculator calculator = new BucketCalculator();
-        BucketEstimateParameters params = new BucketEstimateParameters(2, DOWNTOWN, PLASTER);
-        BigDecimal result = calculator.calculateBucketEstimate(params);
-        System.out.println(result);
-    }
 
     public BigDecimal calculateBucketEstimate(BucketEstimateParameters params) {
         BigDecimal bucketAmount = new BigDecimal(params.getBucketAmount());

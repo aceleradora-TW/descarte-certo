@@ -22,6 +22,4 @@ public class Residue {
     private int id;
     private String residueType;
     private String residueMeasure;
-
-
 }

@@ -8,8 +8,11 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.Optional;
+
+//Modificar o método create em EstimateService, para sempre criar estimativas com estimateValue calculador. Usar o BucketCalculator para o calculo da informação.
 
 @Service
 public class EstimateService {
@@ -17,6 +20,7 @@ public class EstimateService {
     private EstimateRepository estimateRepository;
     private EstimateConverterService estimateConverterService;
     private MailFactory mailFactory;
+
 
     EstimateService(EstimateRepository repository, EstimateConverterService estimateConverter,MailFactory mailFactory) {
         this.estimateRepository = repository;
@@ -30,7 +34,7 @@ public class EstimateService {
 
     public Estimate create(EstimateRequest estimateRequest) {
         Estimate estimateEntity = estimateConverterService.converter(estimateRequest);
-        sendEstimateEmail(estimateEntity);
+        this.sendEmail(estimateEntity,"5marias.orcamento@gmail.com");
         return estimateRepository.save(estimateEntity);
     }
 
@@ -43,7 +47,7 @@ public class EstimateService {
                 PageRequest.of(
                         page.orElse(0),
                         totalPage.orElse(20),
-                        Sort.Direction.ASC, sortBy.orElse("id")
+                        Sort.Direction.DESC, sortBy.orElse("id")
                 )
         );
     }
@@ -63,9 +67,13 @@ public class EstimateService {
         this.sendEstimateEmail(estimate);
     }
 
+
     private void sendEstimateEmail(Estimate estimateEntity){
+
+
+
         StringBuffer sb = new StringBuffer();
-        sb.append("NOVO ORÇAMENTO: ");
+        sb.append("ORÇAMENTO SOLICITADO: ");
         sb.append( System.getProperty("line.separator"));
         sb.append( System.getProperty("line.separator"));
 
@@ -82,7 +90,7 @@ public class EstimateService {
         sb.append(estimateEntity.getRequester().getEmail());
         sb.append( System.getProperty("line.separator"));
 
-        sb.append("Region: ");
+        sb.append("Região: ");
         sb.append(estimateEntity.getResidueAddress().getRegion());
         sb.append( System.getProperty("line.separator"));
 
@@ -90,11 +98,30 @@ public class EstimateService {
         sb.append(estimateEntity.getResidueAddress().getLocationInfo());
         sb.append( System.getProperty("line.separator"));
 
-        sb.append("Informações do residuo: ");
+        sb.append("Informações do resíduo: ");
         sb.append(estimateEntity.getResidue().getResidueType());
         sb.append( System.getProperty("line.separator"));
-        sb.append("Quantidade dos residuo: ");
+
+        sb.append("Quantidade dos resíduo: ");
         sb.append(estimateEntity.getResidue().getResidueMeasure());
+        sb.append( System.getProperty("line.separator"));
+
+        sb.append("Valor do pedido: R$");
+        sb.append(estimateEntity.getEstimateValue());
+
+
+            if (estimateEntity.getResidue().getResidueMeasure().contains("Caçamba")) {
+
+                sb.append("Nome");
+                sb.append("Whatsapp");
+                sb.append("Email");
+
+            } else {
+
+                sb.append("Nome2");
+                sb.append("Whatsapp2");
+                sb.append("Email2");
+            }
 
         try {
             mailFactory.sendMessage(sb.toString());
@@ -102,5 +129,4 @@ public class EstimateService {
             e.printStackTrace();
         }
     }
-
 }
