@@ -380,7 +380,7 @@ const OrderForm = (props) => {
             <Col className="col-sm-6" id="accessType">
               {showingFieldAccessType(values, handleChange, handleBlur)}
             </Col>
-            <Col className="col-sm-5">
+            <Col className="col-sm-5 informacao-andar">
               {showingFieldFloor(values, handleChange, handleBlur)}
               {showingField(values, handleChange, handleBlur)}
             </Col>

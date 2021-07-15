@@ -171,3 +171,7 @@ select {
     max-width: 50.0%;
   }
 }
+
+.informacao-andar {
+  margin-top: 8px;
+}
