@@ -22,7 +22,7 @@ const OrderListComponent = () => {
 
   const findAllOrders = (currentPage) => {
     currentPage -= 1
-    get(`/estimate/all?page=${currentPage}`)
+    get(`https://descartecerto.herokuapp.com/estimate/all?page=${currentPage}`)
       .then((res) => {
         setOrders(res.content);
         setCurrentPage(res.number + 1)
