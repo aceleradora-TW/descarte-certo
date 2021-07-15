@@ -16,6 +16,7 @@ function Tabela({orders}) {
                         <th>Material</th>
                         <th>Acesso</th>
                         <th>Região</th>
+                        <th>Valor</th>
                         <th>Status</th>
                     </tr>
                 </thead>
@@ -30,6 +31,7 @@ function Tabela({orders}) {
                         <td>{order?.residue?.residueType}</td>
                         <td>{order?.residueAddress?.locationInfo}</td>
                         <td>{order?.residueAddress?.region}</td>
+                        <td>{order?.estimateValue?.valor}</td>
                         <td>{order?.status}</td>
                       </tr>
                     ))}
