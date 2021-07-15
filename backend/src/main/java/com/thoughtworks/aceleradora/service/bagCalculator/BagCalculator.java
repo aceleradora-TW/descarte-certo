@@ -2,8 +2,7 @@ package com.thoughtworks.aceleradora.service.bagCalculator;
 
 import java.math.BigDecimal;
 
-import static com.thoughtworks.aceleradora.service.bagCalculator.FloorAccess.ELEVATOR;
-import static com.thoughtworks.aceleradora.service.bagCalculator.FloorAccess.GROUND_FLOOR;
+import static com.thoughtworks.aceleradora.service.bagCalculator.FloorAccess.HARD_ACCESS;
 import static com.thoughtworks.aceleradora.service.bucketcalculator.Materials.PLASTER;
 import static com.thoughtworks.aceleradora.service.bucketcalculator.Materials.WOOD;
 
@@ -15,7 +14,7 @@ public class BagCalculator {
         double calculation = 0.0;
         int floorValue = 0;
 
-        if (parameters.getFloorAccess() != GROUND_FLOOR && parameters.getFloorAccess() != ELEVATOR){
+        if (parameters.getFloorAccess() == HARD_ACCESS){
             floorValue = 40;
         }
         if (parameters.getMaterial() == PLASTER) {
