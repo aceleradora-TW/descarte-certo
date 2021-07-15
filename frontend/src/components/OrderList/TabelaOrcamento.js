@@ -31,7 +31,7 @@ function Tabela({orders}) {
                         <td>{order?.residue?.residueType}</td>
                         <td>{order?.residueAddress?.locationInfo}</td>
                         <td>{order?.residueAddress?.region}</td>
-                        <td>{order?.requester?.valor}</td>
+                        <td>{order?.estimateValue?.valor}</td>
                         <td>{order?.status}</td>
                       </tr>
                     ))}
