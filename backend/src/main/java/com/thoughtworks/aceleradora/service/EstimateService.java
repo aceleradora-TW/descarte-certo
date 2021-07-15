@@ -106,21 +106,25 @@ public class EstimateService {
         sb.append(estimateEntity.getResidue().getResidueMeasure());
         sb.append( System.getProperty("line.separator"));
 
-        sb.append("Valor do pedido: R$");
+        sb.append("Valor do pedido: R$ ");
         sb.append(estimateEntity.getEstimateValue());
-
+        sb.append( System.getProperty("line.separator"));
 
             if (estimateEntity.getResidue().getResidueMeasure().contains("Caçamba")) {
 
-                sb.append("Nome");
-                sb.append("Whatsapp");
-                sb.append("Email");
+                sb.append("Nome: Guacira Ramos" );
+                sb.append( System.getProperty("line.separator"));
+                sb.append("Whatsapp: (51) 9xxxx-xxxx");
+                sb.append( System.getProperty("line.separator"));
+                sb.append("Email: retroentulho@hotmail.com");
 
             } else {
 
-                sb.append("Nome2");
-                sb.append("Whatsapp2");
-                sb.append("Email2");
+                sb.append("Nome: Karina Oliveira Roldão");
+                sb.append( System.getProperty("line.separator"));
+                sb.append("Whatsapp: (51) 9xxxx-xxxx");
+                sb.append( System.getProperty("line.separator"));
+                sb.append("Email: entulhinho@gmail.com");
             }
 
         try {
