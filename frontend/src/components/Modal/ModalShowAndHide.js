@@ -1,62 +1,62 @@
 import React, { useState } from "react";
 import ModalAcceptance from "../ModalAcceptance";
 import ModalConfirmation from "../ModalConfirmation";
+import Form from "./OrderForm";
+import { put } from "../../services/client";
 
-/*const OrderForm = ({ display, onClick }) => {
+const OrderForm = ({ display, onClick, setEstimateValue, setMaterial, setID }) => {
   return display ? (
-    <div className="order-form">
-      <p>formulario de orçamentos</p>
-      <input onClick={onClick} type="button" name="confirmOrder" value="Enviar" />
-    </div>
-  ) : null
-  */
-//Modal confirmation/confirm order
-const ModalConfirmation2 = ({ display, onClick }) => {
-  return display ? (
-    <div className="modal-container">
-      <input
-        onClick={onClick}
-        type="button"
-        name="btn-approve"
-        value="Aprovar e Agendar"
+    <div className="form-inputs-style">
+      <Form 
+        nextStep={onClick} 
+        setEstimateValue={setEstimateValue} 
+        setMaterial={setMaterial}
+        setID={setID}
       />
-    </div>
-  ) : null;
-};
-//Modal acceptance/finish order
-const ModalAcceptance2 = ({ display, onClick }) => {
-  return display ? (
-    <div className="acceptance-content">
-      <input onClick={onclick} type="button" className="acceptance-close-btn" />
     </div>
   ) : null;
 };
 
 const ModalShowAndHide = () => {
   const initialState = {
-    /*orderForm:  true,*/
-    confirmOrder: true,
+    orderForm: true,
+    confirmOrder: false,
     finishOrder: false,
   };
 
   const [contentControler, setContentControler] = useState(initialState);
+  const [estimateValue, setEstimateValue] = useState(0);
+  const [material, setMaterial] = useState('');
+  const [id, setID] = useState(null);
 
   const controlDisplayContent = (e) => {
     const { name } = e.target;
+    if(name === "finishOrder"){
+      put(`/estimate/${id}/confirm`)
+    }
     console.log(name);
     setContentControler({
+      orderForm: false,
       confirmOrder: false,
       finishOrder: false,
-    }); /*TODO: acrescentar orderForm: false,*/
+    });
     setContentControler({ [name]: true });
   };
 
-  const { confirmOrder, finishOrder } = contentControler;
+  const { orderForm, confirmOrder, finishOrder } = contentControler;
 
   return (
     <div className="content-modal">
-      {/*TODO: acrescentar  <OrderForm display={orderForm} onClick={controlDisplayContent} />*/}
+      <OrderForm 
+        display={orderForm} 
+        onClick={controlDisplayContent}
+        setEstimateValue={setEstimateValue}
+        setMaterial={setMaterial}
+        setID={setID} 
+      />
       <ModalConfirmation
+        estimateValue={estimateValue}
+        material={material}
         display={confirmOrder}
         onClick={controlDisplayContent}
       />
@@ -66,8 +66,3 @@ const ModalShowAndHide = () => {
 };
 
 export default ModalShowAndHide;
-
-/* ========
-#TODO: puxar a modal nº 1
-#TODO: refatorar nomes
-*/

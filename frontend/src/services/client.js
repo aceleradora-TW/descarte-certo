@@ -20,3 +20,5 @@ export const setTokenInHeaders = (token) => {
 export const post = (path, payload) => client.post(path, payload).then((res) => res.data);
 
 export const get = (path) => client.get(path).then((res) => res.data);
+
+export const put = (path) => client.put(path).then((res) => res.data);
