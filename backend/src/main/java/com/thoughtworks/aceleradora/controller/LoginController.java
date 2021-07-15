@@ -4,6 +4,7 @@ import com.thoughtworks.aceleradora.controller.response.LoginResponse;
 import com.thoughtworks.aceleradora.service.User;
 import com.thoughtworks.aceleradora.service.AuthenticationService;
 import com.thoughtworks.aceleradora.exception.UserNotFoundException;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
@@ -11,6 +12,13 @@ import java.util.Optional;
 @RequestMapping("/login")
 
 public class LoginController {
+
+    @Value("${login.email}")
+    private String loginEmail;
+
+    @Value("${login.password}")
+    private String loginPassword;
+
     @PostMapping
     public LoginResponse signIn(@RequestBody User user) {
 
@@ -28,7 +36,7 @@ public class LoginController {
     public Optional<String> returnLogin(String email, String password) {
         AuthenticationService authenticationService = new AuthenticationService();
 
-        if (email.equals("5marias.sustentaveis@gmail.com") && password.equals("1234abc")) {
+        if (email.equals(loginEmail) && password.equals(loginPassword)) {
             return Optional.of(authenticationService.createTokenByUser(new User(email, password)));
         }
 
