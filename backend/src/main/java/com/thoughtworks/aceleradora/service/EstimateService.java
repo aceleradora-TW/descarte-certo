@@ -8,11 +8,10 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
 
+import java.math.BigDecimal;
+import java.text.DecimalFormat;
 import java.util.Optional;
-
-//Modificar o método create em EstimateService, para sempre criar estimativas com estimateValue calculador. Usar o BucketCalculator para o calculo da informação.
 
 @Service
 public class EstimateService {
@@ -70,6 +69,10 @@ public class EstimateService {
 
     private void sendEstimateEmail(Estimate estimateEntity){
 
+        BigDecimal divisor = new BigDecimal("100");
+        BigDecimal total = estimateEntity.getEstimateValue().divide(divisor);
+        DecimalFormat resultado = new DecimalFormat("0.00");
+        resultado.format(total);
 
 
         StringBuffer sb = new StringBuffer();
@@ -107,25 +110,25 @@ public class EstimateService {
         sb.append( System.getProperty("line.separator"));
 
         sb.append("Valor do pedido: R$ ");
-        sb.append(estimateEntity.getEstimateValue().toBigInteger().floatValue());
+        sb.append(total);
         sb.append( System.getProperty("line.separator"));
 
-            if (estimateEntity.getResidue().getResidueMeasure().contains("Caçamba")) {
+        if (estimateEntity.getResidue().getResidueMeasure().contains("Caçamba")) {
 
-                sb.append("Nome: Guacira Ramos" );
-                sb.append( System.getProperty("line.separator"));
-                sb.append("Whatsapp: (51) 9xxxx-xxxx");
-                sb.append( System.getProperty("line.separator"));
-                sb.append("Email: retroentulho@hotmail.com");
+            sb.append("Nome: Guacira Ramos" );
+            sb.append( System.getProperty("line.separator"));
+            sb.append("Whatsapp: (51) 9xxxx-xxxx");
+            sb.append( System.getProperty("line.separator"));
+            sb.append("Email: retroentulho@hotmail.com");
 
-            } else {
+        } else {
 
-                sb.append("Nome: Karina Oliveira Roldão");
-                sb.append( System.getProperty("line.separator"));
-                sb.append("Whatsapp: (51) 9xxxx-xxxx");
-                sb.append( System.getProperty("line.separator"));
-                sb.append("Email: entulhinho@gmail.com");
-            }
+            sb.append("Nome: Karina Oliveira Roldão");
+            sb.append( System.getProperty("line.separator"));
+            sb.append("Whatsapp: (51) 9xxxx-xxxx");
+            sb.append( System.getProperty("line.separator"));
+            sb.append("Email: entulhinho@gmail.com");
+        }
 
         try {
             mailFactory.sendMessage(sb.toString());
