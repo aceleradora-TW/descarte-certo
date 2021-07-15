@@ -107,7 +107,7 @@ public class EstimateService {
         sb.append( System.getProperty("line.separator"));
 
         sb.append("Valor do pedido: R$ ");
-        sb.append(estimateEntity.getEstimateValue());
+        sb.append(estimateEntity.getEstimateValue().toBigInteger().floatValue());
         sb.append( System.getProperty("line.separator"));
 
             if (estimateEntity.getResidue().getResidueMeasure().contains("Caçamba")) {
