@@ -12,6 +12,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { ERRORS } from "../../constant";
 import InputMask from "react-input-mask";
 import * as yup from "yup";
+import {adapterZone, adapterType, adapterMaterial, adapterAccess, adapterReducedMaterial} from './adapters'
 
 const OrderForm = (props) => {
   let accessTypeValidation;
@@ -87,22 +88,32 @@ const OrderForm = (props) => {
         residueType: values.residueType,
         residueMeasure: values.residueAmount + " " + values.residueMeasure,
       },
+      calculate: {
+        amount: values.residueAmount,
+        zones: adapterZone(values.region),
+        type: adapterType(values.residueMeasure),
+        material: adapterMaterial(values.residueType),
+        access: adapterAccess(values.accessType)
+      }
     };
 
-    setTimeout(() => {
-      post(`/estimate`, requestCreateEstimate)
-        .then(function (response) {
-          handleSubmitSuccess(true);
-          setSubmitting(false);
-        })
-        .catch((_error) => {
-          handleSubmitSuccess(false);
-          resetForm();
-        })
-        .then(() => {
-          handleAlertClick();
-        });
-    }, 400);
+    props.setMaterial(adapterReducedMaterial(values.residueType))
+
+    post(`/estimate`, requestCreateEstimate)
+      .then(function (response) {
+        handleSubmitSuccess(true);
+        setSubmitting(false);
+        props.setEstimateValue(response.estimateValue);
+        props.setID(response.id);
+      })
+      .catch((_error) => {
+        handleSubmitSuccess(false);
+        resetForm();
+      })
+      .then(() => {
+        handleAlertClick();
+      });
+    props.nextStep({ target: { name: "confirmOrder" } });
   };
 
   const showingField = (values) => {

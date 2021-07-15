@@ -31,7 +31,7 @@ public class ValidEstimateRequestFactory {
                         .build())
                 .calculate(CalculateRequest.builder()
                         .amount(60)
-                        .access(FloorAccess.ELEVATOR)
+                        .access(FloorAccess.HARD_ACCESS)
                         .zones(BucketZones.DOWNTOWN)
                         .type(ServiceType.BAG)
                         .material(Materials.WOOD)

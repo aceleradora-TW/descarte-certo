@@ -1,6 +1,10 @@
 server:
   port: ${PORT}
 
+login:
+  email: ${LOGIN_EMAIL}
+  password: ${LOGIN_PASSWORD}
+
 spring:
   flyway:
     locations: classpath:/db/migration
