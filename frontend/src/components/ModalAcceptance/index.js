@@ -1,14 +1,14 @@
 import React from "react";
 import "./ModalAcceptanceStyle.css";
 
-const ModalAcceptance = ({ display}) => {
+const ModalAcceptance = ({ display }) => {
   // #TODO: refatorar o onclick para close ao invés de reload
   const handlecloseWindow = () => {
     window.location.reload();
-  }
+  };
 
   return display ? (
-    <div className="acceptance-content">      
+    <div className="acceptance-content">
       <h3 className="acceptance-title">
         Agradecemos <br className="break-title" />
         por escolher a 5MARIAS!
@@ -20,6 +20,6 @@ const ModalAcceptance = ({ display}) => {
       </p>
     </div>
   ) : null;
-}
+};
 
 export default ModalAcceptance;

@@ -14,9 +14,7 @@ const Modal = (props) => {
       isOpen={props.isModalVisible}
       toggle={props.handleBudgetClick}
     >
-      <ModalHeader toggle={handlecloseWindow}>
-        Orçamento Rápido
-      </ModalHeader>
+      <ModalHeader toggle={handlecloseWindow}>Orçamento Rápido</ModalHeader>
 
       <ModalBody>
         <ModalShowAndHide />

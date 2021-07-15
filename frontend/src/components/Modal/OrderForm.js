@@ -80,16 +80,16 @@ const OrderForm = (props) => {
         residueType: values.residueType,
         residueMeasure: values.residueAmount + " " + values.residueMeasure,
       },
-      calculate:{
+      calculate: {
         amount: 0,
-        access:"ELEVATOR",
-        zones:"DOWNTOWN",
-        type:"BAG",
-        material:"WOOD"
-      }
+        access: "ELEVATOR",
+        zones: "DOWNTOWN",
+        type: "BAG",
+        material: "WOOD",
+      },
     };
 
-    props.setMaterial(values.residueType)
+    props.setMaterial(values.residueType);
 
     post(`/estimate`, requestCreateEstimate)
       .then(function (response) {
@@ -440,7 +440,7 @@ const OrderForm = (props) => {
             {submitSuccess
               ? "Sua solicitação foi enviada! Obrigada!" + values.locationInfo
               : "Ops! Tivemos um problema. Tente novamente mais tarde. " +
-              values.locationInfo}
+                values.locationInfo}
           </Alert>
         </Form>
       )}
