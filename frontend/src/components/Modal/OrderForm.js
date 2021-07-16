@@ -98,6 +98,7 @@ const OrderForm = (props) => {
         setSubmitting(false);
         props.setEstimateValue(response.estimateValue);
         props.setID(response.id);
+        props.nextStep({ target: { name: "confirmOrder" } });
       })
       .catch((_error) => {
         handleSubmitSuccess(false);
@@ -106,7 +107,6 @@ const OrderForm = (props) => {
       .then(() => {
         handleAlertClick();
       });
-    props.nextStep({ target: { name: "confirmOrder" } });
   };
 
   const showingField = (values) => {
