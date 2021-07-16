@@ -117,7 +117,7 @@ public class EstimateService {
 
             sb.append("Nome: Guacira Ramos" );
             sb.append( System.getProperty("line.separator"));
-            sb.append("Whatsapp: (51) 9xxxx-xxxx");
+            sb.append("Whatsapp: (51) 99993-3706");
             sb.append( System.getProperty("line.separator"));
             sb.append("Email: retroentulho@hotmail.com");
 
@@ -125,7 +125,7 @@ public class EstimateService {
 
             sb.append("Nome: Karina Oliveira Roldão");
             sb.append( System.getProperty("line.separator"));
-            sb.append("Whatsapp: (51) 9xxxx-xxxx");
+            sb.append("Whatsapp: (51) 98582-5844");
             sb.append( System.getProperty("line.separator"));
             sb.append("Email: entulhinho@gmail.com");
         }
