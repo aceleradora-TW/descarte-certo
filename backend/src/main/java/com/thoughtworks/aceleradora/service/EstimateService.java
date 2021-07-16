@@ -11,6 +11,8 @@ import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.util.Locale;
 import java.util.Optional;
 
 @Service
@@ -68,12 +70,11 @@ public class EstimateService {
 
 
     private void sendEstimateEmail(Estimate estimateEntity){
-
-        BigDecimal divisor = new BigDecimal("100");
-        BigDecimal total = estimateEntity.getEstimateValue().divide(divisor);
-        DecimalFormat resultado = new DecimalFormat("0.00");
-        resultado.format(total);
-
+        Locale brazil = new Locale("pt","BR");
+        DecimalFormatSymbols real = new DecimalFormatSymbols(brazil);
+        BigDecimal total = estimateEntity.getEstimateValue();
+        DecimalFormat formatador = new DecimalFormat("###,###,##0.00", real);
+        formatador.format(total);
 
         StringBuffer sb = new StringBuffer();
         sb.append("ORÇAMENTO SOLICITADO: ");
