@@ -45,7 +45,7 @@ public class EstimateService {
         return estimateRepository.findAll(
                 PageRequest.of(
                         page.orElse(0),
-                        totalPage.orElse(20),
+                        totalPage.orElse(100),
                         Sort.Direction.DESC, sortBy.orElse("id")
                 )
         );
