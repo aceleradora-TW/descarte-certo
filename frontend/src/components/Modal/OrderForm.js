@@ -91,6 +91,8 @@ const OrderForm = (props) => {
     };
 
     props.setMaterial(adapterReducedMaterial(values.residueType))
+    props.setLoading(true)
+    props.hideAll()
 
     post(`/estimate`, requestCreateEstimate)
       .then(function (response) {
@@ -98,6 +100,8 @@ const OrderForm = (props) => {
         setSubmitting(false);
         props.setEstimateValue(response.estimateValue);
         props.setID(response.id);
+        props.setLoading(false);
+        props.nextStep({ target: { name: "confirmOrder" } });
       })
       .catch((_error) => {
         handleSubmitSuccess(false);
@@ -106,7 +110,6 @@ const OrderForm = (props) => {
       .then(() => {
         handleAlertClick();
       });
-    props.nextStep({ target: { name: "confirmOrder" } });
   };
 
   const showingField = (values) => {
