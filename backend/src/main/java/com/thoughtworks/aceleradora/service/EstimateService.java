@@ -74,7 +74,6 @@ public class EstimateService {
         DecimalFormatSymbols real = new DecimalFormatSymbols(brazil);
         BigDecimal total = estimateEntity.getEstimateValue();
         DecimalFormat formatador = new DecimalFormat("###,###,##0.00", real);
-        formatador.format(total);
 
         StringBuffer sb = new StringBuffer();
         sb.append("ORÇAMENTO SOLICITADO: ");
@@ -111,7 +110,7 @@ public class EstimateService {
         sb.append( System.getProperty("line.separator"));
 
         sb.append("Valor do pedido: R$ ");
-        sb.append(total);
+        sb.append(formatador.format(total));
         sb.append( System.getProperty("line.separator"));
 
         if (estimateEntity.getResidue().getResidueMeasure().contains("Caçamba")) {
