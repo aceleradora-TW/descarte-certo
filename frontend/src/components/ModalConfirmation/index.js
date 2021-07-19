@@ -39,7 +39,7 @@ function ModalConfirmation({ display, onClick, estimateValue, material }) {
             resíduos de construção civil irregularmente no meio ambiente?
           </p>
           <p className="carousel-text">
-            80% dos focos irregualres em Porto Alegre são compostos de resíduos
+            80% dos focos irregulares em Porto Alegre são compostos de resíduos
             da construção civil
           </p>
           <p className="carousel-text">
