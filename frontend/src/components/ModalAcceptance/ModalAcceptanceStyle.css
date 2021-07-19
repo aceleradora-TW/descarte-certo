@@ -2,7 +2,7 @@ div.acceptance-content {
   margin: 2.5vh;
   display: grid;
   grid-template-columns: 1fr 8fr 1fr;
-  grid-template-rows: 1.5fr 2.5fr;
+  grid-template-rows: 2.5fr 2.5fr;
   font-family: "Montserrat", sans-serif;
   text-align: center;
 }
