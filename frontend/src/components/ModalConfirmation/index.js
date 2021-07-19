@@ -26,6 +26,9 @@ function ModalConfirmation({ display, onClick, estimateValue, material }) {
           autoPlaySpeed={6500}
           className="carousel-modal"
         >
+          <div className="image-slide">
+            <img src={"../images/iconeVocaSabia.png" alt="ícone de lâmpada acesa - você sabia?"} />
+          </div>
           <p className="carousel-text">
             Você sabia que no Brasil, por ano, são descartadas xxx toneladas de
             resíduos de construção civil irregularmente no meio ambiente?
