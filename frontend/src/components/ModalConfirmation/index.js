@@ -27,7 +27,7 @@ function ModalConfirmation({ display, onClick, estimateValue, material }) {
           className="carousel-modal"
         >
           <div className="image-slide">
-            <img src={"../images/iconeVocaSabia.png" alt="ícone de lâmpada acesa - você sabia?"} />
+            <img src={"../images/iconeVocaSabia.png"} alt="ícone de lâmpada acesa - você sabia?" />
           </div>
           <p className="carousel-text">
             Você sabia que no Brasil, por ano, são descartadas xxx toneladas de
