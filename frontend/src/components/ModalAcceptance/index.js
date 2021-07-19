@@ -16,7 +16,7 @@ const ModalAcceptance = ({ display }) => {
       <p className="acceptance-text">
         Os detalhes da sua solicitação <br className="break-line" /> foram
         enviadas através <br className="break-mobile" />
-        do email.
+        do email. O agendamento será realizado diretamente com o prestador de serviço.
       </p>
     </div>
   ) : null;
