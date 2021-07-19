@@ -50,10 +50,7 @@
 .border{
     width: 300px;
     height: 54px;
-    top: 350px;
-    left: 527px;
-    border-radius: 15px; 
-    
+    border-radius: 15px;
 }
 
 .password{

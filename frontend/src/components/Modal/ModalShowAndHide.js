@@ -3,14 +3,10 @@ import ModalAcceptance from "../ModalAcceptance";
 import ModalConfirmation from "../ModalConfirmation";
 import Form from "./OrderForm";
 import { put } from "../../services/client";
+import Preload from '../Preload/Preload';
 
-const OrderForm = ({
-  display,
-  onClick,
-  setEstimateValue,
-  setMaterial,
-  setID,
-}) => {
+const OrderForm = ({ display, onClick, setEstimateValue, setMaterial, setID, setLoading, hideAll }) => {
+
   return display ? (
     <div className="form-inputs-style">
       <Form
@@ -18,6 +14,8 @@ const OrderForm = ({
         setEstimateValue={setEstimateValue}
         setMaterial={setMaterial}
         setID={setID}
+        setLoading={setLoading}
+        hideAll={hideAll}
       />
     </div>
   ) : null;
@@ -32,15 +30,26 @@ const ModalShowAndHide = () => {
 
   const [contentControler, setContentControler] = useState(initialState);
   const [estimateValue, setEstimateValue] = useState(0);
-  const [material, setMaterial] = useState("");
+
+  const [material, setMaterial] = useState('');
+  const [loading, setLoading] = useState(false);
+
   const [id, setID] = useState(null);
+
+  const hideAll = () => {
+    setContentControler({
+      orderForm: false,
+      confirmOrder: false,
+      finishOrder: false,
+    });
+  }
 
   const controlDisplayContent = (e) => {
     const { name } = e.target;
     if (name === "finishOrder") {
       put(`/estimate/${id}/confirm`);
     }
-    console.log(name);
+    
     setContentControler({
       orderForm: false,
       confirmOrder: false,
@@ -53,12 +62,19 @@ const ModalShowAndHide = () => {
 
   return (
     <div className="content-modal">
-      <OrderForm
-        display={orderForm}
+
+      <Preload loading={loading}/>
+      <OrderForm 
+        display={orderForm} 
+
         onClick={controlDisplayContent}
         setEstimateValue={setEstimateValue}
         setMaterial={setMaterial}
         setID={setID}
+
+        setLoading={setLoading}
+        hideAll={hideAll}
+
       />
       <ModalConfirmation
         estimateValue={estimateValue}
