@@ -4,6 +4,7 @@ import "./ModalConfirmationStyle.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
+import iconVoceSabia from "../images/iconeVocaSabia.png";
 
 function ModalConfirmation({ display, onClick, estimateValue, material }) {
   // #TODO: refatorar o onclick para ser close e não reload
@@ -21,14 +22,18 @@ function ModalConfirmation({ display, onClick, estimateValue, material }) {
         resíduo.
       </p>
       <div className="image-slide">
-            <img src="../images/iconeVocaSabia.png" alt="ícone de lâmpada acesa - você sabia?" />
-          </div>
+        <img
+          src={iconVoceSabia}
+          alt="ícone de lâmpada acesa - você sabia?"
+          className="img-voce-sabia"
+        />
+      </div>
       <div className="div-car">
         <Carousel
           enableAutoPlay
           autoPlaySpeed={6500}
           className="carousel-modal"
-        >          
+        >
           <p className="carousel-text">
             Você sabia que no Brasil, por ano, são descartadas xxx toneladas de
             resíduos de construção civil irregularmente no meio ambiente?
