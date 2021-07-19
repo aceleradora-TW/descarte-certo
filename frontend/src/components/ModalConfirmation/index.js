@@ -35,7 +35,7 @@ function ModalConfirmation({ display, onClick, estimateValue, material }) {
           className="carousel-modal"
         >
           <p className="carousel-text">
-            Você sabia que no Brasil, por ano, são descartadas xxx toneladas de
+            Você sabia que no Brasil, por ano, são descartadas toneladas de
             resíduos de construção civil irregularmente no meio ambiente?
           </p>
           <p className="carousel-text">
