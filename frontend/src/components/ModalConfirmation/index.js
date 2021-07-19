@@ -20,15 +20,15 @@ function ModalConfirmation({ display, onClick, estimateValue, material }) {
         Utilizando o serviço da 5 Marias, você garante o descarte correto do seu
         resíduo.
       </p>
+      <div className="image-slide">
+            <img src="../images/iconeVocaSabia.png" alt="ícone de lâmpada acesa - você sabia?" />
+          </div>
       <div className="div-car">
         <Carousel
           enableAutoPlay
           autoPlaySpeed={6500}
           className="carousel-modal"
-        >
-          <div className="image-slide">
-            <img src={"../images/iconeVocaSabia.png"} alt="ícone de lâmpada acesa - você sabia?" />
-          </div>
+        >          
           <p className="carousel-text">
             Você sabia que no Brasil, por ano, são descartadas xxx toneladas de
             resíduos de construção civil irregularmente no meio ambiente?
