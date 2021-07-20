@@ -82,6 +82,7 @@ const OrderForm = (props) => {
         residueMeasure: values.residueAmount + " " + values.residueMeasure,
       },
       calculate: {
+
         amount: values.residueAmount,
         zones: adapterZone(values.region),
         type: adapterType(values.residueMeasure),
@@ -444,7 +445,7 @@ const OrderForm = (props) => {
             {submitSuccess
               ? "Sua solicitação foi enviada! Obrigada!" + values.locationInfo
               : "Ops! Tivemos um problema. Tente novamente mais tarde. " +
-              values.locationInfo}
+                values.locationInfo}
           </Alert>
         </Form>
       )}

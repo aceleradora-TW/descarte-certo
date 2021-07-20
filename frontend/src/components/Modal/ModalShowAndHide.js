@@ -6,11 +6,12 @@ import { put } from "../../services/client";
 import Preload from '../Preload/Preload';
 
 const OrderForm = ({ display, onClick, setEstimateValue, setMaterial, setID, setLoading, hideAll }) => {
+
   return display ? (
     <div className="form-inputs-style">
-      <Form 
-        nextStep={onClick} 
-        setEstimateValue={setEstimateValue} 
+      <Form
+        nextStep={onClick}
+        setEstimateValue={setEstimateValue}
         setMaterial={setMaterial}
         setID={setID}
         setLoading={setLoading}
@@ -29,8 +30,10 @@ const ModalShowAndHide = () => {
 
   const [contentControler, setContentControler] = useState(initialState);
   const [estimateValue, setEstimateValue] = useState(0);
+
   const [material, setMaterial] = useState('');
   const [loading, setLoading] = useState(false);
+
   const [id, setID] = useState(null);
 
   const hideAll = () => {
@@ -43,8 +46,8 @@ const ModalShowAndHide = () => {
 
   const controlDisplayContent = (e) => {
     const { name } = e.target;
-    if(name === "finishOrder"){
-      put(`/estimate/${id}/confirm`)
+    if (name === "finishOrder") {
+      put(`/estimate/${id}/confirm`);
     }
     
     setContentControler({
@@ -59,15 +62,19 @@ const ModalShowAndHide = () => {
 
   return (
     <div className="content-modal">
+
       <Preload loading={loading}/>
       <OrderForm 
         display={orderForm} 
+
         onClick={controlDisplayContent}
         setEstimateValue={setEstimateValue}
         setMaterial={setMaterial}
         setID={setID}
+
         setLoading={setLoading}
         hideAll={hideAll}
+
       />
       <ModalConfirmation
         estimateValue={estimateValue}
