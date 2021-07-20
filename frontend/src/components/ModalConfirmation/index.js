@@ -18,7 +18,7 @@ function ModalConfirmation({ display, onClick, estimateValue, material }) {
         Seu orçamento: R${estimateValue} - {material}*
       </h3>
       <p className="message">
-        Utilizando o serviço da 5 Marias, você garante o descarte correto do seu
+        Utilizando o serviço da 5Marias, você garante o descarte correto do seu
         resíduo.
       </p>
       <div className="image-slide">
