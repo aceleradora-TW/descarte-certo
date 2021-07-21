@@ -5,6 +5,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { ERRORS } from "../../constant";
 import InputMask from "react-input-mask";
 import * as yup from "yup";
+import {adapterZone, adapterType, adapterMaterial, adapterAccess, adapterReducedMaterial} from './adapters'
 
 const OrderForm = (props) => {
   let accessTypeValidation;
@@ -80,16 +81,19 @@ const OrderForm = (props) => {
         residueType: values.residueType,
         residueMeasure: values.residueAmount + " " + values.residueMeasure,
       },
-      calculate:{
-        amount: 0,
-        access:"ELEVATOR",
-        zones:"DOWNTOWN",
-        type:"BAG",
-        material:"WOOD"
+      calculate: {
+
+        amount: values.residueAmount,
+        zones: adapterZone(values.region),
+        type: adapterType(values.residueMeasure),
+        material: adapterMaterial(values.residueType),
+        access: adapterAccess(values.accessType)
       }
     };
 
-    props.setMaterial(values.residueType)
+    props.setMaterial(adapterReducedMaterial(values.residueType))
+    props.setLoading(true)
+    props.hideAll()
 
     post(`/estimate`, requestCreateEstimate)
       .then(function (response) {
@@ -97,6 +101,8 @@ const OrderForm = (props) => {
         setSubmitting(false);
         props.setEstimateValue(response.estimateValue);
         props.setID(response.id);
+        props.setLoading(false);
+        props.nextStep({ target: { name: "confirmOrder" } });
       })
       .catch((_error) => {
         handleSubmitSuccess(false);
@@ -105,7 +111,6 @@ const OrderForm = (props) => {
       .then(() => {
         handleAlertClick();
       });
-    props.nextStep({ target: { name: "confirmOrder" } });
   };
 
   const showingField = (values) => {
@@ -379,7 +384,7 @@ const OrderForm = (props) => {
             <Col className="col-sm-6" id="accessType">
               {showingFieldAccessType(values, handleChange, handleBlur)}
             </Col>
-            <Col className="col-sm-5">
+            <Col className="col-sm-5 informacao-andar">
               {showingFieldFloor(values, handleChange, handleBlur)}
               {showingField(values, handleChange, handleBlur)}
             </Col>
@@ -440,7 +445,7 @@ const OrderForm = (props) => {
             {submitSuccess
               ? "Sua solicitação foi enviada! Obrigada!" + values.locationInfo
               : "Ops! Tivemos um problema. Tente novamente mais tarde. " +
-              values.locationInfo}
+                values.locationInfo}
           </Alert>
         </Form>
       )}

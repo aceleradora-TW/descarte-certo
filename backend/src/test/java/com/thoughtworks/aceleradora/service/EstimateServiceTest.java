@@ -11,6 +11,9 @@ import com.thoughtworks.aceleradora.repository.EstimateRepository;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.invocation.InvocationOnMock;
+
+import java.math.BigDecimal;
+
 import static org.assertj.core.api.Java6Assertions.assertThat;
 import static com.thoughtworks.aceleradora.service.ValidEstimateRequestFactory.createValidRequest;
 import static org.mockito.Mockito.*;
@@ -35,7 +38,13 @@ public class EstimateServiceTest {
             Requester requester= Requester.builder().fullName("Rosa").cellphone("999999999").email("va@van").build();
             Residue residue = Residue.builder().id(1).residueMeasure("").residueType("").build();
             ResidueAddress residueAddress= ResidueAddress.builder().region("").locationInfo("").id(1).build();
-            Estimate expectedEstimateCreated = Estimate.builder().id(1).requester(requester).residue(residue).residueAddress(residueAddress).build();
+            Estimate expectedEstimateCreated = Estimate.builder()
+                    .id(1)
+                    .requester(requester)
+                    .residue(residue)
+                    .residueAddress(residueAddress)
+                    .estimateValue(new BigDecimal("100"))
+                    .build();
             when(estimateConverterServiceMock.converter(validRequest))
                     .thenReturn(expectedEstimateCreated);
 

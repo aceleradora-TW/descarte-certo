@@ -9,9 +9,11 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.util.Locale;
 import java.util.Optional;
-
-//Modificar o método create em EstimateService, para sempre criar estimativas com estimateValue calculador. Usar o BucketCalculator para o calculo da informação.
 
 @Service
 public class EstimateService {
@@ -19,6 +21,7 @@ public class EstimateService {
     private EstimateRepository estimateRepository;
     private EstimateConverterService estimateConverterService;
     private MailFactory mailFactory;
+
 
     EstimateService(EstimateRepository repository, EstimateConverterService estimateConverter,MailFactory mailFactory) {
         this.estimateRepository = repository;
@@ -44,7 +47,7 @@ public class EstimateService {
         return estimateRepository.findAll(
                 PageRequest.of(
                         page.orElse(0),
-                        totalPage.orElse(20),
+                        totalPage.orElse(100),
                         Sort.Direction.DESC, sortBy.orElse("id")
                 )
         );
@@ -65,9 +68,15 @@ public class EstimateService {
         this.sendEstimateEmail(estimate);
     }
 
+
     private void sendEstimateEmail(Estimate estimateEntity){
+        Locale brazil = new Locale("pt","BR");
+        DecimalFormatSymbols real = new DecimalFormatSymbols(brazil);
+        BigDecimal total = estimateEntity.getEstimateValue();
+        DecimalFormat formatador = new DecimalFormat("###,###,##0.00", real);
+
         StringBuffer sb = new StringBuffer();
-        sb.append("NOVO ORÇAMENTO: ");
+        sb.append("ORÇAMENTO SOLICITADO: ");
         sb.append( System.getProperty("line.separator"));
         sb.append( System.getProperty("line.separator"));
 
@@ -100,8 +109,26 @@ public class EstimateService {
         sb.append(estimateEntity.getResidue().getResidueMeasure());
         sb.append( System.getProperty("line.separator"));
 
-        sb.append("Valor do pedido: ");
-        sb.append(estimateEntity.getEstimateValue());
+        sb.append("Valor do pedido: R$ ");
+        sb.append(formatador.format(total));
+        sb.append( System.getProperty("line.separator"));
+
+        if (estimateEntity.getResidue().getResidueMeasure().contains("Caçamba")) {
+
+            sb.append("Nome: Guacira Ramos" );
+            sb.append( System.getProperty("line.separator"));
+            sb.append("Whatsapp: (51) 99993-3706");
+            sb.append( System.getProperty("line.separator"));
+            sb.append("Email: retroentulho@hotmail.com");
+
+        } else {
+
+            sb.append("Nome: Karina Oliveira Roldão");
+            sb.append( System.getProperty("line.separator"));
+            sb.append("Whatsapp: (51) 98582-5844");
+            sb.append( System.getProperty("line.separator"));
+            sb.append("Email: entulhinho@gmail.com");
+        }
 
         try {
             mailFactory.sendMessage(sb.toString());

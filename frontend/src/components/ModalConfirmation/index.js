@@ -4,6 +4,7 @@ import "./ModalConfirmationStyle.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
+import iconDidYouKnow from "../images/iconDidYouKnow.png";
 
 function ModalConfirmation({ display, onClick, estimateValue, material }) {
   // #TODO: refatorar o onclick para ser close e não reload
@@ -17,9 +18,16 @@ function ModalConfirmation({ display, onClick, estimateValue, material }) {
         Seu orçamento: R${estimateValue} - {material}*
       </h3>
       <p className="message">
-        Utilizando o serviço da 5 Marias, você garante o descarte correto do seu
+        Utilizando o serviço da 5Marias, você garante o descarte correto do seu
         resíduo.
       </p>
+      <div className="image-slide">
+        <img
+          src={iconDidYouKnow}
+          alt="ícone de lâmpada acesa - você sabia?"
+          className="img-did-you-know"
+        />
+      </div>
       <div className="div-car">
         <Carousel
           enableAutoPlay
@@ -27,15 +35,15 @@ function ModalConfirmation({ display, onClick, estimateValue, material }) {
           className="carousel-modal"
         >
           <p className="carousel-text">
-            Você sabia que no Brasil, por ano, são descartadas xxx toneladas de
+            Você sabia que no Brasil, por ano, são descartadas toneladas de
             resíduos de construção civil irregularmente no meio ambiente?
           </p>
           <p className="carousel-text">
-            80% dos focos irregualres em Porto Alegre são compostos de resíduos
-            da construção civil
+            80% dos focos irregulares em Porto Alegre são compostos de resíduos
+            da construção civil.
           </p>
           <p className="carousel-text">
-            50% dos serviços de tele-entulho atuam na irregularidade
+            50% dos serviços de tele-entulho atuam na irregularidade.
           </p>
         </Carousel>
       </div>
