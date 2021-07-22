@@ -59,7 +59,7 @@ function ModalConfirmation({ display, onClick, estimateValue, material }) {
       <button className="btn-approve" name="finishOrder" onClick={onClick}>
         Solicitar Agendamento
       </button>
-      <button className="btn-approve-mobile">
+      <button className="btn-approve-mobile" name="finishOrder" onClick={onClick}>
         Solicitar<FontAwesomeIcon className= "fontawesome" icon={faCheckCircle} />
       </button>
     </div>
