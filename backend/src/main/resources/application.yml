@@ -17,5 +17,5 @@ mailgun:
   emailReceiver: "5marias.orcamento@gmail.com"
 
 login:
-  email: "5marias.sustentaveis@gmail.com"
-  password: "1234abc"
+  email: ${LOGIN_EMAIL}
+  password: ${LOGIN_PASSWORD}
