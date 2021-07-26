@@ -1,11 +1,14 @@
 package com.thoughtworks.aceleradora.controller;
 
 import com.thoughtworks.aceleradora.controller.response.LoginResponse;
-import com.thoughtworks.aceleradora.service.User;
-import com.thoughtworks.aceleradora.service.AuthenticationService;
 import com.thoughtworks.aceleradora.exception.UserNotFoundException;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.*;
+import com.thoughtworks.aceleradora.service.AuthenticationService;
+import com.thoughtworks.aceleradora.service.User;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
 import java.util.Optional;
 
 @RestController
@@ -13,17 +16,16 @@ import java.util.Optional;
 
 public class LoginController {
 
-    @Value("${login.email}")
-    private String loginEmail;
+    private AuthenticationService authenticationService;
 
-    @Value("${login.password}")
-    private String loginPassword;
+    public LoginController(AuthenticationService authenticationService) {
+        this.authenticationService = authenticationService;
+    }
 
     @PostMapping
     public LoginResponse signIn(@RequestBody User user) {
-
         try {
-            Optional<String> data = this.returnLogin(user.getEmail(), user.getPassword());
+            Optional<String> data = authenticationService.returnLogin(user.getEmail(), user.getPassword());
             if (data.isPresent()) {
                 return new LoginResponse(data.get());
             } else {
@@ -32,15 +34,6 @@ public class LoginController {
         } catch (UserNotFoundException e) {
             throw new UserNotFoundException("Usuario não encontrado! Verifique se os dados foram digitados corretamente.");
         }
-    }
-    public Optional<String> returnLogin(String email, String password) {
-        AuthenticationService authenticationService = new AuthenticationService();
-
-        if (email.equals(loginEmail) && password.equals(loginPassword)) {
-            return Optional.of(authenticationService.createTokenByUser(new User(email, password)));
-        }
-
-        return Optional.empty();
     }
 
 }

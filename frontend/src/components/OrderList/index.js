@@ -7,6 +7,7 @@ import ReactHTMLTableToExcel from 'react-html-table-to-excel'
 import Preload from '../Preload/Preload'
 import Tabela from './TabelaOrcamento'
 import Pagination from "../Pagination/Pagination";
+import {toast} from "react-toastify";
 
 const OrderListComponent = () => {
 
@@ -29,7 +30,7 @@ const OrderListComponent = () => {
         setTotalElements(res.totalElements)
         setOrdersPerPage(res.size)
         setLoading(false)
-      })
+      }).catch((err) => toast.error(err.message))
   }
   return (
     <>

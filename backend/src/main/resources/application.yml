@@ -19,3 +19,4 @@ mailgun:
 login:
   email: ${LOGIN_EMAIL}
   password: ${LOGIN_PASSWORD}
+  jwtsecret:  ${LOGIN_JWT_SECRET}
