@@ -2,58 +2,20 @@
 
 [![CircleCI](https://circleci.com/gh/aceleradora-TW/descarte-certo.svg?style=svg)](https://app.circleci.com/pipelines/github/aceleradora-TW/descarte-certo?branch=master)
 
-
 Projeto que visa a criação de uma plataforma com implementações back e frontend com intenção de facilitar a busca e contratação do serviço das 5 marias. Consta uma página, efetua o orçamento o envia por email para as proprietárias, e envia dados para o banco cujo apenas elas tem acesso.
 
 Esse projeto foi a ideia vencedora do Creathon de 2019 e posteriormente se juntou com a equipe da aceleradora ágil para desenvolver a plataforma, o time de POs é composto por 5 mulheres: Marcia Castro (empresária), Fernanda Sequeira (publicitária), Sonia Fagundes (engenheira ambiental), Edna Menegaz (engenheira agronoma) e Daniely Votto (advogada).
-
-## Tecnologias:
-  - [Java 11](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
-  - [Node 12.16.2 LTS](https://nodejs.org/en/download/)
-  - [React](https://reactjs.org/docs/getting-started.html)
-  - [Postgres 12](https://www.postgresql.org/download/)
-  - [IntelliJ Community Edition](https://www.jetbrains.com/idea/download/)
-  - [Heroku reference](https://devcenter.heroku.com/categories/reference)
-  - [CircleCI reference](https://circleci.com/docs/2.0/getting-started/#section=getting-started)
-### Pipeline
-
-* [CircleCI - Descarte Certo](https://app.circleci.com/pipelines/github/aceleradora-TW/descarte-certo)
-* [Heroku - Descarte Certo](https://dashboard.heroku.com/apps/descartecerto)
-### Como ver os logs da aplicação
-- Precisa primeiro instalar o client no terminal https://devcenter.heroku.com/articles/heroku-cli
-
-### Stage
-```
-heroku logs --app descartecerto --tail
-```
-### Prod
-```
-heroku logs --app descartecerto-prod --tail
-```
-### Backend testes
-Usando https://httpie.org/
-```
-http GET http://localhost:8080/solicitcaoOrcamentoDescarte/1
-http POST http://localhost:8080/solicitcaoOrcamentoDescarte/create < backend/src/test/resources/createSolicitacaoRequest.json
-```
 ## Executando o projeto
 
-### Garanta acesso ao banco de dados
+### Instalar o Java SDK 11
+- https://jdk.java.net/archive/
 
-Antes de executar o backend, garanta que o Postgres esteja rodando na máquina e que exista um banco de dados 
-chamado `descarte_certo`. Localmente, o backend tentará se conectar ao banco usando usuário `postgres` e senha 
-`123456`. Talvez seja necessário alterar a senha do usuáro `postgres` para que projeto possa executar corretamente
-
-Para isso, execute:
-
-```sql
-ALTER USER postgres WITH PASSWORD '123456';
-```
-
-Também é possível executar o banco de dados com Docker. Execute o script `docker-db.sh` para mais instruções:
+### Configure o banco de dados volatil
+Em um terminal, execute o comando:
 
 ```shell script
-./docker-db.sh
+./docker-db.sh run-volatile
+./docker-db.sh  create
 ```
 
 ### Inicie o backend
@@ -61,11 +23,13 @@ Também é possível executar o banco de dados com Docker. Execute o script `doc
 Em um terminal, execute o comando:
 
 ```shell script
-./gradlew bootrun
+MAILGUN_USERNAME=local@test.com MAILGUN_PASSWORD=senhalocal LOGIN_EMAIL=local@test.com LOGIN_PASSWORD=senhalocal LOGIN_JWT_SECRET=testsecret ./gradlew bootrun
 ```
 
-Este comando iniciará a execução do backend do projeto. Perceba que ele continuará executando até ser parado manualmente,
-O que pode ser feito pressionando as teclas <kbd>ctrl</kbd> + <kbd>c</kbd>.
+- Este comando iniciará a execução do backend do projeto. 
+- Perceba que ele continuará executando até ser parado manualmente,
+- O que pode ser feito pressionando as teclas <kbd>ctrl</kbd> + <kbd>c</kbd>.
+- As variaveis do MAILGUN devem ser preenchidas com as informações do Heroku caso queira testar o email
 
 ### Inicie o frontend
 
@@ -86,8 +50,40 @@ Com as dependências instaladas, execute o comando:
 yarn start;
 ```
 
-Assim como o backend, este comando seguirá executando até ser parado manualmente. Ele também atualizará o front-end a 
+Assim como o backend, este comando seguirá executando até ser parado manualmente. Ele também atualizará o front-end a
 cada mudança feita no código, portanto, não é necessário executá-lo novamente para ver as mudanças aplicadas.
+
+### Pipeline
+
+* [CircleCI - Descarte Certo](https://app.circleci.com/pipelines/github/aceleradora-TW/descarte-certo)
+* [Heroku - Descarte Certo](https://dashboard.heroku.com/apps/descartecerto)
+
+### Como ver os logs da aplicação
+- Precisa primeiro instalar o client no terminal https://devcenter.heroku.com/articles/heroku-cli
+
+### Stage
+```
+heroku logs --app descartecerto --tail
+```
+### Prod
+```
+heroku logs --app descartecerto-prod --tail
+```
+### Backend testes
+Usando https://httpie.org/
+```
+http GET http://localhost:8080/solicitcaoOrcamentoDescarte/1
+http POST http://localhost:8080/solicitcaoOrcamentoDescarte/create < backend/src/test/resources/createSolicitacaoRequest.json
+```
+
+## Tecnologias:
+- [Java 11](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
+- [Node 12.16.2 LTS](https://nodejs.org/en/download/)
+- [React](https://reactjs.org/docs/getting-started.html)
+- [Postgres 12](https://www.postgresql.org/download/)
+- [IntelliJ Community Edition](https://www.jetbrains.com/idea/download/)
+- [Heroku reference](https://devcenter.heroku.com/categories/reference)
+- [CircleCI reference](https://circleci.com/docs/2.0/getting-started/#section=getting-started)
 
 ## Template
 
